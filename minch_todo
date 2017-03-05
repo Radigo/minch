@@ -1,0 +1,101 @@
+MinCH: todo
+
+**Bugs**
+Strong sound at boss 2 transitions: wave attack played at each frames > ramp up sound volume to be lower during the first frame.
+
+**Ongoing**
+Add spawn animation to generator (flashing blue)
+Boss 2-3
+	- intro sequence
+
+**Design**
+Player
+OK - Shot sprites
+OK - Shot animation
+OK - Jump animation
+OK - Wave attack animation
+- Death animation by hit
+OK - Death animation by fall
+- Animated markers
+OK - Claw animation
+
+Level
+OK - Doors
+- Claw switch
+OK - Floor switch
+- 1st level intro cinematic
+
+Ennemies
+OK - Hit sprites
+OK - Explosions
+- Alteration sprites
+
+UI
+OK - Score panel
+OK - Life icon
+OK - Combo panel
+- Game over
+- Hi scores
+
+**Code**
+Player
+OK - Wave attack
+OK - Clean free shot directions (cf. Outzone)
+OK - Kill player in holes
+OK - Kill player in traps
+OK - Combo system (basis)
+OK - Combo system (advanced)
+OK - Combo system (color mix)
+- Combo system (special cases)
+OK - Block jump when not available
+- Jump cooldown (?)
+OK - Checkpoints in case of death
+- Game Over
+OK - Free shot, check rotation speed. Consider firing at each frame when rotating.
+- Tuning on tap rate for free/focus shot (faster)
+
+Level design
+OK - Enemy follow path
+
+Engine
+OK - Contextual camera
+OK - Level intro & end report
+OK - Ennemy shot only when next to viewport
+OK - Ennemy sleep/wake up
+OK - Events
+OK - Switch doors
+- Ennemy count doors
+- Pattern traps (timed harmless/killing zones)
+- Triggered traps (conditional killing zones)
+- moving plateforms
+OK - rolling floor areas
+OK - Ennemy generators
+OK - Cinematics
+OK - BGM play
+OK - BGM sequencing
+
+Tools
+OK - Demo mode for pre releases and tests
+OK - Console
+
+**Game elements**
+- Title screen
+- Menus
+- Intro sequence
+-Levels:
+	- 1-1
+	- 1-2
+	- 1-3 > Ongoing
+	- 2-1 > OK
+	- 2-2 > OK
+	- 2-3 > OK
+	- 3-1
+	- 3-2 > OK
+	- 3-3
+	- 4-1
+	- 4-2
+	- 4-3
+	- 5-1
+	- 5-2
+- Ending sequence
+- End credits

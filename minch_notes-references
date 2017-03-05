@@ -1,0 +1,117 @@
+MinCH: notes and references
+
+**Colors**
+== No scoring ==
+	0 - White
+== Primary colors ==
+	1 - cyan
+	2 - magenta
+	4 - yellow
+== Secondary colors ==
+	3 - purple
+	5 - green
+	6 - orange
+== Universal color ==
+	7 - Brown
+== Special Color ==
+	8 - Black
+
+Mix work like this:
+- you can mix as many colors you like
+- if you mix 2 primary colors, they will give a secondary color
+- if a color appears more than once in a mix, we only count it once
+
+It should give these results as examples:
+- cyan + magenta = purple
+- magenta + yellow = orange
+- cyan + yello = green
+- cyan + cyan = cyan
+- cyan + purple = purle
+- yellow + purple = brown
+- magenta + purple = purple
+- brown + any color = brown
+
+And finally, black is the cursed color that breaks any mix.
+
+
+**Depths**
+== TOP ==
+-15000 - Light particles
+-10000 - Overlay (ex: bg_shading.png)
+
+-1000 - Bullets
+
+-20 - Booms
+-10 - Air particles
+
+0 - minch & sprites ??
+
++100 - Room object (switches, deflectors, conveyors...)
++1000 - Ground particles
+
++100000 - Stage BG (ex: concrete.png)
++1000000 - Deepest BG (ex: city_bg.png)
+== Bottom ==
+
+
+**Level start/end**
+Each level should have a start and an end.
+1/ Star is the object "obj_start_point"
+2/ End is the object "obj_area_end_level"
+
+Note: current end object script returns to home page...
+
+
+**Checkpoints**
+Pair of area/targets
+
+1/ Area are instances of "obj_checkpoint_area" (in objects/LD/checkpoints). Once instance is placed, add this creation code:
+	"self.chekpointId = 1;"
+Area is triggered when walking over (object collision event is already set).
+
+2/ Target is the respawn location. There is separate object for each checkpoint ("obj_checkpoint_1" ... "obj_checkpoint_9").
+Target location is detected by area script.
+
+
+**Scripts order**
+Scripts are executed in a fixed order
+
+obj_start_point Create Event
+	"scr_start_level": General LD purpose, init events/actions list, instanciate MinCH
+obj_minch Create event
+	"scr_minch_init": Inits MinCH variables and controls
+rm_XX creation script
+	"scr_rmXX": custom scripts for level
+
+
+**Switches**
+Switches can trigger events through a level. Can be cinematic, animation, or enemy behavior.
+
+To use a switch, you must have a switch object with these properties:
+- object must have "scr_switch_init" with no argument in its create event
+- object must have "scr_fswitch_press" with no argument in its step event
+- instance of object on the map must have as a creation code "self.action_id = [desired action_id];"
+
+To make the switch interact with triggered objects the triggered object must have these properties:
+- instance of object on the map must have as a creation code "scr_register_dynamic_object([desired action_id], [desired trigger]);"
+- instance can be registered at multiple events
+
+[desired trigger] is picked among a list in scr_init_game and should match with the "switch" in "scr_switch_machine", the list can be extended at will:
+- global.enemyTriggerOn / global.enemyTriggerOff > sets "switchTriggered" to true or false, activating or deactivating an enemy behavior linked to its "switchTriggered" variable (must be coded in enemy AI)
+
+**Save**
+All saved items are stored in 'm_save.ini'.
+
+Saved topics are:
+- 'global' (settings)
+	- 'lang' > 'EN' (english), 'FR' (français), 'ER' (engrish)
+- 'keys'
+	- 'up'
+	- 'down'
+	- 'left'
+	- 'right'
+	- 'a'
+	- 'b'
+	- 'start'
+- 'progress'
+	- 'map' > '11' to '53' (the last completed map)
