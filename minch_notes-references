@@ -24,7 +24,7 @@ Mix work like this:
 It should give these results as examples:
 - cyan + magenta = purple
 - magenta + yellow = orange
-- cyan + yello = green
+- cyan + yellow = green
 - cyan + cyan = cyan
 - cyan + purple = purle
 - yellow + purple = brown
@@ -56,7 +56,7 @@ And finally, black is the cursed color that breaks any mix.
 
 **Level start/end**
 Each level should have a start and an end.
-1/ Star is the object "obj_start_point"
+1/ Start is the object "obj_start_point"
 2/ End is the object "obj_area_end_level"
 
 Note: current end object script returns to home page...
