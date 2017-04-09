@@ -7,7 +7,7 @@ switch (argument0)
 {
     case "help":
     case "?":
-        show_message("Console commands: map [ID], stats [on-off], exit, fs [on-off], wscale [1-10], iddad, idclip, checkpoint (cp) [1-9], kill (k)");
+        show_message("Console commands: map [ID], stats [on-off], exit, fs, wscale [1-10], iddad, idclip, checkpoint (cp) [1-9], kill (k)");
         break;
     case "map":
         if (argument1 != "")
@@ -46,9 +46,10 @@ switch (argument0)
     case "exit":
         game_end();
     case "fs":
-        if (argument1 = "off")
+        if window_get_fullscreen()
         {
             window_set_fullscreen(false);
+            window_set_size(320 * global.wscale, 240 * global.wscale);
         }
         else
         {
@@ -67,7 +68,9 @@ switch (argument0)
             scale = 10;
         }
         
-        window_set_size(320 * scale, 240 * scale);
+        global.wscale = scale;
+        
+        window_set_size(320 * global.wscale, 240 * global.wscale);
         break;
     case "iddad":
         global.invincible = !global.invincible;

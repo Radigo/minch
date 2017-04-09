@@ -59,7 +59,7 @@
     <instance objName="obj_wall" x="32" y="736" name="inst_4661D5A9" locked="0" code="" scaleX="10" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_event_area" x="416" y="448" name="inst_6C1585CC" locked="0" code="self.action_id = 1;&#xA;" scaleX="10" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_event_area_multiuse" x="352" y="512" name="inst_3FEB9BBE" locked="0" code="self.action_id = 3;&#xA;" scaleX="1" scaleY="4" colour="4294967295" rotation="0"/>
-    <instance objName="obj_event_area_multiuse" x="416" y="512" name="inst_F7B70EA6" locked="0" code="self.action_id = 2;&#xA;" scaleX="10" scaleY="4" colour="4294967295" rotation="0"/>
+    <instance objName="obj_event_area_multiuse" x="416" y="512" name="inst_F7B70EA6" locked="0" code="self.action_id = 2;" scaleX="10" scaleY="4" colour="4294967295" rotation="0"/>
     <instance objName="obj_event_area_multiuse" x="768" y="512" name="inst_213CB220" locked="0" code="self.action_id = 3;&#xA;" scaleX="1" scaleY="4" colour="4294967295" rotation="0"/>
     <instance objName="obj_boss_warehouse" x="304" y="368" name="inst_552C406F" locked="0" code="scr_register_dynamic_object(1, global.ENEMY_TRIGGER_ON);&#xA;// Focus ON is triggered with an area OR the boss waking up&#xA;scr_register_dynamic_object(2, global.CAMERA_FOCUS_BOSS_ON);&#xA;// Focus OFF is triggered with boss death OR minch death&#xA;scr_register_dynamic_object(3, global.CAMERA_FOCUS_ENEMY_OFF);" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>

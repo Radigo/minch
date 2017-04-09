@@ -45,7 +45,15 @@ if (self.isIntroSequence == true)
 }
 else if (instance_exists(obj_boss_warehouse_shield))
 {
-    scr_boss_warehouse_pattern_shield();
+    if (self.currentPatternPhase == self.SHIELD_RANDOM)
+    {
+        scr_boss_warehouse_pattern_shield_random();
+    }
+    else
+    {
+        scr_boss_warehouse_pattern_shield_focus();
+    }
+    
 }
 else if (instance_exists(obj_boss_warehouse_head))
 {
@@ -81,6 +89,19 @@ else
     }
 }
 
+// Collision
+if ((self.moveDirection > 0) && (collision_point((x + 78), y, obj_wall, false, true)))// Hit right
+{
+    x -= self.moveSpeed * 3;
+    self.targetSpeed = 0;
+    self.moveSpeed *= 0.1;
+}
+else if (self.moveDirection < 0) && (collision_point((x - 78), y, obj_wall, false, true))// Hit left
+{
+    x += self.moveSpeed * 3;
+    self.targetSpeed = 0;
+    self.moveSpeed *= 0.1;
+}
 
 // Parts
 if (instance_exists(obj_boss_warehouse_base))

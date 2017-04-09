@@ -542,7 +542,11 @@
           <script>scripts\scr_boss_warehouse_intro_step.gml</script>
           <script>scripts\scr_boss_warehouse_death_step.gml</script>
           <script>scripts\scr_boss_warehouse_pattern_head.gml</script>
-          <script>scripts\scr_boss_warehouse_pattern_shield.gml</script>
+          <script>scripts\scr_boss_warehouse_pattern_shield_random.gml</script>
+          <script>scripts\scr_boss_warehouse_pattern_shield_focus.gml</script>
+          <script>scripts\scr_sides_lines_shot.gml</script>
+          <script>scripts\scr_fireballs_shots.gml</script>
+          <script>scripts\scr_spread_shot.gml</script>
         </scripts>
         <script>scripts\scr_ai_simpledrone.gml</script>
         <script>scripts\scr_ai_ara_single_fixed.gml</script>
@@ -944,13 +948,11 @@
     <room>rooms\rm_lvl_43</room>
     <room>rooms\rm_lvl_51</room>
   </rooms>
-  <constants number="6">
+  <constants number="4">
     <constant name="PAGE_SCOREATTACK">"page_scoreattack"</constant>
     <constant name="PAGE_TITLE">"page_title"</constant>
     <constant name="PAGE_OPTIONS">"page_options"</constant>
     <constant name="PAGE_KEYCONFIG">"page_keyconfig"</constant>
-    <constant name="GM_build_date">41967.880113912</constant>
-    <constant name="GM_version">'1.0.0.0'</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>

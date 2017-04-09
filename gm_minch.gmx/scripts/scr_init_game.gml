@@ -7,6 +7,7 @@ scr_settings("loadKeys");
 scr_settings("loadProgress");
 
 //show_debug_message("language: " + global.language);
+global.wscale = 2;
 
 // Fonts
 global.comboFont = font_add_sprite_ext(spr_combofont, "0123456789", false, 1);
