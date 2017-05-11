@@ -34,7 +34,10 @@ if (self.ticker == self.tickerLimit)
     self.patternTicker = 0;
     self.patternTickerLimit = 80;
     self.tickerLimit = (60 * 3) + floor(random(60 * 10));
-    self.currentPatternPhase = self.SHIELD_FOCUS;
+    if (instance_exists(obj_boss_warehouse_head))
+    {
+        self.currentPatternPhase = self.SHIELD_FOCUS;
+    }
     return 0;
 }
 
@@ -45,7 +48,6 @@ if (self.patternTicker = self.patternTickerLimit)
         //show_debug_message("shooting line: " + string(self.sidesPatternLinesIndex));
         scr_sides_lines_shot(self.sidesPatternLinesIndex);
         self.sidesPatternLinesIndex++;
-        self.patternTicker = 0;
         self.patternTickerLimit = 24;
     }
     else if (self.sidesPatternFireballsIndex < 2)
@@ -53,24 +55,22 @@ if (self.patternTicker = self.patternTickerLimit)
         //show_debug_message("shooting fireballs: " + string(self.sidesPatternFireballsIndex));
         scr_fireballs_shots(self.sidesPatternFireballsIndex);
         self.sidesPatternFireballsIndex++;    
-        self.patternTicker = 0;
         self.patternTickerLimit = 100;
     }
     else if (self.sidesPatternSpreadIndex < 120)
     {
-        show_debug_message("shooting spread: " + string(self.sidesPatternSpreadIndex));
+        //show_debug_message("shooting spread: " + string(self.sidesPatternSpreadIndex));
         scr_spread_shot(self.sidesPatternSpreadIndex);
         self.sidesPatternSpreadIndex++;
-        self.patternTicker = 0;
         self.patternTickerLimit = 2;
     }
     else
     {
-        show_debug_message("reset");
         self.sidesPatternLinesIndex = 0;
         self.sidesPatternFireballsIndex = 0;
         self.sidesPatternSpreadIndex = 0;
-        self.patternTicker = 0;
         self.patternTickerLimit = 60;
     }
+    
+    self.patternTicker = 0;
 }

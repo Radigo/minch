@@ -59,6 +59,10 @@ else if (instance_exists(obj_boss_warehouse_head))
 {
     scr_boss_warehouse_pattern_head();
 }
+else if (instance_exists(obj_boss_warehouse_base))
+{
+    scr_boss_warehouse_pattern_base();
+}
 else
 {
     if (instance_exists(obj_boss_warehouse_shield))
@@ -90,17 +94,18 @@ else
 }
 
 // Collision
+//If funnel doesn't gve nice result hange limit so focus can reach borders when switching to head pattern
 if ((self.moveDirection > 0) && (collision_point((x + 78), y, obj_wall, false, true)))// Hit right
 {
-    x -= self.moveSpeed * 3;
+    x -= self.moveSpeed;
     self.targetSpeed = 0;
-    self.moveSpeed *= 0.1;
+    self.moveSpeed = 0;
 }
 else if (self.moveDirection < 0) && (collision_point((x - 78), y, obj_wall, false, true))// Hit left
 {
-    x += self.moveSpeed * 3;
+    x += self.moveSpeed;
     self.targetSpeed = 0;
-    self.moveSpeed *= 0.1;
+    self.moveSpeed = 0;
 }
 
 // Parts
@@ -118,6 +123,32 @@ if (instance_exists(obj_boss_warehouse_shield))
 
 if (instance_exists(obj_boss_warehouse_head))
 {
-    obj_boss_warehouse_head.x = self.x;
-    obj_boss_warehouse_head.y = self.y;
+    obj_boss_warehouse_head.x += (self.x - obj_boss_warehouse_head.x) * 0.1;
+    
+    if (self.currentPatternPhase != self.HEAD_RAM)
+    {
+        obj_boss_warehouse_head.y += (self.y - obj_boss_warehouse_head.y) * 0.1;
+    }
+    
+    for (var i = 0; i < instance_number(obj_boss_warehouse_neck); i++)
+    {
+        with (instance_find(obj_boss_warehouse_neck, i))
+        {
+            self.x = (obj_boss_warehouse_head.x) - ((obj_boss_warehouse_head.x - obj_boss_warehouse_base.x) * (i / instance_number(obj_boss_warehouse_neck)));
+            self.y = (obj_boss_warehouse_head.y - 32) - ((obj_boss_warehouse_head.y - obj_boss_warehouse_base.y - 14) * (i / instance_number(obj_boss_warehouse_neck)));
+        }
+    }
+}
+else if (instance_exists(obj_boss_warehouse_neck))
+{
+    if (self.ticker == 5)
+    {
+        with (instance_find(obj_boss_warehouse_neck, 0))
+        {
+            scr_boom(self.x, self.y, 1, 16);
+            instance_destroy();
+        }
+        
+        self.ticker = 0;
+    }
 }

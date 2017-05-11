@@ -541,12 +541,19 @@
           <script>scripts\scr_boss_warehouse_pattern_change.gml</script>
           <script>scripts\scr_boss_warehouse_intro_step.gml</script>
           <script>scripts\scr_boss_warehouse_death_step.gml</script>
-          <script>scripts\scr_boss_warehouse_pattern_head.gml</script>
           <script>scripts\scr_boss_warehouse_pattern_shield_random.gml</script>
           <script>scripts\scr_boss_warehouse_pattern_shield_focus.gml</script>
+          <script>scripts\scr_boss_warehouse_pattern_head.gml</script>
+          <script>scripts\scr_boss_warehouse_pattern_base.gml</script>
           <script>scripts\scr_sides_lines_shot.gml</script>
           <script>scripts\scr_fireballs_shots.gml</script>
           <script>scripts\scr_spread_shot.gml</script>
+          <script>scripts\scr_funnel_shot.gml</script>
+          <script>scripts\scr_head_ram.gml</script>
+          <script>scripts\scr_ram_side_shot.gml</script>
+          <script>scripts\scr_raflesia_shot.gml</script>
+          <script>scripts\scr_front_round_cross_shot.gml</script>
+          <script>scripts\scr_head_shot.gml</script>
         </scripts>
         <script>scripts\scr_ai_simpledrone.gml</script>
         <script>scripts\scr_ai_ara_single_fixed.gml</script>

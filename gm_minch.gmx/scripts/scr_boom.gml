@@ -9,8 +9,8 @@ var em_shrapnels = part_emitter_create(global.ps_air);
 var em_rays = part_emitter_create(global.ps_light);
 
 // Particles
-part_emitter_region(global.ps_air, em_shrapnels, (source_x - (self.explosionSize / 2)), (source_x + (self.explosionSize / 2)), (source_y - (self.explosionSize / 2)), (source_y + (self.explosionSize / 2)), ps_shape_ellipse, ps_distr_invgaussian);
-part_emitter_region(global.ps_light, em_rays, (source_x - (self.explosionSize / 2)), (source_x + (self.explosionSize / 2)), (source_y - (self.explosionSize / 2)), (source_y + (self.explosionSize / 2)), ps_shape_ellipse, ps_distr_invgaussian);
+part_emitter_region(global.ps_air, em_shrapnels, (source_x - (size / 2)), (source_x + (size / 2)), (source_y - (size / 2)), (source_y + (size / 2)), ps_shape_ellipse, ps_distr_invgaussian);
+part_emitter_region(global.ps_light, em_rays, (source_x - (size / 2)), (source_x + (size / 2)), (source_y - (size / 2)), (source_y + (size / 2)), ps_shape_ellipse, ps_distr_invgaussian);
 
 switch (level)
 {
