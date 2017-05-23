@@ -42,6 +42,8 @@ global.CAMERA_FOCUS_ENEMY_OFF = "cameraFocusEnemyOff";// Stop focuses on enemy
 global.DOOR_OPEN = "doorOpen";// Opens a closed door
 global.DOOR_CLOSE = "doorClose";// Closes an opened door
 global.CREATE_PLATFORM = "createPlatform";// Replaces targeted dynamic obect with platform
+global.CHANGE_STATUS_ACTIVE = "changeStatusActive";// Changes status for active
+global.CHANGE_STATUS_INACTIVE = "changeStatusInactive";// Changes status for inactive
 
 // Game engine
 global.STORY_MODE = "storyMode";// Continuous play through all levels

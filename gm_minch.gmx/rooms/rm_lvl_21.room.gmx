@@ -208,7 +208,7 @@
     <instance objName="obj_area_hole" x="1120" y="608" name="inst_990CDA77" locked="0" code="scr_register_dynamic_object(3, global.CREATE_PLATFORM);&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_area_hole" x="1152" y="608" name="inst_81D8099B" locked="0" code="scr_register_dynamic_object(3, global.CREATE_PLATFORM);&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_area_hole" x="1184" y="608" name="inst_790BF3FC" locked="0" code="scr_register_dynamic_object(3, global.CREATE_PLATFORM);&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_area_hole" x="1216" y="608" name="inst_862A16AB" locked="0" code="scr_register_dynamic_object(3, global.CREATE_PLATFORM);&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_area_hole" x="1216" y="608" name="inst_862A16AB" locked="0" code="scr_register_dynamic_object(3, global.CREATE_PLATFORM);" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_area_hole" x="1120" y="864" name="inst_C07A17A8" locked="0" code="scr_register_dynamic_object(3, global.CREATE_PLATFORM);&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_area_hole" x="1152" y="864" name="inst_7AA4F100" locked="0" code="scr_register_dynamic_object(3, global.CREATE_PLATFORM);&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_area_hole" x="1184" y="864" name="inst_196A402B" locked="0" code="scr_register_dynamic_object(3, global.CREATE_PLATFORM);&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

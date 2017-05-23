@@ -53,7 +53,7 @@
   <instances>
     <instance objName="obj_start_point" x="832" y="1184" name="inst_0488A208" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_area_end_level" x="800" y="128" name="inst_28E8F14A" locked="0" code="" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_boss_tanker" x="832" y="416" name="inst_37B8C55A" locked="0" code="scr_register_dynamic_object(1, global.ENEMY_TRIGGER_ON);&#xA;// Focus ON is triggered with an area OR the boss waking up&#xA;scr_register_dynamic_object(2, global.CAMERA_FOCUS_ENEMY_ON);&#xA;// Focus OFF is triggered with boss death OR minch death&#xA;scr_register_dynamic_object(3, global.CAMERA_FOCUS_ENEMY_OFF);&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_boss_tanker" x="832" y="416" name="inst_37B8C55A" locked="0" code="scr_register_dynamic_object(1, global.ENEMY_TRIGGER_ON);&#xA;// Focus ON is triggered with an area OR the boss waking up&#xA;scr_register_dynamic_object(2, global.CAMERA_FOCUS_ENEMY_ON);&#xA;// Focus OFF is triggered with boss death OR minch death&#xA;scr_register_dynamic_object(3, global.CAMERA_FOCUS_ENEMY_OFF);" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="960" y="416" name="inst_EA5A962A" locked="0" code="" scaleX="3" scaleY="3" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="1248" y="704" name="inst_D4CD54A4" locked="0" code="" scaleX="3" scaleY="3" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="320" y="704" name="inst_C73E7F6C" locked="0" code="" scaleX="3" scaleY="3" colour="4294967295" rotation="0"/>

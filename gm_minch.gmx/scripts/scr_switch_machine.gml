@@ -61,7 +61,15 @@ if (ds_map_exists(global.actions_map, action_id))
                     platform_instance.image_speed = 1;
                     with (dynamic_object) instance_destroy();
                     break;
+                    
+                case global.CHANGE_STATUS_ACTIVE:
+                    with (dynamic_object) self.status = "active";
+                    break;
                 
+                case global.CHANGE_STATUS_INACTIVE:
+                    with (dynamic_object) self.status = "inactive";
+                    break;
+                    
                 default:
                     dynamic_object.image_index = 1;
                     break;

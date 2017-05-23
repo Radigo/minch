@@ -201,7 +201,7 @@
     <instance objName="obj_area_checkpoint" x="768" y="992" name="inst_7008C42A" locked="0" code="self.checkpointId = 5;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_area_checkpoint" x="960" y="576" name="inst_53B973FC" locked="0" code="self.checkpointId = 6;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_area_checkpoint" x="832" y="64" name="inst_FE48EA9E" locked="0" code="self.checkpointId = 1;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_door_h_1_gr" x="1632" y="928" name="inst_FD1BE294" locked="0" code="scr_register_dynamic_object(5, global.DOOR_OPEN);&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_door_h_1_gr" x="1632" y="928" name="inst_FD1BE294" locked="0" code="scr_register_dynamic_object(5, global.DOOR_OPEN);" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_door_h_1_or" x="1184" y="1120" name="inst_52B03DA7" locked="0" code="scr_register_dynamic_object(6, global.DOOR_OPEN);&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_area_hole" x="640" y="1856" name="inst_0C385AC3" locked="0" code="scr_register_dynamic_object(3, global.CREATE_PLATFORM);&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_area_hole" x="672" y="1856" name="inst_1D0695AA" locked="0" code="scr_register_dynamic_object(3, global.CREATE_PLATFORM);&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

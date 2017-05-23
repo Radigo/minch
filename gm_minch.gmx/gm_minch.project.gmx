@@ -236,6 +236,8 @@
       </sprites>
       <sprite>sprites\spr_secret_orange_wall</sprite>
       <sprite>sprites\spr_reval_dark</sprite>
+      <sprite>sprites\sewermaindoor_l</sprite>
+      <sprite>sprites\sewermaindoor_r</sprite>
     </sprites>
     <sprites name="Baddies">
       <sprite>sprites\spr_drone_test</sprite>
@@ -447,6 +449,7 @@
     <background>background\bg_tags</background>
     <background>background\bg_test_warehouse</background>
     <background>background\bg_orange_concrete</background>
+    <background>background\bg_sewers</background>
   </backgrounds>
   <paths name="paths">
     <path>paths\path_rm11_1</path>
@@ -599,6 +602,7 @@
       <script>scripts\scr_secret_claw_hit.gml</script>
       <script>scripts\scr_reveal_dark_step.gml</script>
       <script>scripts\scr_reveal_neighbor.gml</script>
+      <script>scripts\scr_slidingdoor_step.gml</script>
     </scripts>
     <scripts name="Mechanics">
       <script>scripts\scr_scoring_init.gml</script>
@@ -883,6 +887,8 @@
         <object>objects\obj_door_v_1_bk</object>
         <object>objects\obj_door_v_1_open</object>
         <object>objects\obj_door_v_1_anim</object>
+        <object>objects\obj_sewermaindoor_l</object>
+        <object>objects\obj_sewermaindoor_r</object>
       </objects>
       <objects name="Conveyors">
         <object>objects\obj_conveyor_up</object>

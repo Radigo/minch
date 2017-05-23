@@ -12,7 +12,7 @@ if (self.ticker == self.tickerLimit)
 }
 else
 {
-    show_debug_message("intro: " + string(self.ticker));
+    //show_debug_message("intro: " + string(self.ticker));
     // Move to center
     self.x += 3 * (1 - (self.ticker / self.tickerLimit));
 }
