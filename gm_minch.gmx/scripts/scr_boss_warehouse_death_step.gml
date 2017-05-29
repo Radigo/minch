@@ -11,5 +11,6 @@ if (self.ticker == self.tickerLimit)
     //with (self.explodingFrame) instance_destroy();
     self.isDeathSequence = false;
     
-    scr_switch_machine(10);
+    scr_switch_machine(3);// Focus OFF
+    scr_switch_machine(10);// Open sliding door
 }

@@ -54,7 +54,7 @@
     <instance objName="obj_start_point" x="576" y="800" name="inst_0488A208" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_area_end_level" x="544" y="192" name="inst_28E8F14A" locked="0" code="" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="384" y="224" name="inst_4D8A2F67" locked="0" code="" scaleX="1" scaleY="13" colour="4294967295" rotation="0"/>
-    <instance objName="obj_event_area" x="416" y="448" name="inst_6C1585CC" locked="0" code="self.action_id = 1;&#xA;" scaleX="10" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_event_area" x="416" y="448" name="inst_6C1585CC" locked="0" code="self.action_id = 1;" scaleX="10" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="384" y="640" name="inst_34ADD945" locked="0" code="" scaleX="4" scaleY="7" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="640" y="640" name="inst_AF7C2C96" locked="0" code="" scaleX="4" scaleY="7" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="480" y="864" name="inst_4F63262B" locked="0" code="" scaleX="6" scaleY="1" colour="4294967295" rotation="0"/>
@@ -66,7 +66,8 @@
     <instance objName="obj_wall" x="608" y="704" name="inst_5B901A9D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_sewermaindoor_l" x="544" y="224" name="inst_702476AB" locked="0" code="scr_register_dynamic_object(10, global.CHANGE_STATUS_ACTIVE);&#xA;self.slidingDistance = 512;&#xA;self.depth = 110000;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_sewermaindoor_r" x="608" y="224" name="inst_94981128" locked="0" code="scr_register_dynamic_object(10, global.CHANGE_STATUS_ACTIVE);&#xA;self.slidingDistance = 640;&#xA;self.depth = 110000;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_boss_warehouse" x="320" y="368" name="inst_552C406F" locked="0" code="scr_register_dynamic_object(1, global.ENEMY_TRIGGER_ON);&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_boss_warehouse" x="320" y="368" name="inst_552C406F" locked="0" code="scr_register_dynamic_object(1, global.ENEMY_TRIGGER_ON);&#xA;scr_register_dynamic_object(2, global.CAMERA_FOCUS_BOSS_ON);&#xA;scr_register_dynamic_object(3, global.CAMERA_FOCUS_ENEMY_OFF);&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_event_area_multiuse" x="512" y="576" name="inst_E90166ED" locked="0" code="self.action_id = 2;&#xA;" scaleX="4" scaleY="4" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="bg_sewers" x="512" y="320" w="32" h="32" xo="64" yo="256" id="10038755" name="inst_DFEC495A" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

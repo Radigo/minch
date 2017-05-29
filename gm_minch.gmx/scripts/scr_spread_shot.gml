@@ -21,6 +21,4 @@ else
 pos_x = cos(-angle * pi / 180) * 16;
 pos_y = sin(-angle * pi / 180) * 16;
 
-show_debug_message("scr_spread_shot: " + string(index) + ", " + string(phase));
-
 scr_bullet_shot((self.x + pos_x), (self.y + pos_y), angle, 2, 1);

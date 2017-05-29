@@ -25,6 +25,11 @@ if (!self.switchTriggered)
     return false;
 }
 
+if (!self.isActive)
+{
+    self.isActive = true;
+}
+
 if (!self.hasFocus)
 {
     scr_switch_machine(2);

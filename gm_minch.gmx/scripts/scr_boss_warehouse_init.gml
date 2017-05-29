@@ -58,5 +58,3 @@ with (obj_boss_warehouse_base)
 {
     self.shield = true;
 }
-
-Find a way to keep camera focus during all boss active life

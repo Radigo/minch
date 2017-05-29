@@ -30,10 +30,13 @@ if (ds_map_exists(global.actions_map, action_id))
                     dynamic_object.timeline_running = 1;
                     break;
                 case global.CAMERA_FOCUS_BOSS_ON:
-                    // TODO: add isActive, triggerd ON condition before
+                    if (dynamic_object.isActive == false)
+                    {
+                        break;
+                    }
+                    
                 case global.CAMERA_FOCUS_ENEMY_ON:
                     // Only if focus object is MinCH (no focus) OR focus changed
-                    // show_debug_message(string(obj_minch_camera.id) + ", " + string(dynamic_object.id));
                     
                     if (obj_minch_camera.focus == obj_minch
                         || (object_get_name(obj_minch_camera.focus) != object_get_name(dynamic_object)))
@@ -43,6 +46,7 @@ if (ds_map_exists(global.actions_map, action_id))
                         obj_minch_camera.focus = dynamic_object;
                     }
                     break;
+                    
                 case global.CAMERA_FOCUS_ENEMY_OFF:
                     obj_minch_camera.transitionDuration = obj_minch_camera.transitionOutDuration;
                     obj_minch_camera.transitionStep = obj_minch_camera.transitionOutDuration;
