@@ -58,7 +58,7 @@ switch (key)
     case "rm_lvl_21_name":
         return "Dispatcher";
     case "rm_lvl_22_name":
-        return "Test Rooms";// Could be better (Glad, Aperture, Shower Curtain...)
+        return "Cave";
     case "rm_lvl_23_name":
         return "Generator";
     case "rm_lvl_31_name":

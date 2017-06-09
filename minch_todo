@@ -2,6 +2,7 @@ MinCH: todo
 
 **Bugs**
 Strong sound at boss 2 transitions: wave attack played at each frames > ramp up sound volume to be lower during the first frame.
+Change minch marker depth.
 
 **Ongoing**
 Add spawn animation to generator (flashing blue)
@@ -85,7 +86,7 @@ OK - Console
 -Levels:
 	- 1-1
 	- 1-2
-	- 1-3 > Ongoing
+	- 1-3 > OK
 	- 2-1 > OK
 	- 2-2 > OK
 	- 2-3 > OK

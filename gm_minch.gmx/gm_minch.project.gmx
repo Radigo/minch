@@ -475,6 +475,13 @@
     <path>paths\path_rm22_13</path>
     <path>paths\path_rm22_14</path>
     <path>paths\path_rm22_15</path>
+    <path>paths\path_rm41_1</path>
+    <path>paths\path_rm41_2</path>
+    <path>paths\path_rm41_3</path>
+    <path>paths\path_rm41_4</path>
+    <path>paths\path_rm41_5</path>
+    <path>paths\path_rm41_6</path>
+    <path>paths\path_rm41_7</path>
   </paths>
   <scripts name="scripts">
     <script>scripts\scr_lang_EN.gml</script>

@@ -31,7 +31,12 @@ switch (argument0)
         scr_minch_death("deus_ex");
         break;
     case "end":
+    case"e":
         instance_create(0, 0, obj_level_report);
+        break;
+    case "reset":
+    case"r":
+        room_goto(global.currentRoom);
         break;
     case "stats":
         if (argument1 = "off")
