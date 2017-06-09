@@ -1,6 +1,16 @@
-/** Brrtle is supposed to crawl towards player and explode when killed */
+/** Brrtle is supposed to crawl towards player and explode when killed over a given distance (code is in object destroy event)
+
+Also, probably make a beetle that resist collisions for a while */
 
 self.isActive = (distance_to_object(obj_minch) < 140)
+
+ // Movement collision
+if (collision_circle(self.x, self.y, 8, obj_wall, false, false))
+{
+    self.speed = 0;
+    self.isActive = false;
+    scr_enemy_death(false, false);
+}
 
 if (self.isActive)
 {
@@ -13,14 +23,6 @@ if (self.isActive)
     else
     {
         self.speed = 1;
-    }
-    
-    // Movement collision
-    if (collision_circle(self.x, self.y, 8, obj_wall, false, false))
-    {
-        self.speed = 0;
-        self.isActive = false;
-        scr_enemy_death(false, false);
     }
 }
 else

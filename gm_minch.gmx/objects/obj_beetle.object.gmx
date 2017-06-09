@@ -115,7 +115,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scr_pattern_spread(self.x, self.y, -1, 1.1, 0, 12, 360);
+            <string>if (distance_to_object(obj_minch) &gt; 32)
+{
+    scr_pattern_spread(self.x, self.y, -1, 1.1, 0, 12, 360);
+}
 </string>
           </argument>
         </arguments>
