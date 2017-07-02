@@ -1,6 +1,6 @@
 scr_ai_step();
 
-if (!self.isActive && (distance_to_object(obj_minch) < 128))
+if (!self.isActive && (distance_to_object(obj_minch) < self.targetLossDistance))
 {
     self.isActive = true;
 }

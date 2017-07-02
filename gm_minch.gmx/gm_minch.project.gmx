@@ -367,6 +367,26 @@
         <sprite>sprites\spr_splitter_base_cy</sprite>
         <sprite>sprites\spr_splitter_top</sprite>
       </sprites>
+      <sprites name="carrier">
+        <sprite>sprites\spr_carrier_cy</sprite>
+        <sprite>sprites\spr_carrier_ma</sprite>
+        <sprite>sprites\spr_carrier_ye</sprite>
+        <sprite>sprites\spr_carrier_pu</sprite>
+        <sprite>sprites\spr_carrier_or</sprite>
+        <sprite>sprites\spr_carrier_gr</sprite>
+        <sprite>sprites\spr_carrier_br</sprite>
+        <sprite>sprites\spr_carrier_bk</sprite>
+      </sprites>
+      <sprites name="carrierdrone">
+        <sprite>sprites\spr_carrierdrone_cy</sprite>
+        <sprite>sprites\spr_carrierdrone_ma</sprite>
+        <sprite>sprites\spr_carrierdrone_ye</sprite>
+        <sprite>sprites\spr_carrierdrone_pu</sprite>
+        <sprite>sprites\spr_carrierdrone_or</sprite>
+        <sprite>sprites\spr_carrierdrone_gr</sprite>
+        <sprite>sprites\spr_carrierdrone_br</sprite>
+        <sprite>sprites\spr_carrierdrone_bk</sprite>
+      </sprites>
     </sprites>
     <sprites name="Bullets">
       <sprite>sprites\spr_bullet_01</sprite>
@@ -586,6 +606,10 @@
         <script>scripts\scr_splitter_step.gml</script>
         <script>scripts\scr_splitter_clear_parts.gml</script>
         <script>scripts\scr_splitter_create_arcs.gml</script>
+        <script>scripts\scr_carrier_init.gml</script>
+        <script>scripts\scr_carrier_step.gml</script>
+        <script>scripts\scr_carrierdrone_init.gml</script>
+        <script>scripts\scr_carrierdrone_step.gml</script>
       </scripts>
       <script>scripts\scr_aim_at_minch.gml</script>
       <scripts name="patterns">
@@ -640,6 +664,9 @@
       <script>scripts\scr_bgm_step.gml</script>
       <script>scripts\scr_get_next_bgm.gml</script>
     </scripts>
+    <script>scripts\scr_cycle.gml</script>
+    <script>scripts\scr_angle_rotate.gml</script>
+    <script>scripts\scr_collision_normal.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font_small</font>
@@ -798,6 +825,28 @@
         <object>objects\obj_splitter_cy</object>
         <object>objects\obj_arc</object>
         <object>objects\obj_splitter_top</object>
+      </objects>
+      <objects name="obj_carrier">
+        <object>objects\obj_carrier</object>
+        <object>objects\obj_carrier_cy</object>
+        <object>objects\obj_carrier_ma</object>
+        <object>objects\obj_carrier_ye</object>
+        <object>objects\obj_carrier_pu</object>
+        <object>objects\obj_carrier_or</object>
+        <object>objects\obj_carrier_gr</object>
+        <object>objects\obj_carrier_br</object>
+        <object>objects\obj_carrier_bk</object>
+      </objects>
+      <objects name="obj_carrierdrone">
+        <object>objects\obj_carrierdrone</object>
+        <object>objects\obj_carrierdrone_cy</object>
+        <object>objects\obj_carrierdrone_ma</object>
+        <object>objects\obj_carrierdrone_ye</object>
+        <object>objects\obj_carrierdrone_pu</object>
+        <object>objects\obj_carrierdrone_or</object>
+        <object>objects\obj_carrierdrone_gr</object>
+        <object>objects\obj_carrierdrone_br</object>
+        <object>objects\obj_carrierdrone_bk</object>
       </objects>
     </objects>
     <object>objects\obj_dummy</object>
