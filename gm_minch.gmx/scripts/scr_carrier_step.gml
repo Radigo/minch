@@ -1,5 +1,3 @@
-scr_ai_step();
-
 if (!self.isActive && (distance_to_object(obj_minch) < 96))
 {
     self.isActive = true;
@@ -58,6 +56,8 @@ else
 }
 
 // Shoot
+show_debug_message(string(self.dronesLeft) + ", " + string(self.patternTicker) + ", " + string(self.ticker));
+
 if (self.dronesLeft > 0)
 {
     // Spawning drones
@@ -100,9 +100,28 @@ else if (self.dronesLeft == 0)
             drone.status = "kamikazeFormation";
         }
         self.dronesLeft--;
+        self.patternTicker = 0;
     }
 }
 else
 {
     // Shooting like crazy
+    if (self.patternTicker < 80)
+    {
+        if ((self.patternTicker % 8) == 0)
+        {
+            self.patternUpAngle += 43;
+            self.patternDownAngle -= 43;
+            
+            //scr_pattern_spread(self.x + 24, self.y - 25, self.patternUpAngle, 1.6, 2, 4, 130);
+            scr_pattern_spread(self.x + 39, self.y - 18, self.patternDownAngle, 1.2, 2, 4, 120);
+            
+            //scr_pattern_spread(self.x + 24, self.y + 11, self.patternUpAngle, 1.6, 2, 4, 130);
+            scr_pattern_spread(self.x + 39, self.y + 3, self.patternDownAngle, 1.2, 2, 4, 120);
+        }
+    }
+    else if (self.patternTicker == 160)
+    {
+        self.patternTicker = 0;
+    }
 }
