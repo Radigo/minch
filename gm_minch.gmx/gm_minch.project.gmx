@@ -45,10 +45,12 @@
     <sprite>sprites\spr_dummy</sprite>
     <sprites name="Minch">
       <sprite>sprites\spr_minch</sprite>
-      <sprite>sprites\spr_marker_P</sprite>
-      <sprite>sprites\spr_marker_J</sprite>
-      <sprite>sprites\spr_marker_S</sprite>
-      <sprite>sprites\spr_marker_J_origin</sprite>
+      <sprite>sprites\spr_marker_position</sprite>
+      <sprite>sprites\spr_marker_jump</sprite>
+      <sprite>sprites\spr_marker_focusshot</sprite>
+      <sprite>sprites\spr_marker_jump_origin</sprite>
+      <sprite>sprites\spr_marker_freeshot</sprite>
+      <sprite>sprites\spr_marker_anchorshot</sprite>
       <sprite>sprites\spr_minch_claw</sprite>
       <sprite>sprites\spr_fx_claw</sprite>
       <sprites name="FX">

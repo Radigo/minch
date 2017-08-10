@@ -63,7 +63,7 @@ self.aPressTime = 0;// A button press counter
 self.aReleaseTime = 0;// A button release counter
 
 self.firstShotDelay = 12;// Delay after the first shot fired
-self.shotDelay = 3;// Delay between 2 shots fired
+self.shotDelay = 2;// Delay between 2 shots fired
 self.fixedDelay = 4;// Delay between 2 aimed shots fired
 self.shotTime = 0;// Shot delay counter
 

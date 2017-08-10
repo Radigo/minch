@@ -260,7 +260,7 @@ switch (global.bodyStatus)
         self.bodyAngle = self.mainAngle;
         
         direction = 180 * (-self.bodyAngle) / pi;
-        obj_marker.sprite_index = spr_marker_P;
+        obj_marker.sprite_index = spr_marker_position;
         obj_marker.image_angle = 0;
         
         self.numShots = 0;
@@ -300,7 +300,7 @@ switch (global.bodyStatus)
         }
         
         direction = 180 * (-self.bodyAngle) / pi;
-        obj_marker.sprite_index = spr_marker_S;
+        obj_marker.sprite_index = spr_marker_freeshot;// Free shot
         obj_marker.image_angle = direction;
         
         if (self.shotTime = 0)
@@ -338,14 +338,14 @@ switch (global.bodyStatus)
         self.bodyAngle = arctan2(y_dist, x_dist); 
         
         direction = 180 * (-self.bodyAngle) / pi;
-        obj_marker.sprite_index = spr_marker_S;
+        obj_marker.sprite_index = spr_marker_anchorshot;
         obj_marker.image_angle = 180 * (-self.bodyAngle) / pi;
         
         break;
         
     case global.BODY_FIXED:
         direction = 180 * (-self.bodyAngle) / pi;
-        obj_marker.sprite_index = spr_marker_S;
+        obj_marker.sprite_index = spr_marker_focusshot;// Shot (fixed)
         obj_marker.image_angle = 180 * (-self.bodyAngle) / pi;
         
         if (self.shotTime = 0)
@@ -407,7 +407,7 @@ else if (self.bodyAngle < 0)
 // MOVES (LEGS STATUS)
 if (global.legsStatus = global.LEGS_JUMP)
 {
-    obj_marker.sprite_index = spr_marker_J;
+    obj_marker.sprite_index = spr_marker_jump;
     if (self.jumpTicker < self.jumpDuration)
     {
         // Jump smoke

@@ -72,7 +72,7 @@ switch (global.applicationMode)
     case global.DEMO_MODE:
         global.init_room = rm_lvl_21;
         global.allowConsole = true;
-        global.initLives = 3;
+        global.initLives = 9;
         break;
     case global.RELEASE_MODE:
         global.map_list = ds_map_create();
