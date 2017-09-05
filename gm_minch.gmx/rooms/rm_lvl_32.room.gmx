@@ -278,7 +278,7 @@
     <instance objName="obj_copter_drone_cy" x="1584" y="1968" name="inst_D1586543" locked="0" code="path_start(path_rm32_1, 1, 1, true);&#xA;path_position = 4 / 16;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_copter_drone_cy" x="1584" y="2032" name="inst_5E283FD0" locked="0" code="path_start(path_rm32_1, 1, 1, true);&#xA;path_position = 6 / 16;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_copter_drone_cy" x="1584" y="2096" name="inst_DD052286" locked="0" code="path_start(path_rm32_1, 1, 1, true);&#xA;path_position = 8 / 16;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_event_area" x="576" y="1888" name="inst_E23A2282" locked="0" code="// Enemy ON&#xA;self.action_id = 1;&#xA;" scaleX="11" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_event_area" x="576" y="1888" name="inst_E23A2282" locked="0" code="// Enemy ON&#xA;self.action_id = 1;" scaleX="11" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="736" y="1504" name="inst_3AC5AB4A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_event_area" x="576" y="1856" name="inst_36514212" locked="0" code="// Enemy OFF&#xA;self.action_id = 2;&#xA;" scaleX="11" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_event_area" x="576" y="2656" name="inst_4F2C2858" locked="0" code="// Enemy OFF&#xA;self.action_id = 2;&#xA;" scaleX="11" scaleY="2" colour="4294967295" rotation="0"/>
@@ -337,7 +337,7 @@
     <instance objName="obj_rm32_ch1" x="640" y="328" name="inst_B5C6BA51" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_rm32_julia" x="640" y="384" name="inst_9C957851" locked="0" code="timeline_index = tl_rm32_juliadeath;&#xA;timeline_speed = 1;&#xA;scr_register_dynamic_object(100, global.START_CINEMATIC);&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_event_area" x="608" y="416" name="inst_682B10AA" locked="0" code="self.action_id = 100;&#xA;" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_dummy" x="736" y="1408" name="inst_9255FA7B" locked="0" code="scr_register_dynamic_object(3, global.CAMERA_FOCUS_ENEMY_ON);&#xA;scr_register_dynamic_object(4, global.CAMERA_FOCUS_ENEMY_OFF);&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dummy" x="752" y="1408" name="inst_9255FA7B" locked="0" code="scr_register_dynamic_object(3, global.CAMERA_FOCUS_ENEMY_ON);&#xA;scr_register_dynamic_object(4, global.CAMERA_FOCUS_ENEMY_OFF);" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_area_checkpoint" x="896" y="2400" name="inst_47383FE7" locked="0" code="self.checkpointId = 6;&#xA;" scaleX="1" scaleY="7" colour="4294967295" rotation="0"/>
     <instance objName="obj_checkpoint_6" x="752" y="2496" name="inst_A0653BA9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_area_checkpoint" x="544" y="1664" name="inst_BD6BC706" locked="0" code="self.checkpointId = 7;&#xA;" scaleX="1" scaleY="5" colour="4294967295" rotation="0"/>

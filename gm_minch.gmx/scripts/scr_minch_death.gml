@@ -48,7 +48,7 @@ if ((global.controlStatus == global.ALIVE)
         self.clawTime = 0;
         self.clawDelayTime = 0;
         
-        global.lives--;
+        global.extends--;
         
         // Restore focus
         obj_minch_camera.transitionDuration = obj_minch_camera.transitionOutDuration;

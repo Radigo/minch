@@ -53,6 +53,9 @@ self.jumpStartingPosX = -1;
 self.jumpStartingPosY = -1;
 self.jumpTargetPosX = -1;
 self.jumpTargetPosY = -1;
+//TODO: implement tolerance timer to make jump timing easyier
+self.jumpToleranceTimerDuration = 4;
+self.jumpToleranceTimer = 0;
 
 // Shooting vars
 self.numShots = 0;

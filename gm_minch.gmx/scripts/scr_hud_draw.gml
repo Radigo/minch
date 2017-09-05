@@ -41,7 +41,7 @@ draw_set_halign(fa_left);
 draw_text((view_xview[0] + 4), (view_yview[0] + 4), string(global.levelScore));
 
 // LIVES
-for (i = 0; i < global.lives; i++)
+for (i = 0; i < global.extends; i++)
 {
     draw_sprite(spr_life, 0, (view_xview[0] + 4 + (i * 8)), (view_yview[0] + 24));
 }

@@ -4,9 +4,18 @@ var shot_direction = argument[2];
 var shot_speed = argument[3];
 var shot_type = argument[4];
 
+var shot_object = noone;
+
 if (argument_count > 5)
 {
-    var shot_object = argument[5];
+    shot_object = argument[5];
+}
+
+var rotate_instance = false;
+
+if (argument_count > 6)
+{
+    rotate_instance = argument[6];
 }
 
 global.bulletDepth = -1000;
@@ -72,4 +81,9 @@ switch (shot_type)
 shot.speed = shot_speed;//TODO: multiply by rank
 shot.direction = shot_direction;
 
-return true;
+if (rotate_instance)
+{
+    shot.image_angle = shot_direction;
+}
+
+return shot;

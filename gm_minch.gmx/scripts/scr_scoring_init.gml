@@ -1,7 +1,7 @@
 // Inits score vars
 
 // Values
-global.lives = global.initLives;
+global.extends = global.initLives;
 
 global.levelScore = 0;
 global.levelTime = 0;

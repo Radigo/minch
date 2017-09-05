@@ -17,7 +17,7 @@ self.isColliding = false;
 // GET KEY PRESSED if we can move
 if (global.controlStatus == global.SPAWN)
 {
-    if (global.lives < 0)
+    if (global.extends < 0)
     {
         // Game over
         scr_end_level(false);
@@ -143,92 +143,94 @@ else if (global.minchControlIsActive)
     
     if (keyboard_check(global.key_a) && keyboard_check(global.key_b))
     {
-        switch (global.bodyStatus)
+        //show_debug_message("press: AB");
+        if (self.abReleased
+            && (global.legsStatus != global.LEGS_JUMP))
         {
-            default:
-            case global.BODY_SHOT:
-            case global.BODY_CLAW:
-            case global.BODY_IDLE:
-                if (self.abReleased
-                    && (global.legsStatus != global.LEGS_JUMP))
-                {
-                    obj_marker.x = x + cos(self.bodyAngle) * self.markerDistance;
-                    obj_marker.y = y + sin(self.bodyAngle) * self.markerDistance;
-                    
-                    if (scr_can_jump(x, y, self.bodyAngle))
-                    {
-                        // init start/target positions
-                        self.jumpStartingPosX = x;
-                        self.jumpStartingPosY = y;
-                        self.jumpTargetPosX = obj_marker.x;
-                        self.jumpTargetPosY = obj_marker.y;
-                        global.legsStatus = global.LEGS_JUMP;// << JUMP!
-                        self.abReleased = false;
-                    }
-                }
-                break;
-
-            case global.BODY_FIXED:
-            case global.BODY_AIMEDSHOT:
-            case global.BODY_AIM:
-                global.bodyStatus = global.BODY_AIMEDSHOT;// << AIMED SHOT
-                break;
+            obj_marker.x = x + cos(self.bodyAngle) * self.markerDistance;
+            obj_marker.y = y + sin(self.bodyAngle) * self.markerDistance;
+            
+            if (scr_can_jump(x, y, self.bodyAngle))
+            {
+                // init start/target positions
+                self.jumpStartingPosX = x;
+                self.jumpStartingPosY = y;
+                self.jumpTargetPosX = obj_marker.x;
+                self.jumpTargetPosY = obj_marker.y;
+                global.legsStatus = global.LEGS_JUMP;// << JUMP!
+                self.abReleased = false;
+            }
+        }
+        else if (global.bodyStatus != global.BODY_CLAW)
+        {
+            global.bodyStatus = global.BODY_AIMEDSHOT;// << AIMED SHOT
         }
     }
-    else if (keyboard_check(global.key_a)
-        && (global.bodyStatus != global.BODY_CLAW)
-        && (global.bodyStatus != global.BODY_HOLD))
+    else if (keyboard_check(global.key_a))
     {
-        if (self.numShots > 1)
-        {
-            self.aReleaseTime = self.aReleaseDelay;
-        }
-        else
-        {
-            self.aReleaseTime = self.aFirstReleaseDelay;
-        }
+        //show_debug_message("press: A");
+        self.abReleased = false;
         
-        self.aPressTime++;
-        
-        if (self.aPressTime < self.aPressDelay)
+        if ((global.bodyStatus != global.BODY_CLAW)
+           && (global.bodyStatus != global.BODY_HOLD))
         {
-            global.bodyStatus = global.BODY_SHOT;// << FREE SHOT
-        }
-        else
-        {
-            self.aPressTime = self.aPressDelay;
-            global.bodyStatus = global.BODY_FIXED;// << FIXED SHOT
+            
+            if (self.numShots > 1)
+            {
+                self.aReleaseTime = self.aReleaseDelay;
+            }
+            else
+            {
+                self.aReleaseTime = self.aFirstReleaseDelay;
+            }
+            
+            self.aPressTime++;
+            
+            if (self.aPressTime < self.aPressDelay)
+            {
+                global.bodyStatus = global.BODY_SHOT;// << FREE SHOT
+            }
+            else
+            {
+                self.aPressTime = self.aPressDelay;
+                global.bodyStatus = global.BODY_FIXED;// << FIXED SHOT
+            }
         }
     }
-    else if (keyboard_check(global.key_b)
-            && (self.clawTime = 0)
+    else if (keyboard_check(global.key_b))
+    {
+        //show_debug_message("press: B");
+        self.abReleased = false;
+        
+        if ((self.clawTime = 0)
             && (self.clawDelayTime = 0))
-    {
-        switch (global.bodyStatus)
         {
-            case global.BODY_AIM:
-            case global.BODY_AIMEDSHOT:
-                global.bodyStatus = global.BODY_AIM;// Free aim
-                break;
-            case global.BODY_CLAW:
-            case global.BODY_HOLD:
-                // Nothing
-                break;
-            default:
-                self.aPressTime = 0;
-                self.aReleaseTime = 0;
-                
-                if ((global.legsStatus = global.LEGS_JUMP)// Add timing
-                    && (self.jumpTicker > self.jumpDuration - 3))
-                {
-                    global.bodyStatus = global.BODY_CLAW;// << POWER WAVE CLAW ATTACK
-                    scr_wave_attack(self.x, self.y, 1);
-                }
-                else
-                {
-                    global.bodyStatus = global.BODY_CLAW;// << CLAW ATTACK
-                }
-                break;
+            switch (global.bodyStatus)
+            {
+                case global.BODY_AIM:
+                case global.BODY_AIMEDSHOT:
+                    global.bodyStatus = global.BODY_AIM;// Free aim
+                    break;
+                case global.BODY_CLAW:
+                case global.BODY_HOLD:
+                    // Nothing
+                    break;
+                default:
+                    self.aPressTime = 0;
+                    self.aReleaseTime = 0;
+                    
+                    if ((global.legsStatus = global.LEGS_JUMP)// Add timing
+                        && (self.jumpTicker > self.jumpDuration - 6))
+                    {
+                        global.bodyStatus = global.BODY_CLAW;// << POWER WAVE CLAW ATTACK
+                        scr_wave_attack(self.x, self.y, 1);
+                    }
+                    else
+                    {
+                        global.bodyStatus = global.BODY_CLAW;// << CLAW ATTACK
+                    }
+                    break;
+            }
         }
     }
     else

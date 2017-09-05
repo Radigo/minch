@@ -20,7 +20,7 @@ if (self.isActive)
         // Moves up
         self.direction = 90;
     }
-    else if (self.ticker == 0)
+    else
     {
         self.ticker = 0;
         self.direction = 270;
@@ -31,11 +31,13 @@ if (self.isActive)
         && collision_point(self.x, (self.y - 64), obj_wall, false, false))
     {
         self.speed = 0;
+        self.ticker = 0;
     }
     else if ((self.direction == 270)
         && collision_point(self.x, (self.y + 64), obj_wall, false, false))
     {
         self.speed = 0;
+        self.ticker = 500;
     }
     else
     {
@@ -118,7 +120,14 @@ if (self.isActive)
     // Missiles
     if ((self.patternTicker % 90) == 0)
     {
-        scr_bullet_shot((self.x + 24), (self.y + self.turretY), 0, 2.3, 0, obj_missile_darkred_E);
+        if ((self.turretFacing == "left") && (obj_minch_feets.x < self.x))
+        {
+            scr_bullet_shot((self.x - 24), (self.y + self.turretY), 180, 2.3, 0, obj_missile_darkred_E, true);
+        }
+        else if ((self.turretFacing == "right") && (obj_minch_feets.x > self.x))
+        {
+            scr_bullet_shot((self.x + 24), (self.y + self.turretY), 0, 2.3, 0, obj_missile_darkred_E);
+        }
     }
 }
 else

@@ -55,6 +55,7 @@ OK - Checkpoints in case of death
 OK - Free shot, check rotation speed. Consider firing at each frame when rotating.
 - Tuning on tap rate for free/focus shot (faster)
 - change focus marker design
+- TODO: implement tolerance timer to make jump timing easyier (scr_minch_init)
 
 Level design
 OK - Enemy follow path
