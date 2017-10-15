@@ -441,10 +441,12 @@
         <sprite>sprites\spr_rm32_ch1_2</sprite>
       </sprites>
       <sprite>sprites\spr_big_door</sprite>
+      <sprites name="rm41">
+        <sprite>sprites\spr_mutant_raid</sprite>
+      </sprites>
     </sprites>
   </sprites>
   <backgrounds name="background">
-    <background>background\background0</background>
     <background>background\bg_warehouse</background>
     <background>background\bg_warehouse_overlay</background>
     <background>background\bg_shading</background>
@@ -472,6 +474,7 @@
     <background>background\bg_test_warehouse</background>
     <background>background\bg_orange_concrete</background>
     <background>background\bg_sewers</background>
+    <background>background\bg_nest</background>
   </backgrounds>
   <paths name="paths">
     <path>paths\path_rm11_1</path>
@@ -669,6 +672,9 @@
     <script>scripts\scr_cycle.gml</script>
     <script>scripts\scr_angle_rotate.gml</script>
     <script>scripts\scr_collision_normal.gml</script>
+    <scripts name="Cinematics">
+      <script>scripts\scr_cinematic_mutantraid.gml</script>
+    </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font_small</font>
@@ -992,12 +998,17 @@
       </objects>
       <object>objects\obj_cinematic</object>
       <object>objects\obj_big_door</object>
+      <objects name="rm41">
+        <object>objects\obj_mutant_raid</object>
+        <object>objects\obj_mutantaid_spawner</object>
+      </objects>
     </objects>
     <object>objects\obj_jukebox</object>
   </objects>
   <timelines name="timelines">
     <timelines name="Cinematics">
       <timeline>timelines\tl_rm32_juliadeath</timeline>
+      <timeline>timelines\tl_rm41_mutantraid</timeline>
     </timelines>
     <timeline>timelines\tl_start_level</timeline>
     <timeline>timelines\tl_end_level</timeline>

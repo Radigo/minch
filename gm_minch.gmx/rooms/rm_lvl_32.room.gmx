@@ -335,8 +335,8 @@
     <instance objName="obj_ara_single_fixed_ye" x="272" y="464" name="inst_B22FB007" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_rm32_nuke" x="544" y="352" name="inst_E367E435" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_rm32_ch1" x="640" y="328" name="inst_B5C6BA51" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_rm32_julia" x="640" y="384" name="inst_9C957851" locked="0" code="timeline_index = tl_rm32_juliadeath;&#xA;timeline_speed = 1;&#xA;scr_register_dynamic_object(100, global.START_CINEMATIC);&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_event_area" x="608" y="416" name="inst_682B10AA" locked="0" code="self.action_id = 100;&#xA;" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rm32_julia" x="640" y="384" name="inst_9C957851" locked="0" code="timeline_index = tl_rm32_juliadeath;&#xA;timeline_speed = 1;&#xA;scr_register_dynamic_object(100, global.START_CINEMATIC);" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_event_area" x="608" y="416" name="inst_682B10AA" locked="0" code="self.action_id = 100;" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_dummy" x="752" y="1408" name="inst_9255FA7B" locked="0" code="scr_register_dynamic_object(3, global.CAMERA_FOCUS_ENEMY_ON);&#xA;scr_register_dynamic_object(4, global.CAMERA_FOCUS_ENEMY_OFF);" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_area_checkpoint" x="896" y="2400" name="inst_47383FE7" locked="0" code="self.checkpointId = 6;&#xA;" scaleX="1" scaleY="7" colour="4294967295" rotation="0"/>
     <instance objName="obj_checkpoint_6" x="752" y="2496" name="inst_A0653BA9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
