@@ -507,6 +507,8 @@
     <path>paths\path_rm41_5</path>
     <path>paths\path_rm41_6</path>
     <path>paths\path_rm41_7</path>
+    <path>paths\path_rm41_8</path>
+    <path>paths\path_rm41_9</path>
   </paths>
   <scripts name="scripts">
     <script>scripts\scr_lang_EN.gml</script>
