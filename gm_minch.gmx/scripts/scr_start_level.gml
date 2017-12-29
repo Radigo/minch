@@ -13,6 +13,18 @@ global.lastCheckpoint = 0;
 
 scr_scoring_init();
 
+// Prepare kill counter
+global.ennemyKilled = ds_map_create();
+ds_map_add(global.ennemyKilled, 0, 0);// Colorless enemies (debug)
+ds_map_add(global.ennemyKilled, global.CY, 0);
+ds_map_add(global.ennemyKilled, global.MA, 0);
+ds_map_add(global.ennemyKilled, global.YE, 0);
+ds_map_add(global.ennemyKilled, global.PU, 0);
+ds_map_add(global.ennemyKilled, global.GR, 0);
+ds_map_add(global.ennemyKilled, global.RG, 0);
+ds_map_add(global.ennemyKilled, global.BR, 0);
+ds_map_add(global.ennemyKilled, global.BK, 0);
+
 // Particles
 scr_particles_init();
 

@@ -54,8 +54,11 @@ if (number_of_enemies > 0)
         total_value = total_value * number_of_enemies;
     }
     
-    show_debug_message("=>> mixed color = " + string(mixed_color));
-    show_debug_message("=>> total value = " + string(total_value));
+    //show_debug_message("=>> mixed color = " + string(mixed_color));
+    //show_debug_message("=>> total value = " + string(total_value));
     
+    // Increment enemy kill counter with mixed color
+    ds_map_replace(global.ennemyKilled, mixed_color, ds_map_find_value(global.ennemyKilled, mixed_color) + 1);
+    show_debug_message(ds_map_find_value(global.ennemyKilled, mixed_color));
     scr_scoring_update(total_value, mixed_color);
 }

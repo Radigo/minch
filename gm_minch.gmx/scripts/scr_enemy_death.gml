@@ -6,23 +6,27 @@ var is_mixing_object = argument1;
 
 if (add_score)
 {
-    // Scoring
-    var str = object_get_name(self.id.object_index);
-    // Get the last 2 characters of the object name to set color
-    var str_color = string_char_at(str, (string_length(str) - 1)) + string_char_at(str, (string_length(str) - 0));
-    
     if (is_mixing_object)
     {
-        scr_mixer_update(other, self.value, scr_colors_str_to_int(str_color));
+        scr_mixer_update(other, self.value, self.color);
     }
     else
     {
-        scr_scoring_update(self.value, scr_colors_str_to_int(str_color));
+        scr_scoring_update(self.value, self.color);
     }
 }
 
 // FX
 scr_boom(self.x, self.y, self.explosionLevel, self.explosionSize);
+
+// Update ennemy kill counter
+ds_map_replace(global.ennemyKilled, self.color, ds_map_find_value(global.ennemyKilled, self.color) + 1);
+show_debug_message(ds_map_find_value(global.ennemyKilled, self.color));
+// Call event linked to enemy count mechanic
+with (obj_door)
+{
+    event_user(0);
+}
 
 // Dispose
 with (self) instance_destroy();

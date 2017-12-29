@@ -62,7 +62,7 @@ switch (key)
     case "rm_lvl_23_name":
         return "Generator";
     case "rm_lvl_31_name":
-        return "Exit";
+        return "Tower";
     case "rm_lvl_32_name":
         return "Rooftops";
     case "rm_lvl_33_name":
@@ -72,7 +72,7 @@ switch (key)
     case "rm_lvl_42_name":
         return "Ancestors";
     case "rm_lvl_43_name":
-        return "Tower";
+        return "Leader";
     case "rm_lvl_51_name":
         return "Humans";
 }

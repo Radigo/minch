@@ -16,7 +16,11 @@ self.isActive = false;// Moves and fires when active only
 self.switchTriggered = false;// Turn true when enemy is activated by something (switch)
 
 // Scoring
-self.color = 0;
+var str = object_get_name(self.id.object_index);
+// Get the last 2 characters of the object name to set color
+var str_color = string_char_at(str, (string_length(str) - 1)) + string_char_at(str, (string_length(str) - 0));
+    
+self.color = scr_colors_str_to_int(str_color);
 self.value = 100;
 
 // Swag

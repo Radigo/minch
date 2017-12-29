@@ -10,7 +10,7 @@ if (argument0 == global.DOOR_CLOSE)
 {
     // By default, all dynamically closed doors are Cyan.
     // TODO: keep track of door color.
-    new_door_object_name = string_copy(door_object_name, 1, 12) + "_cy";
+    new_door_object_name = string_copy(door_object_name, 1, 12) + "_" + scr_colors_int_to_str(self.color);
 }
 else
 {

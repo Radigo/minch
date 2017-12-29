@@ -25,6 +25,7 @@ if (global.comboColor > 0)
     global.comboColorTimer = global.comboColorDuration;
 }
 
+// Save score
 global.levelScore += enemy_value * global.comboValue;
 
 //show_debug_message("Added " + string(enemy_value) + " points to score: " + string(global.levelScore) + ", with color: " + string(enemy_color));

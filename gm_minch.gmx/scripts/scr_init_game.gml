@@ -12,6 +12,7 @@ global.wscale = 2;
 // Fonts
 global.comboFont = font_add_sprite_ext(spr_combofont, "0123456789", false, 1);
 global.scoreFont = font_add_sprite_ext(spr_scorefont, "0123456789", false, 1);
+global.doorsFont = font_add_sprite_ext(spr_doorsfont, "0123456789", false, 1);
 
 // Scoring Mechanics
 global.CY = 1;
@@ -20,7 +21,7 @@ global.YE = 4;
 
 global.PU = 3;
 global.GR = 5;
-global.RG = 6;// Can't be "or" because it's reserved)
+global.RG = 6;// (Can't be "OR" for orange because it's reserved)
 
 global.BR = 7;
 
@@ -44,6 +45,7 @@ global.DOOR_CLOSE = "doorClose";// Closes an opened door
 global.CREATE_PLATFORM = "createPlatform";// Replaces targeted dynamic obect with platform
 global.CHANGE_STATUS_ACTIVE = "changeStatusActive";// Changes status for active
 global.CHANGE_STATUS_INACTIVE = "changeStatusInactive";// Changes status for inactive
+global.TELEPORT_PLAYER_TO = "teleportPlayerTo";// Send MinCH to destination
 
 // Game engine
 global.STORY_MODE = "storyMode";// Continuous play through all levels
@@ -58,7 +60,7 @@ global.DEBUG_MODE = "debugMode";// Using during development
 global.DEMO_MODE = "demoMode";// Used for pre-release and demos
 global.RELEASE_MODE = "releaseMode";// Used for real!
 
-global.applicationMode = global.DEBUG_MODE;
+global.applicationMode = global.DEMO_MODE;
 
 switch (global.applicationMode)
 {
@@ -70,7 +72,7 @@ switch (global.applicationMode)
         global.initLives = 3;
         break;
     case global.DEMO_MODE:
-        global.init_room = rm_lvl_21;
+        global.init_room = rm_lvl_31;
         global.allowConsole = true;
         global.initLives = 9;
         break;

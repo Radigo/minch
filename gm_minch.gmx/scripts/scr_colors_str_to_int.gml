@@ -5,19 +5,21 @@ var str_in = argument0;
 switch (str_in)
 {
     case "cy":
-        return 1;
+        return global.CY;
     case "ma":
-        return 2;
+        return global.MA;
     case "ye":
-        return 4;
+        return global.YE;
     case "pu":
-        return 3;
+        return global.PU;
     case "gr":
-        return 5;
+        return global.GR;
     case "or":
-        return 6;
+        return global.RG;
     case "br":
-        return 7;
+        return global.BR;
+    case "bk":
+        return global.BK;
     default:
         return 0;
 }

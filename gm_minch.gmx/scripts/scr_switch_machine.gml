@@ -74,6 +74,12 @@ if (ds_map_exists(global.actions_map, action_id))
                     with (dynamic_object) self.status = "inactive";
                     break;
                     
+                case global.TELEPORT_PLAYER_TO:
+                     //show_debug_message("teleport to: " + string(dynamic_object.x) + ":" + string(dynamic_object.y) + "@ " + string(obj_minch.mainAngle));
+                     obj_minch.x = dynamic_object.x + (cos(obj_minch.mainAngle) * 2);
+                     obj_minch.y = dynamic_object.y + (sin(obj_minch.mainAngle) * 2);
+                     break;
+                 
                 default:
                     dynamic_object.image_index = 1;
                     break;

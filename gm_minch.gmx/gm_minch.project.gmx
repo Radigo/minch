@@ -128,6 +128,7 @@
     </sprites>
     <sprites name="LD">
       <sprite>sprites\spr_wall</sprite>
+      <sprite>sprites\spr_wallhalf</sprite>
       <sprite>sprites\spr_area</sprite>
       <sprite>sprites\spr_door1_1v</sprite>
       <sprite>sprites\spr_door_v_green</sprite>
@@ -240,6 +241,14 @@
       <sprite>sprites\spr_reval_dark</sprite>
       <sprite>sprites\sewermaindoor_l</sprite>
       <sprite>sprites\sewermaindoor_r</sprite>
+      <sprite>sprites\sprt_tower_dimmer</sprite>
+      <sprite>sprites\spr_marker</sprite>
+      <sprites name="Box">
+        <sprite>sprites\spr_box_cy</sprite>
+        <sprite>sprites\spr_box_ma</sprite>
+        <sprite>sprites\spr_box_pu</sprite>
+        <sprite>sprites\spr_box_small</sprite>
+      </sprites>
     </sprites>
     <sprites name="Baddies">
       <sprite>sprites\spr_drone_test</sprite>
@@ -403,6 +412,7 @@
       <sprite>sprites\spr_title</sprite>
       <sprite>sprites\spr_combofont</sprite>
       <sprite>sprites\spr_scorefont</sprite>
+      <sprite>sprites\spr_doorsfont</sprite>
       <sprite>sprites\spr_combobar_frame</sprite>
       <sprite>sprites\spr_combohalo</sprite>
       <sprite>sprites\spr_comboframe</sprite>
@@ -475,6 +485,9 @@
     <background>background\bg_orange_concrete</background>
     <background>background\bg_sewers</background>
     <background>background\bg_nest</background>
+    <background>background\bg_towerfull</background>
+    <background>background\bg_tower</background>
+    <background>background\bg_props</background>
   </backgrounds>
   <paths name="paths">
     <path>paths\path_rm11_1</path>
@@ -500,6 +513,9 @@
     <path>paths\path_rm22_13</path>
     <path>paths\path_rm22_14</path>
     <path>paths\path_rm22_15</path>
+    <path>paths\path_rm31_1</path>
+    <path>paths\path_rm31_2</path>
+    <path>paths\path_rm31_3</path>
     <path>paths\path_rm41_1</path>
     <path>paths\path_rm41_2</path>
     <path>paths\path_rm41_3</path>
@@ -641,11 +657,15 @@
       <script>scripts\scr_reveal_dark_step.gml</script>
       <script>scripts\scr_reveal_neighbor.gml</script>
       <script>scripts\scr_slidingdoor_step.gml</script>
+      <script>scripts\scr_door_init.gml</script>
+      <script>scripts\scr_doordraw.gml</script>
+      <script>scripts\scr_door_enemy_update.gml</script>
     </scripts>
     <scripts name="Mechanics">
       <script>scripts\scr_scoring_init.gml</script>
       <script>scripts\scr_scoring_update.gml</script>
       <script>scripts\scr_colors_str_to_int.gml</script>
+      <script>scripts\scr_colors_int_to_str.gml</script>
       <script>scripts\scr_scoring_step.gml</script>
       <script>scripts\scr_mixer_init.gml</script>
       <script>scripts\scr_mixer_update.gml</script>
@@ -678,12 +698,16 @@
       <script>scripts\scr_cinematic_mutantraid.gml</script>
     </scripts>
   </scripts>
+  <shaders name="shaders">
+    <shader type="GLSLES">shaders\shader0.shader</shader>
+  </shaders>
   <fonts name="fonts">
     <font>fonts\font_small</font>
     <font>fonts\font_large</font>
     <font>fonts\font_wide</font>
     <font>fonts\font3</font>
     <font>fonts\font4</font>
+    <font>fonts\font5</font>
   </fonts>
   <objects name="objects">
     <objects name="UI">
@@ -974,6 +998,15 @@
       <object>objects\obj_secret_orange_wall</object>
       <object>objects\obj_reveal_dark</object>
       <object>objects\obj_reveal_dark_anim</object>
+      <object>objects\obj_tower_dimmer</object>
+      <object>objects\obj_ldmarker</object>
+      <objects name="Box">
+        <object>objects\obj_box</object>
+        <object>objects\obj_box_cy</object>
+        <object>objects\obj_box_ma</object>
+        <object>objects\obj_box_pu</object>
+        <object>objects\obj_box_small</object>
+      </objects>
     </objects>
     <objects name="Bullets">
       <object>objects\obj_bullet_01</object>
