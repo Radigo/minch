@@ -60,7 +60,7 @@ global.DEBUG_MODE = "debugMode";// Using during development
 global.DEMO_MODE = "demoMode";// Used for pre-release and demos
 global.RELEASE_MODE = "releaseMode";// Used for real!
 
-global.applicationMode = global.DEMO_MODE;
+global.applicationMode = global.DEBUG_MODE;
 
 switch (global.applicationMode)
 {

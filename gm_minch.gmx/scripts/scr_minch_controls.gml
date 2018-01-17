@@ -48,6 +48,22 @@ if (global.controlStatus == global.SPAWN)
     
     self.controlTime--;
 }
+else if (global.controlStatus == global.TELEPORT)
+{
+    // No possible move
+    if (self.controlTime == 0)
+    {
+        global.controlStatus = global.ALIVE;
+        exit;
+    }
+    else if (self.controlTime < global.teleportDuration / 2)
+    {
+        self.x = self.teleportTargetX;
+        self.y = self.teleportTargetY;
+    }
+    
+    self.controlTime--;
+}
 else if (global.controlStatus == global.DEATH)
 {
     self.image_alpha = self.controlTime / self.deathDuration;
@@ -57,7 +73,7 @@ else if (global.controlStatus == global.DEATH)
     
     if (self.controlTime == 0)
     {
-        self.controlTime = self.deathDuration;
+        self.controlTime = self.spawnDuration;
         global.controlStatus = global.SPAWN;
         exit;
     }
@@ -77,7 +93,7 @@ else if (global.controlStatus == global.FALL)
     
     if (self.controlTime == 0)
     {
-        self.controlTime = self.deathDuration;
+        self.controlTime = self.spawnDuration;
         global.controlStatus = global.SPAWN;
         exit;
     }

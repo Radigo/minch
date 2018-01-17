@@ -2,6 +2,7 @@
 
 var total_value = 0;
 var mixed_color = 0;
+var isMixDifferentFromEntry = false;
 
 var mixed_colors_list = ds_list_create();
 
@@ -46,6 +47,14 @@ if (number_of_enemies > 0)
             ds_list_add(mixed_colors_list, entry_color);
             mixed_color += entry_color;
         }
+        
+        if ((isMixDifferentFromEntry == false)
+           && ((number_of_enemies - ds_stack_size(self.mixEntries)) > 1)
+           && (entry_color != mixed_color))
+        {
+            // We mixed more than 1 entry
+            isMixDifferentFromEntry = true;
+        }
     }
     
     if (mixed_color < global.BK)
@@ -57,8 +66,17 @@ if (number_of_enemies > 0)
     //show_debug_message("=>> mixed color = " + string(mixed_color));
     //show_debug_message("=>> total value = " + string(total_value));
     
-    // Increment enemy kill counter with mixed color
-    ds_map_replace(global.ennemyKilled, mixed_color, ds_map_find_value(global.ennemyKilled, mixed_color) + 1);
-    show_debug_message(ds_map_find_value(global.ennemyKilled, mixed_color));
-    scr_scoring_update(total_value, mixed_color);
+    // Increment enemy kill counter with mixed color if different fromany entry color
+    if (isMixDifferentFromEntry)
+    {
+        ds_map_replace(global.ennemyKilled, mixed_color, ds_map_find_value(global.ennemyKilled, mixed_color) + 1);
+        show_debug_message("scr_mixer_flush color" + string(ds_map_find_value(global.ennemyKilled, mixed_color)));
+        scr_scoring_update(total_value, mixed_color);
+        
+        // Call event linked to enemy count mechanic
+        with (obj_door)
+        {
+            event_user(0);
+        }
+    }
 }

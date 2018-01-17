@@ -398,6 +398,16 @@
         <sprite>sprites\spr_carrierdrone_br</sprite>
         <sprite>sprites\spr_carrierdrone_bk</sprite>
       </sprites>
+      <sprites name="turret">
+        <sprite>sprites\spr_turret_cy</sprite>
+        <sprite>sprites\spr_turret_ma</sprite>
+        <sprite>sprites\spr_turret_ye</sprite>
+        <sprite>sprites\spr_turret_pu</sprite>
+        <sprite>sprites\spr_turret_gr</sprite>
+        <sprite>sprites\spr_turret_or</sprite>
+        <sprite>sprites\spr_turret_br</sprite>
+        <sprite>sprites\spr_turret_bk</sprite>
+      </sprites>
     </sprites>
     <sprites name="Bullets">
       <sprite>sprites\spr_bullet_01</sprite>
@@ -516,6 +526,11 @@
     <path>paths\path_rm31_1</path>
     <path>paths\path_rm31_2</path>
     <path>paths\path_rm31_3</path>
+    <path>paths\path_rm31_4</path>
+    <path>paths\path_rm31_5</path>
+    <path>paths\path_rm31_6</path>
+    <path>paths\path_rm31_7</path>
+    <path>paths\path_rm31_8</path>
     <path>paths\path_rm41_1</path>
     <path>paths\path_rm41_2</path>
     <path>paths\path_rm41_3</path>
@@ -549,6 +564,7 @@
       <script>scripts\scr_level_intro_draw.gml</script>
       <script>scripts\scr_level_report_init.gml</script>
       <script>scripts\scr_level_report_draw.gml</script>
+      <script>scripts\scr_teleportfader_draw.gml</script>
     </scripts>
     <scripts name="Minch">
       <script>scripts\scr_minch_init.gml</script>
@@ -633,6 +649,10 @@
         <script>scripts\scr_carrier_step.gml</script>
         <script>scripts\scr_carrierdrone_init.gml</script>
         <script>scripts\scr_carrierdrone_step.gml</script>
+        <script>scripts\scr_turret_init.gml</script>
+        <script>scripts\scr_turret_step.gml</script>
+        <script>scripts\scr_turret_step_free.gml</script>
+        <script>scripts\scr_turret_step_fixed.gml</script>
       </scripts>
       <script>scripts\scr_aim_at_minch.gml</script>
       <scripts name="patterns">
@@ -717,6 +737,7 @@
       <object>objects\obj_hud</object>
       <object>objects\obj_level_intro</object>
       <object>objects\obj_level_report</object>
+      <object>objects\obj_teleportfader</object>
     </objects>
     <objects name="Minch">
       <object>objects\obj_minch</object>
@@ -881,6 +902,17 @@
         <object>objects\obj_carrierdrone_gr</object>
         <object>objects\obj_carrierdrone_br</object>
         <object>objects\obj_carrierdrone_bk</object>
+      </objects>
+      <objects name="obj_turret">
+        <object>objects\obj_turret</object>
+        <object>objects\obj_turret_cy</object>
+        <object>objects\obj_turret_ma</object>
+        <object>objects\obj_turret_ye</object>
+        <object>objects\obj_turret_pu</object>
+        <object>objects\obj_turret_gr</object>
+        <object>objects\obj_turret_or</object>
+        <object>objects\obj_turret_br</object>
+        <object>objects\obj_turret_bk</object>
       </objects>
     </objects>
     <object>objects\obj_dummy</object>

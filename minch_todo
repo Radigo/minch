@@ -68,8 +68,8 @@ OK - Ennemy shot only when next to viewport
 OK - Ennemy sleep/wake up
 OK - Events
 OK - Switch doors
-- Ennemy count doors
-- LD elements with combo colors
+Ongoing - Ennemy count doors > combo count bug
+OK - LD elements with combo colors
 - Pattern traps (timed harmless/killing zones)
 - Triggered traps (conditional killing zones)
 - moving plateforms

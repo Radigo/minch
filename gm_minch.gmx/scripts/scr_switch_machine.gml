@@ -76,8 +76,18 @@ if (ds_map_exists(global.actions_map, action_id))
                     
                 case global.TELEPORT_PLAYER_TO:
                      //show_debug_message("teleport to: " + string(dynamic_object.x) + ":" + string(dynamic_object.y) + "@ " + string(obj_minch.mainAngle));
-                     obj_minch.x = dynamic_object.x + (cos(obj_minch.mainAngle) * 2);
-                     obj_minch.y = dynamic_object.y + (sin(obj_minch.mainAngle) * 2);
+                     
+                     with (obj_minch)
+                     {
+                         self.teleportTargetX = dynamic_object.x + (cos(self.mainAngle) * 2);
+                         self.teleportTargetY = dynamic_object.y + (sin(self.mainAngle) * 2);
+                         self.controlTime = global.teleportDuration;
+                         global.controlStatus = global.TELEPORT;
+                     }
+                     
+                     fader = instance_create(obj_minch.x, obj_minch.y, obj_teleportfader);
+                     fader.duration = global.teleportDuration;
+                     
                      break;
                  
                 default:

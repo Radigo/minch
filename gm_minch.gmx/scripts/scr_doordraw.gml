@@ -7,7 +7,7 @@ var remainingEnemies = enemyCount - ds_map_find_value(global.ennemyKilled, self.
 if (remainingEnemies <= 0)
    return false;
 
-//show_debug_message(name + " needs " + string(enemyCount) + " of " + self.color);
+// show_debug_message(name + " needs " + string(remainingEnemies) + " / " + string(enemyCount) + " of " + string(self.color));
 
 // Display door ennemy count on door draw
 draw_set_font(global.doorsFont);

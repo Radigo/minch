@@ -53,7 +53,7 @@
   <instances>
     <instance objName="obj_box_cy" x="2560" y="592" name="inst_A8DA00D6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_box_cy" x="2352" y="704" name="inst_6274887A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_start_point" x="1312" y="1648" name="inst_0488A208" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_start_point" x="1312" y="1632" name="inst_0488A208" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="384" y="1536" name="inst_9E57641C" locked="0" code="" scaleX="2" scaleY="3" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="416" y="1632" name="inst_C464B8ED" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="384" y="1664" name="inst_27EE161B" locked="0" code="" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
@@ -197,7 +197,7 @@
     <instance objName="obj_wall" x="1344" y="992" name="inst_6CF267D3" locked="0" code="" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="1344" y="928" name="inst_ABCD6EC4" locked="0" code="" scaleX="1" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="obj_event_area_multiuse" x="1648" y="320" name="inst_B19E3B32" locked="0" code="self.action_id = 17;&#xA;" scaleX="0.5" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_checkpoint_1" x="352" y="1648" name="inst_886CED91" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_checkpoint_1" x="352" y="1696" name="inst_886CED91" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_checkpoint_2" x="864" y="992" name="inst_F030B313" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_checkpoint_3" x="256" y="288" name="inst_DD397138" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_checkpoint_4" x="2272" y="1888" name="inst_B2C44C6E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -219,28 +219,27 @@
     <instance objName="obj_copter_drone_ma" x="2096" y="1648" name="inst_5C318E7C" locked="0" code="path_start(path_rm31_3, 1, 1, true);&#xA;path_position = 5 / 8;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_copter_drone_ma" x="2128" y="1648" name="inst_9F3E7E08" locked="0" code="path_start(path_rm31_3, 1, 1, true);&#xA;path_position = 6 / 8;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_copter_drone_ma" x="2160" y="1648" name="inst_2C93EE31" locked="0" code="path_start(path_rm31_3, 1, 1, true);&#xA;path_position = 7 / 8;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_copter_drone_ma" x="1968" y="1648" name="inst_20FF971B" locked="0" code="path_start(path_rm31_3, 1, 1, true);&#xA;path_position = 1 / 8;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_copter_drone_ma" x="1968" y="1648" name="inst_20FF971B" locked="0" code="path_start(path_rm31_3, 1, 1, true);&#xA;path_position = 1 / 8;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_copter_drone_ma" x="2032" y="1648" name="inst_F1A8B225" locked="0" code="path_start(path_rm31_3, 1, 1, true);&#xA;path_position = 3 / 8;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_copter_drone_ma" x="2000" y="1648" name="inst_6BDE1210" locked="0" code="path_start(path_rm31_3, 1, 1, true);&#xA;path_position = 2 / 8;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="2400" y="1088" name="inst_D4CA4045" locked="0" code="" scaleX="1" scaleY="3" colour="4294967295" rotation="0"/>
     <instance objName="obj_door_h_1_pu" x="2432" y="1088" name="inst_81B18DCA" locked="0" code="enemyCount = 1;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="2400" y="1216" name="inst_E3F5A5B1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_door_v_1_cy" x="2400" y="1184" name="inst_CF6EB751" locked="0" code="enemyCount = 22;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_copter_drone_cy" x="2256" y="1104" name="inst_B3A683CF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_copter_drone_cy" x="2384" y="1104" name="inst_3B1C0995" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_copter_drone_cy" x="2256" y="1328" name="inst_66439236" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_copter_drone_cy" x="2320" y="1200" name="inst_DCC109B6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_copter_drone_cy" x="2384" y="1328" name="inst_19EEF902" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_copter_drone_cy" x="2256" y="1104" name="inst_B3A683CF" locked="0" code="path_start(path_rm31_4, 1, 1, true);&#xA;path_position = 1 / 4;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_copter_drone_cy" x="2384" y="1104" name="inst_3B1C0995" locked="0" code="path_start(path_rm31_4, 1, 1, true);&#xA;path_position = 2 / 4;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_copter_drone_cy" x="2256" y="1232" name="inst_66439236" locked="0" code="path_start(path_rm31_4, 1, 1, true);&#xA;path_position = 4 / 4;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_copter_drone_cy" x="2384" y="1232" name="inst_19EEF902" locked="0" code="path_start(path_rm31_4, 1, 1, true);&#xA;path_position = 3 / 4;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_sentinel_pu" x="2512" y="656" name="inst_3BA35A9B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_copter_drone_cy" x="1680" y="1040" name="inst_42B283CD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_copter_drone_cy" x="1520" y="1040" name="inst_4FB7D48D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_copter_drone_ma" x="1712" y="1040" name="inst_C3ED88F8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_copter_drone_ma" x="1488" y="1040" name="inst_C19A76A9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_copter_drone_cy" x="1680" y="1040" name="inst_42B283CD" locked="0" code="path_start(path_rm31_7, 1, 1, true);&#xA;path_position = 2 / 2;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_copter_drone_cy" x="1520" y="1040" name="inst_4FB7D48D" locked="0" code="path_start(path_rm31_6, 1, 1, true);&#xA;path_position = 2 / 2;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_copter_drone_ma" x="1712" y="1040" name="inst_C3ED88F8" locked="0" code="path_start(path_rm31_8, 1, 1, true);&#xA;path_position = 2 / 2;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_copter_drone_ma" x="1488" y="1040" name="inst_C19A76A9" locked="0" code="path_start(path_rm31_5, 1, 1, true);&#xA;path_position = 2 / 2;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_door_v_1_pu" x="1632" y="928" name="inst_2DED6149" locked="0" code="enemyCount = 6;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_copter_drone_cy" x="1488" y="848" name="inst_0FDDFB8B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_copter_drone_ma" x="1520" y="848" name="inst_D402B4B1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_copter_drone_cy" x="1680" y="848" name="inst_94C887C3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_copter_drone_ma" x="1712" y="848" name="inst_A09F4A15" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_copter_drone_cy" x="1488" y="848" name="inst_0FDDFB8B" locked="0" code="path_start(path_rm31_5, 1, 1, true);&#xA;path_position = 1 / 2;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_copter_drone_ma" x="1520" y="848" name="inst_D402B4B1" locked="0" code="path_start(path_rm31_6, 1, 1, true);&#xA;path_position = 1 / 2;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_copter_drone_cy" x="1680" y="848" name="inst_94C887C3" locked="0" code="path_start(path_rm31_7, 1, 1, true);&#xA;path_position = 1 / 2;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_copter_drone_ma" x="1712" y="848" name="inst_A09F4A15" locked="0" code="path_start(path_rm31_8, 1, 1, true);&#xA;path_position = 1 / 2;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="2592" y="1312" name="inst_95F7CA9A" locked="0" code="" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_player_wall" x="928" y="1728" name="inst_D545B142" locked="0" code="" scaleX="1" scaleY="4" colour="4294967295" rotation="0"/>
     <instance objName="obj_tower_dimmer" x="1344" y="1120" name="inst_BD337565" locked="0" code="" scaleX="13" scaleY="3" colour="4294967295" rotation="0"/>
@@ -310,6 +309,10 @@
     <instance objName="obj_ara_dual_fixed_cy" x="336" y="464" name="inst_E8A714B5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ara_single_fixed_ma" x="1888" y="1888" name="inst_42214637" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_copter_drone_ma" x="2192" y="1648" name="inst_C3DF66C5" locked="0" code="path_start(path_rm31_3, 1, 1, true);&#xA;path_position = 8 / 8;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_turret_ma" x="2112" y="1728" name="inst_4FCE1AD0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_turret_cy" x="2320" y="1168" name="inst_F2926E62" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall" x="1984" y="1728" name="inst_15B14A71" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_player_wall" x="1984" y="1760" name="inst_1026DEC9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="bg_warehouse" x="800" y="1216" w="32" h="32" xo="128" yo="0" id="10050001" name="inst_DE77D5F6" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -4206,6 +4209,8 @@
     <tile bgName="bg_tower" x="1504" y="320" w="32" h="32" xo="128" yo="448" id="10060876" name="inst_4AC40493" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bg_tower" x="1504" y="352" w="32" h="32" xo="128" yo="480" id="10060877" name="inst_5FE7BA8C" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bg_tower" x="1504" y="288" w="32" h="32" xo="160" yo="448" id="10060878" name="inst_C550F5DF" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bg_props" x="1984" y="1696" w="32" h="64" xo="0" yo="128" id="10060879" name="inst_F6B5B146" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bg_props" x="1984" y="1760" w="32" h="32" xo="192" yo="96" id="10060880" name="inst_CD945B08" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bg_roof_shadows" x="1376" y="1472" w="32" h="32" xo="160" yo="96" id="10060626" name="inst_D88DF600" depth="-10000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bg_roof_shadows" x="1376" y="1504" w="32" h="32" xo="160" yo="128" id="10060627" name="inst_F097755A" depth="-10000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bg_roof_shadows" x="1376" y="1536" w="32" h="32" xo="160" yo="160" id="10060628" name="inst_D54024F7" depth="-10000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

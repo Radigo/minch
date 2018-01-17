@@ -13,6 +13,7 @@ global.ALIVE = "alive";
 global.DEATH = "death";
 global.FALL = "fall";
 global.SPAWN = "spawn";
+global.TELEPORT = "teleport";
 
 global.LEGS_IDLE = "idle";
 global.LEGS_WALK = "walk";
@@ -37,6 +38,7 @@ self.initY = y;
 self.controlTime = 0;
 self.spawnDuration = 40;// Duration of the spawn process
 self.deathDuration = 60;// Duration of the death sequence
+global.teleportDuration = 30;// Duration of the teleport process (20)
 
 self.jumpDuration = 20;// Duration of jump in frames
 self.jumpTicker = 0;// Jump duration counter
@@ -75,6 +77,10 @@ self.clawDuration = 8;// The duration of the claw attack
 self.clawDelay = 12;// The delay between 2 claw attacks
 self.clawTime = 0;// The current timing of the claw attack
 self.clawDelayTime = 0;// The current delay
+
+// Teleport vars
+self.teleportTargetX = 0;
+self.teleportTargetY = 0;
 
 // FX vars
 self.shotFX = instance_create(0, 0, obj_shot_fx);

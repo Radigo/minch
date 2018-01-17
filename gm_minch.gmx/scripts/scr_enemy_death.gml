@@ -21,7 +21,7 @@ scr_boom(self.x, self.y, self.explosionLevel, self.explosionSize);
 
 // Update ennemy kill counter
 ds_map_replace(global.ennemyKilled, self.color, ds_map_find_value(global.ennemyKilled, self.color) + 1);
-show_debug_message(ds_map_find_value(global.ennemyKilled, self.color));
+show_debug_message("scr_enemy_death " + string(ds_map_find_value(global.ennemyKilled, self.color)) + " of color:" + string(self.color));
 // Call event linked to enemy count mechanic
 with (obj_door)
 {
