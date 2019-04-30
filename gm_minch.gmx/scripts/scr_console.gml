@@ -7,7 +7,7 @@ switch (argument0)
 {
     case "help":
     case "?":
-        show_message("Console commands: map [ID], stats [on-off], exit, fs, wscale [1-10], iddad, idclip, checkpoint (cp) [1-9], kill (k)");
+        show_message("Console commands: map [ID], stats [on-off], exit, end (e), fs, wscale [1-10], iddad, idclip, checkpoint (cp) [1-9], kill (k)");
         break;
     case "map":
         if (argument1 != "")

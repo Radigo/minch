@@ -1,3 +1,7 @@
+if (enemyCount == 0) {
+   return true;
+}
+
 var remainingEnemies = enemyCount - ds_map_find_value(global.ennemyKilled, self.color);
 
 show_debug_message("scr_door_enemy_update " + object_get_name(self.object_index) + ", remainingEnemies:" + string(remainingEnemies));

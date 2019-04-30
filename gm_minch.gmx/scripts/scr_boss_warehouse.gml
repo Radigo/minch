@@ -99,7 +99,7 @@ else
 }
 
 // Collision
-//If funnel doesn't gve nice result hange limit so focus can reach borders when switching to head pattern
+//If funnel doesn't gve nice result, change limit so focus can reach borders when switching to head pattern
 if ((self.moveDirection > 0) && (collision_point((x + 78), y, obj_wall, false, true)))// Hit right
 {
     x -= self.moveSpeed;

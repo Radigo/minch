@@ -7,6 +7,8 @@ if (!scr_is_room_level(room_str))
     room_str = room_arg;
 }
 
+//show_debug_message("room8str: " + room_str);
+
 var world_id = string_char_at(room_str, string_length(room_str) - 1);
 var level_id = string_char_at(room_str, string_length(room_str));
 

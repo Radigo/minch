@@ -408,6 +408,12 @@
         <sprite>sprites\spr_turret_br</sprite>
         <sprite>sprites\spr_turret_bk</sprite>
       </sprites>
+      <sprites name="napalm">
+        <sprite>sprites\spr_napalm</sprite>
+        <sprite>sprites\spr_katana_h</sprite>
+        <sprite>sprites\spr_napalm_rush</sprite>
+        <sprite>sprites\spr_napalm_slash_a</sprite>
+      </sprites>
     </sprites>
     <sprites name="Bullets">
       <sprite>sprites\spr_bullet_01</sprite>
@@ -445,6 +451,7 @@
       <sprite>sprites\spr_shot_hit_sparkles</sprite>
       <sprite>sprites\spr_bigbulleparticles</sprite>
       <sprite>sprites\spr_arc</sprite>
+      <sprite>sprites\spr_slash_r</sprite>
     </sprites>
     <sprites name="Cinematics">
       <sprites name="rm32">
@@ -623,6 +630,12 @@
           <script>scripts\scr_raflesia_shot.gml</script>
           <script>scripts\scr_front_round_cross_shot.gml</script>
           <script>scripts\scr_head_shot.gml</script>
+        </scripts>
+        <scripts name="BossNapalm">
+          <script>scripts\scr_boss_napalm_step.gml</script>
+          <script>scripts\scr_napalm_init.gml</script>
+          <script>scripts\scr_fly_katana_shield_step.gml</script>
+          <script>scripts\scr_katana_counter.gml</script>
         </scripts>
         <script>scripts\scr_ai_simpledrone.gml</script>
         <script>scripts\scr_ai_ara_single_fixed.gml</script>
@@ -824,6 +837,11 @@
         <object>objects\obj_boss_warehouse_head</object>
         <object>objects\obj_boss_warehouse_shield</object>
         <object>objects\obj_boss_warehouse_neck</object>
+        <objects name="napalm">
+          <object>objects\obj_napalm</object>
+          <object>objects\obj_katana</object>
+          <object>objects\obj_slash_r</object>
+        </objects>
       </objects>
       <objects name="obj_canon">
         <object>objects\obj_canon</object>

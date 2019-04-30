@@ -160,7 +160,7 @@
     <instance objName="obj_door_h_1_ma" x="2208" y="1824" name="inst_8DF46D05" locked="0" code="enemyCount = 12;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="2240" y="1824" name="inst_5E2FEE44" locked="0" code="" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_event_area_multiuse" x="416" y="928" name="inst_5363E16E" locked="0" code="self.action_id = 11;" scaleX="0.5" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_event_area_multiuse" x="400" y="1632" name="inst_C5D45D72" locked="0" code="self.action_id = 1;&#xA;" scaleX="0.5" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_event_area_multiuse" x="400" y="1632" name="inst_C5D45D72" locked="0" code="self.action_id = 1;" scaleX="0.5" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_event_area_multiuse" x="896" y="928" name="inst_F082EC3B" locked="0" code="self.action_id = 2;&#xA;" scaleX="1" scaleY="0.5" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="896" y="992" name="inst_EBB93AB4" locked="0" code="" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="864" y="800" name="inst_11B97166" locked="0" code="" scaleX="3" scaleY="4" colour="4294967295" rotation="0"/>
@@ -260,7 +260,7 @@
     <instance objName="obj_tower_dimmer" x="896" y="448" name="inst_E4885CBF" locked="0" code="" scaleX="2" scaleY="3" colour="4294967295" rotation="0"/>
     <instance objName="obj_tower_dimmer" x="1536" y="448" name="inst_6D868D82" locked="0" code="" scaleX="6" scaleY="3" colour="4294967295" rotation="0"/>
     <instance objName="obj_tower_dimmer" x="1728" y="416" name="inst_E39B85AB" locked="0" code="" scaleX="1" scaleY="3" colour="4294967295" rotation="0"/>
-    <instance objName="obj_ldmarker" x="400" y="1648" name="inst_E87D4876" locked="0" code="scr_register_dynamic_object(11, global.TELEPORT_PLAYER_TO);&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ldmarker" x="352" y="1648" name="inst_E87D4876" locked="0" code="scr_register_dynamic_object(11, global.TELEPORT_PLAYER_TO);" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ldmarker" x="432" y="944" name="inst_1B397E64" locked="0" code="scr_register_dynamic_object(1, global.TELEPORT_PLAYER_TO);&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ldmarker" x="912" y="944" name="inst_E30BBAEA" locked="0" code="scr_register_dynamic_object(12, global.TELEPORT_PLAYER_TO);&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ldmarker" x="912" y="368" name="inst_09B78A77" locked="0" code="scr_register_dynamic_object(2, global.TELEPORT_PLAYER_TO);&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

@@ -16,6 +16,7 @@ switch (global.gameMode)
     case global.STORY_MODE:
         if (has_won && (global.applicationMode != global.DEMO_MODE))
         {
+            //TODO: check if next room is null (last level) to avoid crash
             global.currentRoom = room_next(room);
             scr_settings("saveProgress");
         }
