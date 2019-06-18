@@ -14,6 +14,6 @@ var targetPosY = dsin(shieldAngle) * distance;
 var newX = napalmX + targetPosX;
 var newY = napalmY - targetPosY;
 
-obj_katana.x = katanaPrevX + ((newX - katanaPrevX) * ease);
-obj_katana.y = katanaPrevY + ((newY - katanaPrevY) * ease);
-obj_katana.image_angle = shieldAngle - 90;
+obj_katana_shield.x = katanaPrevX + ((newX - katanaPrevX) * ease);
+obj_katana_shield.y = katanaPrevY + ((newY - katanaPrevY) * ease);
+obj_katana_shield.image_angle = shieldAngle - 90;

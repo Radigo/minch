@@ -322,6 +322,15 @@
         <sprite>sprites\spr_boss_warehouse_head</sprite>
         <sprite>sprites\spr_boss_warehouse_shield</sprite>
         <sprite>sprites\spr_boss_warehouse_neck</sprite>
+        <sprites name="napalm">
+          <sprite>sprites\spr_napalm</sprite>
+          <sprite>sprites\spr_katana_h</sprite>
+          <sprite>sprites\spr_katana_circular</sprite>
+          <sprite>sprites\spr_napalm_rush</sprite>
+          <sprite>sprites\spr_napalm_slash_a</sprite>
+          <sprite>sprites\spr_napalm_slash_b</sprite>
+          <sprite>sprites\spr_napalmdeath</sprite>
+        </sprites>
       </sprites>
       <sprites name="canon_down">
         <sprite>sprites\spr_canondown_cy</sprite>
@@ -408,12 +417,6 @@
         <sprite>sprites\spr_turret_br</sprite>
         <sprite>sprites\spr_turret_bk</sprite>
       </sprites>
-      <sprites name="napalm">
-        <sprite>sprites\spr_napalm</sprite>
-        <sprite>sprites\spr_katana_h</sprite>
-        <sprite>sprites\spr_napalm_rush</sprite>
-        <sprite>sprites\spr_napalm_slash_a</sprite>
-      </sprites>
     </sprites>
     <sprites name="Bullets">
       <sprite>sprites\spr_bullet_01</sprite>
@@ -452,6 +455,8 @@
       <sprite>sprites\spr_bigbulleparticles</sprite>
       <sprite>sprites\spr_arc</sprite>
       <sprite>sprites\spr_slash_r</sprite>
+      <sprite>sprites\spr_groundlaser</sprite>
+      <sprite>sprites\spr_rocks_geyser</sprite>
     </sprites>
     <sprites name="Cinematics">
       <sprites name="rm32">
@@ -594,6 +599,7 @@
     <scripts name="AI">
       <script>scripts\scr_ai_init.gml</script>
       <script>scripts\scr_enemy_hit.gml</script>
+      <script>scripts\scr_enemy_draw.gml</script>
       <script>scripts\scr_enemy_death.gml</script>
       <script>scripts\scr_follow.gml</script>
       <script>scripts\scr_ai_step.gml</script>
@@ -636,6 +642,13 @@
           <script>scripts\scr_napalm_init.gml</script>
           <script>scripts\scr_fly_katana_shield_step.gml</script>
           <script>scripts\scr_katana_counter.gml</script>
+          <script>scripts\scr_napalmdeath_init.gml</script>
+          <script>scripts\scr_napalmdeath_step.gml</script>
+        </scripts>
+        <scripts name="ch1">
+          <script>scripts\scr_groundlaser_step.gml</script>
+          <script>scripts\scr_groundlaser_init.gml</script>
+          <script>scripts\scr_groundlaser_draw.gml</script>
         </scripts>
         <script>scripts\scr_ai_simpledrone.gml</script>
         <script>scripts\scr_ai_ara_single_fixed.gml</script>
@@ -840,7 +853,12 @@
         <objects name="napalm">
           <object>objects\obj_napalm</object>
           <object>objects\obj_katana</object>
+          <object>objects\obj_katana_shield</object>
           <object>objects\obj_slash_r</object>
+          <object>objects\obj_napalmdeath</object>
+        </objects>
+        <objects name="ch1">
+          <object>objects\obj_ch1laser</object>
         </objects>
       </objects>
       <objects name="obj_canon">
@@ -932,6 +950,7 @@
         <object>objects\obj_turret_br</object>
         <object>objects\obj_turret_bk</object>
       </objects>
+      <object>objects\obj_groundlaser</object>
     </objects>
     <object>objects\obj_dummy</object>
     <objects name="LD">
@@ -1073,6 +1092,7 @@
       <object>objects\obj_fx_boom_tiny</object>
       <object>objects\obj_fx_boom_big</object>
       <object>objects\obj_bullet_cancel</object>
+      <object>objects\obj_rocks_geyser</object>
     </objects>
     <objects name="Cinematics">
       <objects name="rm32">

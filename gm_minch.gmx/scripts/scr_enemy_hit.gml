@@ -26,6 +26,12 @@ switch (string(object_get_name(other.object_index)))
         damage = 2;
         break;
         
+    case "obj_groundlaser":
+        is_piercing_shot = true;
+        is_mixing_object = false;
+        damage = 200;
+        break;
+        
     case "obj_shot":
     default:
         is_piercing_shot = false;
@@ -44,9 +50,7 @@ if ((x < (view_xview - safe_zone))
     damage = 0;
 }
 
-damage = damage / self.image_xscale;
-
-//show_debug_message("ennemy: " + string(self.id) + ", hit by: " + string(damage) + ", hp: " + string(self.hp) + ", scale:" + string(self.image_xscale));
+//show_debug_message("ennemy: " + string(self.id) + ", shield: " + string(self.shield) + ", hit by: " + string(damage) + ", hp: " + string(self.hp) + ", scale:" + string(self.image_xscale));
 //show_debug_message("Other: " + string(other.id) + ", " + string(object_get_name(other.object_index)) + ", " + string(other.object_index));
 
 scr_shot_sparkles(self.shield, other, is_piercing_shot);
@@ -63,6 +67,7 @@ if (!self.shield)
 {
     self.hp -= damage;
     audio_play_sound(snd_shot_hit, 0, false);
+    self.lastHitTicker = 0;
 }
 else
 {

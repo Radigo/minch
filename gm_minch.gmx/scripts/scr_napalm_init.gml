@@ -24,14 +24,20 @@ self.targetY = self.yList[| 0];
 
 // Phases
 self.ONE_KATANA = "phase1katana";
-self.TWO_KATANA = "phase2katanas";
-self.FOUR_KATANA = "phase4katanas";
+self.TWO_KATANAS = "phase2katanas";
+self.FOUR_KATANAS = "phase4katanas";
+
+self.hp = 200;
+self.phaseTwoHp = 100;
+self.phaseFourHp = 50;
 
 // Patterns
 self.REACH_SIDE = "reachside";
 self.SEARCH_MINCH_Y = "searchminchy";
 self.RUSH_MINCH = "rushminch";
-self.RUSH_SLASH = "rushslash";
+self.RUSH_SLASH = "rushslasha";
+self.RUSH_SLASH_BIS = "rushslashb";
+self.PHASE_TRANSITION = "phasetransition";
 
 self.slashDirection = 0;// -0: left, +0: right (x scale)
 

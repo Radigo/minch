@@ -1,13 +1,14 @@
 MinCH: todo
 
 **Bugs**
+Crash when finishing a level then going to score attack (scr_get_room_id)
 Strong sound at boss 2 transitions: wave attack played at each frames > ramp up sound volume to be lower during the first frame.
 Change minch marker depth.
 
 **Ongoing**
 Add spawn animation to generator (flashing blue)
 Boss 2-3
- - intro sequence
+	- intro sequence
 
 **Design**
 Player
@@ -53,9 +54,9 @@ OK - Block jump when not available
 OK - Checkpoints in case of death
 - Game Over
 OK - Free shot, check rotation speed. Consider firing at each frame when rotating.
-- Tuning on tap rate for free/focus shot (faster)
-- change focus marker design
-- TODO: implement tolerance timer to make jump timing easyier (scr_minch_init)
+OK - Tuning on tap rate for free/focus shot (faster)
+OK - change focus marker design
+OK - implement tolerance timer to make jump timing easyier (scr_minch_init)
 
 Level design
 OK - Enemy follow path
@@ -68,7 +69,7 @@ OK - Ennemy shot only when next to viewport
 OK - Ennemy sleep/wake up
 OK - Events
 OK - Switch doors
-Ongoing - Ennemy count doors > combo count bug
+OK - Ennemy count doors > combo count bug
 OK - LD elements with combo colors
 - Pattern traps (timed harmless/killing zones)
 - Triggered traps (conditional killing zones)

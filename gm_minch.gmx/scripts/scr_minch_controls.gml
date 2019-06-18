@@ -1,5 +1,4 @@
-/** Minch Movement and behavior
-    Edited in Sublime Text*/
+/** Minch Movement and behavior */
 
 // Console
 if (keyboard_check_released(vk_enter))
