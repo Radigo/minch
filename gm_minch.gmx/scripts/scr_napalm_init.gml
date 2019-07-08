@@ -26,10 +26,13 @@ self.targetY = self.yList[| 0];
 self.ONE_KATANA = "phase1katana";
 self.TWO_KATANAS = "phase2katanas";
 self.FOUR_KATANAS = "phase4katanas";
+self.DIYING = "phaseDiying";
 
-self.hp = 200;
-self.phaseTwoHp = 100;
-self.phaseFourHp = 50;
+// Ugly way of having a death state (hp = zero w/o instance destroy yet)
+self.hp = 1200;
+self.phaseTwoHp = 1100;
+self.phaseFourHp = 1050;
+self.phaseFinaleHp = 1000;
 
 // Patterns
 self.REACH_SIDE = "reachside";
@@ -37,7 +40,7 @@ self.SEARCH_MINCH_Y = "searchminchy";
 self.RUSH_MINCH = "rushminch";
 self.RUSH_SLASH = "rushslasha";
 self.RUSH_SLASH_BIS = "rushslashb";
-self.PHASE_TRANSITION = "phasetransition";
+self.TRANSITION = "transition";
 
 self.slashDirection = 0;// -0: left, +0: right (x scale)
 

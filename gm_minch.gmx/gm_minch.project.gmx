@@ -477,6 +477,7 @@
         <sprite>sprites\spr_mutant_raid</sprite>
       </sprites>
     </sprites>
+    <sprite>sprites\spr_ch1hole</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_warehouse</background>
@@ -859,6 +860,7 @@
         </objects>
         <objects name="ch1">
           <object>objects\obj_ch1laser</object>
+          <object>objects\obj_ch1hole</object>
         </objects>
       </objects>
       <objects name="obj_canon">

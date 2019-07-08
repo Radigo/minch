@@ -1,7 +1,13 @@
 // Wait for ground impact in room to fire a laser
 
 if (self.status == self.STATUS_SEARCH) {
-    if (global.legsStatus == global.LEGS_JUMP) {
+    var napalm = instance_find(obj_napalm, 0);
+    if (napalm.currentPhase == "phaseDiying") {
+        self.targetX = obj_napalm.x;
+        self.targetY = obj_napalm.y;
+        self.status = self.STATUS_FIRE;
+        self.ticker = 0;
+    } else if (global.legsStatus == global.LEGS_JUMP) {
         self.targetX = obj_marker.x;
         self.targetY = obj_marker.y;
         self.status = self.STATUS_FIRE;
@@ -13,7 +19,15 @@ if (self.status == self.STATUS_SEARCH) {
         laser.image_speed = 0.5;
         var rocks = instance_create(self.targetX, self.targetY, obj_rocks_geyser);
         rocks.image_speed = 0.2;
+    } else if (self.ticker == 61) {
+        if (instance_exists(obj_napalmdeath)) {
+            // Create hole in the ground
+            var hole = instance_create(self.targetX, self.targetY, obj_ch1hole);
+        }
     } else if (self.ticker == 120) {
+        if (instance_exists(obj_napalmdeath)) {
+            with (self) instance_destroy();
+        }
         self.status = self.STATUS_SEARCH;
         self.ticker = 0;
     }

@@ -19,17 +19,25 @@ if (self.isIntro) {
 if ((self.currentPhase == self.ONE_KATANA) && (self.hp < self.phaseTwoHp)) {
     // Switch to next phase
     self.currentPhase = self.TWO_KATANAS;
-    self.currentPattern = self.PHASE_TRANSITION;
+    self.currentPattern = self.TRANSITION;
     self.shield = true;
     self.ticker = 0;
     scr_boom(self.x, self.y, self.explosionLevel, self.explosionSize);
 } else if ((self.currentPhase == self.TWO_KATANAS) && (self.hp < self.phaseFourHp)) {
     // Switch to next phase
     self.currentPhase = self.FOUR_KATANAS;
-    self.currentPattern = self.PHASE_TRANSITION;
+    self.currentPattern = self.TRANSITION;
     self.shield = true;
     self.ticker = 0;
     scr_boom(self.x, self.y, self.explosionLevel, self.explosionSize);
+} else if ((self.currentPhase == self.FOUR_KATANAS) && (self.hp < self.phaseFinaleHp)) {
+    // Switch to diying phase
+    self.currentPhase = self.DIYING;
+    self.currentPattern = self.TRANSITION;
+    self.shield = true;
+    self.ticker = 0;
+    scr_boom(self.x, self.y, self.explosionLevel, self.explosionSize * 1.6);
+    
 }
 
 // Moves
@@ -183,9 +191,9 @@ if (self.currentPattern == self.REACH_SIDE) {
             else
                 image_xscale = -1;
     }
-} else if (self.currentPattern == self.PHASE_TRANSITION) {
-    // Stops for a moment
-    if (self.ticker > 60) {
+} else if (self.currentPattern == self.TRANSITION) {
+    // Stops for a moment if not diying
+    if ((self.currentPhase != self.DIYING) && (self.ticker > 60)) {
         self.shield = false;
         self.targetX = self.xList[| irandom(1)];
         self.targetY = self.yList[| 0];

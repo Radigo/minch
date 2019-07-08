@@ -21,14 +21,13 @@ if (argument_count > 6)
 global.bulletDepth = -1000;
 
 var safe_zone = 128;// Outbounds distance until bullets can be shot
-show_debug_message("1");
 // If we are during start of end level sequence, no bullet
 if (instance_exists(obj_level_intro)
     || instance_exists(obj_level_report))
 {
     return false;
 }
-show_debug_message("2");
+
 // If emitter is off screen, don't shoot
 if ((x < (view_xview - safe_zone))
     || (x > (view_xview + view_wview + safe_zone))
@@ -37,13 +36,11 @@ if ((x < (view_xview - safe_zone))
 {
     return false;
 }
-show_debug_message("3");
 // default speed
 if (shot_speed == 0)
 {
     shot_speed = 1;
 }
-show_debug_message("4");
 switch (shot_type)
 {
     case 1:
@@ -77,7 +74,6 @@ switch (shot_type)
         }
         break;
 }
-show_debug_message("5");
 shot.speed = shot_speed;//TODO: multiply by rank
 shot.direction = shot_direction;
 
@@ -85,5 +81,4 @@ if (rotate_instance)
 {
     shot.image_angle = shot_direction;
 }
-show_debug_message("6");
 return shot;
