@@ -208,7 +208,7 @@
     <instance objName="obj_area_checkpoint" x="1856" y="1632" name="inst_27B28188" locked="0" code="self.checkpointId = 3;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_area_checkpoint" x="2368" y="1264" name="inst_38F638A5" locked="0" code="self.checkpointId = 4;&#xA;" scaleX="1" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="obj_area_checkpoint" x="2528" y="480" name="inst_E692F336" locked="0" code="self.checkpointId = 5;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_area_checkpoint" x="1376" y="960" name="inst_AA296842" locked="0" code="self.checkpointId = 6;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_area_checkpoint" x="1376" y="960" name="inst_AA296842" locked="0" code="self.checkpointId = 6;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_door_v_1_cy" x="736" y="1632" name="inst_F9925FA8" locked="0" code="enemyCount = 2;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_copter_drone_cy" x="256" y="816" name="inst_D4B955EE" locked="0" code="path_start(path_rm31_1, 1, 1, true);&#xA;path_position = 1 / 2;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_copter_drone_cy" x="352" y="1072" name="inst_1BE1E268" locked="0" code="path_start(path_rm31_2, 1, 1, true);&#xA;path_position = 2 / 2;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

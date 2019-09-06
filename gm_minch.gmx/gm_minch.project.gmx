@@ -157,6 +157,7 @@
         <sprite>sprites\spr_checkpoint_18</sprite>
         <sprite>sprites\spr_checkpoint_19</sprite>
         <sprite>sprites\spr_checkpoint_20</sprite>
+        <sprite>sprites\spr_checkpoint_follow</sprite>
         <sprite>sprites\spr_end_level</sprite>
       </sprites>
       <sprite>sprites\spr_event_area</sprite>
@@ -243,6 +244,8 @@
       <sprite>sprites\sewermaindoor_r</sprite>
       <sprite>sprites\sprt_tower_dimmer</sprite>
       <sprite>sprites\spr_marker</sprite>
+      <sprite>sprites\spr_glory_small</sprite>
+      <sprite>sprites\spr_glory_large</sprite>
       <sprites name="Box">
         <sprite>sprites\spr_box_cy</sprite>
         <sprite>sprites\spr_box_ma</sprite>
@@ -330,6 +333,19 @@
           <sprite>sprites\spr_napalm_slash_a</sprite>
           <sprite>sprites\spr_napalm_slash_b</sprite>
           <sprite>sprites\spr_napalmdeath</sprite>
+        </sprites>
+        <sprites name="CH1">
+          <sprite>sprites\spr_ch1_legs_idle</sprite>
+          <sprite>sprites\spr_ch1_legs_jumpup</sprite>
+          <sprite>sprites\spr_ch1_legs_jumpdown</sprite>
+          <sprite>sprites\spr_ch1_body_idle</sprite>
+          <sprite>sprites\spr_ch1_body_lasertwin</sprite>
+          <sprite>sprites\spr_ch1_body_laserup</sprite>
+          <sprite>sprites\spr_ch1_body_laserdown</sprite>
+          <sprite>sprites\spr_ch1_body_spread</sprite>
+          <sprite>sprites\spr_ch1_body_spreadtwin</sprite>
+          <sprite>sprites\spr_ch1_body_spreadup</sprite>
+          <sprite>sprites\spr_ch1_body_spreaddown</sprite>
         </sprites>
       </sprites>
       <sprites name="canon_down">
@@ -511,6 +527,7 @@
     <background>background\bg_towerfull</background>
     <background>background\bg_tower</background>
     <background>background\bg_props</background>
+    <background>background\bg_rage</background>
   </backgrounds>
   <paths name="paths">
     <path>paths\path_rm11_1</path>
@@ -650,6 +667,9 @@
           <script>scripts\scr_groundlaser_step.gml</script>
           <script>scripts\scr_groundlaser_init.gml</script>
           <script>scripts\scr_groundlaser_draw.gml</script>
+          <script>scripts\scr_ch1_init.gml</script>
+          <script>scripts\scr_ch1_step.gml</script>
+          <script>scripts\scr_ch1_setnextpattern.gml</script>
         </scripts>
         <script>scripts\scr_ai_simpledrone.gml</script>
         <script>scripts\scr_ai_ara_single_fixed.gml</script>
@@ -707,6 +727,7 @@
       <script>scripts\scr_door_init.gml</script>
       <script>scripts\scr_doordraw.gml</script>
       <script>scripts\scr_door_enemy_update.gml</script>
+      <script>scripts\scr_blend_add_draw.gml</script>
     </scripts>
     <scripts name="Mechanics">
       <script>scripts\scr_scoring_init.gml</script>
@@ -861,6 +882,8 @@
         <objects name="ch1">
           <object>objects\obj_ch1laser</object>
           <object>objects\obj_ch1hole</object>
+          <object>objects\obj_ch1_legs</object>
+          <object>objects\obj_ch1_body</object>
         </objects>
       </objects>
       <objects name="obj_canon">
@@ -984,6 +1007,7 @@
         <object>objects\obj_checkpoint_18</object>
         <object>objects\obj_checkpoint_19</object>
         <object>objects\obj_checkpoint_20</object>
+        <object>objects\obj_checkpoint_follow</object>
         <object>objects\obj_area_end_level</object>
       </objects>
       <object>objects\obj_event_area</object>
@@ -1078,6 +1102,8 @@
         <object>objects\obj_box_pu</object>
         <object>objects\obj_box_small</object>
       </objects>
+      <object>objects\obj_glory_small</object>
+      <object>objects\obj_glory_large</object>
     </objects>
     <objects name="Bullets">
       <object>objects\obj_bullet_01</object>

@@ -72,6 +72,18 @@ else if (global.controlStatus == global.DEATH)
     
     if (self.controlTime == 0)
     {
+        // Get the associated start checkpoint
+        var checkpoint_obj = asset_get_index("obj_checkpoint_" + string(global.lastCheckpoint));
+        show_debug_message("obj_checkpoint_" + string(global.lastCheckpoint));
+        show_debug_message(string(object_exists(checkpoint_obj)));
+        
+        if (object_exists(checkpoint_obj))
+        {
+            // set coordinates to MinCH for further respawn
+            self.initX = checkpoint_obj.x;
+            self.initY = checkpoint_obj.y;
+        }
+        
         self.controlTime = self.spawnDuration;
         global.controlStatus = global.SPAWN;
         exit;
