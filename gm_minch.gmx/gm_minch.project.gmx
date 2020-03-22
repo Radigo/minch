@@ -346,6 +346,9 @@
           <sprite>sprites\spr_ch1_body_spreadtwin</sprite>
           <sprite>sprites\spr_ch1_body_spreadup</sprite>
           <sprite>sprites\spr_ch1_body_spreaddown</sprite>
+          <sprite>sprites\spr_ch1_laser_h</sprite>
+          <sprite>sprites\spr_greenlasercharge</sprite>
+          <sprite>sprites\spr_pod</sprite>
         </sprites>
       </sprites>
       <sprites name="canon_down">
@@ -670,6 +673,9 @@
           <script>scripts\scr_ch1_init.gml</script>
           <script>scripts\scr_ch1_step.gml</script>
           <script>scripts\scr_ch1_setnextpattern.gml</script>
+          <script>scripts\scr_ch1_death.gml</script>
+          <script>scripts\scr_pod_init.gml</script>
+          <script>scripts\scr_pod_step.gml</script>
         </scripts>
         <script>scripts\scr_ai_simpledrone.gml</script>
         <script>scripts\scr_ai_ara_single_fixed.gml</script>
@@ -884,6 +890,9 @@
           <object>objects\obj_ch1hole</object>
           <object>objects\obj_ch1_legs</object>
           <object>objects\obj_ch1_body</object>
+          <object>objects\obj_ch1_laser_h</object>
+          <object>objects\obj_ch1_laser_h_charge</object>
+          <object>objects\obj_pod</object>
         </objects>
       </objects>
       <objects name="obj_canon">

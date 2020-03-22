@@ -9,8 +9,9 @@ self.jumpSourceY = self.y;
 self.jumpTargetX = self.x;
 self.jumpTargetY = self.y;
 
-self.jumpTargetYMin = 704;
-self.jumpTargetYMax = 864;
+self.jumpTargetYMin = 736;
+self.jumpTargetYMax = 832;
+self.jumpTargetYMiddle = (self.jumpTargetYMax + self.jumpTargetYMin) * 0.5;
 
 // Patterns
 self.PATTERN_RAGING = "patternRaging";// Spread arms, shaking, sound...
@@ -22,6 +23,8 @@ self.PATTERN_SPREADUP = "patternSpreadUp";// Fire pattern with upper (left) claw
 self.PATTERN_SPREADDOWN = "patternSpreadDown";// Fire pattern with lower (right) claws
 self.PATTERN_SPREADTWIN = "patternSpreadTwin";// Fire pattern with both claws
 self.PATTERN_SPREADSHOULDER = "patternSpreadShoulders";// Spread arms, fire pattern with shoulders
+self.NUM_PODS = 20;
+self.PODS_SPAWN_DELAY = 16;
 
 self.staticPatternsList = ds_list_create();
 ds_list_add(self.staticPatternsList, self.PATTERN_LASERUP, self.PATTERN_LASERDOWN, self.PATTERN_LASERTWIN, self.PATTERN_SPREADUP, self.PATTERN_SPREADDOWN, self.PATTERN_SPREADTWIN, self.PATTERN_SPREADSHOULDER);
@@ -31,18 +34,34 @@ self.staticPatternCount = 3;// Number of patterns thrown while static
 self.cycleIndex = 0;// Index of static patterns cycle
 self.cycleCount = 5;// Num of cycles before going to next phase
 
+self.podsLeft = self.NUM_PODS;
+
+// Patterns config
+self.ARM_X = 43
+self.LEFT_ARM_Y = -22;
+self.RIGHT_ARM_Y = 18;
+
+self.LASER_HALF_WIDTH = 10;
+self.LASER_LENGTH = 300;
+
+self.SINGLE_LASER_WARMUP_TIME = 48;
+self.TWIN_LASER_WARMUP_TIME = 32;
+self.SINGLE_SPREAD_WARMUP_TIME = 16;
+self.TWIN_SPREAD_WARMUP_TIME = 32;
+self.PODS_SPAWN_WARMUP_TIME = 16;
+
 // Create
-self.shield = true;
+self.legsRelativePositionX = 6;
+self.legsRelativePositionY = 14;
 
-self.bodyRelativePositionX = -6;
-self.bodyRelativePositionY = -14;
-
-self.body = instance_create(self.x + self.bodyRelativePositionX, self.y + self.bodyRelativePositionY, obj_ch1_body);
-self.depth = self.body.depth + 1;
-self.body.hp = 500;
+self.legs = instance_create(self.x + self.legsRelativePositionX, self.y + self.legsRelativePositionY, obj_ch1_legs);
+self.legs.depth = self.depth + 1;
+self.hp = 5000;
+self.killSequenceHp = 4900;
 
 // OK let's go
 self.isIntro = true;
+self.isKillSequence = false;
 self.tickerLimit = 60;
 self.move = self.MOVE_STATIC;
 self.pattern = self.PATTERN_IDLE;

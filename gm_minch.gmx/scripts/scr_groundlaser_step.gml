@@ -1,5 +1,8 @@
 // Wait for ground impact in room to fire a laser
 
+if (!instance_exists(obj_napalm))
+    return false;// Active only when Napalm lives
+
 if (self.status == self.STATUS_SEARCH) {
     var napalm = instance_find(obj_napalm, 0);
     if (napalm.currentPhase == "phaseDiying") {

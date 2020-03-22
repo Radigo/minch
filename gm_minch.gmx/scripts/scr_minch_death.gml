@@ -1,6 +1,4 @@
-// TODO: remove 1 life
-
-//show_debug_message(argument0);
+//show_debug_message("scr_minch_death by " + argument0 + ", global.invincible: " + string(global.invincible));
 
 var destroy_instance = false;
 
@@ -32,6 +30,9 @@ if ((global.controlStatus == global.ALIVE)
             case "bullet":
                 global.controlStatus = global.DEATH;
                 destroy_instance = true;
+                break;
+            case "laser":
+                global.controlStatus = global.DEATH;
                 break;
             case "hole":
                 global.controlStatus = global.FALL;

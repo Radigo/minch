@@ -13,6 +13,8 @@ var prev_y = y;
 
 self.isColliding = false;
 
+//show_debug_message("scr_minch_controls global.controlStatus: " + global.controlStatus + ", controlTime: " + string(self.controlTime));
+    
 // GET KEY PRESSED if we can move
 if (global.controlStatus == global.SPAWN)
 {
@@ -42,6 +44,8 @@ if (global.controlStatus == global.SPAWN)
     if (self.controlTime == 0)
     {
         global.controlStatus = global.ALIVE;
+        global.invincible = true;
+        self.controlTime = self.warmupDuration;
         exit;
     }
     
@@ -113,7 +117,13 @@ else if (global.controlStatus == global.FALL)
 }
 else if (global.minchControlIsActive)
 {
-    controlTime = 0;
+    if (self.controlTime > 0) {
+        if (self.controlTime == 1) {
+            global.invincible = false;
+        }
+        self.controlTime--;
+    }
+    
     if (keyboard_check(global.key_right) &&  keyboard_check(global.key_up))
     {
         self.mainAngle = pi * 1.75;

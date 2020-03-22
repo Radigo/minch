@@ -6,12 +6,14 @@ var damage = 10;
 switch (string(object_get_name(other.object_index)))
 {
     case "obj_minch_feets":
-        if (global.legsStatus == global.LEGS_JUMP)
-        {
+        if (global.controlStatus != global.ALIVE) {
+            exit;
+        }
+        if (global.legsStatus == global.LEGS_JUMP) {
             exit;
         }
         is_piercing_shot = true;
-        damage = 100;
+        damage = 20;
         break;
         
     case "obj_claw_hitbox":
