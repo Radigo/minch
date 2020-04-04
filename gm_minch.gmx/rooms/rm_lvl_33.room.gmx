@@ -51,14 +51,14 @@
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
   <instances>
-    <instance objName="obj_start_point" x="352" y="768" name="inst_0488A208" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_area_end_level" x="1696" y="576" name="inst_28E8F14A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_start_point" x="320" y="352" name="inst_0488A208" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_area_end_level" x="0" y="0" name="inst_28E8F14A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="128" y="128" name="inst_39C50CB7" locked="0" code="" scaleX="12" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="128" y="160" name="inst_4D8A2F67" locked="0" code="" scaleX="1" scaleY="7" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="480" y="160" name="inst_15AFE05B" locked="0" code="" scaleX="1" scaleY="7" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="128" y="384" name="inst_4661D5A9" locked="0" code="" scaleX="12" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_dummy" x="320" y="256" name="inst_4665A9A0" locked="0" code="scr_register_dynamic_object(1, global.CAMERA_FOCUS_ENEMY_ON);&#xA;scr_register_dynamic_object(2, global.CAMERA_FOCUS_ENEMY_OFF);" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_event_area" x="288" y="736" name="inst_5DBABA7E" locked="0" code="// Focus OFF&#xA;self.action_id = 2;" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
+    <instance objName="obj_event_area" x="288" y="704" name="inst_5DBABA7E" locked="0" code="// Focus OFF&#xA;self.action_id = 2;" scaleX="2" scaleY="3" colour="4294967295" rotation="0"/>
     <instance objName="obj_dummy" x="320" y="768" name="inst_1C139380" locked="0" code="scr_register_dynamic_object(3, global.TELEPORT_PLAYER_TO);&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_napalm" x="320" y="176" name="inst_FB35397A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="192" y="192" name="inst_14DA9386" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -67,7 +67,7 @@
     <instance objName="obj_wall" x="416" y="256" name="inst_1A313CF9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="192" y="320" name="inst_1502AE64" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="416" y="320" name="inst_DF78C2FB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_event_area_multiuse" x="288" y="320" name="inst_30A6225C" locked="0" code="// Focus ON&#xA;self.action_id = 1;&#xA;" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
+    <instance objName="obj_event_area_multiuse" x="288" y="320" name="inst_30A6225C" locked="0" code="// Focus ON&#xA;self.action_id = 1;" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="obj_ch1laser" x="400" y="336" name="inst_4F12820B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_glory_small" x="176" y="64" name="inst_C08925C5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_glory_small" x="224" y="64" name="inst_F0C874F2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -85,7 +85,10 @@
     <instance objName="obj_area_hole" x="1952" y="832" name="inst_E24A7DE2" locked="0" code="" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_area_checkpoint" x="320" y="704" name="inst_FA629653" locked="0" code="self.checkpointId = &quot;follow&quot;;&#xA;" scaleX="1" scaleY="5" colour="4294967295" rotation="0"/>
     <instance objName="obj_checkpoint_follow" x="384" y="768" name="inst_E92F18D2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_ch1_body" x="224" y="768" name="inst_B08DE5BE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ch1_body" x="224" y="768" name="inst_B08DE5BE" locked="0" code="scr_register_dynamic_object(4, global.ENEMY_TRIGGER_ON);&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_event_area" x="288" y="736" name="inst_EAA0D6C8" locked="0" code="// Activates CH1&#xA;self.action_id = 4;&#xA;" scaleX="2" scaleY="3" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ch1hole" x="32" y="32" name="inst_55EF332B" locked="0" code="// Teleports to CH1&#xA;self.action_id = 3;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_player_wall" x="0" y="704" name="inst_D57AA185" locked="0" code="" scaleX="1" scaleY="5" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="bg_rage" x="128" y="160" w="32" h="32" xo="0" yo="96" id="10061452" name="inst_9F56C3E2" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -813,10 +816,7 @@
     <tile bgName="bg_shading" x="704" y="608" w="32" h="32" xo="256" yo="0" id="10063387" name="inst_3792E649" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bg_shading" x="800" y="608" w="32" h="32" xo="256" yo="0" id="10063390" name="inst_BBA46455" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bg_shading" x="896" y="608" w="32" h="32" xo="256" yo="0" id="10063393" name="inst_F0559EB5" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="bg_shading" x="1056" y="672" w="32" h="32" xo="256" yo="0" id="10063402" name="inst_7FC54278" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="bg_shading" x="1152" y="672" w="32" h="32" xo="256" yo="0" id="10063405" name="inst_DDFE9BD5" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bg_shading" x="1472" y="640" w="32" h="32" xo="256" yo="0" id="10063450" name="inst_171C4280" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="bg_shading" x="960" y="608" w="32" h="32" xo="256" yo="0" id="10063467" name="inst_B67878D4" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bg_shading" x="1184" y="608" w="32" h="32" xo="256" yo="0" id="10063474" name="inst_DA842A2E" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bg_shading" x="992" y="736" w="32" h="32" xo="192" yo="0" id="10063541" name="inst_E746863F" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bg_shading" x="1024" y="736" w="32" h="32" xo="192" yo="0" id="10063542" name="inst_86DB733B" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -1321,6 +1321,9 @@
     <tile bgName="bg_shading" x="320" y="256" w="32" h="32" xo="288" yo="0" id="10064802" name="inst_81D0099F" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bg_shading" x="352" y="256" w="32" h="32" xo="288" yo="0" id="10064803" name="inst_FFE5EC51" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bg_shading" x="384" y="256" w="32" h="32" xo="288" yo="0" id="10064804" name="inst_D5A0E5FA" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bg_shading" x="1056" y="672" w="32" h="32" xo="224" yo="0" id="10064917" name="inst_EEF4E183" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bg_shading" x="1152" y="672" w="32" h="32" xo="224" yo="0" id="10064918" name="inst_7D6D4078" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bg_shading" x="960" y="608" w="32" h="32" xo="224" yo="0" id="10064919" name="inst_21082475" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
   </tiles>
   <PhysicsWorld>0</PhysicsWorld>
   <PhysicsWorldTop>0</PhysicsWorldTop>

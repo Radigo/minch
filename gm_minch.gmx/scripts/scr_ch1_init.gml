@@ -33,6 +33,8 @@ self.staticPatternIndex = 0;// Pattern thrown when staying static
 self.staticPatternCount = 3;// Number of patterns thrown while static
 self.cycleIndex = 0;// Index of static patterns cycle
 self.cycleCount = 5;// Num of cycles before going to next phase
+self.SPREAD_SHOULDER_COUNT = 6;// Max num of spread shoulder patttern (because of leeching)
+self.spreadSoulderIndex = 0;
 
 self.podsLeft = self.NUM_PODS;
 
@@ -56,8 +58,8 @@ self.legsRelativePositionY = 14;
 
 self.legs = instance_create(self.x + self.legsRelativePositionX, self.y + self.legsRelativePositionY, obj_ch1_legs);
 self.legs.depth = self.depth + 1;
-self.hp = 5000;
-self.killSequenceHp = 4900;
+self.hp = 6000;
+self.killSequenceHp = 1000;
 
 // OK let's go
 self.isIntro = true;

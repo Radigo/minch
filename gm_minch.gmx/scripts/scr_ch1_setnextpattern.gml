@@ -1,4 +1,4 @@
-var debugPatterns = false;
+var debugPatterns = true;
 if (self.patternTicker < self.patternTickerLimit) {
     return false;
 }
@@ -7,6 +7,8 @@ if (self.hp < self.killSequenceHp) {
     self.isKillSequence = true;
     self.ticker = 0;
     self.patternTicker = 0;
+    self.tickerLimit = 300;
+    self.patternTickerLimit = 300;
     return false;
 }
 
@@ -35,5 +37,15 @@ if (self.staticPatternIndex == self.staticPatternCount) {
 }
 
 if (debugPatterns) show_debug_message("Next pattern is: " + self.pattern);
+
+if (self.pattern == self.PATTERN_SPREADSHOULDER) {
+    self.spreadSoulderIndex++;
+    if (debugPatterns) show_debug_message("Incrementing spread shoulder count " + string(self.spreadSoulderIndex));
+    if (self.spreadSoulderIndex > self.SPREAD_SHOULDER_COUNT) {
+        // Remove from base list (spread shoulder is last
+        ds_list_delete(self.staticPatternsList, ds_list_size(self.staticPatternsList) - 1);
+        if (debugPatterns) show_debug_message("Spread soulder count reached, remove from list");
+    }
+}
 
 self.patternTicker = 0;

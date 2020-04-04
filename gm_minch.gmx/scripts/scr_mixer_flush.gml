@@ -57,16 +57,21 @@ if (number_of_enemies > 0)
         }
     }
     
+    show_debug_message("=>> mixed color = " + string(mixed_color));
+    show_debug_message("=>> total value = " + string(total_value));
+    
     if (mixed_color < global.BK)
     {
         // We earn a special multiplier if we mixed well
         total_value = total_value * number_of_enemies;
+    } else if (mixed_color > global.BK) {
+        // If mix is crazy broken we can't compute mix any further
+        scr_scoring_update(total_value, global.BK);
+        return false;
     }
     
-    //show_debug_message("=>> mixed color = " + string(mixed_color));
-    //show_debug_message("=>> total value = " + string(total_value));
     
-    // Increment enemy kill counter with mixed color if different fromany entry color
+    // Increment enemy kill counter with mixed color if different from any entry color
     if (isMixDifferentFromEntry)
     {
         ds_map_replace(global.ennemyKilled, mixed_color, ds_map_find_value(global.ennemyKilled, mixed_color) + 1);

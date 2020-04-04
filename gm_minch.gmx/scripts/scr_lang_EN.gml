@@ -66,13 +66,13 @@ switch (key)
     case "rm_lvl_32_name":
         return "Rooftops";
     case "rm_lvl_33_name":
-        return "Honor";
+        return "Rage";
     case "rm_lvl_41_name":
         return "Nest";
     case "rm_lvl_42_name":
         return "Ancestors";
     case "rm_lvl_43_name":
-        return "Leader";
+        return "Trash";
     case "rm_lvl_51_name":
         return "Humans";
 }

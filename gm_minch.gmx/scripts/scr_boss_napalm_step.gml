@@ -11,9 +11,9 @@ if (self.isIntro) {
     return false;
 }
 
-//show_debug_message("napalm step:");
+show_debug_message("napalm step:");
 //show_debug_message(string(self.yList[| irandom(3)]));
-//show_debug_message(string(self.currentPattern));
+show_debug_message(string(self.currentPattern));
 //show_debug_message(string(point_distance(self.x, self.y, self.targetCol, self.targetRow)));
 
 if ((self.currentPhase == self.ONE_KATANA) && (self.hp < self.phaseTwoHp)) {
@@ -37,7 +37,6 @@ if ((self.currentPhase == self.ONE_KATANA) && (self.hp < self.phaseTwoHp)) {
     self.shield = true;
     self.ticker = 0;
     scr_boom(self.x, self.y, self.explosionLevel, self.explosionSize * 1.6);
-    
 }
 
 // Moves

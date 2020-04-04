@@ -20,7 +20,7 @@ if (self.status == self.STATUS_SEARCH) {
     if (self.ticker == 60) {
         var laser = instance_create(self.targetX, self.targetY, obj_groundlaser);
         laser.image_speed = 0.5;
-        var rocks = instance_create(self.targetX, self.targetY, obj_rocks_geyser);
+        var rocks = instance_create(self.targetX, self.targetY, obj_fx_boom_big);
         rocks.image_speed = 0.2;
     } else if (self.ticker == 61) {
         if (instance_exists(obj_napalmdeath)) {

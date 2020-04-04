@@ -1,5 +1,9 @@
-
 //show_debug_message("ticker: " + string(self.ticker) + " > " + string(self.tickerLimit) + ", self.isIntro: " + string(self.isIntro) + ", move: " + self.move + " / patternTicker: " + string(self.patternTicker) + " > " + string(self.patternTickerLimit) + ", pattern: " + self.pattern);
+
+if (!self.switchTriggered)
+{
+    return false;
+}
 
 // Calm before the storm
 if (self.isIntro) {
@@ -13,11 +17,9 @@ if (self.isIntro) {
     
     return false;
 } else if (self.isKillSequence) {
-    // Display kill sequence
     instance_destroy(obj_ch1_laser_h);
     instance_destroy(obj_ch1_laser_h_charge);
-    self.legs.sprite_index = spr_ch1_legs_idle;
-    self.sprite_index = spr_ch1_body_idle;
+    scr_ch1_killsequence();
     return false;
 }
 
@@ -119,7 +121,6 @@ if (self.pattern == self.PATTERN_RAGING) {
                                       self.x + self.ARM_X + self.LASER_LENGTH, self.y + self.LEFT_ARM_Y + self.LASER_HALF_WIDTH,
                                       obj_minch_feets, false, false))) {
         scr_minch_death("laser");
-        self.patternTicker = self.patternTickerLimit;
     }
 } else if (self.pattern == self.PATTERN_LASERDOWN) {
     // Fire laser with right arm, warmup time, then short blast
@@ -140,7 +141,6 @@ if (self.pattern == self.PATTERN_RAGING) {
                                       self.x + self.ARM_X + self.LASER_LENGTH, self.y + self.RIGHT_ARM_Y + self.LASER_HALF_WIDTH,
                                       obj_minch_feets, false, false))) {
         scr_minch_death("laser");
-        self.patternTicker = self.patternTickerLimit;
     }
 } else if (self.pattern == self.PATTERN_LASERTWIN) {
     // Fire lasers with both arms, warmup time (shorter), then medium long blast
@@ -170,7 +170,6 @@ if (self.pattern == self.PATTERN_RAGING) {
                 self.x + self.ARM_X + self.LASER_LENGTH, self.y + self.RIGHT_ARM_Y + self.LASER_HALF_WIDTH,
                 obj_minch_feets, false, false)) {
             scr_minch_death("laser");
-            self.patternTicker = self.patternTickerLimit;
         }
     }
 } else if (self.pattern == self.PATTERN_SPREADUP) {
@@ -220,7 +219,13 @@ if (self.pattern == self.PATTERN_RAGING) {
               && (self.patternTicker > self.PODS_SPAWN_WARMUP_TIME)
               && (self.patternTicker % self.PODS_SPAWN_DELAY == 0)) {
         // Spawning pods
-        var pod = instance_create(self.x, self.y, obj_pod);
+        var pod;
+        var randPodColor = irandom(1);
+        if (randPodColor == 0) {
+            pod = instance_create(self.x, self.y, obj_pod_cy);
+        } else if (randPodColor == 1) {
+            pod = instance_create(self.x, self.y, obj_pod_ma);
+        }
         pod.parentCarrier = self;
         pod.sourceX = self.x;
         pod.travelTargetX = self.x + 128;

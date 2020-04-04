@@ -333,12 +333,14 @@
           <sprite>sprites\spr_napalm_slash_a</sprite>
           <sprite>sprites\spr_napalm_slash_b</sprite>
           <sprite>sprites\spr_napalmdeath</sprite>
+          <sprite>sprites\spr_ch1hole</sprite>
         </sprites>
         <sprites name="CH1">
           <sprite>sprites\spr_ch1_legs_idle</sprite>
           <sprite>sprites\spr_ch1_legs_jumpup</sprite>
           <sprite>sprites\spr_ch1_legs_jumpdown</sprite>
           <sprite>sprites\spr_ch1_body_idle</sprite>
+          <sprite>sprites\spr_ch1_body_lookdown</sprite>
           <sprite>sprites\spr_ch1_body_lasertwin</sprite>
           <sprite>sprites\spr_ch1_body_laserup</sprite>
           <sprite>sprites\spr_ch1_body_laserdown</sprite>
@@ -348,7 +350,22 @@
           <sprite>sprites\spr_ch1_body_spreaddown</sprite>
           <sprite>sprites\spr_ch1_laser_h</sprite>
           <sprite>sprites\spr_greenlasercharge</sprite>
-          <sprite>sprites\spr_pod</sprite>
+          <sprites name="pod">
+            <sprite>sprites\spr_pod_cy</sprite>
+            <sprite>sprites\spr_pod_ma</sprite>
+            <sprite>sprites\spr_pod_ye</sprite>
+            <sprite>sprites\spr_pod_pu</sprite>
+            <sprite>sprites\spr_pod_gr</sprite>
+            <sprite>sprites\spr_pod_or</sprite>
+            <sprite>sprites\spr_pod_br</sprite>
+            <sprite>sprites\spr_pod_bk</sprite>
+          </sprites>
+        </sprites>
+        <sprites name="nuke">
+          <sprite>sprites\spr_nuke_idle_down</sprite>
+          <sprite>sprites\spr_nuke_idle_down_facingright</sprite>
+          <sprite>sprites\spr_nuke_kneeattack_up</sprite>
+          <sprite>sprites\spr_nuke_kneeattack_down</sprite>
         </sprites>
       </sprites>
       <sprites name="canon_down">
@@ -475,7 +492,8 @@
       <sprite>sprites\spr_arc</sprite>
       <sprite>sprites\spr_slash_r</sprite>
       <sprite>sprites\spr_groundlaser</sprite>
-      <sprite>sprites\spr_rocks_geyser</sprite>
+      <sprite>sprites\spr_greenwave</sprite>
+      <sprite>sprites\spr_greenstar</sprite>
     </sprites>
     <sprites name="Cinematics">
       <sprites name="rm32">
@@ -496,7 +514,6 @@
         <sprite>sprites\spr_mutant_raid</sprite>
       </sprites>
     </sprites>
-    <sprite>sprites\spr_ch1hole</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_warehouse</background>
@@ -672,10 +689,16 @@
           <script>scripts\scr_groundlaser_draw.gml</script>
           <script>scripts\scr_ch1_init.gml</script>
           <script>scripts\scr_ch1_step.gml</script>
+          <script>scripts\scr_ch1_killsequence.gml</script>
           <script>scripts\scr_ch1_setnextpattern.gml</script>
           <script>scripts\scr_ch1_death.gml</script>
           <script>scripts\scr_pod_init.gml</script>
           <script>scripts\scr_pod_step.gml</script>
+        </scripts>
+        <scripts name="BossNuke">
+          <script>scripts\scr_nuke_init.gml</script>
+          <script>scripts\scr_nuke_step.gml</script>
+          <script>scripts\scr_nuke_step_rage.gml</script>
         </scripts>
         <script>scripts\scr_ai_simpledrone.gml</script>
         <script>scripts\scr_ai_ara_single_fixed.gml</script>
@@ -892,7 +915,21 @@
           <object>objects\obj_ch1_body</object>
           <object>objects\obj_ch1_laser_h</object>
           <object>objects\obj_ch1_laser_h_charge</object>
-          <object>objects\obj_pod</object>
+          <objects name="pod">
+            <object>objects\obj_pod</object>
+            <object>objects\obj_pod_cy</object>
+            <object>objects\obj_pod_ma</object>
+            <object>objects\obj_pod_ye</object>
+            <object>objects\obj_pod_pu</object>
+            <object>objects\obj_pod_gr</object>
+            <object>objects\obj_pod_or</object>
+            <object>objects\obj_pod_br</object>
+            <object>objects\obj_pod_bk</object>
+          </objects>
+        </objects>
+        <objects name="nuke">
+          <object>objects\obj_nuke</object>
+          <object>objects\obj_grenwave</object>
         </objects>
       </objects>
       <objects name="obj_canon">
@@ -1129,7 +1166,6 @@
       <object>objects\obj_fx_boom_tiny</object>
       <object>objects\obj_fx_boom_big</object>
       <object>objects\obj_bullet_cancel</object>
-      <object>objects\obj_rocks_geyser</object>
     </objects>
     <objects name="Cinematics">
       <objects name="rm32">
