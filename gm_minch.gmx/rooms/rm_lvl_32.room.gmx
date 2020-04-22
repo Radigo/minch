@@ -3,8 +3,8 @@
   <caption></caption>
   <width>2048</width>
   <height>3008</height>
-  <vsnap>16</vsnap>
-  <hsnap>16</hsnap>
+  <vsnap>32</vsnap>
+  <hsnap>32</hsnap>
   <isometric>0</isometric>
   <speed>60</speed>
   <persistent>0</persistent>
@@ -344,9 +344,9 @@
     <instance objName="obj_checkpoint_7" x="288" y="1712" name="inst_D68E4698" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_checkpoint_8" x="96" y="1104" name="inst_03086F09" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_area_checkpoint" x="64" y="1120" name="inst_14B7C4A2" locked="0" code="self.checkpointId = 8;&#xA;" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_area_checkpoint" x="832" y="1024" name="inst_0D0E1475" locked="0" code="self.checkpointId = 9;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_area_checkpoint" x="832" y="992" name="inst_0D0E1475" locked="0" code="self.checkpointId = 9;&#xA;" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="obj_checkpoint_9" x="768" y="1056" name="inst_665A5FA3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_area_checkpoint" x="1152" y="800" name="inst_F508720D" locked="0" code="self.checkpointId = 10;&#xA;" scaleX="1" scaleY="5" colour="4294967295" rotation="0"/>
+    <instance objName="obj_area_checkpoint" x="1120" y="768" name="inst_F508720D" locked="0" code="self.checkpointId = 10;&#xA;" scaleX="3" scaleY="6" colour="4294967295" rotation="0"/>
     <instance objName="obj_checkpoint_10" x="1184" y="864" name="inst_D6C28752" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_area_checkpoint" x="1248" y="576" name="inst_F8ECE0F2" locked="0" code="self.checkpointId = 11;&#xA;" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_checkpoint_11" x="1296" y="576" name="inst_88710238" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -363,7 +363,7 @@
     <instance objName="obj_event_area_multiuse" x="512" y="1664" name="inst_783C6AD2" locked="0" code="// Focus OFF&#xA;self.action_id = 4;&#xA;" scaleX="2" scaleY="5" colour="4294967295" rotation="0"/>
     <instance objName="obj_event_area" x="576" y="2336" name="inst_DD6E5937" locked="0" code="// Enemy ON&#xA;self.action_id = 1;&#xA;" scaleX="11" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_event_area_multiuse" x="576" y="2400" name="inst_954B75F9" locked="0" code="// Focus ON&#xA;self.action_id = 3;&#xA;" scaleX="11" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_event_area_multiuse" x="576" y="1824" name="inst_82EF30AD" locked="0" code="// Focus ON&#xA;self.action_id = 3;&#xA;" scaleX="11" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_event_area_multiuse" x="576" y="1824" name="inst_82EF30AD" locked="0" code="// Focus ON&#xA;self.action_id = 3;" scaleX="11" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="&lt;undefined&gt;" x="1760" y="1440" w="32" h="32" xo="160" yo="96" id="10006570" name="inst_EFC364DE" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -2982,7 +2982,6 @@
     <tile bgName="bg_highway" x="608" y="1856" w="32" h="32" xo="96" yo="64" id="10011683" name="inst_AE641AC6" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bg_highway" x="608" y="1824" w="32" h="32" xo="96" yo="64" id="10011684" name="inst_96E8937F" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bg_highway" x="608" y="1792" w="32" h="32" xo="96" yo="64" id="10011685" name="inst_15DD6C4A" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="bg_highway" x="608" y="1760" w="32" h="32" xo="96" yo="64" id="10011686" name="inst_5A25B1E7" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bg_highway" x="608" y="1664" w="32" h="32" xo="96" yo="64" id="10011688" name="inst_40681416" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bg_highway" x="608" y="1632" w="32" h="32" xo="96" yo="64" id="10011689" name="inst_DF8C935D" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bg_highway" x="608" y="1600" w="32" h="32" xo="96" yo="64" id="10011690" name="inst_01B82048" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -2990,7 +2989,6 @@
     <tile bgName="bg_highway" x="608" y="1536" w="32" h="32" xo="96" yo="64" id="10011692" name="inst_5426AA27" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bg_highway" x="608" y="1504" w="32" h="32" xo="96" yo="64" id="10011693" name="inst_C46CC4CC" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bg_highway" x="608" y="1696" w="32" h="32" xo="96" yo="64" id="10011712" name="inst_4C4C16D2" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="bg_highway" x="608" y="1728" w="32" h="32" xo="96" yo="64" id="10011713" name="inst_6569DD78" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bg_highway" x="672" y="2880" w="32" h="32" xo="96" yo="64" id="10011741" name="inst_FEB08EC2" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bg_highway" x="672" y="2208" w="32" h="32" xo="96" yo="64" id="10011764" name="inst_9CC8D8C7" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bg_highway" x="672" y="2144" w="32" h="32" xo="96" yo="64" id="10011766" name="inst_100F606B" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -7216,6 +7214,7 @@
     <tile bgName="bg_bricks_inside" x="1632" y="2400" w="32" h="32" xo="128" yo="224" id="10018815" name="inst_5FD2E729" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bg_bricks_inside" x="1664" y="2400" w="32" h="32" xo="160" yo="224" id="10018816" name="inst_47CF947B" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bg_exits" x="288" y="64" w="32" h="32" xo="0" yo="0" id="10018924" name="inst_6A2B7E26" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bg_highway" x="608" y="1728" w="32" h="64" xo="224" yo="96" id="10064921" name="inst_327FA739" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="&lt;undefined&gt;" x="1728" y="1536" w="32" h="32" xo="160" yo="256" id="10007479" name="inst_39B05B97" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bg_shading" x="1376" y="1472" w="32" h="32" xo="224" yo="0" id="10007496" name="inst_D8380589" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bg_shading" x="1408" y="1472" w="32" h="32" xo="224" yo="0" id="10007497" name="inst_0455B422" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

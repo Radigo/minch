@@ -367,6 +367,17 @@
           <sprite>sprites\spr_nuke_kneeattack_up</sprite>
           <sprite>sprites\spr_nuke_kneeattack_down</sprite>
         </sprites>
+        <sprites name="neant">
+          <sprite>sprites\spr_neant_sitting_idle</sprite>
+          <sprite>sprites\spr_roof_front_left</sprite>
+          <sprite>sprites\spr_roof_front_right</sprite>
+          <sprite>sprites\spr_roof_back_left</sprite>
+          <sprite>sprites\spr_roof_back_right</sprite>
+          <sprite>sprites\spr_cannon_a</sprite>
+          <sprite>sprites\spr_cannon_b</sprite>
+          <sprite>sprites\spr_cannon_b_overlay</sprite>
+          <sprite>sprites\spr_cannon_c</sprite>
+        </sprites>
       </sprites>
       <sprites name="canon_down">
         <sprite>sprites\spr_canondown_cy</sprite>
@@ -548,6 +559,8 @@
     <background>background\bg_tower</background>
     <background>background\bg_props</background>
     <background>background\bg_rage</background>
+    <background>background\bg_ancestors_draft</background>
+    <background>background\bg_ancestors</background>
   </backgrounds>
   <paths name="paths">
     <path>paths\path_rm11_1</path>
@@ -699,6 +712,15 @@
           <script>scripts\scr_nuke_init.gml</script>
           <script>scripts\scr_nuke_step.gml</script>
           <script>scripts\scr_nuke_step_rage.gml</script>
+        </scripts>
+        <scripts name="BossNeant">
+          <script>scripts\scr_neant_init.gml</script>
+          <script>scripts\scr_neant_step.gml</script>
+          <script>scripts\scr_cannon_init.gml</script>
+          <script>scripts\scr_cannon_a_step.gml</script>
+          <script>scripts\scr_cannon_b_step.gml</script>
+          <script>scripts\scr_cannon_b_death.gml</script>
+          <script>scripts\scr_cannon_c_step.gml</script>
         </scripts>
         <script>scripts\scr_ai_simpledrone.gml</script>
         <script>scripts\scr_ai_ara_single_fixed.gml</script>
@@ -930,6 +952,17 @@
         <objects name="nuke">
           <object>objects\obj_nuke</object>
           <object>objects\obj_grenwave</object>
+        </objects>
+        <objects name="neant">
+          <object>objects\obj_neant</object>
+          <object>objects\obj_cannon_a</object>
+          <object>objects\obj_cannon_b</object>
+          <object>objects\obj_cannon_b_overlay</object>
+          <object>objects\obj_cannon_c</object>
+          <object>objects\obj_roof_front_left</object>
+          <object>objects\obj_roof_front_right</object>
+          <object>objects\obj_roof_back_left</object>
+          <object>objects\obj_roof_back_right</object>
         </objects>
       </objects>
       <objects name="obj_canon">

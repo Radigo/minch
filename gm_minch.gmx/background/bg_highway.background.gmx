@@ -13,7 +13,7 @@
     <TextureGroup0>0</TextureGroup0>
   </TextureGroups>
   <For3D>0</For3D>
-  <width>224</width>
+  <width>256</width>
   <height>160</height>
   <data>images\bg_highway.png</data>
 </background>
