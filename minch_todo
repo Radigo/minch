@@ -1,14 +1,15 @@
 MinCH: todo
 
 **Bugs**
+Collision between wall and player wall in a corner let pass through (jump allowed as well).
 Crash when finishing a level then going to score attack (scr_get_room_id)
 Strong sound at boss 2 transitions: wave attack played at each frames > ramp up sound volume to be lower during the first frame.
 Change minch marker depth.
+Change end level depths.
+Destroying black ennemy gives blue screen borders and white combo bar.
 
 **Ongoing**
 Add spawn animation to generator (flashing blue)
-Boss 2-3
-	- intro sequence
 
 **Design**
 Player
@@ -71,9 +72,6 @@ OK - Events
 OK - Switch doors
 OK - Ennemy count doors > combo count bug
 OK - LD elements with combo colors
-- Pattern traps (timed harmless/killing zones)
-- Triggered traps (conditional killing zones)
-- moving plateforms
 OK - rolling floor areas
 OK - Ennemy generators
 OK - Cinematics
@@ -88,7 +86,4 @@ OK - Console
 - Title screen
 - Menus
 - Intro sequence
-- Levels:
-	- 3-2: arrow on highway floor, hide camera target on highway
-	- 3-3: geyser, kill sequence, H lasers should not disapear when hit
 - Ending sequence

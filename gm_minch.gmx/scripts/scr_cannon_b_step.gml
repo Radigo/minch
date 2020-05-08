@@ -2,30 +2,29 @@ if (!self.switchTriggered) {
     return false;
 }
 
-scr_ai_step();
 self.shield = false;
 
 // Settings
 // No overlay at all
 var rotationSpeed = 2;
-var aimTime = 30;
-var lockOnTime = aimTime + 20;
-var shootTime = lockOnTime + 2;
+var aimTime = 16;
+var lockOnTime = aimTime + 10;
+var shootTime = lockOnTime + 1;
 var shootFrequency = 1;
-var coolDownTime = shootTime + 20;
+var coolDownTime = shootTime + 10;
 var targetAngle = 0;
-var rotationArcDuration = 400;
+var rotationArcDuration = 200;
 
 if (self.overlay != noone) {
     // Overlay only on us
     self.overlay.image_angle = self.image_angle;
     
     rotationSpeed = 1;    
-    aimTime = 240;
-    lockOnTime = aimTime + 120;
-    shootTime = lockOnTime + 60;
-    shootFrequency = 20;
-    coolDownTime = shootTime + 90;
+    aimTime = 120;
+    lockOnTime = aimTime + 60;
+    shootTime = lockOnTime + 30;
+    shootFrequency = 10;
+    coolDownTime = shootTime + 40;
     
     if (self.hp < 400) {
         instance_destroy(self.overlay);
@@ -34,11 +33,11 @@ if (self.overlay != noone) {
     }
 } else if (instance_number(obj_cannon_b_overlay) > 0) {
     // Overlay on other
-    aimTime = 300;
-    lockOnTime = aimTime + 60;
-    shootTime = lockOnTime + 400;
-    shootFrequency = 48;
-    coolDownTime = shootTime + 10;
+    aimTime = 160;
+    lockOnTime = aimTime + 30;
+    shootTime = lockOnTime + 200;
+    shootFrequency = 24;
+    coolDownTime = shootTime + 6;
 }
 
 if (self.ticker < aimTime) {

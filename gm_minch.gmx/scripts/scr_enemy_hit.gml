@@ -1,3 +1,6 @@
+//show_debug_message("ennemy: " + string(self.id) + ", shield: " + string(self.shield));
+//show_debug_message("Other: " + string(other.id) + ", " + string(object_get_name(other.object_index)) + ", " + string(other.object_index));
+
 // Handle enemy life and death
 var is_piercing_shot = false;
 var is_mixing_object = false;
@@ -34,6 +37,18 @@ switch (string(object_get_name(other.object_index)))
         is_mixing_object = false;
         damage = 10000;
         break;
+    
+    case "obj_sunray":
+        is_piercing_shot = false;
+        is_mixing_object = false;
+        damage = 0.2;
+        break;
+    
+    case "obj_neant_rock":
+        is_piercing_shot = false;
+        is_mixing_object = false;
+        damage = 60;
+        break;
         
     case "obj_shot":
     default:
@@ -42,19 +57,16 @@ switch (string(object_get_name(other.object_index)))
         break;
 }
 
-var safe_zone = 8;// Outbounds distance until bullets can be shot
-
-// If emitter is off screen, don't shoot
-if ((x < (view_xview - safe_zone))
-    || (x > (view_xview + view_wview + safe_zone))
-    || (y < (view_yview - safe_zone))
-    || (y > (view_yview + view_hview + safe_zone)))
+// If emitter is off screen, don't hit
+if ((x < (view_xview - self.safeZone))
+    || (x > (view_xview + view_wview + self.safeZone))
+    || (y < (view_yview - self.safeZone))
+    || (y > (view_yview + view_hview + self.safeZone)))
 {
     damage = 0;
 }
 
-//show_debug_message("ennemy: " + string(self.id) + ", shield: " + string(self.shield) + ", hit by: " + string(damage) + ", hp: " + string(self.hp) + ", scale:" + string(self.image_xscale));
-//show_debug_message("Other: " + string(other.id) + ", " + string(object_get_name(other.object_index)) + ", " + string(other.object_index));
+//show_debug_message(string(object_get_name(self.object_index)) + " > hit by: " + string(object_get_name(other.object_index)) + ", dmg: " + string(damage) + " > hp: " + string(self.hp) + " (safe zone: " + string(self.safeZone) + ")");
 
 scr_shot_sparkles(self.shield, other, is_piercing_shot);
 

@@ -2,16 +2,15 @@ if (!self.switchTriggered) {
     return false;
 }
 
-scr_ai_step();
 self.shield = false;
 
 // Settings
 var numCannons = instance_number(obj_cannon_a) + instance_number(obj_cannon_b);
 
 var rotationSpeed = 0.1;
-var aimTime = 400 + (numCannons * 40);
-var lockOnTime = aimTime + 10 + (numCannons * 10);
-var coolDownTime = lockOnTime + 90;
+var aimTime = 200 + (numCannons * 20);
+var lockOnTime = aimTime + 6 + (numCannons * 6);
+var coolDownTime = lockOnTime + 40;
 
 if (self.ticker < aimTime) {
     // Aim

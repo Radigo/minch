@@ -74,8 +74,10 @@ switch (shot_type)
         }
         break;
 }
-shot.speed = shot_speed;//TODO: multiply by rank
+
+shot.speed = shot_speed;
 shot.direction = shot_direction;
+shot.image_speed = 1;
 
 if (rotate_instance)
 {

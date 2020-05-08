@@ -15,8 +15,7 @@ if (ds_map_exists(global.actions_map, action_id))
         
         with (dynamic_object)
         {
-            //show_debug_message("scr_switch_machine > action_id:" + dynamic_object.action_id + ", rule: " + dynamic_object.action_rule);
-            show_debug_message("scr_switch_machine > rule: " + action_rule);
+            //show_debug_message("scr_switch_machine > action_id:" + string(action_id) + ", rule: " + action_rule);
             
             switch (action_rule)
             {

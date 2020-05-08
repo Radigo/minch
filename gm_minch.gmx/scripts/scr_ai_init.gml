@@ -16,6 +16,8 @@ self.isActive = false;// Moves and fires when active only
                         // (activation rules at each enemy discretion)
 self.switchTriggered = false;// Turn true when enemy is activated by something (switch)
 
+self.safeZone = 8;// Outbounds distance until enemies can be hit
+
 // Scoring
 var str = object_get_name(self.id.object_index);
 // Get the last 2 characters of the object name to set color

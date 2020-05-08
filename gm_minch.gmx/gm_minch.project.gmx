@@ -246,6 +246,7 @@
       <sprite>sprites\spr_marker</sprite>
       <sprite>sprites\spr_glory_small</sprite>
       <sprite>sprites\spr_glory_large</sprite>
+      <sprite>sprites\spr_ancestor_doorlight</sprite>
       <sprites name="Box">
         <sprite>sprites\spr_box_cy</sprite>
         <sprite>sprites\spr_box_ma</sprite>
@@ -369,6 +370,13 @@
         </sprites>
         <sprites name="neant">
           <sprite>sprites\spr_neant_sitting_idle</sprite>
+          <sprite>sprites\spr_neant_sitting_hand</sprite>
+          <sprite>sprites\spr_neant_standing</sprite>
+          <sprite>sprites\spr_neant_flying</sprite>
+          <sprite>sprites\spr_neant_death</sprite>
+          <sprite>sprites\spr_neant_flying_sun</sprite>
+          <sprite>sprites\spr_neant_cape</sprite>
+          <sprite>sprites\spr_roof_center</sprite>
           <sprite>sprites\spr_roof_front_left</sprite>
           <sprite>sprites\spr_roof_front_right</sprite>
           <sprite>sprites\spr_roof_back_left</sprite>
@@ -377,6 +385,17 @@
           <sprite>sprites\spr_cannon_b</sprite>
           <sprite>sprites\spr_cannon_b_overlay</sprite>
           <sprite>sprites\spr_cannon_c</sprite>
+          <sprite>sprites\spr_neant_rock</sprite>
+          <sprite>sprites\spr_rock_core_spawn</sprite>
+          <sprite>sprites\spr_rock_core_cy</sprite>
+          <sprite>sprites\spr_rock_core_ma</sprite>
+          <sprite>sprites\spr_rock_core_ye</sprite>
+          <sprite>sprites\spr_rock_core_pu</sprite>
+          <sprite>sprites\spr_rock_core_or</sprite>
+          <sprite>sprites\spr_rock_core_gr</sprite>
+          <sprite>sprites\spr_rock_core_br</sprite>
+          <sprite>sprites\spr_rock_core_bk</sprite>
+          <sprite>sprites\spr_ancestors_gate</sprite>
         </sprites>
       </sprites>
       <sprites name="canon_down">
@@ -473,6 +492,7 @@
       <sprite>sprites\spr_missile_dark_red_E</sprite>
       <sprite>sprites\spr_bullet_cancel</sprite>
       <sprite>sprites\spr_bigbullet</sprite>
+      <sprite>sprites\spr_sunray</sprite>
     </sprites>
     <sprites name="UI">
       <sprite>sprites\spr_title</sprite>
@@ -505,6 +525,7 @@
       <sprite>sprites\spr_groundlaser</sprite>
       <sprite>sprites\spr_greenwave</sprite>
       <sprite>sprites\spr_greenstar</sprite>
+      <sprite>sprites\spr_black_particle</sprite>
     </sprites>
     <sprites name="Cinematics">
       <sprites name="rm32">
@@ -559,7 +580,6 @@
     <background>background\bg_tower</background>
     <background>background\bg_props</background>
     <background>background\bg_rage</background>
-    <background>background\bg_ancestors_draft</background>
     <background>background\bg_ancestors</background>
   </backgrounds>
   <paths name="paths">
@@ -716,11 +736,20 @@
         <scripts name="BossNeant">
           <script>scripts\scr_neant_init.gml</script>
           <script>scripts\scr_neant_step.gml</script>
+          <script>scripts\scr_neant_change_room_pattern.gml</script>
+          <script>scripts\scr_neant_destroy.gml</script>
+          <script>scripts\scr_neant_death_init.gml</script>
+          <script>scripts\scr_neant_death_step.gml</script>
           <script>scripts\scr_cannon_init.gml</script>
           <script>scripts\scr_cannon_a_step.gml</script>
           <script>scripts\scr_cannon_b_step.gml</script>
           <script>scripts\scr_cannon_b_death.gml</script>
           <script>scripts\scr_cannon_c_step.gml</script>
+          <script>scripts\scr_neant_rock_init.gml</script>
+          <script>scripts\scr_neant_rock_step.gml</script>
+          <script>scripts\scr_neant_rock_destroy.gml</script>
+          <script>scripts\scr_neant_rock_hit.gml</script>
+          <script>scripts\scr_neant_cape_step.gml</script>
         </scripts>
         <script>scripts\scr_ai_simpledrone.gml</script>
         <script>scripts\scr_ai_ara_single_fixed.gml</script>
@@ -815,6 +844,7 @@
     <script>scripts\scr_collision_normal.gml</script>
     <scripts name="Cinematics">
       <script>scripts\scr_cinematic_mutantraid.gml</script>
+      <script>scripts\scr_cinematic_doorlight_step.gml</script>
     </scripts>
   </scripts>
   <shaders name="shaders">
@@ -955,14 +985,28 @@
         </objects>
         <objects name="neant">
           <object>objects\obj_neant</object>
+          <object>objects\obj_neant_death</object>
+          <object>objects\obj_neant_cape</object>
           <object>objects\obj_cannon_a</object>
           <object>objects\obj_cannon_b</object>
           <object>objects\obj_cannon_b_overlay</object>
           <object>objects\obj_cannon_c</object>
+          <object>objects\obj_roof_center</object>
           <object>objects\obj_roof_front_left</object>
           <object>objects\obj_roof_front_right</object>
           <object>objects\obj_roof_back_left</object>
           <object>objects\obj_roof_back_right</object>
+          <object>objects\obj_neant_rock</object>
+          <object>objects\obj_rock_core_spawn</object>
+          <object>objects\obj_rock_core_cy</object>
+          <object>objects\obj_rock_core_ma</object>
+          <object>objects\obj_rock_core_ye</object>
+          <object>objects\obj_rock_core_pu</object>
+          <object>objects\obj_rock_core_or</object>
+          <object>objects\obj_rock_core_gr</object>
+          <object>objects\obj_rock_core_br</object>
+          <object>objects\obj_rock_core_bk</object>
+          <object>objects\obj_ancestors_gate</object>
         </objects>
       </objects>
       <objects name="obj_canon">
@@ -1190,6 +1234,7 @@
       <object>objects\obj_bullet_03</object>
       <object>objects\obj_bullet_04</object>
       <object>objects\obj_bigbullet</object>
+      <object>objects\obj_sunray</object>
       <object>objects\obj_bullet</object>
       <object>objects\obj_missile_darkred_E</object>
     </objects>
@@ -1213,6 +1258,7 @@
         <object>objects\obj_mutant_raid</object>
         <object>objects\obj_mutantaid_spawner</object>
       </objects>
+      <object>objects\obj_doorlight</object>
     </objects>
     <object>objects\obj_jukebox</object>
   </objects>

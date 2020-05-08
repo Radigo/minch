@@ -28,8 +28,10 @@ if (roofObj != noone) {
     self.roof = instance_create(self.x, self.y, roofObj);
     self.roof.depth = self.depth - 2;
     self.roof.shield = true;
+    self.safeZone = 16;
     if (overlayObj == noone) {
-       self.hp = 600;
+        // We are cannon C
+        self.hp = 600;
     }
 }
 
