@@ -156,7 +156,7 @@
     <instance objName="obj_area_hole" x="1216" y="160" name="inst_332CDAA9" locked="0" code="" scaleX="10" scaleY="5" colour="4294967295" rotation="0"/>
     <instance objName="obj_area_hole" x="1216" y="320" name="inst_644176EE" locked="0" code="" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_area_hole" x="1216" y="352" name="inst_512C4A3E" locked="0" code="" scaleX="10" scaleY="5" colour="4294967295" rotation="0"/>
-    <instance objName="obj_door_v_1_cy" x="352" y="416" name="inst_B60A5084" locked="0" code="enemyCount = 14;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_door_v_1_cy" x="352" y="416" name="inst_B60A5084" locked="0" code="enemyCount = 14;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_door_h_1_ma" x="2208" y="1824" name="inst_8DF46D05" locked="0" code="enemyCount = 12;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="2240" y="1824" name="inst_5E2FEE44" locked="0" code="" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_event_area_multiuse" x="416" y="928" name="inst_5363E16E" locked="0" code="self.action_id = 11;" scaleX="0.5" scaleY="1" colour="4294967295" rotation="0"/>

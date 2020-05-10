@@ -3,8 +3,8 @@
   <caption></caption>
   <width>2048</width>
   <height>2048</height>
-  <vsnap>16</vsnap>
-  <hsnap>16</hsnap>
+  <vsnap>32</vsnap>
+  <hsnap>32</hsnap>
   <isometric>0</isometric>
   <speed>60</speed>
   <persistent>0</persistent>
@@ -163,7 +163,7 @@
     <instance objName="obj_fswitch_magenta" x="1120" y="1376" name="inst_E7D61C83" locked="0" code="self.action_id = 2;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_fswitch_purple" x="896" y="1792" name="inst_F07B3304" locked="0" code="self.action_id = 3;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_fswitch_yellow" x="416" y="1824" name="inst_6B4C82C4" locked="0" code="self.action_id = 4;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_fswitch_green" x="1024" y="192" name="inst_09202C9D" locked="0" code="self.action_id = 5;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_fswitch_green" x="1024" y="192" name="inst_09202C9D" locked="0" code="self.action_id = 5;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_fswitch_orange" x="1632" y="672" name="inst_8014EEC7" locked="0" code="self.action_id = 6;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_area_hole" x="704" y="1856" name="inst_E974DDB7" locked="0" code="scr_register_dynamic_object(3, global.CREATE_PLATFORM);&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_area_hole" x="608" y="1536" name="inst_1E8274EF" locked="0" code="scr_register_dynamic_object(4, global.CREATE_PLATFORM);&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -232,7 +232,7 @@
     <instance objName="obj_wall" x="768" y="1088" name="inst_97179CAA" locked="0" code="" scaleX="10" scaleY="4" colour="4294967295" rotation="0"/>
     <instance objName="obj_secret_orange_wall" x="1280" y="256" name="inst_C7FA5BCA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_door_v_1_gr" x="1216" y="576" name="inst_11EEEDAE" locked="0" code="scr_register_dynamic_object(5, global.DOOR_OPEN);&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_door_v_1_gr" x="1088" y="576" name="inst_C61C284F" locked="0" code="scr_register_dynamic_object(5, global.DOOR_OPEN);&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_door_v_1_gr" x="1088" y="576" name="inst_C61C284F" locked="0" code="scr_register_dynamic_object(5, global.DOOR_OPEN);" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_door_v_1_gr" x="1344" y="576" name="inst_F58E33B1" locked="0" code="scr_register_dynamic_object(5, global.DOOR_OPEN);&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_door_v_1_bk" x="1152" y="192" name="inst_690B5905" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_door_v_1_ma" x="928" y="1376" name="inst_D269BE7C" locked="0" code="scr_register_dynamic_object(2, global.DOOR_OPEN);&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

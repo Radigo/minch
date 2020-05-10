@@ -281,8 +281,8 @@
     <instance objName="obj_copter_drone_cy" x="816" y="304" name="drone_path1_cy" locked="0" code="path_start(path_rm11_1, 1, 1, true);&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_copter_drone_ma" x="816" y="464" name="drone_path1_ma" locked="0" code="path_start(path_rm11_1, 1, 1, true);&#xA;path_position = 0.5;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_copter_drone_cy" x="704" y="464" name="inst_D1C02A7D" locked="0" code="path_start(path_rm11_2, 1, 1, true);&#xA;path_position = 0.5;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_copter_drone_cy" x="592" y="304" name="inst_3BD36104" locked="0" code="path_start(path_rm11_3, 1, 1, true);&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_copter_drone_ma" x="592" y="464" name="inst_FBD12500" locked="0" code="path_start(path_rm11_3, 1, 1, true);&#xA;path_position = 0.5;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_copter_drone_cy" x="592" y="304" name="inst_3BD36104" locked="0" code="path_start(path_rm11_3, 1, 1, true);" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_copter_drone_ma" x="592" y="464" name="inst_FBD12500" locked="0" code="path_start(path_rm11_3, 1, 1, true);&#xA;path_position = 0.5;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_copter_drone_ma" x="704" y="304" name="inst_C104AAB3" locked="0" code="path_start(path_rm11_2, 1, 1, true);&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>

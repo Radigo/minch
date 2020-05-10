@@ -586,6 +586,14 @@
     <path>paths\path_rm11_1</path>
     <path>paths\path_rm11_2</path>
     <path>paths\path_rm11_3</path>
+    <path>paths\path_rm12_1</path>
+    <path>paths\path_rm12_2</path>
+    <path>paths\path_rm12_3</path>
+    <path>paths\path_rm12_4</path>
+    <path>paths\path_rm12_5</path>
+    <path>paths\path_rm12_6</path>
+    <path>paths\path_rm12_7</path>
+    <path>paths\path_rm12_8</path>
     <path>paths\path_rm32_1</path>
     <path>paths\path_rm32_2</path>
     <path>paths\path_rm32_3</path>
@@ -623,6 +631,7 @@
     <path>paths\path_rm41_7</path>
     <path>paths\path_rm41_8</path>
     <path>paths\path_rm41_9</path>
+    <path>paths\path40</path>
   </paths>
   <scripts name="scripts">
     <script>scripts\scr_lang_EN.gml</script>
@@ -1138,6 +1147,7 @@
       <objects name="Generators">
         <object>objects\obj_enemy_generator_up</object>
         <object>objects\obj_enemy_generator_left</object>
+        <object>objects\obj_enemy_generator_right</object>
         <object>objects\obj_generator</object>
         <object>objects\obj_spawner</object>
       </objects>

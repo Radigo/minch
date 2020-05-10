@@ -9,7 +9,7 @@ if (self.ticker == self.tickerLimit)
 {
     if (self.enemiesAreRandom)
     {
-        self.listIndex = random(ds_list_size(self.enemyList) - 1);
+        self.listIndex = random(ds_list_size(self.enemyList));
     }
     else
     {

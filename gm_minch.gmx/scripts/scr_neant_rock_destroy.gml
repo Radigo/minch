@@ -1,7 +1,7 @@
 var MAX_BULLETS = 30;
 var boomStrength = 1 - (max(self.hp, 1) / self.MAX_HP);
 
-show_debug_message("ROCK destroy with " + string(self.MAX_HP) + " / " + string(self.hp) + " hp = " + string(boomStrength));
+//show_debug_message("ROCK destroy with " + string(self.MAX_HP) + " / " + string(self.hp) + " hp = " + string(boomStrength));
 
 scr_pattern_spread(self.x, self.y, 0, 1, 3, MAX_BULLETS * boomStrength, 360);
 
