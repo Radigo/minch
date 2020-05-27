@@ -83,8 +83,8 @@
     <instance objName="obj_event_area" x="864" y="416" name="inst_26643385" locked="0" code="// Close doors&#xA;self.action_id = 10;&#xA;" scaleX="3" scaleY="3" colour="4294967295" rotation="0"/>
     <instance objName="obj_checkpoint_follow" x="1056" y="336" name="inst_796C64BE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_area_checkpoint" x="832" y="448" name="inst_72F7F46F" locked="0" code="self.checkpointId = &quot;follow&quot;;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_event_area" x="864" y="384" name="inst_751FAC2D" locked="0" code="// Focus ON&#xA;self.action_id = 1;&#xA;" scaleX="12" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_door_v_1_bk" x="832" y="448" name="inst_DCADB5F9" locked="0" code="scr_register_dynamic_object(5, global.DOOR_CLOSE);&#xA;// init this door opened&#xA;scr_register_dynamic_object(6, global.DOOR_OPEN);&#xA;scr_switch_machine(6);&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_event_area" x="864" y="384" name="inst_751FAC2D" locked="0" code="// Focus ON&#xA;self.action_id = 1;" scaleX="12" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_door_v_1_bk" x="832" y="448" name="inst_DCADB5F9" locked="0" code="scr_register_dynamic_object(5, global.DOOR_CLOSE);&#xA;// init this door opened&#xA;scr_register_dynamic_object(6, global.DOOR_OPEN);&#xA;scr_switch_machine(6);" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_event_area" x="864" y="320" name="inst_64D8DE4C" locked="0" code="// Closes door&#xA;self.action_id = 5;&#xA;" scaleX="12" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_door_v_1_bk" x="1344" y="544" name="inst_E01635EB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>

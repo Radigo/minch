@@ -362,7 +362,7 @@
     <instance objName="obj_event_area_multiuse" x="928" y="2432" name="inst_BB89D331" locked="0" code="// Focus OFF&#xA;self.action_id = 4;&#xA;" scaleX="2" scaleY="5" colour="4294967295" rotation="0"/>
     <instance objName="obj_event_area_multiuse" x="512" y="1664" name="inst_783C6AD2" locked="0" code="// Focus OFF&#xA;self.action_id = 4;&#xA;" scaleX="2" scaleY="5" colour="4294967295" rotation="0"/>
     <instance objName="obj_event_area" x="576" y="2336" name="inst_DD6E5937" locked="0" code="// Enemy ON&#xA;self.action_id = 1;&#xA;" scaleX="11" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_event_area_multiuse" x="576" y="2400" name="inst_954B75F9" locked="0" code="// Focus ON&#xA;self.action_id = 3;&#xA;" scaleX="11" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_event_area_multiuse" x="576" y="2400" name="inst_954B75F9" locked="0" code="// Focus ON&#xA;self.action_id = 3;" scaleX="11" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_event_area_multiuse" x="576" y="1824" name="inst_82EF30AD" locked="0" code="// Focus ON&#xA;self.action_id = 3;" scaleX="11" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>

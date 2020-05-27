@@ -397,6 +397,25 @@
           <sprite>sprites\spr_rock_core_bk</sprite>
           <sprite>sprites\spr_ancestors_gate</sprite>
         </sprites>
+        <sprites name="trash">
+          <sprite>sprites\spr_trash_idle</sprite>
+          <sprite>sprites\spr_trash_goodbye</sprite>
+          <sprite>sprites\spr_trash_goodbye_look</sprite>
+          <sprite>sprites\spr_trash_shield</sprite>
+          <sprite>sprites\spr_trash_jump_up</sprite>
+          <sprite>sprites\spr_trash_land_up</sprite>
+          <sprite>sprites\spr_trash_jump_down</sprite>
+          <sprite>sprites\spr_trash_land_down</sprite>
+          <sprite>sprites\spr_trash_jump_right</sprite>
+          <sprite>sprites\spr_trash_land_right</sprite>
+          <sprite>sprites\spr_layout_square</sprite>
+          <sprite>sprites\spr_layout_square_end</sprite>
+          <sprite>sprites\spr_layout_cross</sprite>
+          <sprite>sprites\spr_layout_bar</sprite>
+          <sprite>sprites\spr_layout_i</sprite>
+          <sprite>sprites\spr_layout_square_end_wall</sprite>
+          <sprite>sprites\spr_layout_square_end_fence</sprite>
+        </sprites>
       </sprites>
       <sprites name="canon_down">
         <sprite>sprites\spr_canondown_cy</sprite>
@@ -760,6 +779,26 @@
           <script>scripts\scr_neant_rock_hit.gml</script>
           <script>scripts\scr_neant_cape_step.gml</script>
         </scripts>
+        <scripts name="BossTrash">
+          <script>scripts\scr_trash_init.gml</script>
+          <script>scripts\scr_trash_instance_init.gml</script>
+          <script>scripts\scr_trash_instance_step.gml</script>
+          <script>scripts\scr_trash_destroy.gml</script>
+          <script>scripts\scr_trash_death_init.gml</script>
+          <script>scripts\scr_trash_death_step.gml</script>
+          <script>scripts\scr_trash_pattern_squarepunch_init.gml</script>
+          <script>scripts\scr_trash_pattern_squarepunch_step.gml</script>
+          <script>scripts\scr_trash_pattern_squareburst_init.gml</script>
+          <script>scripts\scr_trash_pattern_squareburst_step.gml</script>
+          <script>scripts\scr_trash_pattern_squarespiral_init.gml</script>
+          <script>scripts\scr_trash_pattern_squarespiral_step.gml</script>
+          <script>scripts\scr_trash_pattern_cross_init.gml</script>
+          <script>scripts\scr_trash_pattern_cross_step.gml</script>
+          <script>scripts\scr_trash_pattern_bar_init.gml</script>
+          <script>scripts\scr_trash_pattern_bar_step.gml</script>
+          <script>scripts\scr_trash_pattern_i_init.gml</script>
+          <script>scripts\scr_trash_pattern_i_step.gml</script>
+        </scripts>
         <script>scripts\scr_ai_simpledrone.gml</script>
         <script>scripts\scr_ai_ara_single_fixed.gml</script>
         <script>scripts\scr_ai_ara_dual_fixed.gml</script>
@@ -829,6 +868,7 @@
       <script>scripts\scr_mixer_flush.gml</script>
       <script>scripts\scr_add_door_anim_object.gml</script>
       <script>scripts\scr_change_door_triggered_instance.gml</script>
+      <script>scripts\scr_door_instance_step.gml</script>
     </scripts>
     <scripts name="Particles">
       <script>scripts\scr_particles_init.gml</script>
@@ -1017,6 +1057,23 @@
           <object>objects\obj_rock_core_bk</object>
           <object>objects\obj_ancestors_gate</object>
         </objects>
+        <objects name="trash">
+          <object>objects\obj_trash_layout_square</object>
+          <object>objects\obj_trash_layout_square_end</object>
+          <object>objects\obj_trash_layout_cross</object>
+          <object>objects\obj_trash_layout_bar</object>
+          <object>objects\obj_trash_layout_i</object>
+          <object>objects\obj_trash_layout_square_end_wall</object>
+          <object>objects\obj_trash_layout_square_end_fence</object>
+          <object>objects\obj_trash_conductor</object>
+          <object>objects\obj_trash_pattern_squarepunch_instance</object>
+          <object>objects\obj_trash_pattern_squareburst_instance</object>
+          <object>objects\obj_trash_pattern_squarespiral_instance</object>
+          <object>objects\obj_trash_pattern_cross_instance</object>
+          <object>objects\obj_trash_pattern_bar_instance</object>
+          <object>objects\obj_trash_pattern_i_instance</object>
+          <object>objects\obj_trash_death</object>
+        </objects>
       </objects>
       <objects name="obj_canon">
         <object>objects\obj_canon</object>
@@ -1143,6 +1200,7 @@
         <object>objects\obj_area_end_level</object>
       </objects>
       <object>objects\obj_event_area</object>
+      <object>objects\obj_focusmoverdebug</object>
       <object>objects\obj_event_area_multiuse</object>
       <objects name="Generators">
         <object>objects\obj_enemy_generator_up</object>

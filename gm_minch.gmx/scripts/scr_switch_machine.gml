@@ -54,8 +54,8 @@ if (ds_map_exists(global.actions_map, action_id))
                     
                 case global.DOOR_OPEN:
                 case global.DOOR_CLOSE:
-                    scr_add_door_anim_object(action_rule, dynamic_object);
-                    scr_change_door_triggered_instance(action_rule, dynamic_object);
+                    var doorInstance = scr_change_door_triggered_instance(action_rule, dynamic_object);
+                    scr_add_door_anim_object(action_rule, doorInstance);
                     break;
                 
                 case global.CREATE_PLATFORM:
