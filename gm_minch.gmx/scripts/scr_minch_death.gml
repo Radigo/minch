@@ -52,9 +52,11 @@ if ((global.controlStatus == global.ALIVE)
         global.extends--;
         
         // Restore focus
-        obj_minch_camera.transitionDuration = obj_minch_camera.transitionOutDuration;
-        obj_minch_camera.transitionStep = obj_minch_camera.transitionOutDuration;
-        obj_minch_camera.focus = obj_minch;
+        if (!obj_minch_camera.keepFocusAfterDeath) {
+            obj_minch_camera.transitionDuration = obj_minch_camera.transitionOutDuration;
+            obj_minch_camera.transitionStep = obj_minch_camera.transitionOutDuration;
+            obj_minch_camera.focus = obj_minch;
+        }
     }
     
     if (destroy_instance)

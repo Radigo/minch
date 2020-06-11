@@ -27,6 +27,10 @@ if (isPressed)
         image_index = 1;
         
         scr_switch_machine(self.action_id);
+        for (i = 0; i < ds_list_size(self.actionList); i++) {
+            scr_switch_machine(ds_list_find_value(self.actionList, i));
+        }
+        
         if (play_sound)
         {
             audio_play_sound(snd_switch, 0, false);

@@ -167,9 +167,13 @@ for (var i = 0; i < ds_list_size(self.patternsSequence); i++) {
     }
 }
 
-// debug
+
+// ============= DEBUG =============
 ds_list_clear(self.patternsSequence);
-ds_list_add(self.patternsSequence, self.PATTERN_SQUARE_PUNCH);
+ds_list_add(self.patternsSequence, self.PATTERN_SQUARE_PUNCH, self.PATTERN_BAR, self.PATTERN_SQUARE_SPIRAL, self.PATTERN_CROSS, self.PATTERN_I, self.PATTERN_SQUARE_BURST);
+ds_list_clear(self.directionSequence);
+ds_list_add(self.directionSequence, self.DIRECTION_RIGHT, self.DIRECTION_RIGHT, self.DIRECTION_UP, self.DIRECTION_UP, self.DIRECTION_UP, self.DIRECTION_LEFT);
+// ============= DEBUG =============
 
 show_debug_message("-- Trash sequence --");
 for (var i = 0; i < ds_list_size(self.patternsSequence); i++) {
@@ -248,6 +252,6 @@ instance_create(self.x, self.y, obj_checkpoint_1);
 // Camera focus
 self.focus = instance_create(self.x, self.y, obj_dummy);
 with (self.focus) {
-    scr_register_dynamic_object(obj_trash_conductor.CAMERA_FOCUS_ON, global.CAMERA_FOCUS_ENEMY_ON);
+    scr_register_dynamic_object(obj_trash_conductor.CAMERA_FOCUS_ON, global.CAMERA_FOCUS_ENEMY_ON_PERSISTENT);
     scr_register_dynamic_object(obj_trash_conductor.CAMERA_FOCUS_OFF, global.CAMERA_FOCUS_ENEMY_OFF);
 }

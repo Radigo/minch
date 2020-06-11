@@ -7,3 +7,4 @@ self.vDistanceMax = 80;
 self.transitionDuration = 0;
 self.transitionStep = 0;
 self.focus = obj_minch;
+self.keepFocusAfterDeath = false;

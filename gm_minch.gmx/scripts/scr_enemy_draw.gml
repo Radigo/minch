@@ -13,3 +13,4 @@ if (self.lastHitTicker >= 0) {
 // Normal
 draw_set_blend_mode(blendMode);
 draw_self();
+draw_set_blend_mode(bm_normal);

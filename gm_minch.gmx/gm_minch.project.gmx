@@ -408,6 +408,10 @@
           <sprite>sprites\spr_trash_land_down</sprite>
           <sprite>sprites\spr_trash_jump_right</sprite>
           <sprite>sprites\spr_trash_land_right</sprite>
+          <sprite>sprites\spr_trash_punch_stance</sprite>
+          <sprite>sprites\spr_trash_punch_stance_land</sprite>
+          <sprite>sprites\spr_trash_punch_stance_right</sprite>
+          <sprite>sprites\spr_trash_punch</sprite>
           <sprite>sprites\spr_layout_square</sprite>
           <sprite>sprites\spr_layout_square_end</sprite>
           <sprite>sprites\spr_layout_cross</sprite>
@@ -415,6 +419,9 @@
           <sprite>sprites\spr_layout_i</sprite>
           <sprite>sprites\spr_layout_square_end_wall</sprite>
           <sprite>sprites\spr_layout_square_end_fence</sprite>
+          <sprite>sprites\spr_bar_deflector</sprite>
+          <sprite>sprites\spr_trash_spawner</sprite>
+          <sprite>sprites\spr_pusher_wave</sprite>
         </sprites>
       </sprites>
       <sprites name="canon_down">
@@ -545,6 +552,7 @@
       <sprite>sprites\spr_greenwave</sprite>
       <sprite>sprites\spr_greenstar</sprite>
       <sprite>sprites\spr_black_particle</sprite>
+      <sprite>sprites\spr_fading_black_spot</sprite>
     </sprites>
     <sprites name="Cinematics">
       <sprites name="rm32">
@@ -659,6 +667,8 @@
     <script>scripts\scr_text.gml</script>
     <script>scripts\scr_loop_kill.gml</script>
     <script>scripts\scr_loop_stop.gml</script>
+    <script>scripts\scr_invert_noalpha_draw.gml</script>
+    <script>scripts\scr_invert_draw.gml</script>
     <script>scripts\scr_get_moreorless.gml</script>
     <script>scripts\scr_map_rooms.gml</script>
     <script>scripts\scr_get_room_id.gml</script>
@@ -788,16 +798,29 @@
           <script>scripts\scr_trash_death_step.gml</script>
           <script>scripts\scr_trash_pattern_squarepunch_init.gml</script>
           <script>scripts\scr_trash_pattern_squarepunch_step.gml</script>
+          <script>scripts\scr_trash_pattern_squarepunch_destroy.gml</script>
           <script>scripts\scr_trash_pattern_squareburst_init.gml</script>
           <script>scripts\scr_trash_pattern_squareburst_step.gml</script>
+          <script>scripts\scr_trash_pattern_squareburst_destroy.gml</script>
           <script>scripts\scr_trash_pattern_squarespiral_init.gml</script>
           <script>scripts\scr_trash_pattern_squarespiral_step.gml</script>
+          <script>scripts\scr_trash_pattern_squarespiral_destroy.gml</script>
           <script>scripts\scr_trash_pattern_cross_init.gml</script>
           <script>scripts\scr_trash_pattern_cross_step.gml</script>
+          <script>scripts\scr_trash_pattern_cross_destroy.gml</script>
           <script>scripts\scr_trash_pattern_bar_init.gml</script>
           <script>scripts\scr_trash_pattern_bar_step.gml</script>
+          <script>scripts\scr_trash_pattern_bar_destroy.gml</script>
           <script>scripts\scr_trash_pattern_i_init.gml</script>
           <script>scripts\scr_trash_pattern_i_step.gml</script>
+          <script>scripts\scr_trash_pattern_i_destroy.gml</script>
+          <script>scripts\scr_deflector_bullet_hit.gml</script>
+          <script>scripts\scr_spawner_init.gml</script>
+          <script>scripts\scr_spawner_step.gml</script>
+          <script>scripts\scr_spawner_destroy.gml</script>
+          <script>scripts\scr_pusher_init.gml</script>
+          <script>scripts\scr_pusher_step.gml</script>
+          <script>scripts\scr_pusher_hit.gml</script>
         </scripts>
         <script>scripts\scr_ai_simpledrone.gml</script>
         <script>scripts\scr_ai_ara_single_fixed.gml</script>
@@ -1073,6 +1096,9 @@
           <object>objects\obj_trash_pattern_bar_instance</object>
           <object>objects\obj_trash_pattern_i_instance</object>
           <object>objects\obj_trash_death</object>
+          <object>objects\obj_bar_deflector</object>
+          <object>objects\obj_trash_spawner</object>
+          <object>objects\obj_trash_pusher</object>
         </objects>
       </objects>
       <objects name="obj_canon">
@@ -1312,6 +1338,7 @@
       <object>objects\obj_fx_boom_tiny</object>
       <object>objects\obj_fx_boom_big</object>
       <object>objects\obj_bullet_cancel</object>
+      <object>objects\obj_fading_black_spot</object>
     </objects>
     <objects name="Cinematics">
       <objects name="rm32">

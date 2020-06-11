@@ -53,6 +53,12 @@ And finally, black is the cursed color that breaks any mix.
 +1000000 - Deepest BG (ex: city_bg.png)
 == Bottom ==
 
+**Blend Modes**
+Quick note abot GM blend modes
+4, 6 > bm_inv_src_colour, bm_inv_src_alpha = subtle dark FX
+4, 7 > bm_inv_src_colour, bm_dest_alpha = subtle light FX
+9, 5 > bm_dest_colour, bm_src_alpha = invert with alpha
+
 
 **Level start/end**
 Each level should have a start and an end.

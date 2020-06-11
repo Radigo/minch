@@ -37,8 +37,8 @@ ds_list_add(global.SECONDARY_COLORS, global.PU, global.GR, global.RG);
 global.ENEMY_TRIGGER_ON = "enemyTriggerOn";// Switch turns enemy ON
 global.ENEMY_TRIGGER_OFF = "enemyTriggerOff";// Switch turns enemy OFF
 global.START_CINEMATIC = "startCinematic";// Launch a predifined cinematic on dynamic object
-global.CAMERA_FOCUS_BOSS_ON = "cameraFocusBossOn";// Start focuses on boss (or triggered ON enemy)
 global.CAMERA_FOCUS_ENEMY_ON = "cameraFocusEnemyOn";// Start focuses on enemy
+global.CAMERA_FOCUS_ENEMY_ON_PERSISTENT = "cameraFocusEnemyOnPersistent";// Start persistent focuses on enemy (keep after death)
 global.CAMERA_FOCUS_ENEMY_OFF = "cameraFocusEnemyOff";// Stop focuses on enemy
 global.DOOR_OPEN = "doorOpen";// Opens a closed door
 global.DOOR_CLOSE = "doorClose";// Closes an opened door
@@ -72,9 +72,9 @@ switch (global.applicationMode)
         global.initLives = 3;
         break;
     case global.DEMO_MODE:
-        global.init_room = rm_lvl_31;
+        global.init_room = rm_lvl_12;
         global.allowConsole = true;
-        global.initLives = 9;
+        global.initLives = 3;
         break;
     case global.RELEASE_MODE:
         global.map_list = ds_map_create();

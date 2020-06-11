@@ -22,17 +22,14 @@ if (ds_map_exists(global.actions_map, action_id))
                 case global.ENEMY_TRIGGER_ON:
                     dynamic_object.switchTriggered = true;
                     break;
+                    
                 case global.ENEMY_TRIGGER_OFF:
                     dynamic_object.switchTriggered = false;
                     break;
+                    
                 case global.START_CINEMATIC:
                     dynamic_object.timeline_running = 1;
                     break;
-                case global.CAMERA_FOCUS_BOSS_ON:
-                    if (dynamic_object.isActive == false)
-                    {
-                        break;
-                    }
                     
                 case global.CAMERA_FOCUS_ENEMY_ON:
                     // Only if focus object is MinCH (no focus) OR focus changed
@@ -43,6 +40,20 @@ if (ds_map_exists(global.actions_map, action_id))
                         obj_minch_camera.transitionDuration = obj_minch_camera.transitionInDuration;
                         obj_minch_camera.transitionStep = obj_minch_camera.transitionInDuration;
                         obj_minch_camera.focus = dynamic_object;
+                        obj_minch_camera.keepFocusAfterDeath = false;
+                    }
+                    break;
+                    
+                case global.CAMERA_FOCUS_ENEMY_ON_PERSISTENT:
+                    // Only if focus object is MinCH (no focus) OR focus changed
+                    
+                    if (obj_minch_camera.focus == obj_minch
+                        || (object_get_name(obj_minch_camera.focus) != object_get_name(dynamic_object)))
+                    {
+                        obj_minch_camera.transitionDuration = obj_minch_camera.transitionInDuration;
+                        obj_minch_camera.transitionStep = obj_minch_camera.transitionInDuration;
+                        obj_minch_camera.focus = dynamic_object;
+                        obj_minch_camera.keepFocusAfterDeath = true;
                     }
                     break;
                     
@@ -50,6 +61,7 @@ if (ds_map_exists(global.actions_map, action_id))
                     obj_minch_camera.transitionDuration = obj_minch_camera.transitionOutDuration;
                     obj_minch_camera.transitionStep = obj_minch_camera.transitionOutDuration;
                     obj_minch_camera.focus = obj_minch;
+                    obj_minch_camera.keepFocusAfterDeath = false;
                     break;
                     
                 case global.DOOR_OPEN:

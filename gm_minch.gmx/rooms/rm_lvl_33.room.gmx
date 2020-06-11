@@ -83,7 +83,7 @@
     <instance objName="obj_area_hole" x="1920" y="864" name="inst_2F16A0B6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_area_hole" x="1856" y="704" name="inst_79A1351F" locked="0" code="" scaleX="6" scaleY="4" colour="4294967295" rotation="0"/>
     <instance objName="obj_area_hole" x="1952" y="832" name="inst_E24A7DE2" locked="0" code="" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_area_checkpoint" x="320" y="704" name="inst_FA629653" locked="0" code="self.checkpointId = &quot;follow&quot;;&#xA;" scaleX="1" scaleY="5" colour="4294967295" rotation="0"/>
+    <instance objName="obj_area_checkpoint" x="320" y="704" name="inst_FA629653" locked="0" code="self.checkpointId = &quot;follow&quot;;" scaleX="1" scaleY="5" colour="4294967295" rotation="0"/>
     <instance objName="obj_checkpoint_follow" x="384" y="768" name="inst_E92F18D2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ch1_body" x="224" y="768" name="inst_B08DE5BE" locked="0" code="scr_register_dynamic_object(4, global.ENEMY_TRIGGER_ON);&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_event_area" x="288" y="736" name="inst_EAA0D6C8" locked="0" code="// Activates CH1&#xA;self.action_id = 4;&#xA;" scaleX="2" scaleY="3" colour="4294967295" rotation="0"/>

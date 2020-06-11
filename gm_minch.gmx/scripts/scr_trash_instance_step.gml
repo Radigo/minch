@@ -1,20 +1,19 @@
-
 // Focus
 var roomCenterX = self.originX + (obj_trash_conductor.LAYOUT_TILE_SIZE * 5.5);
 var roomCenterY = self.originY + (obj_trash_conductor.LAYOUT_TILE_SIZE * 5.5);
 
 var xDiff = (roomCenterX) - obj_trash_conductor.focus.x;
-if (xDiff > 1) {
-    obj_trash_conductor.focus.x += 1;
-} else if (xDiff < 1) {
-    obj_trash_conductor.focus.x -= 1;
+if (abs(xDiff) > 1) {
+    obj_trash_conductor.focus.x += max(xDiff * 0.007, 1);
+} else {
+    obj_trash_conductor.focus.x = roomCenterX;
 }
 
 var yDiff = roomCenterY - obj_trash_conductor.focus.y;
-if (yDiff > 1) {
-    obj_trash_conductor.focus.y += 1;
-} else if (yDiff < 1) {
-    obj_trash_conductor.focus.y -= 1;
+if (abs(yDiff) > 1) {
+    obj_trash_conductor.focus.y -= max(yDiff * 0.007, 1);
+} else {
+    obj_trash_conductor.focus.y = roomCenterY;
 }
 
 if (self.currentPhase == self.PHASE_IDLE) {
@@ -101,5 +100,5 @@ if (self.currentPhase == self.PHASE_IDLE) {
     
     return false;
 } else if (self.currentPhase == self.PHASE_ACTIVE) {
-
+    return true;
 }

@@ -67,7 +67,7 @@
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>scr_trash_destroy</script>
+            <script>scr_trash_pattern_bar_destroy</script>
           </argument>
           <argument>
             <kind>0</kind>
