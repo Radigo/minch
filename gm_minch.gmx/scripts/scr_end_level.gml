@@ -10,6 +10,7 @@ ds_map_destroy(global.events);
 // Particles
 scr_particles_dispose();
 
+var nextRoom = room_next(room);
 
 switch (global.gameMode)
 {
@@ -17,16 +18,16 @@ switch (global.gameMode)
         if (has_won && (global.applicationMode != global.DEMO_MODE))
         {
             //TODO: check if next room is null (last level) to avoid crash
-            global.currentRoom = room_next(room);
+            global.currentRoom = nextRoom;
             scr_settings("saveProgress");
         }
         else
         {
-            global.currentRoom = rm_title;
+           nextRoom = rm_title;
         }
         break;
     case global.SCOREATTACK_MODE:
-        global.currentRoom = rm_title;
+        nextRoom = rm_title;
         break;
 }
 
@@ -36,4 +37,4 @@ global.currentBGM = noone;
 global.nextBGM = noone;
 audio_stop_all();
 
-room_goto(global.currentRoom);
+room_goto(nextRoom);

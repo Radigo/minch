@@ -76,7 +76,6 @@ if (number_of_enemies > 0)
     {
         ds_map_replace(global.ennemyKilled, mixed_color, ds_map_find_value(global.ennemyKilled, mixed_color) + 1);
         show_debug_message("scr_mixer_flush color" + string(ds_map_find_value(global.ennemyKilled, mixed_color)));
-        scr_scoring_update(total_value, mixed_color);
         
         // Call event linked to enemy count mechanic
         with (obj_door)
@@ -84,4 +83,6 @@ if (number_of_enemies > 0)
             event_user(0);
         }
     }
+    
+    scr_scoring_update(total_value, mixed_color);
 }
