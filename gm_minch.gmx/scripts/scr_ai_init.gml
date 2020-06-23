@@ -10,6 +10,7 @@ self.patternTicker = 0;// Pattern ticker incremented with general ticker
 self.patternTickerLimit = 10000;
 self.hp = 1;// When HPs are <= 0 then boom
 self.shield = false;// Enemy is invincible
+self.noCollision = false;// Enemy doesn't collide with MinCH
 self.lastHitTicker = -1;
 
 self.isActive = false;// Moves and fires when active only

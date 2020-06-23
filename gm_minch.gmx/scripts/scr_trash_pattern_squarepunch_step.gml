@@ -85,7 +85,6 @@ if (self.currentMove == self.MOVE_JUMP) {
 }
 
 // Spawners
-
 for (var i = 0; i < ds_list_size(self.spawnerList); i++) {
     var spawner = ds_list_find_value(self.spawnerList, i);
     

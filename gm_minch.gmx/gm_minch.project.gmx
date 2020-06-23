@@ -399,6 +399,7 @@
         </sprites>
         <sprites name="trash">
           <sprite>sprites\spr_trash_idle</sprite>
+          <sprite>sprites\spr_trash_hover</sprite>
           <sprite>sprites\spr_trash_goodbye</sprite>
           <sprite>sprites\spr_trash_goodbye_look</sprite>
           <sprite>sprites\spr_trash_shield</sprite>
@@ -422,6 +423,10 @@
           <sprite>sprites\spr_bar_deflector</sprite>
           <sprite>sprites\spr_trash_spawner</sprite>
           <sprite>sprites\spr_pusher_wave</sprite>
+          <sprite>sprites\spr_spiral_box_cy</sprite>
+          <sprite>sprites\spr_spiral_box_canon_cy</sprite>
+          <sprite>sprites\spr_spiral_deflector</sprite>
+          <sprite>sprites\spr_spiral_deflector_canon</sprite>
         </sprites>
       </sprites>
       <sprites name="canon_down">
@@ -553,6 +558,7 @@
       <sprite>sprites\spr_greenstar</sprite>
       <sprite>sprites\spr_black_particle</sprite>
       <sprite>sprites\spr_fading_black_spot</sprite>
+      <sprite>sprites\spr_black_wave</sprite>
     </sprites>
     <sprites name="Cinematics">
       <sprites name="rm32">
@@ -821,6 +827,12 @@
           <script>scripts\scr_pusher_init.gml</script>
           <script>scripts\scr_pusher_step.gml</script>
           <script>scripts\scr_pusher_hit.gml</script>
+          <script>scripts\scr_black_wave.gml</script>
+          <script>scripts\scr_radial_pusher_init.gml</script>
+          <script>scripts\scr_radial_pusher_step.gml</script>
+          <script>scripts\scr_radial_pusher_hit.gml</script>
+          <script>scripts\scr_spiral_element_init.gml</script>
+          <script>scripts\scr_spiral_element_step.gml</script>
         </scripts>
         <script>scripts\scr_ai_simpledrone.gml</script>
         <script>scripts\scr_ai_ara_single_fixed.gml</script>
@@ -1098,7 +1110,10 @@
           <object>objects\obj_trash_death</object>
           <object>objects\obj_bar_deflector</object>
           <object>objects\obj_trash_spawner</object>
+          <object>objects\obj_trash_radial_pusher</object>
           <object>objects\obj_trash_pusher</object>
+          <object>objects\obj_spiral_deflector_canon</object>
+          <object>objects\obj_spiral_box_cy</object>
         </objects>
       </objects>
       <objects name="obj_canon">
@@ -1339,6 +1354,7 @@
       <object>objects\obj_fx_boom_big</object>
       <object>objects\obj_bullet_cancel</object>
       <object>objects\obj_fading_black_spot</object>
+      <object>objects\obj_black_wave_element</object>
     </objects>
     <objects name="Cinematics">
       <objects name="rm32">

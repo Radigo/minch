@@ -2,7 +2,6 @@ MinCH: todo
 
 **Bugs**
 Collision between wall and player wall in a corner let pass through (jump allowed as well).
-Crash when finishing a level then going to score attack (scr_get_room_id)
 Strong sound at boss 2 transitions: wave attack played at each frames > ramp up sound volume to be lower during the first frame.
 Change minch marker depth.
 Change end level depths.

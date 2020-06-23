@@ -170,7 +170,7 @@ for (var i = 0; i < ds_list_size(self.patternsSequence); i++) {
 
 // ============= DEBUG =============
 ds_list_clear(self.patternsSequence);
-ds_list_add(self.patternsSequence, self.PATTERN_SQUARE_PUNCH, self.PATTERN_BAR, self.PATTERN_SQUARE_SPIRAL, self.PATTERN_CROSS, self.PATTERN_I, self.PATTERN_SQUARE_BURST);
+ds_list_add(self.patternsSequence, self.PATTERN_SQUARE_SPIRAL, self.PATTERN_BAR, self.PATTERN_SQUARE_BURST, self.PATTERN_CROSS, self.PATTERN_I, self.PATTERN_SQUARE_PUNCH);
 ds_list_clear(self.directionSequence);
 ds_list_add(self.directionSequence, self.DIRECTION_RIGHT, self.DIRECTION_RIGHT, self.DIRECTION_UP, self.DIRECTION_UP, self.DIRECTION_UP, self.DIRECTION_LEFT);
 // ============= DEBUG =============
