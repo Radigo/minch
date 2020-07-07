@@ -58,9 +58,9 @@
     <instance objName="obj_wall" x="1152" y="2048" name="inst_D6239793" locked="0" code="" scaleX="1" scaleY="5" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="1280" y="2048" name="inst_C85D4CC5" locked="0" code="" scaleX="1" scaleY="5" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="1152" y="2208" name="inst_C8250AF9" locked="0" code="" scaleX="5" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_event_area" x="1184" y="2080" name="inst_C7633E8B" locked="0" code="self.action_id = 1;" scaleX="3" scaleY="3" colour="4294967295" rotation="0"/>
+    <instance objName="obj_event_area" x="1184" y="2112" name="inst_C7633E8B" locked="0" code="self.action_id = 1;" scaleX="3.09677410125732" scaleY="2.03225803375244" colour="4294967295" rotation="0"/>
     <instance objName="obj_trash_conductor" x="1232" y="1776" name="inst_16E69C9D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_event_area" x="1216" y="1984" name="inst_A424C9AF" locked="0" code="// In scr_trash_init&#xA;//self.CAMERA_FOCUS_ON = 9;&#xA;// Camera focus&#xA;self.action_id = obj_trash_conductor.CAMERA_FOCUS_ON;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_event_area" x="1184" y="2048" name="inst_A424C9AF" locked="0" code="// In scr_trash_init&#xA;//self.CAMERA_FOCUS_ON = 9;&#xA;// Camera focus&#xA;self.action_id = obj_trash_conductor.CAMERA_FOCUS_ON;&#xA;" scaleX="3" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="obj_area_checkpoint" x="1216" y="1920" name="inst_7885000B" locked="0" code="self.checkpointId = 1;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>

@@ -13,6 +13,7 @@ self.PATTERN_SQUARE_PUNCH = "patternSquarePunch";
 self.PATTERN_SQUARE_BURST = "patternSquareBurst";
 self.PATTERN_SQUARE_SPIRAL = "patternSquareSpiral";
 self.PATTERN_CROSS = "patternCross";
+self.PATTERN_RING = "patternRing";
 self.PATTERN_BAR = "patternBar";
 self.PATTERN_I = "patternI";
 
@@ -22,7 +23,7 @@ self.DIRECTION_RIGHT = "right";
 
 // Master list
 var allPatterns = ds_list_create();
-ds_list_add(allPatterns, self.PATTERN_SQUARE_PUNCH, self.PATTERN_SQUARE_BURST, self.PATTERN_SQUARE_SPIRAL, self.PATTERN_CROSS, self.PATTERN_BAR, self.PATTERN_I);
+ds_list_add(allPatterns, self.PATTERN_SQUARE_PUNCH, self.PATTERN_SQUARE_BURST, self.PATTERN_SQUARE_SPIRAL, self.PATTERN_CROSS, self.PATTERN_RING, self.PATTERN_BAR, self.PATTERN_I);
 ds_list_shuffle(allPatterns);
 
 // Force use at sequence begin and end
@@ -167,18 +168,26 @@ for (var i = 0; i < ds_list_size(self.patternsSequence); i++) {
     }
 }
 
-
-// ============= DEBUG =============
-ds_list_clear(self.patternsSequence);
-ds_list_add(self.patternsSequence, self.PATTERN_SQUARE_SPIRAL, self.PATTERN_BAR, self.PATTERN_SQUARE_BURST, self.PATTERN_CROSS, self.PATTERN_I, self.PATTERN_SQUARE_PUNCH);
-ds_list_clear(self.directionSequence);
-ds_list_add(self.directionSequence, self.DIRECTION_RIGHT, self.DIRECTION_RIGHT, self.DIRECTION_UP, self.DIRECTION_UP, self.DIRECTION_UP, self.DIRECTION_LEFT);
-// ============= DEBUG =============
-
 show_debug_message("-- Trash sequence --");
 for (var i = 0; i < ds_list_size(self.patternsSequence); i++) {
     show_debug_message(ds_list_find_value(self.patternsSequence, i) + " - " + ds_list_find_value(self.directionSequence, i));
 }
+
+// ============= DEBUG =============
+/*
+// Full deterministic path
+ds_list_clear(self.patternsSequence);
+ds_list_add(self.patternsSequence, self.PATTERN_RING, self.PATTERN_I, self.PATTERN_CROSS, self.PATTERN_BAR, self.PATTERN_SQUARE_BURST, self.PATTERN_SQUARE_SPIRAL, self.PATTERN_SQUARE_PUNCH);
+ds_list_clear(self.directionSequence);
+ds_list_add(self.directionSequence, self.DIRECTION_UP, self.DIRECTION_UP, self.DIRECTION_RIGHT, self.DIRECTION_RIGHT, self.DIRECTION_UP, self.DIRECTION_UP, self.DIRECTION_LEFT);
+*/
+
+// Single room
+ds_list_clear(self.patternsSequence);
+ds_list_add(self.patternsSequence,self.PATTERN_SQUARE_PUNCH);
+ds_list_clear(self.directionSequence);
+ds_list_add(self.directionSequence, self.DIRECTION_UP);
+// ============= DEBUG =============
 
 // Instanciate objects
 var originX = self.x - 176;
@@ -235,6 +244,10 @@ switch (ds_list_find_value(self.patternsSequence, 0)) {
          
     case self.PATTERN_CROSS:
         instance_create(self.x, self.y, obj_trash_pattern_cross_instance);
+        break;
+         
+    case self.PATTERN_RING:
+        instance_create(self.x, self.y, obj_trash_pattern_ring_instance);
         break;
          
     case self.PATTERN_BAR:

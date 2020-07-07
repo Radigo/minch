@@ -43,6 +43,24 @@ if (self.currentPhase == self.PHASE_STUN) {
         }
     }
 } else if (self.currentPhase == self.PHASE_GOODBYE) {
+    // Focus a bit up
+    var focusX = obj_trash_conductor.patternX
+    var focusY = obj_trash_conductor.patternY - (obj_trash_conductor.LAYOUT_TILE_SIZE * 1.5);
+    
+    var xDiff = (focusX) - obj_trash_conductor.focus.x;
+    if (abs(xDiff) > 1) {
+        obj_trash_conductor.focus.x += max(xDiff * 0.007, 1);
+    } else {
+        obj_trash_conductor.focus.x = focusX;
+    }
+    
+    var yDiff = focusY - obj_trash_conductor.focus.y;
+    if (abs(yDiff) > 1) {
+        obj_trash_conductor.focus.y -= max(yDiff * 0.007, 1);
+    } else {
+        obj_trash_conductor.focus.y = focusY;
+    }
+
     // Open doors
     var tileSize = 32;
     if (obj_trash_conductor.leftFence.x > obj_trash_conductor.patternX - (tileSize * 3)) {

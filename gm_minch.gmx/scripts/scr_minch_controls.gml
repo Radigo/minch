@@ -501,23 +501,25 @@ else
     // Movement collision
     if (!global.clip)
     {
-        if (collision_circle(x, y, 8, obj_wall, false, false))
+        /*
+        if (collision_circle(x, y, 8, obj_wall, false, false) || collision_circle(x, y, 8, obj_player_wall, false, false))
         {
-            if (!collision_circle(xprevious, y, 8, obj_wall, false, false))
+            if (!collision_circle(xprevious, y, 8, obj_wall, false, false) || !collision_circle(xprevious, y, 8, obj_player_wall, false, false))
             {
                 x = xprevious;
             }
-            else if (!collision_circle(x, yprevious, 8, obj_wall, false, false))
+            else if (!collision_circle(x, yprevious, 8, obj_wall, false, false) || !collision_circle(x, yprevious, 8, obj_player_wall, false, false))
             {
                 y = yprevious;
             }
-            else if (!collision_circle(xprevious, yprevious, 8, obj_wall, false, false))
+            else if (!collision_circle(xprevious, yprevious, 8, obj_wall, false, false) || !collision_circle(xprevious, yprevious, 8, obj_player_wall, false, false))
             {
                 x = xprevious;
                 y = yprevious;
             }
         }
-        else if (collision_circle(x, y, 8, obj_player_wall, false, false))
+        */
+        if (collision_circle(x, y, 8, obj_player_wall, false, false))
         {
             if (!collision_circle(xprevious, y, 8, obj_player_wall, false, false))
             {

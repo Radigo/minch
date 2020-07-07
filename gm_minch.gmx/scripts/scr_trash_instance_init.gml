@@ -27,6 +27,9 @@ self.incomingDirection = obj_trash_conductor.DIRECTION_UP;
 self.originX = self.x - 176;
 self.originY = self.y - 176;
 
+self.respawnX = self.originX + (obj_trash_conductor.LAYOUT_TILE_SIZE * 5.5);
+self.respawnY = self.originY + (obj_trash_conductor.LAYOUT_TILE_SIZE * 7.5);
+
 // Always build side walls
 var wall_tl = instance_create(self.originX, self.originY, obj_player_wall);
 wall_tl.image_xscale = 5;
@@ -117,7 +120,19 @@ switch (object_get_name(object_index)) {
         br_corner.image_yscale = 3.5;
         
         self.x = self.originX + (obj_trash_conductor.LAYOUT_TILE_SIZE * 5.5);
-        self.y = self.originY + (obj_trash_conductor.LAYOUT_TILE_SIZE * 3.5);
+        self.y = self.originY + (obj_trash_conductor.LAYOUT_TILE_SIZE * 5.5);
+        break;
+         
+    case "obj_trash_pattern_ring_instance":
+        var layout = instance_create(self.x, self.y, obj_trash_layout_ring);
+        layout.depth = 10000;
+        
+        var crates = instance_create(self.originX + (obj_trash_conductor.LAYOUT_TILE_SIZE * 2.5), self.originY + (obj_trash_conductor.LAYOUT_TILE_SIZE * 3.5), obj_player_wall);
+        crates.image_xscale = 6;
+        crates.image_yscale = 4;
+        
+        self.x = self.originX + (obj_trash_conductor.LAYOUT_TILE_SIZE * 5.5);
+        self.y = self.originY + 146;
         break;
          
     case "obj_trash_pattern_bar_instance":
@@ -147,10 +162,13 @@ switch (object_get_name(object_index)) {
         r_wall.image_yscale = 8;
         
         self.x = self.originX + (obj_trash_conductor.LAYOUT_TILE_SIZE * 5.5);
-        self.y = self.originY + (obj_trash_conductor.LAYOUT_TILE_SIZE * 3.5);
+        self.y = self.originY + (obj_trash_conductor.LAYOUT_TILE_SIZE * 4.5);
         
         hasLeftDoor = false;
         hasRightDoor = false;
+        
+        self.respawnX = self.originX + (obj_trash_conductor.LAYOUT_TILE_SIZE * 5.5);
+        self.respawnY = self.originY + (obj_trash_conductor.LAYOUT_TILE_SIZE * 7.5);
         break;
 }
 

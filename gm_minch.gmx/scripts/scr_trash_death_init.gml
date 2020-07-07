@@ -84,6 +84,10 @@ switch (self.currentPattern) {
         var nextPattern = instance_create(obj_trash_conductor.patternX, obj_trash_conductor.patternY, obj_trash_pattern_cross_instance);
         break;
          
+    case obj_trash_conductor.PATTERN_RING:
+        var nextPattern = instance_create(obj_trash_conductor.patternX, obj_trash_conductor.patternY, obj_trash_pattern_ring_instance);
+        break;
+         
     case obj_trash_conductor.PATTERN_BAR:
         var nextPattern = instance_create(obj_trash_conductor.patternX, obj_trash_conductor.patternY, obj_trash_pattern_bar_instance);
         break;

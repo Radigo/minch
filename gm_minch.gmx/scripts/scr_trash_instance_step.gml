@@ -25,9 +25,11 @@ if (self.currentPhase == self.PHASE_IDLE) {
     // Activates when we come too close
     var triggered = false;
     if (self.incomingDirection == obj_trash_conductor.DIRECTION_UP) {
-        triggered = (abs(self.y - obj_minch_feets.y) < 128);
-    } else if ((self.incomingDirection == obj_trash_conductor.DIRECTION_LEFT) || (self.incomingDirection == obj_trash_conductor.DIRECTION_RIGHT)) {
-        triggered = (abs(self.x - obj_minch_feets.x) < 128);
+        triggered = obj_minch_feets.y < self.originY + (obj_trash_conductor.LAYOUT_TILE_SIZE * 8);
+    } else if (self.incomingDirection == obj_trash_conductor.DIRECTION_LEFT) {
+        triggered = obj_minch_feets.x < self.originX + (obj_trash_conductor.LAYOUT_TILE_SIZE * 9);
+    } else if (self.incomingDirection == obj_trash_conductor.DIRECTION_RIGHT) {
+        triggered = obj_minch_feets.x > self.originX + (obj_trash_conductor.LAYOUT_TILE_SIZE * 2);
     }
     
     if (triggered) {
@@ -81,8 +83,8 @@ if (self.currentPhase == self.PHASE_IDLE) {
         }
         
         // Move respawn point
-        obj_checkpoint_1.x = self.originX + (obj_trash_conductor.LAYOUT_TILE_SIZE * 5.5);
-        obj_checkpoint_1.y = self.originY + (obj_trash_conductor.LAYOUT_TILE_SIZE * 5.5);
+        obj_checkpoint_1.x = self.respawnX;
+        obj_checkpoint_1.y = self.respawnY;
         
         // Camera focus
         scr_switch_machine(obj_trash_conductor.CAMERA_FOCUS_ON);
