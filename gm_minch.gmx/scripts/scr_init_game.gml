@@ -67,7 +67,7 @@ switch (global.applicationMode)
     case global.DEBUG_MODE:
         global.map_list = ds_map_create();
         scr_map_rooms(global.map_list);
-        global.init_room = rm_lvl_11;
+        global.init_room = rm_lvl_12;
         global.allowConsole = true;
         global.initLives = 3;
         break;

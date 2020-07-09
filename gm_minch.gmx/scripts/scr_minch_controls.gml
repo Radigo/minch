@@ -499,41 +499,67 @@ else
     }
     
     // Movement collision
-    if (!global.clip)
-    {
-        /*
-        if (collision_circle(x, y, 8, obj_wall, false, false) || collision_circle(x, y, 8, obj_player_wall, false, false))
-        {
-            if (!collision_circle(xprevious, y, 8, obj_wall, false, false) || !collision_circle(xprevious, y, 8, obj_player_wall, false, false))
-            {
-                x = xprevious;
+    if (!global.clip) {
+        var collisionRadius = 8;
+        if (collision_circle(x, y, collisionRadius, obj_player_wall, false, false)) {
+            /*
+            // Check corners to ease slide
+            var hitTestX = 0;
+            var hitTestY = 0;
+            var hitAngles = ds_list_create();
+            // Hit the 4 corners
+            for (var hitAngle = 0; hitAngle < (pi * 2); hitAngle += pi * 0.25) {
+                hitTestX = self.x + cos(hitAngle) * collisionRadius;
+                hitTestY = self.y + sin(hitAngle) * collisionRadius;
+                if (collision_point(hitTestX, hitTestY, obj_player_wall, false, false)) {
+                    ds_list_add(hitAngles, (hitAngle + pi) % (pi * 2));// Reverse angle
+                }
             }
-            else if (!collision_circle(x, yprevious, 8, obj_wall, false, false) || !collision_circle(x, yprevious, 8, obj_player_wall, false, false))
-            {
+            
+            for (var i = 0; i < ds_list_size(hitAngles); i++) {
+                var hitAngle = ds_list_find_value(hitAngles, i);
+                self.legsAngle
+            }
+            */
+            
+            var lCornerAngle = self.legsAngle - (pi * 0.25);
+            var rCornerAngle = self.legsAngle + (pi * 0.25);
+            var cornerDistance = 12;
+            var lCornerX = x + cos(lCornerAngle) * cornerDistance;
+            var lCornerY = y + sin(lCornerAngle) * cornerDistance;
+            var rCornerX = x + cos(rCornerAngle) * cornerDistance;
+            var rCornerY = y + sin(rCornerAngle) * cornerDistance;
+            
+            var lCollision = collision_point(lCornerX, lCornerY, obj_player_wall, false, false);
+            var rCollision = collision_point(rCornerX, rCornerY, obj_player_wall, false, false);
+            
+            if (lCollision && rCollision) {
+                lCollision = false;
+                rCollision = false;
+            }
+            
+            // Legacy collision
+            if (!collision_circle(xprevious, y, 8, obj_player_wall, false, false)) {
+                // Try moving to avoid corners
+                if (lCollision) {
+                    y -= sin(lCornerAngle);
+                } else if (rCollision) {
+                    y -= sin(rCornerAngle);
+                }
+                x = xprevious;
+            } else if (!collision_circle(x, yprevious, 8, obj_player_wall, false, false)) {
+                // Try moving to avoid corners
+                if (lCollision) {
+                    x -= cos(lCornerAngle);
+                } else if (rCollision) {
+                    x -= cos(rCornerAngle);
+                }
+                y = yprevious;
+            } else if (!collision_circle(xprevious, yprevious, 8, obj_player_wall, false, false)) {
+                x = xprevious;
                 y = yprevious;
             }
-            else if (!collision_circle(xprevious, yprevious, 8, obj_wall, false, false) || !collision_circle(xprevious, yprevious, 8, obj_player_wall, false, false))
-            {
-                x = xprevious;
-                y = yprevious;
-            }
-        }
-        */
-        if (collision_circle(x, y, 8, obj_player_wall, false, false))
-        {
-            if (!collision_circle(xprevious, y, 8, obj_player_wall, false, false))
-            {
-                x = xprevious;
-            }
-            else if (!collision_circle(x, yprevious, 8, obj_player_wall, false, false))
-            {
-                y = yprevious;
-            }
-            else if (!collision_circle(xprevious, yprevious, 8, obj_player_wall, false, false))
-            {
-                x = xprevious;
-                y = yprevious;
-            }
+            
         }
     }
 }
