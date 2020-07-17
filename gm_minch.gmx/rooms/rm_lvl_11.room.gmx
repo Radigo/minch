@@ -3,8 +3,8 @@
   <caption></caption>
   <width>1600</width>
   <height>768</height>
-  <vsnap>32</vsnap>
-  <hsnap>32</hsnap>
+  <vsnap>16</vsnap>
+  <hsnap>16</hsnap>
   <isometric>0</isometric>
   <speed>60</speed>
   <persistent>0</persistent>
@@ -61,6 +61,26 @@
     <instance objName="obj_wall" x="864" y="256" name="inst_5AE9B825" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="672" y="160" name="inst_62127633" locked="0" code="" scaleX="1" scaleY="7" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="1216" y="160" name="inst_7DB1D89D" locked="0" code="" scaleX="1" scaleY="7" colour="4294967295" rotation="0"/>
+    <instance objName="obj_copter_drone_cy" x="1008" y="208" name="inst_F9782D4B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_copter_drone_ma" x="1056" y="208" name="inst_3139D193" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_copter_drone_ye" x="1104" y="208" name="inst_9BF4E6BA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_copter_drone_pu" x="1008" y="336" name="inst_56EA63A4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_copter_drone_gr" x="1056" y="336" name="inst_D157FD5B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_copter_drone_or" x="1104" y="336" name="inst_4397504D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_copter_drone_br" x="1200" y="208" name="inst_FF167232" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_copter_drone_bk" x="1200" y="336" name="inst_8B4FEA2E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_copter_drone_cy" x="944" y="208" name="inst_9C39465B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_copter_drone_or" x="912" y="208" name="inst_BEB42910" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_copter_drone_ma" x="944" y="336" name="inst_5FD927EC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_copter_drone_pu" x="912" y="336" name="inst_4AAC17B0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_copter_drone_ma" x="848" y="208" name="inst_2AF6F1E5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_copter_drone_gr" x="816" y="208" name="inst_311F3DFC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_copter_drone_pu" x="720" y="208" name="inst_9B47478C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_copter_drone_ye" x="752" y="208" name="inst_535ECF76" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_copter_drone_pu" x="848" y="336" name="inst_2733282E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_copter_drone_gr" x="816" y="336" name="inst_CA696DC1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_copter_drone_br" x="752" y="336" name="inst_93DDCA50" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_copter_drone_cy" x="720" y="336" name="inst_C23CF21C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="bg_warehouse" x="992" y="192" w="32" h="32" xo="128" yo="0" id="10002020" name="inst_54409A74" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

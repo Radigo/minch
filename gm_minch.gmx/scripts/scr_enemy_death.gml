@@ -12,7 +12,7 @@ if (add_score)
     }
     else
     {
-        scr_scoring_update(self.value, self.color);
+        scr_scoring_update(self.value, self.color, self, false, 1);
     }
 }
 
@@ -21,10 +21,9 @@ scr_boom(self.x, self.y, self.explosionLevel, self.explosionSize);
 
 // Update ennemy kill counter
 ds_map_replace(global.ennemyKilled, self.color, ds_map_find_value(global.ennemyKilled, self.color) + 1);
-show_debug_message("scr_enemy_death " + string(ds_map_find_value(global.ennemyKilled, self.color)) + " of color:" + string(self.color));
+show_debug_message("scr_enemy_death " + string(ds_map_find_value(global.ennemyKilled, self.color)) + " of color: " + string(self.color) + " @ " + string(self.x) + ", " + string(self.y));
 // Call event linked to enemy count mechanic
-with (obj_door)
-{
+with (obj_door) {
     event_user(0);
 }
 

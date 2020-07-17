@@ -684,6 +684,7 @@
     <script>scripts\scr_map_rooms.gml</script>
     <script>scripts\scr_get_room_id.gml</script>
     <script>scripts\scr_is_room_level.gml</script>
+    <script>scripts\scr_rgb_color_from_index.gml</script>
     <script>scripts\scr_is_room_ok_for_scoreattack.gml</script>
     <scripts name="UI">
       <script>scripts\scr_title_controls.gml</script>
@@ -697,6 +698,9 @@
       <script>scripts\scr_level_report_init.gml</script>
       <script>scripts\scr_level_report_draw.gml</script>
       <script>scripts\scr_teleportfader_draw.gml</script>
+      <script>scripts\scr_score_notif_init.gml</script>
+      <script>scripts\scr_score_notif_step.gml</script>
+      <script>scripts\scr_score_notif_draw.gml</script>
     </scripts>
     <scripts name="Minch">
       <script>scripts\scr_minch_init.gml</script>
@@ -946,7 +950,9 @@
   </shaders>
   <fonts name="fonts">
     <font>fonts\font_small</font>
+    <font>fonts\font_medium</font>
     <font>fonts\font_large</font>
+    <font>fonts\font_huge</font>
     <font>fonts\font_wide</font>
     <font>fonts\font3</font>
     <font>fonts\font4</font>
@@ -961,6 +967,7 @@
       <object>objects\obj_level_intro</object>
       <object>objects\obj_level_report</object>
       <object>objects\obj_teleportfader</object>
+      <object>objects\obj_score_notif</object>
     </objects>
     <objects name="Minch">
       <object>objects\obj_minch</object>

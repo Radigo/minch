@@ -7,7 +7,7 @@ scr_settings("loadKeys");
 scr_settings("loadProgress");
 
 //show_debug_message("language: " + global.language);
-global.wscale = 2;
+global.wscale = 3;
 
 // Fonts
 global.comboFont = font_add_sprite_ext(spr_combofont, "0123456789", false, 1);
@@ -67,7 +67,7 @@ switch (global.applicationMode)
     case global.DEBUG_MODE:
         global.map_list = ds_map_create();
         scr_map_rooms(global.map_list);
-        global.init_room = rm_lvl_12;
+        global.init_room = rm_lvl_11;
         global.allowConsole = true;
         global.initLives = 3;
         break;
