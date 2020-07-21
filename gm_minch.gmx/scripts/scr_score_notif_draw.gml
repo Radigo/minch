@@ -15,6 +15,8 @@ if (isMixing) {
 
 if ((floor(self.ticker * 0.5) % 2) == 0) {
     draw_set_color(scr_rgb_color_from_index(self.color));
+} else if (self.color == global.BK) {
+    draw_set_colour(c_dkgray);
 } else {
     draw_set_colour(c_white);
 }

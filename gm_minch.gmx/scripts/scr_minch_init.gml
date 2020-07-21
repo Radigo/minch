@@ -12,7 +12,6 @@ global.minchControlIsActive = true;
 global.SPAWN = "spawn";// Sprite fades in
 global.ALIVE = "alive";// Full control and death opportunities
 global.DEATH = "death";// Sprite fades out (TODO: better death anim)
-global.FALL = "fall";// Sprite zoom out
 global.TELEPORT = "teleport";
 
 global.LEGS_IDLE = "idle";
@@ -38,7 +37,7 @@ self.initY = y;
 self.controlTime = 0;
 self.warmupDuration = 60;// Invincibility time after spawn
 self.spawnDuration = 40;// Duration of the spawn process
-self.deathDuration = 60;// Duration of the death sequence
+self.deathDuration = 120;// Duration of the death sequence
 global.teleportDuration = 30;// Duration of the teleport process (20)
 
 self.jumpDuration = 20;// Duration of jump in frames

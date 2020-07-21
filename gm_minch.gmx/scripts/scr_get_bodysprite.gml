@@ -2,13 +2,6 @@
 
 var minch = argument0;
 
-if (global.controlStatus == global.FALL)
-{
-    minch.sprite_index = spr_minch_falling;
-    exit;
-}
-
-
 minch.shotFX.visible = false;
 
 switch (global.bodyStatus)

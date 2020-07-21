@@ -1,8 +1,7 @@
 /** Minch Movement and behavior */
 
 // Console
-if (keyboard_check_released(vk_enter))
-{
+if (keyboard_check_released(vk_enter)) {
     scr_console_controls();
 }
 
@@ -16,16 +15,13 @@ self.isColliding = false;
 //show_debug_message("scr_minch_controls global.controlStatus: " + global.controlStatus + ", controlTime: " + string(self.controlTime));
     
 // GET KEY PRESSED if we can move
-if (global.controlStatus == global.SPAWN)
-{
-    if (global.extends < 0)
-    {
+if (global.controlStatus == global.SPAWN) {
+    if (global.extends < 0) {
         // Game over
         scr_end_level(false);
     }
     
-    if (self.controlTime == self.spawnDuration)
-    {
+    if (self.controlTime == self.spawnDuration) {
         self.x = self.initX;
         self.y = self.initY;
         self.mainAngle = pi * 0.5;
@@ -41,8 +37,7 @@ if (global.controlStatus == global.SPAWN)
     self.image_alpha = 1 - (self.controlTime / self.spawnDuration);
     obj_minch_feets.image_alpha = 1 - (self.controlTime / self.spawnDuration);
     
-    if (self.controlTime == 0)
-    {
+    if (self.controlTime == 0) {
         global.controlStatus = global.ALIVE;
         global.invincible = true;
         self.controlTime = self.warmupDuration;
@@ -50,39 +45,30 @@ if (global.controlStatus == global.SPAWN)
     }
     
     self.controlTime--;
-}
-else if (global.controlStatus == global.TELEPORT)
-{
+} else if (global.controlStatus == global.TELEPORT) {
     // No possible move
-    if (self.controlTime == 0)
-    {
+    if (self.controlTime == 0) {
         global.controlStatus = global.ALIVE;
         exit;
-    }
-    else if (self.controlTime < global.teleportDuration / 2)
-    {
+    } else if (self.controlTime < global.teleportDuration / 2) {
         self.x = self.teleportTargetX;
         self.y = self.teleportTargetY;
     }
     
     self.controlTime--;
-}
-else if (global.controlStatus == global.DEATH)
-{
-    self.image_alpha = self.controlTime / self.deathDuration;
-    obj_minch_feets.image_alpha = self.controlTime / self.deathDuration;
+} else if (global.controlStatus == global.DEATH) {
+    self.image_alpha = 0;
+    obj_minch_feets.image_alpha = 0;
     
     scr_all_bullet_cancel();
     
-    if (self.controlTime == 0)
-    {
+    if (self.controlTime == 0) {
         // Get the associated start checkpoint
         var checkpoint_obj = asset_get_index("obj_checkpoint_" + string(global.lastCheckpoint));
         show_debug_message("obj_checkpoint_" + string(global.lastCheckpoint));
         show_debug_message(string(object_exists(checkpoint_obj)));
         
-        if (object_exists(checkpoint_obj))
-        {
+        if (object_exists(checkpoint_obj)) {
             // set coordinates to MinCH for further respawn
             self.initX = checkpoint_obj.x;
             self.initY = checkpoint_obj.y;
@@ -94,29 +80,7 @@ else if (global.controlStatus == global.DEATH)
     }
     
     self.controlTime--;
-}
-else if (global.controlStatus == global.FALL)
-{
-    self.image_xscale = self.controlTime / self.deathDuration;
-    self.image_yscale = self.controlTime / self.deathDuration;
-    self.y += 0.2;
-    self.image_angle += 6;
-    
-    obj_minch_feets.image_alpha = 0;
-    
-    scr_all_bullet_cancel();
-    
-    if (self.controlTime == 0)
-    {
-        self.controlTime = self.spawnDuration;
-        global.controlStatus = global.SPAWN;
-        exit;
-    }
-    
-    self.controlTime--;
-}
-else if (global.minchControlIsActive)
-{
+} else if (global.minchControlIsActive) {
     if (self.controlTime > 0) {
         if (self.controlTime == 1) {
             global.invincible = false;
@@ -124,71 +88,48 @@ else if (global.minchControlIsActive)
         self.controlTime--;
     }
     
-    if (keyboard_check(global.key_right) &&  keyboard_check(global.key_up))
-    {
+    if (keyboard_check(global.key_right) &&  keyboard_check(global.key_up)) {
         self.mainAngle = pi * 1.75;
         walk_speed = 2;
-    }
-    else if (keyboard_check(global.key_left) &&  keyboard_check(global.key_up))
-    {
+    } else if (keyboard_check(global.key_left) &&  keyboard_check(global.key_up)) {
         self.mainAngle = pi * 1.25;
         walk_speed = 2;
-    }
-    else if (keyboard_check(global.key_left) && keyboard_check(global.key_down))
-    {
+    } else if (keyboard_check(global.key_left) && keyboard_check(global.key_down)) {
         self.mainAngle = pi * 0.75;
         walk_speed = 2;
-    }
-    else if (keyboard_check(global.key_down) && keyboard_check(global.key_right))
-    {
+    } else if (keyboard_check(global.key_down) && keyboard_check(global.key_right)) {
         self.mainAngle = pi * 0.25;
         walk_speed = 2;
-    }
-    else if (keyboard_check(global.key_up))
-    {
+    } else if (keyboard_check(global.key_up)) {
         self.mainAngle = pi * 1.5;
         walk_speed = 2;
-    }
-    else if (keyboard_check(global.key_down))
-    {
+    } else if (keyboard_check(global.key_down)) {
         self.mainAngle = pi * 0.5;
         walk_speed = 2;
-    }
-    else if (keyboard_check(global.key_left))
-    {
+    } else if (keyboard_check(global.key_left)) {
         self.mainAngle = pi * 1;
         walk_speed = 2;
-    }
-    else if (keyboard_check(global.key_right))
-    {
+    } else if (keyboard_check(global.key_right)) {
         self.mainAngle = 0;
         walk_speed = 2;
     }
     
-    if (self.jumpTicker > 0)
-    {
+    if (self.jumpTicker > 0) {
         global.legsStatus = global.LEGS_JUMP;
-    }
-    else if (walk_speed > 0)
-    {
+    } else if (walk_speed > 0) {
         global.legsStatus = global.LEGS_WALK;
-    }
-    else
-    {
+    } else {
         global.legsStatus = global.LEGS_IDLE;
     }
     
-    if (keyboard_check(global.key_a) && keyboard_check(global.key_b))
-    {
+    if (keyboard_check(global.key_a) && keyboard_check(global.key_b)) {
         //show_debug_message("press: AB");
         if (self.abReleased
-            && (global.legsStatus != global.LEGS_JUMP))
-        {
+            && (global.legsStatus != global.LEGS_JUMP)) {
             obj_marker.x = x + cos(self.bodyAngle) * self.markerDistance;
             obj_marker.y = y + sin(self.bodyAngle) * self.markerDistance;
             
-            if (scr_can_jump(x, y, self.bodyAngle))
-            {
+            if (scr_can_jump(x, y, self.bodyAngle)) {
                 // init start/target positions
                 self.jumpStartingPosX = x;
                 self.jumpStartingPosY = y;
@@ -197,53 +138,38 @@ else if (global.minchControlIsActive)
                 global.legsStatus = global.LEGS_JUMP;// << JUMP!
                 self.abReleased = false;
             }
-        }
-        else if (global.bodyStatus != global.BODY_CLAW)
-        {
+        } else if (global.bodyStatus != global.BODY_CLAW) {
             global.bodyStatus = global.BODY_AIMEDSHOT;// << AIMED SHOT
         }
-    }
-    else if (keyboard_check(global.key_a))
-    {
+    } else if (keyboard_check(global.key_a)) {
         //show_debug_message("press: A");
         self.abReleased = false;
         
         if ((global.bodyStatus != global.BODY_CLAW)
-           && (global.bodyStatus != global.BODY_HOLD))
-        {
+           && (global.bodyStatus != global.BODY_HOLD)) {
             
-            if (self.numShots > 1)
-            {
+            if (self.numShots > 1) {
                 self.aReleaseTime = self.aReleaseDelay;
-            }
-            else
-            {
+            } else {
                 self.aReleaseTime = self.aFirstReleaseDelay;
             }
             
             self.aPressTime++;
             
-            if (self.aPressTime < self.aPressDelay)
-            {
+            if (self.aPressTime < self.aPressDelay) {
                 global.bodyStatus = global.BODY_SHOT;// << FREE SHOT
-            }
-            else
-            {
+            } else {
                 self.aPressTime = self.aPressDelay;
                 global.bodyStatus = global.BODY_FIXED;// << FIXED SHOT
             }
         }
-    }
-    else if (keyboard_check(global.key_b))
-    {
+    } else if (keyboard_check(global.key_b)) {
         //show_debug_message("press: B");
         self.abReleased = false;
         
         if ((self.clawTime = 0)
-            && (self.clawDelayTime = 0))
-        {
-            switch (global.bodyStatus)
-            {
+            && (self.clawDelayTime = 0)) {
+            switch (global.bodyStatus) {
                 case global.BODY_AIM:
                 case global.BODY_AIMEDSHOT:
                     global.bodyStatus = global.BODY_AIM;// Free aim
@@ -257,44 +183,33 @@ else if (global.minchControlIsActive)
                     self.aReleaseTime = 0;
                     
                     if ((global.legsStatus = global.LEGS_JUMP)// Add timing
-                        && (self.jumpTicker > self.jumpDuration - 6))
-                    {
+                        && (self.jumpTicker > self.jumpDuration - 6)) {
                         global.bodyStatus = global.BODY_CLAW;// << POWER WAVE CLAW ATTACK
                         scr_wave_attack(self.x, self.y, 1);
-                    }
-                    else
-                    {
+                    } else {
                         global.bodyStatus = global.BODY_CLAW;// << CLAW ATTACK
                     }
                     break;
             }
         }
-    }
-    else
-    {
+    } else {
         self.aPressTime = 0;
         self.abReleased = true;
         
-        if (self.aReleaseTime > 0)
-        {
+        if (self.aReleaseTime > 0) {
             self.aReleaseTime--;
-        }
-        else if ((global.bodyStatus != global.BODY_CLAW)
-            && (global.bodyStatus != global.BODY_HOLD))
-        {
+        } else if ((global.bodyStatus != global.BODY_CLAW)
+            && (global.bodyStatus != global.BODY_HOLD)) {
             global.bodyStatus = global.BODY_IDLE;// NO MORE SHOOTING
         }
     }
-}
-else
-{
+} else {
     global.bodyStatus = global.BODY_IDLE;
     global.legsStatus = global.LEGS_IDLE;
 }
 
 // STATUS
-switch (global.bodyStatus)
-{
+switch (global.bodyStatus) {
     case global.BODY_IDLE:
         self.bodyAngle = self.mainAngle;
         
@@ -307,34 +222,23 @@ switch (global.bodyStatus)
     case global.BODY_SHOT:
         var angle_step = 0.2;// Rotates by step Radians at each frame
         var angle_diff = self.mainAngle - self.bodyAngle;
-        if (angle_diff > pi)
-        {
+        if (angle_diff > pi) {
             self.mainAngle -= (2 * pi);
-        }
-        else if (angle_diff < -pi)
-        {
+        } else if (angle_diff < -pi) {
             self.mainAngle += 2 * pi;
         }
         
-        if (self.bodyAngle < (self.mainAngle - angle_step))
-        {
+        if (self.bodyAngle < (self.mainAngle - angle_step)) {
             self.bodyAngle += angle_step;
-        }
-        else if (self.bodyAngle > (self.mainAngle + angle_step))
-        {
+        } else if (self.bodyAngle > (self.mainAngle + angle_step)) {
             self.bodyAngle -= angle_step;
-        }
-        else
-        {
+        } else {
             self.bodyAngle = self.mainAngle;
         }
         
-        if (self.mainAngle < 0)
-        {
+        if (self.mainAngle < 0) {
             self.mainAngle += (2 * pi);
-        }
-        else if (self.mainAngle > (2 * pi))
-        {
+        } else if (self.mainAngle > (2 * pi)) {
             self.mainAngle -= (2 * pi);
         }
         
@@ -342,32 +246,26 @@ switch (global.bodyStatus)
         obj_marker.sprite_index = spr_marker_freeshot;// Free shot
         obj_marker.image_angle = direction;
         
-        if (self.shotTime = 0)
-        {
+        if (self.shotTime = 0) {
             scr_shot(x, y, direction);
             self.numShots++;
             self.shotTime = self.shotDelay;
             
             audio_play_sound(snd_shot_1, 0, false);
-        }
-        else
-        {
+        } else {
             self.shotTime--;
         }
         
         break;
         
     case global.BODY_AIMEDSHOT:
-        if (self.shotTime = 0)
-        {
+        if (self.shotTime = 0) {
             scr_shot(x, y, direction);
             self.numShots++;
             self.shotTime = self.fixedDelay;
             
             audio_play_sound(snd_shot_1, 0, false);
-        }
-        else
-        {
+        } else {
             self.shotTime--;
         }
         
@@ -387,23 +285,19 @@ switch (global.bodyStatus)
         obj_marker.sprite_index = spr_marker_focusshot;// Shot (fixed)
         obj_marker.image_angle = 180 * (-self.bodyAngle) / pi;
         
-        if (self.shotTime = 0)
-        {
+        if (self.shotTime = 0) {
             scr_shot(x, y, direction);
             self.numShots++;
             self.shotTime = self.fixedDelay;
             
             audio_play_sound(snd_shot_1, 0, false);
-        }
-        else
-        {
+        } else {
             self.shotTime--;
         }
         
         break;
     case global.BODY_CLAW:
-        if ((self.clawTime = 0) && (self.clawDelayTime = 0))
-        {
+        if ((self.clawTime = 0) && (self.clawDelayTime = 0)) {
             self.clawTime = self.clawDuration;
             self.clawHitbox = instance_create(x, y, obj_claw_hitbox);
             self.clawFX = instance_create(x, y, obj_claw_fx);
@@ -411,15 +305,11 @@ switch (global.bodyStatus)
             scr_claw_fx_position(self);
             
             audio_play_sound(snd_claw, 0, false);
-        }
-        else if (self.clawTime > 0)
-        {
+        } else if (self.clawTime > 0) {
             self.clawTime--;
             scr_clawhitbox_position(self);
             scr_claw_fx_position(self);
-        }
-        else
-        {
+        } else {
             global.bodyStatus = global.BODY_IDLE;
             with (obj_claw_hitbox) instance_destroy();
             with (obj_claw_fx) instance_destroy();
@@ -429,29 +319,22 @@ switch (global.bodyStatus)
         break;
 }
 
-if (self.clawDelayTime > 0)
-{
+if (self.clawDelayTime > 0) {
     self.clawDelayTime--;
 }
 
-if (self.bodyAngle > (pi * 2))
-{
+if (self.bodyAngle > (pi * 2)) {
     self.bodyAngle -= (pi * 2);
-}
-else if (self.bodyAngle < 0)
-{
+} else if (self.bodyAngle < 0) {
     self.bodyAngle += (pi * 2);
 }
 
 // MOVES (LEGS STATUS)
-if (global.legsStatus = global.LEGS_JUMP)
-{
+if (global.legsStatus = global.LEGS_JUMP) {
     obj_marker.sprite_index = spr_marker_jump;
-    if (self.jumpTicker < self.jumpDuration)
-    {
+    if (self.jumpTicker < self.jumpDuration) {
         // Jump smoke
-        if (self.jumpTicker = 0)
-        {
+        if (self.jumpTicker = 0) {
             part_emitter_region(global.ps_ground, self.em_smoke, (self.x - 8), (self.x + 8), (self.y - 8), (self.y + 8), ps_shape_ellipse, ps_distr_invgaussian);
             part_type_direction(global.pt_smoke, (direction + 120), (direction + 240), 0, 0);
             part_emitter_burst(global.ps_ground, self.em_smoke, global.pt_smoke, 8);
@@ -465,18 +348,14 @@ if (global.legsStatus = global.LEGS_JUMP)
         
         self.jumpTicker++;
         scr_jump_position(self);
-    }
-    else
-    {
+    } else {
         self.jumpTicker = 0;
         self.legsAngle = self.mainAngle;
         global.legsStatus = global.BODY_IDLE;
         
         audio_play_sound(snd_land, 0, false);
     }
-}
-else
-{
+} else {
     self.legsAngle = self.mainAngle;
     
     x += (cos(self.legsAngle) * walk_speed) + self.conveyorMoveX;
@@ -485,8 +364,7 @@ else
     self.conveyorMoveX = 0;
     self.conveyorMoveY = 0;
     
-    switch (global.bodyStatus)
-    {
+    switch (global.bodyStatus) {
         case global.BODY_AIMEDSHOT:
         case global.BODY_AIM:
             // Fixed position
@@ -502,26 +380,6 @@ else
     if (!global.clip) {
         var collisionRadius = 8;
         if (collision_circle(x, y, collisionRadius, obj_player_wall, false, false)) {
-            /*
-            // Check corners to ease slide
-            var hitTestX = 0;
-            var hitTestY = 0;
-            var hitAngles = ds_list_create();
-            // Hit the 4 corners
-            for (var hitAngle = 0; hitAngle < (pi * 2); hitAngle += pi * 0.25) {
-                hitTestX = self.x + cos(hitAngle) * collisionRadius;
-                hitTestY = self.y + sin(hitAngle) * collisionRadius;
-                if (collision_point(hitTestX, hitTestY, obj_player_wall, false, false)) {
-                    ds_list_add(hitAngles, (hitAngle + pi) % (pi * 2));// Reverse angle
-                }
-            }
-            
-            for (var i = 0; i < ds_list_size(hitAngles); i++) {
-                var hitAngle = ds_list_find_value(hitAngles, i);
-                self.legsAngle
-            }
-            */
-            
             var lCornerAngle = self.legsAngle - (pi * 0.25);
             var rCornerAngle = self.legsAngle + (pi * 0.25);
             var cornerDistance = 12;

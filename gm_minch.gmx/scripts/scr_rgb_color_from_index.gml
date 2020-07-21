@@ -14,5 +14,5 @@ switch (argument0) {
     case global.BR:
         return make_colour_rgb(111, 76, 57);
     case global.BK:
-        return make_colour_rgb(65, 219, 219);
+        return make_colour_rgb(25, 17, 14);
 }

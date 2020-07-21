@@ -58,6 +58,12 @@
         <sprite>sprites\spr_shot_fx</sprite>
         <sprite>sprites\spr_jump_boost_fx</sprite>
         <sprite>sprites\spr_claw_wave</sprite>
+        <sprite>sprites\spr_minch_explosion</sprite>
+        <sprite>sprites\spr_death_feets</sprite>
+        <sprite>sprites\spr_death_head</sprite>
+        <sprite>sprites\spr_death_backpack</sprite>
+        <sprite>sprites\spr_death_l_arm</sprite>
+        <sprite>sprites\spr_death_r_arm</sprite>
       </sprites>
       <sprites name="Feets">
         <sprites name="Idle_walk">
@@ -670,6 +676,10 @@
     <path>paths\path_rm41_8</path>
     <path>paths\path_rm41_9</path>
     <path>paths\path40</path>
+    <path>paths\path_test_1</path>
+    <path>paths\path_test_2</path>
+    <path>paths\path_test_3</path>
+    <path>paths\path_test_4</path>
   </paths>
   <scripts name="scripts">
     <script>scripts\scr_lang_EN.gml</script>
@@ -719,6 +729,10 @@
       <script>scripts\scr_wave_attack_element_step.gml</script>
       <script>scripts\scr_camera_init.gml</script>
       <script>scripts\scr_camera_step.gml</script>
+      <script>scripts\scr_minch_death_bullet_init.gml</script>
+      <script>scripts\scr_minch_death_bullet_step.gml</script>
+      <script>scripts\scr_minch_death_fall_init.gml</script>
+      <script>scripts\scr_minch_death_fall_step.gml</script>
     </scripts>
     <scripts name="AI">
       <script>scripts\scr_ai_init.gml</script>
@@ -980,6 +994,9 @@
       <object>objects\obj_wave_attack_element</object>
       <object>objects\obj_wave_attack</object>
       <object>objects\obj_minch_camera</object>
+      <object>objects\obj_minch_death_bullet</object>
+      <object>objects\obj_minch_death_fall</object>
+      <object>objects\obj_minch_death_part</object>
     </objects>
     <objects name="Baddies">
       <object>objects\obj_drone_test</object>
