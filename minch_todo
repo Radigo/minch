@@ -1,10 +1,17 @@
 MinCH: todo
 
 **Bugs**
+map 1-3
+- lower density of "wave" pattern
+
+Map 2-3
+- focus camera reset after death
+- boss wave doesn't chain
+- boss animations
+
 Strong sound at boss 2 transitions: wave attack played at each frames > ramp up sound volume to be lower during the first frame.
 Change minch marker depth.
 Change end level depths.
-Destroying black ennemy gives blue screen borders and white combo bar.
 
 **Ongoing**
 Add spawn animation to generator (flashing blue)
@@ -15,9 +22,8 @@ OK - Shot sprites
 OK - Shot animation
 OK - Jump animation
 OK - Wave attack animation
-- Death animation by hit
+OK - Death animation by hit
 OK - Death animation by fall
-- Animated markers
 OK - Claw animation
 
 Level
@@ -28,6 +34,7 @@ OK - Floor switch
 Ennemies
 OK - Hit sprites
 OK - Explosions
+- Animated splitter blue arc (Cave)
 - Alteration sprites
 
 UI
@@ -46,7 +53,7 @@ OK - Kill player in traps
 OK - Combo system (basis)
 OK - Combo system (advanced)
 OK - Combo system (color mix)
-- Combo system (special cases)
+OK - Combo system (special cases)
 OK - Block jump when not available
 - Jump cooldown (?)
 OK - Checkpoints in case of death
@@ -55,7 +62,7 @@ OK - Free shot, check rotation speed. Consider firing at each frame when rotatin
 OK - Tuning on tap rate for free/focus shot (faster)
 OK - change focus marker design
 OK - implement tolerance timer to make jump timing easyier (scr_minch_init)
-- sliding collisions in corners
+OK - sliding collisions in corners
 
 Level design
 OK - Enemy follow path

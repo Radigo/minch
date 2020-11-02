@@ -228,6 +228,26 @@
         <sprite>sprites\spr_door_v_1_br</sprite>
         <sprite>sprites\spr_door_v_1_bk</sprite>
         <sprite>sprites\spr_door_v_1_anim</sprite>
+        <sprite>sprites\spr_door_v_2_open</sprite>
+        <sprite>sprites\spr_door_v_2_cy</sprite>
+        <sprite>sprites\spr_door_v_2_ma</sprite>
+        <sprite>sprites\spr_door_v_2_ye</sprite>
+        <sprite>sprites\spr_door_v_2_pu</sprite>
+        <sprite>sprites\spr_door_v_2_gr</sprite>
+        <sprite>sprites\spr_door_v_2_or</sprite>
+        <sprite>sprites\spr_door_v_2_br</sprite>
+        <sprite>sprites\spr_door_v_2_bk</sprite>
+        <sprite>sprites\spr_door_v_2_anim</sprite>
+        <sprite>sprites\spr_door_v_3_open</sprite>
+        <sprite>sprites\spr_door_v_3_cy</sprite>
+        <sprite>sprites\spr_door_v_3_ma</sprite>
+        <sprite>sprites\spr_door_v_3_ye</sprite>
+        <sprite>sprites\spr_door_v_3_pu</sprite>
+        <sprite>sprites\spr_door_v_3_gr</sprite>
+        <sprite>sprites\spr_door_v_3_or</sprite>
+        <sprite>sprites\spr_door_v_3_br</sprite>
+        <sprite>sprites\spr_door_v_3_bk</sprite>
+        <sprite>sprites\spr_door_v_3_anim</sprite>
       </sprites>
       <sprite>sprites\spr_platform</sprite>
       <sprites name="ConveyorBelts">
@@ -1341,6 +1361,26 @@
         <object>objects\obj_door_v_1_bk</object>
         <object>objects\obj_door_v_1_open</object>
         <object>objects\obj_door_v_1_anim</object>
+        <object>objects\obj_door_v_2_cy</object>
+        <object>objects\obj_door_v_2_ma</object>
+        <object>objects\obj_door_v_2_ye</object>
+        <object>objects\obj_door_v_2_pu</object>
+        <object>objects\obj_door_v_2_gr</object>
+        <object>objects\obj_door_v_2_or</object>
+        <object>objects\obj_door_v_2_br</object>
+        <object>objects\obj_door_v_2_bk</object>
+        <object>objects\obj_door_v_2_open</object>
+        <object>objects\obj_door_v_2_anim</object>
+        <object>objects\obj_door_v_3_cy</object>
+        <object>objects\obj_door_v_3_ma</object>
+        <object>objects\obj_door_v_3_ye</object>
+        <object>objects\obj_door_v_3_pu</object>
+        <object>objects\obj_door_v_3_gr</object>
+        <object>objects\obj_door_v_3_or</object>
+        <object>objects\obj_door_v_3_br</object>
+        <object>objects\obj_door_v_3_bk</object>
+        <object>objects\obj_door_v_3_open</object>
+        <object>objects\obj_door_v_3_anim</object>
         <object>objects\obj_sewermaindoor_l</object>
         <object>objects\obj_sewermaindoor_r</object>
       </objects>

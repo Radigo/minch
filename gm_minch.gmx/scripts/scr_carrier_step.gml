@@ -56,7 +56,7 @@ else
 }
 
 // Shoot
-show_debug_message(string(self.dronesLeft) + ", " + string(self.patternTicker) + ", " + string(self.ticker));
+//show_debug_message(string(self.dronesLeft) + ", " + string(self.patternTicker) + ", " + string(self.ticker));
 
 if (self.dronesLeft > 0)
 {

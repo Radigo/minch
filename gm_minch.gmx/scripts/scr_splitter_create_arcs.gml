@@ -16,6 +16,8 @@ for (var i = 0; i < self.numBranches; i++)
     {
         var arc_instance = instance_create(0, 0, obj_arc);
         arc_instance.depth = self.depth - i;
+        arc_instance.image_index = j % self.arcLength;
+        arc_instance.image_speed = 0.5;
         ds_grid_add(self.arcs, i, j, arc_instance);
     }
 }

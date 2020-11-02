@@ -65,8 +65,7 @@ if (global.controlStatus == global.SPAWN) {
     if (self.controlTime == 0) {
         // Get the associated start checkpoint
         var checkpoint_obj = asset_get_index("obj_checkpoint_" + string(global.lastCheckpoint));
-        show_debug_message("obj_checkpoint_" + string(global.lastCheckpoint));
-        show_debug_message(string(object_exists(checkpoint_obj)));
+        //show_debug_message("obj_checkpoint_" + string(global.lastCheckpoint));
         
         if (object_exists(checkpoint_obj)) {
             // set coordinates to MinCH for further respawn
@@ -213,8 +212,8 @@ switch (global.bodyStatus) {
     case global.BODY_IDLE:
         self.bodyAngle = self.mainAngle;
         
-        direction = 180 * (-self.bodyAngle) / pi;
-        obj_marker.sprite_index = spr_marker_position;
+        direction = 180 * (-self.bodyAngle)  / pi;
+        obj_marker.sprite_index = spr_marker_position; 
         obj_marker.image_angle = 0;
         
         self.numShots = 0;

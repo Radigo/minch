@@ -3,14 +3,14 @@
   <type>0</type>
   <xorig>0</xorig>
   <yorigin>6</yorigin>
-  <colkind>1</colkind>
+  <colkind>2</colkind>
   <coltolerance>0</coltolerance>
   <sepmasks>0</sepmasks>
-  <bboxmode>0</bboxmode>
+  <bboxmode>2</bboxmode>
   <bbox_left>0</bbox_left>
-  <bbox_right>13</bbox_right>
-  <bbox_top>3</bbox_top>
-  <bbox_bottom>8</bbox_bottom>
+  <bbox_right>16</bbox_right>
+  <bbox_top>0</bbox_top>
+  <bbox_bottom>11</bbox_bottom>
   <HTile>0</HTile>
   <VTile>0</VTile>
   <TextureGroups>
@@ -21,5 +21,8 @@
   <height>12</height>
   <frames>
     <frame index="0">images\spr_arc_0.png</frame>
+    <frame index="1">images\spr_arc_1.png</frame>
+    <frame index="2">images\spr_arc_2.png</frame>
+    <frame index="3">images\spr_arc_3.png</frame>
   </frames>
 </sprite>
