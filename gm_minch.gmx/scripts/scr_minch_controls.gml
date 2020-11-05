@@ -12,7 +12,7 @@ var prev_y = y;
 
 self.isColliding = false;
 
-//show_debug_message("scr_minch_controls global.controlStatus: " + global.controlStatus + ", controlTime: " + string(self.controlTime));
+show_debug_message("scr_minch_controls global.controlStatus: " + global.controlStatus + ", controlTime: " + string(self.controlTime));
     
 // GET KEY PRESSED if we can move
 if (global.controlStatus == global.SPAWN) {
@@ -39,23 +39,29 @@ if (global.controlStatus == global.SPAWN) {
     
     if (self.controlTime == 0) {
         global.controlStatus = global.ALIVE;
-        global.invincible = true;
         self.controlTime = self.warmupDuration;
         exit;
     }
     
+    global.invincible = true;
     self.controlTime--;
+    self.invincibilityTicker++;
 } else if (global.controlStatus == global.TELEPORT) {
     // No possible move
     if (self.controlTime == 0) {
         global.controlStatus = global.ALIVE;
+        global.invincible = false;
+        self.invincibilityTicker = 0;
         exit;
     } else if (self.controlTime < global.teleportDuration / 2) {
         self.x = self.teleportTargetX;
         self.y = self.teleportTargetY;
+        self.image_alpha = 1;
     }
     
+    global.invincible = true;
     self.controlTime--;
+    self.invincibilityTicker++;
 } else if (global.controlStatus == global.DEATH) {
     self.image_alpha = 0;
     obj_minch_feets.image_alpha = 0;
@@ -83,8 +89,10 @@ if (global.controlStatus == global.SPAWN) {
     if (self.controlTime > 0) {
         if (self.controlTime == 1) {
             global.invincible = false;
+            self.invincibilityTicker = 0;
         }
         self.controlTime--;
+        self.invincibilityTicker++;
     }
     
     if (keyboard_check(global.key_right) &&  keyboard_check(global.key_up)) {

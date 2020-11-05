@@ -1,4 +1,4 @@
-show_debug_message("scr_minch_death by " + argument0 + ", global.invincible: " + string(global.invincible));
+//show_debug_message("scr_minch_death by " + argument0 + ", global.invincible: " + string(global.invincible));
 
 var destroy_instance = false;
 

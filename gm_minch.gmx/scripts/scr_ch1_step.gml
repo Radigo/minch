@@ -74,6 +74,11 @@ if (self.move == self.MOVE_RAGING) {
             self.legs.sprite_index = spr_ch1_legs_jumpdown;
         }
         self.tickerLimit = 30;
+        
+        // Jumping smoke FX
+        part_emitter_region(self.ps_smoke, self.em_smoke, (self.x - 16), (self.x + 16), (self.y - 16), (self.y + 16), ps_shape_ellipse, ps_distr_invgaussian);
+        part_type_direction(global.pt_smoke, (direction + 120), (direction + 240), 0, 0);
+        part_emitter_burst(self.ps_smoke, self.em_smoke, global.pt_smoke, 10);
     }
     
     self.x = self.jumpSourceX + (self.ticker / self.tickerLimit) * (self.jumpTargetX - self.jumpSourceX);
@@ -81,22 +86,26 @@ if (self.move == self.MOVE_RAGING) {
     
     if (self.ticker > self.tickerLimit) {
         self.move = self.MOVE_STATIC;
+        // Landing smoke FX
+        part_emitter_region(self.ps_smoke, self.em_smoke, (self.x - 8), (self.x + 8), (self.y - 8), (self.y + 8), ps_shape_ellipse, ps_distr_invgaussian);
+        part_type_direction(global.pt_smoke, 0, 360, 0, 0);
+        part_emitter_burst(self.ps_smoke, self.em_smoke, global.pt_smoke, 16);
     }
 }
 
 // scr_bullet_shot((self.x + 20), (self.y - 32), scr_aim_at_minch(self, 5, 20, -32), 5, 2);
 
+var switchOffLasers = false;
+
 if (self.pattern == self.PATTERN_RAGING) {
-    instance_destroy(obj_ch1_laser_h);
-    instance_destroy(obj_ch1_laser_h_charge);
+    switchOffLasers = true;
     // Does nothing harmful
     if (self.patternTicker == 1) {
         self.sprite_index = spr_ch1_body_spread;
         self.patternTickerLimit = 90;
     }
 } else if (self.pattern == self.PATTERN_IDLE) {
-    instance_destroy(obj_ch1_laser_h);
-    instance_destroy(obj_ch1_laser_h_charge);
+    switchOffLasers = true;
     // Does nothing at all
     if (self.patternTicker == 1) {
         self.sprite_index = spr_ch1_body_idle;
@@ -105,8 +114,7 @@ if (self.pattern == self.PATTERN_RAGING) {
 } else if (self.pattern == self.PATTERN_LASERUP) {
     // Fire laser with left arm, warmup time, then short blast
     if (self.patternTicker == 1) {
-        instance_destroy(obj_ch1_laser_h);
-        instance_destroy(obj_ch1_laser_h_charge);
+        switchOffLasers = true;
         self.sprite_index = spr_ch1_body_laserup;
         self.patternTickerLimit = 60;
         var charge = instance_create(self.x + self.ARM_X, self.y + self.LEFT_ARM_Y, obj_ch1_laser_h_charge);
@@ -125,8 +133,8 @@ if (self.pattern == self.PATTERN_RAGING) {
 } else if (self.pattern == self.PATTERN_LASERDOWN) {
     // Fire laser with right arm, warmup time, then short blast
     if (self.patternTicker == 1) {
-        instance_destroy(obj_ch1_laser_h);
-        instance_destroy(obj_ch1_laser_h_charge);
+        switchOffLasers = true;
+        
         self.sprite_index = spr_ch1_body_laserdown;
         self.patternTickerLimit = 60;
         var charge = instance_create(self.x + self.ARM_X, self.y + self.RIGHT_ARM_Y, obj_ch1_laser_h_charge);
@@ -145,8 +153,8 @@ if (self.pattern == self.PATTERN_RAGING) {
 } else if (self.pattern == self.PATTERN_LASERTWIN) {
     // Fire lasers with both arms, warmup time (shorter), then medium long blast
     if (self.patternTicker == 1) {
-        instance_destroy(obj_ch1_laser_h);
-        instance_destroy(obj_ch1_laser_h_charge);
+        switchOffLasers = true;
+        
         self.sprite_index = spr_ch1_body_lasertwin;
         self.patternTickerLimit = 90;
         var chargeL = instance_create(self.x + self.ARM_X, self.y + self.LEFT_ARM_Y, obj_ch1_laser_h_charge);
@@ -173,8 +181,7 @@ if (self.pattern == self.PATTERN_RAGING) {
         }
     }
 } else if (self.pattern == self.PATTERN_SPREADUP) {
-    instance_destroy(obj_ch1_laser_h);
-    instance_destroy(obj_ch1_laser_h_charge);
+    switchOffLasers = true;
     // Fire spread with left arm, no warmup, short blast
     if (self.patternTicker == 1) {
         self.sprite_index = spr_ch1_body_spreadup;
@@ -185,8 +192,7 @@ if (self.pattern == self.PATTERN_RAGING) {
         scr_pattern_spread(self.x + self.ARM_X, self.y + self.LEFT_ARM_Y, 0, 4, 3, 3, 60);
     }
 } else if (self.pattern == self.PATTERN_SPREADDOWN) {
-    instance_destroy(obj_ch1_laser_h);
-    instance_destroy(obj_ch1_laser_h_charge);
+    switchOffLasers = true;
     // Fire spread with right arm, no warmup, short blast
     if (self.patternTicker == 1) {
         self.sprite_index = spr_ch1_body_spreaddown;
@@ -196,8 +202,7 @@ if (self.pattern == self.PATTERN_RAGING) {
         scr_pattern_spread(self.x + self.ARM_X, self.y + self.RIGHT_ARM_Y, 0, 4, 3, 3, 60);
     }
 } else if (self.pattern == self.PATTERN_SPREADTWIN) {
-    instance_destroy(obj_ch1_laser_h);
-    instance_destroy(obj_ch1_laser_h_charge);
+    switchOffLasers = true;
     // Fire spread with both arms, short warmup, long dense pattern
     if (self.patternTicker == 1) {
         self.sprite_index = spr_ch1_body_spreadtwin;
@@ -208,8 +213,7 @@ if (self.pattern == self.PATTERN_RAGING) {
         scr_pattern_spread(self.x + self.ARM_X, self.y + self.RIGHT_ARM_Y, scr_get_moreorless(0, 10), 1.5, 2, irandom(2) + 3, 80);
     }
 } else if (self.pattern == self.PATTERN_SPREADSHOULDER) {
-    instance_destroy(obj_ch1_laser_h);
-    instance_destroy(obj_ch1_laser_h_charge);
+    switchOffLasers = true;
     // Rage pose, spawns modules that surround the place
     if (self.patternTicker == 1) {
         self.sprite_index = spr_ch1_body_spread;
@@ -237,6 +241,22 @@ if (self.pattern == self.PATTERN_RAGING) {
         
         self.podsLeft--;
     }
+}
+
+if (switchOffLasers) {
+    show_debug_message("switchOffLasers");
+
+    for (var i = 0; i < instance_number(obj_ch1_laser_h); i += 1){
+        var laserInstance = instance_find(obj_ch1_laser_h, i);
+
+        part_emitter_region(global.ps_light, self.em_greenlaser_dots, laserInstance.bbox_left, laserInstance.bbox_right, laserInstance.y, laserInstance.y, ps_shape_line, ps_distr_linear);
+        part_type_direction(self.pt_greenlaser, 0, 360, 0, 0);
+        part_emitter_burst(global.ps_light, self.em_greenlaser_dots, self.pt_greenlaser, 48);
+        
+        instance_destroy(laserInstance);
+    }
+    
+    instance_destroy(obj_ch1_laser_h_charge);// Just in case
 }
 
 // Script will choose what comes next and reset ticker

@@ -182,11 +182,13 @@ ds_list_clear(self.directionSequence);
 ds_list_add(self.directionSequence, self.DIRECTION_UP, self.DIRECTION_UP, self.DIRECTION_RIGHT, self.DIRECTION_RIGHT, self.DIRECTION_UP, self.DIRECTION_UP, self.DIRECTION_LEFT);
 */
 
+/*
 // Single room
 ds_list_clear(self.patternsSequence);
 ds_list_add(self.patternsSequence,self.PATTERN_SQUARE_PUNCH);
 ds_list_clear(self.directionSequence);
 ds_list_add(self.directionSequence, self.DIRECTION_UP);
+*/
 // ============= DEBUG =============
 
 // Instanciate objects

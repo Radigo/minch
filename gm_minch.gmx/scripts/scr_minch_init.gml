@@ -34,11 +34,13 @@ self.bodyAngle = pi * 0.5;// Direction of shot (in Radians)
 self.initX = x;
 self.initY = y;
 
-self.controlTime = 0;
 self.warmupDuration = 60;// Invincibility time after spawn
 self.spawnDuration = 40;// Duration of the spawn process
 self.deathDuration = 120;// Duration of the death sequence
 global.teleportDuration = 30;// Duration of the teleport process (20)
+
+self.controlTime = warmupDuration;// Init as spawning
+self.invincibilityTicker = 0;
 
 self.jumpDuration = 20;// Duration of jump in frames
 self.jumpTicker = 0;// Jump duration counter
@@ -93,7 +95,7 @@ global.bodyStatus = global.BODY_IDLE;
 global.controlTime = self.spawnDuration;
 
 // Create target with minch
-object_set_depth(obj_marker, -10);
+object_set_depth(obj_marker, -12000);
 instance_create(x ,y, obj_marker);
 // Create feets
 instance_create(x, y, obj_minch_feets);
@@ -101,7 +103,7 @@ instance_create(x, y, obj_minch_feets);
 instance_create(x, y, obj_minch_camera);
 
 // Create particles systems
-self.em_smoke = part_emitter_create(global.ps_ground); 
+self.em_smoke = part_emitter_create(global.ps_ground);
 global.em_shots_sparkles = part_emitter_create(global.ps_light);
 
 obj_minch_feets.depth = -1; 

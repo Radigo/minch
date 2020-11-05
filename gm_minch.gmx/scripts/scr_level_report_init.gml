@@ -9,6 +9,7 @@ self.faderDuration = 300;// Fade to black
 self.reportTicker = 0;// Global ticker
 
 self.faderAlpha = 1;
+self.depth = -100000;
 
 // Gameplay
 scr_all_bullet_cancel();

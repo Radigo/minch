@@ -376,6 +376,7 @@
           <sprite>sprites\spr_ch1_body_spreadup</sprite>
           <sprite>sprites\spr_ch1_body_spreaddown</sprite>
           <sprite>sprites\spr_ch1_laser_h</sprite>
+          <sprite>sprites\spr_ch1_laser_active</sprite>
           <sprite>sprites\spr_greenlasercharge</sprite>
           <sprites name="pod">
             <sprite>sprites\spr_pod_cy</sprite>
@@ -590,6 +591,7 @@
       <sprite>sprites\spr_fading_black_spot</sprite>
       <sprite>sprites\spr_black_wave</sprite>
       <sprite>sprites\spr_biggerbullet_ray</sprite>
+      <sprite>sprites\spr_greenlaser_dots</sprite>
     </sprites>
     <sprites name="Cinematics">
       <sprites name="rm32">
@@ -735,6 +737,7 @@
     <scripts name="Minch">
       <script>scripts\scr_minch_init.gml</script>
       <script>scripts\scr_minch_controls.gml</script>
+      <script>scripts\scr_minch_draw.gml</script>
       <script>scripts\scr_get_bodysprite.gml</script>
       <script>scripts\scr_clawhitbox_position.gml</script>
       <script>scripts\scr_get_legssprites.gml</script>
@@ -814,6 +817,7 @@
           <script>scripts\scr_ch1_death.gml</script>
           <script>scripts\scr_pod_init.gml</script>
           <script>scripts\scr_pod_step.gml</script>
+          <script>scripts\scr_ch1_laser_h_step.gml</script>
         </scripts>
         <scripts name="BossNuke">
           <script>scripts\scr_nuke_init.gml</script>
@@ -1088,6 +1092,7 @@
         <object>objects\obj_boss_tanker_right</object>
         <object>objects\obj_boss_warehouse</object>
         <object>objects\obj_boss_warehouse_base</object>
+        <object>objects\obj_boss_warehouse_frame</object>
         <object>objects\obj_boss_warehouse_head</object>
         <object>objects\obj_boss_warehouse_shield</object>
         <object>objects\obj_boss_warehouse_neck</object>

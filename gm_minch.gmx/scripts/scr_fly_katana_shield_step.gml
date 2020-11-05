@@ -2,11 +2,12 @@
 
 var napalmX = argument0;
 var napalmY = argument1;
-var katanaPrevX = argument2;
-var katanaPrevY = argument3;
-var shieldAngle = argument4;
-var distance = argument5;
-var ease = argument6;// 0: loose, 1: sharp
+var shieldAngle = argument2;
+var distance = argument3;
+var ease = argument4;// 0: loose, 1: sharp
+
+var katanaPrevX = obj_katana_shield.x;
+var katanaPrevY = obj_katana_shield.y;
 
 var targetPosX = dcos(shieldAngle) * distance;
 var targetPosY = dsin(shieldAngle) * distance;

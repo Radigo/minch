@@ -67,3 +67,17 @@ self.isKillSequence = false;
 self.tickerLimit = 60;
 self.move = self.MOVE_STATIC;
 self.pattern = self.PATTERN_IDLE;
+
+// FX
+self.ps_smoke = part_system_create();
+part_system_depth(self.depth + 2, self.ps_smoke);
+self.em_smoke = part_emitter_create(self.ps_smoke);
+
+// Big bullets particles
+self.pt_greenlaser = part_type_create();
+part_type_sprite(self.pt_greenlaser, spr_greenlaser_dots, true, true, false);
+part_type_speed(self.pt_greenlaser, 0.8, 2.5, -0.15, 0);
+part_type_direction(self.pt_greenlaser, 0, 360, 0, 2);
+part_type_life(self.pt_greenlaser, 16, 40);
+
+self.em_greenlaser_dots = part_emitter_create(global.ps_light);

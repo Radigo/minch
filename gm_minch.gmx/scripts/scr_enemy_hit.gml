@@ -32,7 +32,6 @@ switch (string(object_get_name(other.object_index)))
         break;
         
     case "obj_groundlaser":
-        self.shield = false;
         is_piercing_shot = true;
         is_mixing_object = false;
         damage = 10000;

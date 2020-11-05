@@ -11,9 +11,9 @@ if (self.isIntro) {
     return false;
 }
 
-show_debug_message("napalm step:");
+//show_debug_message("napalm step:");
 //show_debug_message(string(self.yList[| irandom(3)]));
-show_debug_message(string(self.currentPattern));
+//show_debug_message(string(self.currentPattern));
 //show_debug_message(string(point_distance(self.x, self.y, self.targetCol, self.targetRow)));
 
 if ((self.currentPhase == self.ONE_KATANA) && (self.hp < self.phaseTwoHp)) {
@@ -39,14 +39,17 @@ if ((self.currentPhase == self.ONE_KATANA) && (self.hp < self.phaseTwoHp)) {
     scr_boom(self.x, self.y, self.explosionLevel, self.explosionSize * 1.6);
 }
 
-// Moves
+if (self.currentPhase == self.DIYING) {
+    return false;
+}
+// Moves (if not dying)
 if (self.currentPattern == self.REACH_SIDE) {
     if (self.targetX > self.x)
         self.x += 3;
     else
         self.x -= 3;
     self.y = self.targetY + ((self.y - self.targetY) * 0.9);
-    scr_fly_katana_shield_step(self.x, self.y, obj_katana_shield.x, obj_katana_shield.y, scr_aim_at_minch(self, 0, 0, 0), 32, 0.8);
+    scr_fly_katana_shield_step(self.x, self.y, scr_aim_at_minch(self, 0, 0, 0), 32, 0.8);
     
     if (point_distance(self.x, self.y, self.targetX, self.targetY) < 2) {
         // TODO: Select closest row to minch y
@@ -58,7 +61,7 @@ if (self.currentPattern == self.REACH_SIDE) {
     }
 } else if (self.currentPattern == self.SEARCH_MINCH_Y) {
     self.y += 4;
-    scr_fly_katana_shield_step(self.x, self.y, obj_katana_shield.x, obj_katana_shield.y, scr_aim_at_minch(self, 0, 0, 0), 16, 0.08);
+    scr_fly_katana_shield_step(self.x, self.y, scr_aim_at_minch(self, 0, 0, 0), 16, 0.08);
     
     if (point_distance(self.x, self.y, self.targetX, self.targetY) < 6) {
         self.ticker = 0;
@@ -81,7 +84,7 @@ if (self.currentPattern == self.REACH_SIDE) {
             self.targetX = self.col0;
         else if ((self.slashDirection < 0) && (self.targetX < self.col0))
             self.targetX = self.col2;
-        scr_fly_katana_shield_step(self.x, self.y, obj_katana_shield.x, obj_katana_shield.y, scr_aim_at_minch(self, 0, 0, 0), 16, 0.9);
+        scr_fly_katana_shield_step(self.x, self.y, scr_aim_at_minch(self, 0, 0, 0), 16, 0.9);
     } else {
         // Rush
         self.x += self.slashDirection * 4;
@@ -89,7 +92,7 @@ if (self.currentPattern == self.REACH_SIDE) {
         var katanaAngle = 180;
         if (self.slashDirection < 0)
             katanaAngle = 0;
-        scr_fly_katana_shield_step(self.x, self.y, obj_katana_shield.x, obj_katana_shield.y, katanaAngle, 16, 0.9);
+        scr_fly_katana_shield_step(self.x, self.y, katanaAngle, 16, 0.9);
         
         if (point_distance(self.x, self.y, self.targetX, self.targetY) < 16) {
             self.shield = false;
@@ -110,7 +113,7 @@ if (self.currentPattern == self.REACH_SIDE) {
     }
 } else if (self.currentPattern == self.RUSH_SLASH) {
     // Slash n slowdown
-    scr_fly_katana_shield_step(self.x, self.y, obj_katana_shield.x, obj_katana_shield.y, scr_aim_at_minch(self, 0, 0, 0), 24, 0.1);
+    scr_fly_katana_shield_step(self.x, self.y, scr_aim_at_minch(self, 0, 0, 0), 24, 0.1);
     
     if (self.ticker < 120) {
         if ((self.currentPhase == self.TWO_KATANAS) || (self.currentPhase == self.FOUR_KATANAS)) {

@@ -2,7 +2,7 @@ angle_min = -70 - 90;
 angle_max = 70 - 90;
 range = angle_max - angle_min;
 
-arc_num = 30;
+arc_num = 10;
 delta = range / arc_num;// angle between 2 bullets
 
 index = argument0 % arc_num;
