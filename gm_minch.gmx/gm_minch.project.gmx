@@ -569,6 +569,9 @@
       <sprite>sprites\spr_combobar</sprite>
       <sprite>sprites\spr_combobar_current</sprite>
       <sprite>sprites\spr_cursor</sprite>
+      <sprite>sprites\spr_title_bg</sprite>
+      <sprite>sprites\spr_title_towers</sprite>
+      <sprite>sprites\spr_title_fg</sprite>
     </sprites>
     <sprites name="FX">
       <sprite>sprites\spr_fx_smoke_16_0</sprite>
@@ -1006,6 +1009,9 @@
       <object>objects\obj_level_report</object>
       <object>objects\obj_teleportfader</object>
       <object>objects\obj_score_notif</object>
+      <object>objects\obj_title_bg</object>
+      <object>objects\obj_title_towers</object>
+      <object>objects\obj_title_fg</object>
     </objects>
     <objects name="Minch">
       <object>objects\obj_minch</object>

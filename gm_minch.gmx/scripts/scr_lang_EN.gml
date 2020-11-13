@@ -20,7 +20,9 @@ switch (key)
     case "scoreattack_start":
         return "Start level";
     case "scoreattack_select":
-        return "select level";
+        return "< level";
+    case "scoreattack_select_end":
+        return ">";
     // Options screen
     case "options_keys":
         return "Configure keys";

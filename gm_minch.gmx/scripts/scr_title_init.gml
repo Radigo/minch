@@ -31,3 +31,11 @@ right
 a
 b */
 global.key_config_step = 0;
+
+// Reorder depths (objects depths seems automatically managed depending on their Y)
+obj_title_bg.depth = 100;
+obj_title_towers.depth = 90;
+obj_title_fg.depth = 80;
+obj_title.depth = 0;
+obj_title_texts.depth = 10;
+obj_cursor.depth = 20;

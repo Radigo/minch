@@ -1,4 +1,5 @@
 // Applies to title screen cursor
+var cursor_x = 28;
 var cursor_min_y = 132;
 
 // Cursor is Vertical
@@ -218,7 +219,8 @@ if (played_sound_id != noone)
     audio_play_sound(played_sound_id, 0, false);
 }
 
-y = cursor_min_y + (16 * v_cursor_index);
+self.x = cursor_x;
+self.y = cursor_min_y + (16 * v_cursor_index);
 
 switch (global.titlepage)
 {
