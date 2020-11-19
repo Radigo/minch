@@ -278,6 +278,8 @@
         <sprite>sprites\spr_box_ma</sprite>
         <sprite>sprites\spr_box_pu</sprite>
         <sprite>sprites\spr_box_small</sprite>
+        <sprite>sprites\spr_crate</sprite>
+        <sprite>sprites\spr_crate2</sprite>
       </sprites>
     </sprites>
     <sprites name="Baddies">
@@ -597,6 +599,13 @@
       <sprite>sprites\spr_greenlaser_dots</sprite>
     </sprites>
     <sprites name="Cinematics">
+      <sprites name="Intro">
+        <sprite>sprites\spr_controlroom</sprite>
+        <sprite>sprites\spr_guy_typing</sprite>
+        <sprite>sprites\spr_guy_standing_left</sprite>
+        <sprite>sprites\spr_guy_standing_right</sprite>
+        <sprite>sprites\spr_red_button</sprite>
+      </sprites>
       <sprites name="rm32">
         <sprite>sprites\spr_rm32_nuke_0</sprite>
         <sprite>sprites\spr_rm32_nuke_1</sprite>
@@ -984,6 +993,10 @@
     <scripts name="Cinematics">
       <script>scripts\scr_cinematic_mutantraid.gml</script>
       <script>scripts\scr_cinematic_doorlight_step.gml</script>
+      <scripts name="Intro">
+        <script>scripts\scr_intro_init.gml</script>
+        <script>scripts\scr_intro_step.gml</script>
+      </scripts>
     </scripts>
   </scripts>
   <shaders name="shaders">
@@ -1012,6 +1025,10 @@
       <object>objects\obj_title_bg</object>
       <object>objects\obj_title_towers</object>
       <object>objects\obj_title_fg</object>
+      <objects name="Intro">
+        <object>objects\obj_controlroom</object>
+        <object>objects\obj_intro</object>
+      </objects>
     </objects>
     <objects name="Minch">
       <object>objects\obj_minch</object>
@@ -1459,11 +1476,18 @@
         <object>objects\obj_mutantaid_spawner</object>
       </objects>
       <object>objects\obj_doorlight</object>
+      <objects name="intro">
+        <object>objects\obj_crate_minch</object>
+        <object>objects\obj_crate</object>
+        <object>objects\obj_guy</object>
+        <object>objects\obj_red_button</object>
+      </objects>
     </objects>
     <object>objects\obj_jukebox</object>
   </objects>
   <timelines name="timelines">
     <timelines name="Cinematics">
+      <timeline>timelines\tl_intro</timeline>
       <timeline>timelines\tl_rm32_juliadeath</timeline>
       <timeline>timelines\tl_rm41_mutantraid</timeline>
     </timelines>
@@ -1473,6 +1497,7 @@
   <rooms name="rooms">
     <room>rooms\rm_init</room>
     <room>rooms\rm_title</room>
+    <room>rooms\rm_intro</room>
     <room>rooms\rm_lvl_11</room>
     <room>rooms\rm_lvl_12</room>
     <room>rooms\rm_lvl_13</room>

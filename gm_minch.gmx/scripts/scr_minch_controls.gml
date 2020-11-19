@@ -12,7 +12,7 @@ var prev_y = y;
 
 self.isColliding = false;
 
-show_debug_message("scr_minch_controls global.controlStatus: " + global.controlStatus + ", controlTime: " + string(self.controlTime));
+//show_debug_message("scr_minch_controls global.controlStatus: " + global.controlStatus + ", controlTime: " + string(self.controlTime));
     
 // GET KEY PRESSED if we can move
 if (global.controlStatus == global.SPAWN) {

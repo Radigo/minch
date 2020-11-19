@@ -3,6 +3,9 @@
 // Init position
 self.initX = x;
 self.initY = y;
+self.followConveyors = true;
+self.conveyorMoveX = 0;
+self.conveyorMoveY = 0;
 
 self.ticker = 0;// Ticker increments itself at each frame
 self.tickerLimit = 1000;

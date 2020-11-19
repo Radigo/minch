@@ -135,7 +135,7 @@ else
                         case 0:// Start
                             // played_sound_id = snd_ui_start;// TODO: add start game sound FX
                             global.gameMode = global.STORY_MODE;
-                            global.currentRoom = global.init_room;
+                            global.currentRoom = rm_intro;
                             room_goto(global.currentRoom);
                             break;
                         case 1:// Continue

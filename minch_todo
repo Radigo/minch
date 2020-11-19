@@ -1,13 +1,7 @@
 MinCH: todo
 
 **Bugs**
-Change end level depths.
-
 Strong sound at boss 2 transitions: wave attack played at each frames > ramp up sound volume to be lower during the first frame.
-
-
-**Ongoing**
-Add spawn animation to generator (flashing blue)
 
 **Design**
 Player
@@ -19,6 +13,7 @@ OK - Death animation by hit
 OK - Death animation by fall
 OK - Claw animation
 OK - Respawn invincibility FX
+- Add spawn animation to generator (flashing blue)
 
 Level
 OK - Doors
