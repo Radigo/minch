@@ -1,9 +1,27 @@
 // Inits
-self.crateSourceX = 9840;
-self.crateSourceY = 176;
+scr_ai_init();
 
-self.crateSpawnControlRoomX = 9888;
-self.crateSpawnControlRoomY = 272;
+self.crateNum = 0;
+self.crateId = 999;
+
+// Intro settings
+self.crateSourceX = 4064;
+self.crateSourceY = 560;
+
+self.crateSpawnControlRoomX = 3984;
+self.crateSpawnControlRoomY = 464;
+
+self.crateSpawnSectionOneX = 3504;
+self.crateSpawnSectionOneY = 912;
+
+self.crateSpawnSectionTwoX = 3152;
+self.crateSpawnSectionTwoY = 464;
+
+self.crateSpawnUpperLoopX = 2992;
+self.crateSpawnUpperLoopY = 464;
+
+self.crateSpawnLowerLoopX = 3184;
+self.crateSpawnLowerLoopY = 912;
 
 // Set default view
 var main_view_index = 0;

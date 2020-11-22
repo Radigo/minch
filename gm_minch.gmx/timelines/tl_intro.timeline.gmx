@@ -5,6 +5,62 @@
     <event>
       <action>
         <libid>1</libid>
+        <id>201</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_create_object</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>10</kind>
+            <object>obj_crate</object>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>crateSpawnControlRoomX</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>crateSpawnControlRoomY</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>201</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_create_object</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>10</kind>
+            <object>obj_crate</object>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>3952</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>560</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
         <id>611</id>
         <kind>6</kind>
         <userelative>-1</userelative>
@@ -107,39 +163,6 @@
     </event>
   </entry>
   <entry>
-    <step>76</step>
-    <event>
-      <action>
-        <libid>1</libid>
-        <id>201</id>
-        <kind>0</kind>
-        <userelative>-1</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_create_object</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>10</kind>
-            <object>obj_crate</object>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>crateSpawnControlRoomX</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>crateSpawnControlRoomY</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-  </entry>
-  <entry>
     <step>90</step>
     <event>
       <action>
@@ -176,7 +199,7 @@
         <exetype>2</exetype>
         <functionname></functionname>
         <codestring></codestring>
-        <whoName>self</whoName>
+        <whoName>obj_crate_minch</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
@@ -186,7 +209,7 @@
           </argument>
           <argument>
             <kind>0</kind>
-            <string>90000</string>
+            <string>1</string>
           </argument>
         </arguments>
       </action>
@@ -226,7 +249,7 @@
     </event>
   </entry>
   <entry>
-    <step>186</step>
+    <step>138</step>
     <event>
       <action>
         <libid>1</libid>
@@ -310,7 +333,7 @@ view_object[0] = obj_crate_minch;
     </event>
   </entry>
   <entry>
-    <step>220</step>
+    <step>225</step>
     <event>
       <action>
         <libid>1</libid>
@@ -337,6 +360,336 @@ view_object[0] = obj_crate_minch;
           <argument>
             <kind>0</kind>
             <string>crateSpawnControlRoomY</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+  </entry>
+  <entry>
+    <step>790</step>
+    <event>
+      <action>
+        <libid>1</libid>
+        <id>201</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_create_object</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>10</kind>
+            <object>obj_crate</object>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>crateSpawnSectionOneX</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>crateSpawnSectionOneY</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+  </entry>
+  <entry>
+    <step>900</step>
+    <event>
+      <action>
+        <libid>1</libid>
+        <id>201</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_create_object</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>10</kind>
+            <object>obj_crate</object>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>crateSpawnSectionTwoX</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>crateSpawnSectionTwoY</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+  </entry>
+  <entry>
+    <step>1000</step>
+    <event>
+      <action>
+        <libid>1</libid>
+        <id>201</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_create_object</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>10</kind>
+            <object>obj_crate</object>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>crateSpawnLowerLoopX</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>crateSpawnLowerLoopY</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+  </entry>
+  <entry>
+    <step>1020</step>
+    <event>
+      <action>
+        <libid>1</libid>
+        <id>201</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_create_object</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>10</kind>
+            <object>obj_crate</object>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>crateSpawnSectionTwoX</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>crateSpawnSectionTwoY</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+  </entry>
+  <entry>
+    <step>1080</step>
+    <event>
+      <action>
+        <libid>1</libid>
+        <id>201</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_create_object</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>10</kind>
+            <object>obj_crate</object>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>crateSpawnLowerLoopX</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>crateSpawnLowerLoopY</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+  </entry>
+  <entry>
+    <step>1200</step>
+    <event>
+      <action>
+        <libid>1</libid>
+        <id>201</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_create_object</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>10</kind>
+            <object>obj_crate</object>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>crateSpawnLowerLoopX</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>crateSpawnLowerLoopY</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+  </entry>
+  <entry>
+    <step>1215</step>
+    <event>
+      <action>
+        <libid>1</libid>
+        <id>201</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_create_object</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>10</kind>
+            <object>obj_crate</object>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>crateSpawnSectionTwoX</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>crateSpawnSectionTwoY</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+  </entry>
+  <entry>
+    <step>1300</step>
+    <event>
+      <action>
+        <libid>1</libid>
+        <id>201</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_create_object</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>10</kind>
+            <object>obj_crate</object>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>crateSpawnUpperLoopX</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>crateSpawnUpperLoopY</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+  </entry>
+  <entry>
+    <step>1450</step>
+    <event>
+      <action>
+        <libid>1</libid>
+        <id>201</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_create_object</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>10</kind>
+            <object>obj_crate</object>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>crateSpawnUpperLoopX</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>crateSpawnUpperLoopY</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+  </entry>
+  <entry>
+    <step>1500</step>
+    <event>
+      <action>
+        <libid>1</libid>
+        <id>201</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_create_object</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>10</kind>
+            <object>obj_crate</object>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>crateSpawnUpperLoopX</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>crateSpawnUpperLoopY</string>
           </argument>
         </arguments>
       </action>

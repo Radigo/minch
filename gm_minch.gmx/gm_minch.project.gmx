@@ -605,6 +605,7 @@
         <sprite>sprites\spr_guy_standing_left</sprite>
         <sprite>sprites\spr_guy_standing_right</sprite>
         <sprite>sprites\spr_red_button</sprite>
+        <sprite>sprites\spr_intro_event_area</sprite>
       </sprites>
       <sprites name="rm32">
         <sprite>sprites\spr_rm32_nuke_0</sprite>
@@ -996,6 +997,8 @@
       <scripts name="Intro">
         <script>scripts\scr_intro_init.gml</script>
         <script>scripts\scr_intro_step.gml</script>
+        <script>scripts\scr_conveyor_dispatcher_collision.gml</script>
+        <script>scripts\scr_crate_init.gml</script>
       </scripts>
     </scripts>
   </scripts>
@@ -1477,10 +1480,13 @@
       </objects>
       <object>objects\obj_doorlight</object>
       <objects name="intro">
+        <object>objects\obj_intro_crate_destroyer</object>
         <object>objects\obj_crate_minch</object>
         <object>objects\obj_crate</object>
         <object>objects\obj_guy</object>
         <object>objects\obj_red_button</object>
+        <object>objects\obj_intro_crate_dispatcher</object>
+        <object>objects\obj_conveyor_dispenser</object>
       </objects>
     </objects>
     <object>objects\obj_jukebox</object>
