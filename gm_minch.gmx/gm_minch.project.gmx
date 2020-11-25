@@ -606,6 +606,7 @@
         <sprite>sprites\spr_guy_standing_right</sprite>
         <sprite>sprites\spr_red_button</sprite>
         <sprite>sprites\spr_intro_event_area</sprite>
+        <sprite>sprites\spr_fake_crate</sprite>
       </sprites>
       <sprites name="rm32">
         <sprite>sprites\spr_rm32_nuke_0</sprite>
@@ -999,6 +1000,8 @@
         <script>scripts\scr_intro_step.gml</script>
         <script>scripts\scr_conveyor_dispatcher_collision.gml</script>
         <script>scripts\scr_crate_init.gml</script>
+        <script>scripts\scr_intro_fake_conveyor_init.gml</script>
+        <script>scripts\scr_intro_fake_conveyor_step.gml</script>
       </scripts>
     </scripts>
   </scripts>
@@ -1487,6 +1490,10 @@
         <object>objects\obj_red_button</object>
         <object>objects\obj_intro_crate_dispatcher</object>
         <object>objects\obj_conveyor_dispenser</object>
+        <object>objects\obj_fake_conveyor_up</object>
+        <object>objects\obj_fake_conveyor_down</object>
+        <object>objects\obj_fake_crate</object>
+        <object>objects\obj_intro_fake_conveyors</object>
       </objects>
     </objects>
     <object>objects\obj_jukebox</object>
