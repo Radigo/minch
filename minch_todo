@@ -1,6 +1,9 @@
 MinCH: todo
 
 **Bugs**
+Pink-49 overlay
+Animate beetle
+
 Strong sound at boss 2 transitions: wave attack played at each frames > ramp up sound volume to be lower during the first frame.
 
 **Design**
@@ -18,7 +21,7 @@ OK - Respawn invincibility FX
 Level
 OK - Doors
 OK - Floor switch
-- 1st level intro cinematic
+ONGOING - 1st level intro cinematic (skippable)
 
 Ennemies
 OK - Hit sprites
@@ -34,7 +37,6 @@ UI
 OK - Score panel
 OK - Life icon
 OK - Combo panel
-- Game over
 - Hi scores
 
 **Code**
@@ -48,7 +50,6 @@ OK - Combo system (advanced)
 OK - Combo system (color mix)
 OK - Combo system (special cases)
 OK - Block jump when not available
-- Jump cooldown (?)
 OK - Checkpoints in case of death
 - Game Over (?)
 OK - Free shot, check rotation speed. Consider firing at each frame when rotating.
@@ -56,6 +57,7 @@ OK - Tuning on tap rate for free/focus shot (faster)
 OK - change focus marker design
 OK - implement tolerance timer to make jump timing easyier (scr_minch_init)
 OK - sliding collisions in corners
+- Joystick support
 
 Level design
 OK - Enemy follow path
@@ -81,7 +83,8 @@ OK - Demo mode for pre releases and tests
 OK - Console
 
 **Game elements**
-- Title screen
+OK - Title screen
 - Menus
-- Intro sequence
+- leaderboards
+ONGOING - Intro sequence
 - Ending sequence

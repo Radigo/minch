@@ -5,6 +5,8 @@ self.crateNum = 0;
 self.crateId = 999;
 
 // Intro settings
+self.fadeInDuration = 90;
+
 self.crateSourceX = 4064;
 self.crateSourceY = 560;
 
@@ -23,6 +25,10 @@ self.crateSpawnUpperLoopY = 464;
 self.crateSpawnLowerLoopX = 3184;
 self.crateSpawnLowerLoopY = 912;
 
+self.skipStart = 250;
+self.skipFadeDuration = 80;
+self.skipMessageAlpha = 0;
+
 // Set default view
 var main_view_index = 0;
 
@@ -40,6 +46,6 @@ view_visible[main_view_index] = true;
 view_enabled[main_view_index] = true;
 
 // Launch cinematic
-timeline_index = tl_intro;
-timeline_speed = 1;
-timeline_running = 1;
+self.timeline_index = tl_intro;
+self.timeline_speed = 1;
+self.timeline_running = 1;

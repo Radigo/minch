@@ -74,19 +74,17 @@ switch (action)
     
     // PROGRESS
     case "loadProgress":
-        global.lastMap = ini_read_string("progress", "map", "rm_lvl_11");
-        show_debug_message("Loading last map");
-        show_debug_message(global.lastMap);
+        global.lastMapName = ini_read_string("progress", "map", "rm_lvl_11");
+        show_debug_message("Loading last map " + global.lastMapName);
         break;
     case "saveProgress":
-        global.lastMap = room_get_name(global.currentRoom);
-        ini_write_string("progress", "map", global.lastMap);
-        show_debug_message("Saving last map");
-        show_debug_message(global.lastMap);
+        global.lastMapName = room_get_name(global.currentRoom);
+        ini_write_string("progress", "map", global.lastMapName);
+        show_debug_message("Saving last map " + global.lastMapName);
         break;
     case "clearSavedData":
         ini_write_string("progress", "map", "rm_lvl_11");
-        global.lastMap = "rm_lvl_11";
+        global.lastMapName = "rm_lvl_11";
         break;
 }
 

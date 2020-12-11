@@ -135,16 +135,17 @@ else
                         case 0:// Start
                             // played_sound_id = snd_ui_start;// TODO: add start game sound FX
                             global.gameMode = global.STORY_MODE;
-                            global.currentRoom = rm_intro;
-                            room_goto(global.currentRoom);
+                            global.fromIntro = true;
+                            global.currentRoom = rm_lvl_11;
+                            room_goto(rm_title_start);
                             break;
                         case 1:// Continue
                             // played_sound_id = snd_ui_start;// TODO: add start game sound FX
                             if (global.applicationMode != global.DEMO_MODE)
                             {
                                 global.gameMode = global.STORY_MODE;
-                                
-                                var level = ds_map_find_value(global.map_list, scr_get_room_id(global.lastMap));
+                                global.fromIntro = false;
+                                var level = ds_map_find_value(global.map_list, global.lastMapName);
                                 
                                 if (room_exists(level))
                                 {
@@ -176,6 +177,7 @@ else
                         case 0:
                             // played_sound_id = snd_ui_start;// TODO: add start game sound FX
                             global.gameMode = global.SCOREATTACK_MODE;
+                            global.fromIntro = false;
                             room_goto(global.currentRoom);
                             break;
                         case 1:

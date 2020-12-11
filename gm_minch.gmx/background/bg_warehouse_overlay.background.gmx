@@ -14,6 +14,6 @@
   </TextureGroups>
   <For3D>0</For3D>
   <width>384</width>
-  <height>192</height>
+  <height>256</height>
   <data>images\bg_warehouse_overlay.png</data>
 </background>

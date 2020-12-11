@@ -133,6 +133,7 @@ if (global.controlStatus == global.SPAWN) {
         //show_debug_message("press: AB");
         if (self.abReleased
             && (global.legsStatus != global.LEGS_JUMP)) {
+            self.bodyAngle = self.mainAngle;
             obj_marker.x = x + cos(self.bodyAngle) * self.markerDistance;
             obj_marker.y = y + sin(self.bodyAngle) * self.markerDistance;
             
@@ -140,8 +141,7 @@ if (global.controlStatus == global.SPAWN) {
                 // init start/target positions
                 self.jumpStartingPosX = x;
                 self.jumpStartingPosY = y;
-                self.jumpTargetPosX = obj_marker.x;
-                self.jumpTargetPosY = obj_marker.y;
+                self.legsAngle = self.bodyAngle;
                 global.legsStatus = global.LEGS_JUMP;// << JUMP!
                 self.abReleased = false;
             }
@@ -253,7 +253,7 @@ switch (global.bodyStatus) {
         obj_marker.sprite_index = spr_marker_freeshot;// Free shot
         obj_marker.image_angle = direction;
         
-        if (self.shotTime = 0) {
+        if (self.shotTime == 0) {
             scr_shot(x, y, direction);
             self.numShots++;
             self.shotTime = self.shotDelay;
@@ -266,12 +266,13 @@ switch (global.bodyStatus) {
         break;
         
     case global.BODY_AIMEDSHOT:
-        if (self.shotTime = 0) {
+        if (self.shotTime == 0) {
             scr_shot(x, y, direction);
             self.numShots++;
             self.shotTime = self.fixedDelay;
             
             audio_play_sound(snd_shot_1, 0, false);
+            
         } else {
             self.shotTime--;
         }
@@ -292,7 +293,7 @@ switch (global.bodyStatus) {
         obj_marker.sprite_index = spr_marker_focusshot;// Shot (fixed)
         obj_marker.image_angle = 180 * (-self.bodyAngle) / pi;
         
-        if (self.shotTime = 0) {
+        if (self.shotTime == 0) {
             scr_shot(x, y, direction);
             self.numShots++;
             self.shotTime = self.fixedDelay;
@@ -304,10 +305,11 @@ switch (global.bodyStatus) {
         
         break;
     case global.BODY_CLAW:
-        if ((self.clawTime = 0) && (self.clawDelayTime = 0)) {
+        if ((self.clawTime == 0) && (self.clawDelayTime == 0)) {
             self.clawTime = self.clawDuration;
             self.clawHitbox = instance_create(x, y, obj_claw_hitbox);
             self.clawFX = instance_create(x, y, obj_claw_fx);
+            self.clawFX.depth = -3;
             scr_clawhitbox_position(self);
             scr_claw_fx_position(self);
             
@@ -318,8 +320,8 @@ switch (global.bodyStatus) {
             scr_claw_fx_position(self);
         } else {
             global.bodyStatus = global.BODY_IDLE;
-            with (obj_claw_hitbox) instance_destroy();
-            with (obj_claw_fx) instance_destroy();
+            instance_destroy(self.clawHitbox);
+            instance_destroy(self.clawFX);
         }
         
         self.clawDelayTime = self.clawDelay;
@@ -337,7 +339,7 @@ if (self.bodyAngle > (pi * 2)) {
 }
 
 // MOVES (LEGS STATUS)
-if (global.legsStatus = global.LEGS_JUMP) {
+if (global.legsStatus == global.LEGS_JUMP) {
     obj_marker.sprite_index = spr_marker_jump;
     if (self.jumpTicker < self.jumpDuration) {
         // Jump smoke
@@ -352,7 +354,6 @@ if (global.legsStatus = global.LEGS_JUMP) {
             audio_play_sound(snd_jump, 0, false);
         }
         
-        
         self.jumpTicker++;
         scr_jump_position(self);
     } else {
@@ -362,6 +363,10 @@ if (global.legsStatus = global.LEGS_JUMP) {
         
         audio_play_sound(snd_land, 0, false);
     }
+} else if (global.controlStatus == global.CRATE) {
+    // We can still move the target
+    obj_marker.x = x + cos(self.bodyAngle) * self.markerDistance;
+    obj_marker.y = y + sin(self.bodyAngle) * self.markerDistance;
 } else {
     self.legsAngle = self.mainAngle;
     
@@ -430,5 +435,71 @@ if (global.legsStatus = global.LEGS_JUMP) {
 }
 
 // DISPLAY
-scr_get_legssprites(self);
-scr_get_bodysprite(self);
+if (global.controlStatus == global.CRATE) {
+    var emSize = 8;
+    var sourceX = self.x;
+    var sourceY = self.y;
+    var emDirection = -self.bodyAngle / pi * 180;
+    var emDirectionVar = 20;
+    var particleQuantity = 0;
+    
+    if ((self.shotTime == 0) && (self.numShots > 0)) {
+        self.crateHP -= 10;
+        
+        sourceX += cos(self.bodyAngle - 0.4) * 12;
+        sourceY += sin(self.bodyAngle - 0.4) * 12;
+        particleQuantity = 3;
+        
+        part_type_size(self.pt_woodShrapnels, 0.1, 0.4, 0, 0);
+    }
+    
+    if (self.clawTime == self.clawDuration) {
+        self.crateHP -= 20;
+    } else if (self.clawTime > 0) {
+        var waveAngle = -2;
+        waveAngle += (self.clawTime / self.clawDuration) * 4;
+        sourceX += cos(self.bodyAngle + waveAngle) * 12;
+        sourceY += sin(self.bodyAngle + waveAngle) * 12;
+        emSize = 4;
+        particleQuantity = 2;
+        emDirection -= waveAngle * 10;
+        
+        part_type_direction(self.pt_woodShrapnels, 45, 135, 0, 0.02);
+        part_type_size(self.pt_woodShrapnels, 0.1, 0.4, 0, 0);
+    }
+    
+    if (global.legsStatus == global.LEGS_JUMP) {
+        self.crateHP = 0;
+    }
+    
+    if (self.crateHP <= 0) {
+        // We are no longer in the intro
+        global.fromIntro = false;
+        
+        emSize = 16;
+        emDirection = 90;
+        emDirectionVar = 60;
+        particleQuantity = 64;
+        
+        part_type_life(self.pt_woodShrapnels, 30, 80);
+        part_type_speed(self.pt_woodShrapnels, 0.25, 3, -0.01, 0.05);
+        part_type_direction(self.pt_woodShrapnels, 0, 360, 0, 0.02);
+        part_type_size(self.pt_woodShrapnels, 0.1, 0.6, 0, 0);
+        global.controlStatus = global.ALIVE;
+        
+        instance_destroy(self.crateTop);
+    } else {
+        // Display crate alterations
+        self.image_index = floor((1 - (self.crateHP / self.crateMaxHP)) * self.image_number);
+        self.crateTop.image_index = floor((1 - (self.crateHP / self.crateMaxHP)) * self.image_number);
+    }
+    
+    if (particleQuantity > 0) {
+        part_type_direction(self.pt_woodShrapnels, emDirection - emDirectionVar, emDirection + emDirectionVar, 0, 0.02);
+        part_emitter_region(global.ps_air, self.em_shrapnels, (sourceX - (emSize / 2)), (sourceX + (emSize / 2)), (sourceY - (emSize / 2)), (sourceY + (emSize / 2)), ps_shape_ellipse, ps_distr_invgaussian);
+        part_emitter_burst(global.ps_air, self.em_shrapnels, self.pt_woodShrapnels, particleQuantity);
+    }
+} else {
+    scr_get_legssprites(self);
+    scr_get_bodysprite(self);
+}

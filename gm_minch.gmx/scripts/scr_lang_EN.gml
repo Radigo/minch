@@ -49,6 +49,8 @@ switch (key)
     // GUI
     case "level_complete":
         return "Level Complete";
+    case "skip_intro":
+        return "Start >>";
     
     // LEVEL NAMES
     case "rm_lvl_11_name":
@@ -77,6 +79,14 @@ switch (key)
         return "Trash";
     case "rm_lvl_51_name":
         return "Humans";
+    
+    // Lore
+    case "intro_message":
+        return "> Loc. node:#City Core Tower LV.min26#DC dept.#supply command room#
+> Override delivery instr. operator:#- DC officer rank4#
+> Special delivery ID:#- MNC#
+> Destination:#- City border, Hangar Pink49###
+> Command:#- > Deliver <";
 }
 
 return "no_text";

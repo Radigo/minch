@@ -1,19 +1,15 @@
 // Level intro sequence draw
 
 // Fader
-if (self.introTicker < self.faderDuration)
-{   
+if (self.hasFader && (self.introTicker < self.faderDuration)) {
     self.faderAlpha = 1 - (self.introTicker / self.faderDuration);
-}
-else
-{
+} else {
     self.faderAlpha = 0;
 }
 
 // Name
 if ((self.introTicker > self.levelNameDuration)
-    && (self.introTicker < (self.levelNameDuration + self.levelNameFadeDuration)))
-{
+    && (self.introTicker < (self.levelNameDuration + self.levelNameFadeDuration))) {
     var name_ticker = self.introTicker - self.levelNameDuration;
     self.nameAlpha = 1 - (name_ticker / self.levelNameFadeDuration);
 }
@@ -32,8 +28,7 @@ draw_text(view_xview[0] + 160, view_yview[0] + 70, self.levelName);
 draw_set_alpha(1);
 
 
-if (self.introTicker > self.introDuration)
-{
+if (self.introTicker > self.introDuration) {
     instance_destroy();
 }
 

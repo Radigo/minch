@@ -15,7 +15,7 @@ for (i = 0; i < global.NUM_LEVELS; i++)
             room_index = i;
         }
         
-        if (room_get_name(i) == global.lastMap)
+        if (room_get_name(i) == global.lastMapName)
         {
             lastroom_index = i;
             

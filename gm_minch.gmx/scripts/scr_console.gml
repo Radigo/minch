@@ -12,7 +12,7 @@ switch (argument0)
     case "map":
         if (argument1 != "")
         {
-            var map = ds_map_find_value(global.map_list, scr_get_room_id(argument1));
+            var map = ds_map_find_value(global.map_list, "rm_lvl_");
             
             if (room_exists(map))
             {

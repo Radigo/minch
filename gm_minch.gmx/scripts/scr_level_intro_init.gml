@@ -7,6 +7,7 @@ self.levelNameFadeDuration = 60;
 self.introDuration = self.levelNameDuration + self.levelNameFadeDuration;
 self.introTicker = 0;// Global ticker
 
+self.hasFader = global.controlStatus != global.CRATE;
 self.faderAlpha = 1;
 self.nameAlpha = 1;
 self.levelName = scr_text(string(room_get_name(global.currentRoom)) + "_name");

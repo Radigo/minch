@@ -12,3 +12,4 @@ var shot = instance_create(shot_x, shot_y, obj_shot);
 shot.speed = 8;
 shot.direction = shot_direction;
 shot.image_angle = shot_direction;
+shot.depth = -3;

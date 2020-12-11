@@ -9,6 +9,7 @@ global.clip = false;
 global.minchControlIsActive = true;
 
 // Status vars
+global.CRATE = "crate";// Waiting for unboxing
 global.SPAWN = "spawn";// Sprite fades in
 global.ALIVE = "alive";// Full control and death opportunities
 global.DEATH = "death";// Sprite fades out (TODO: better death anim)
@@ -55,8 +56,6 @@ self.abReleased = true;
 self.markerDistance = 56;//48: Distance of target marker (ie: jump distance)
 self.jumpStartingPosX = -1;
 self.jumpStartingPosY = -1;
-self.jumpTargetPosX = -1;
-self.jumpTargetPosY = -1;
 //TODO: implement tolerance timer to make jump timing easyier
 self.jumpToleranceTimerDuration = 4;
 self.jumpToleranceTimer = 0;
@@ -87,12 +86,35 @@ self.teleportTargetY = 0;
 // FX vars
 self.shotFX = instance_create(0, 0, obj_shot_fx);
 
+// Crate
+self.crateMaxHP = 600;
+self.crateHP = 0;
+
 // ASSIGNING INIT VARS
-global.controlStatus = global.SPAWN;
+if (global.fromIntro) {
+    global.controlStatus = global.CRATE;
+    self.crateHP = self.crateMaxHP;
+    
+    self.pt_woodShrapnels = part_type_create();
+    part_type_sprite(self.pt_woodShrapnels, spr_woodshrapnel, true, false, true);
+    part_type_speed(self.pt_woodShrapnels, 0.35, 2, -0.01, 0.05);
+    part_type_life(self.pt_woodShrapnels, 8, 20);
+    part_type_gravity(self.pt_woodShrapnels, 0.02, -90);
+    part_type_orientation(self.pt_woodShrapnels, 0, 360, 0, 0, false);
+    
+    self.em_shrapnels = part_emitter_create(global.ps_air);
+    
+    self.image_speed = 0;
+    self.crateTop = instance_create(self.x, self.y, obj_minch_crate_top);
+    self.crateTop.image_speed = 0;
+    self.crateTop.depth = -10;
+} else {
+    global.controlStatus = global.SPAWN;
+}
 global.legsStatus = global.LEGS_IDLE;
 global.bodyStatus = global.BODY_IDLE;
 
-global.controlTime = self.spawnDuration;
+self.controlTime = self.spawnDuration;
 
 // Create target with minch
 object_set_depth(obj_marker, -12000);

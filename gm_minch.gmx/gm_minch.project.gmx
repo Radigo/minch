@@ -131,6 +131,9 @@
       </sprites>
       <sprite>sprites\spr_minch_falling</sprite>
       <sprite>sprites\spr_circle_hitbox</sprite>
+      <sprites name="IntroCrate">
+        <sprite>sprites\spr_minch_crate_top</sprite>
+      </sprites>
     </sprites>
     <sprites name="LD">
       <sprite>sprites\spr_wall</sprite>
@@ -597,6 +600,7 @@
       <sprite>sprites\spr_black_wave</sprite>
       <sprite>sprites\spr_biggerbullet_ray</sprite>
       <sprite>sprites\spr_greenlaser_dots</sprite>
+      <sprite>sprites\spr_woodshrapnel</sprite>
     </sprites>
     <sprites name="Cinematics">
       <sprites name="Intro">
@@ -666,6 +670,8 @@
     <path>paths\path_rm11_1</path>
     <path>paths\path_rm11_2</path>
     <path>paths\path_rm11_3</path>
+    <path>paths\path_rm11_4</path>
+    <path>paths\path_rm11_5</path>
     <path>paths\path_rm12_1</path>
     <path>paths\path_rm12_2</path>
     <path>paths\path_rm12_3</path>
@@ -711,11 +717,6 @@
     <path>paths\path_rm41_7</path>
     <path>paths\path_rm41_8</path>
     <path>paths\path_rm41_9</path>
-    <path>paths\path40</path>
-    <path>paths\path_test_1</path>
-    <path>paths\path_test_2</path>
-    <path>paths\path_test_3</path>
-    <path>paths\path_test_4</path>
   </paths>
   <scripts name="scripts">
     <script>scripts\scr_lang_EN.gml</script>
@@ -934,7 +935,6 @@
       <scripts name="patterns">
         <script>scripts\scr_pattern_spread.gml</script>
       </scripts>
-      <script>scripts\scr_assign_path.gml</script>
     </scripts>
     <scripts name="LD">
       <script>scripts\scr_start_level.gml</script>
@@ -996,8 +996,12 @@
       <script>scripts\scr_cinematic_mutantraid.gml</script>
       <script>scripts\scr_cinematic_doorlight_step.gml</script>
       <scripts name="Intro">
+        <script>scripts\scr_intro_start_init.gml</script>
+        <script>scripts\scr_title_start_step.gml</script>
+        <script>scripts\scr_title_start_draw.gml</script>
         <script>scripts\scr_intro_init.gml</script>
         <script>scripts\scr_intro_step.gml</script>
+        <script>scripts\scr_intro_draw.gml</script>
         <script>scripts\scr_conveyor_dispatcher_collision.gml</script>
         <script>scripts\scr_crate_init.gml</script>
         <script>scripts\scr_intro_fake_conveyor_init.gml</script>
@@ -1017,6 +1021,8 @@
     <font>fonts\font3</font>
     <font>fonts\font4</font>
     <font>fonts\font5</font>
+    <font>fonts\font8</font>
+    <font>fonts\font9</font>
   </fonts>
   <objects name="objects">
     <objects name="UI">
@@ -1050,6 +1056,7 @@
       <object>objects\obj_minch_death_bullet</object>
       <object>objects\obj_minch_death_fall</object>
       <object>objects\obj_minch_death_part</object>
+      <object>objects\obj_minch_crate_top</object>
     </objects>
     <objects name="Baddies">
       <object>objects\obj_drone_test</object>
@@ -1483,6 +1490,7 @@
       </objects>
       <object>objects\obj_doorlight</object>
       <objects name="intro">
+        <object>objects\obj_title_start</object>
         <object>objects\obj_intro_crate_destroyer</object>
         <object>objects\obj_crate_minch</object>
         <object>objects\obj_crate</object>
@@ -1504,12 +1512,11 @@
       <timeline>timelines\tl_rm32_juliadeath</timeline>
       <timeline>timelines\tl_rm41_mutantraid</timeline>
     </timelines>
-    <timeline>timelines\tl_start_level</timeline>
-    <timeline>timelines\tl_end_level</timeline>
   </timelines>
   <rooms name="rooms">
     <room>rooms\rm_init</room>
     <room>rooms\rm_title</room>
+    <room>rooms\rm_title_start</room>
     <room>rooms\rm_intro</room>
     <room>rooms\rm_lvl_11</room>
     <room>rooms\rm_lvl_12</room>
