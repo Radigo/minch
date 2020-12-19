@@ -16,3 +16,5 @@ self.enemiesAreRandom = true;// False to throw fixed patterns of colors
 self.numEnemies = 10;
 
 self.depth = -100;
+self.image_index = 0;
+self.image_speed = 0;

@@ -29,7 +29,7 @@ if (global.comboColor > 0) {
 }
 
 // Save score
-global.levelScore += enemy_value * global.comboValue;
+global.normalGameScore += enemy_value * global.comboValue;
 
 // Display score notification over destroyed ennemies
 var notif = instance_create(locationInstance.x, locationInstance.y, obj_score_notif);
@@ -38,4 +38,4 @@ notif.comboValue = global.comboValue;
 notif.color = global.comboColor;
 notif.isMixing = isMixing;
 
-//show_debug_message("Added " + string(enemy_value) + " points to score: " + string(global.levelScore) + ", with color: " + string(enemy_color));
+//show_debug_message("Added " + string(enemy_value) + " points to score: " + string(global.normalGameScore) + ", with color: " + string(enemy_color));

@@ -1,10 +1,8 @@
 MinCH: todo
 
 **Bugs**
-Pink-49 overlay
-Animate beetle
-
-Strong sound at boss 2 transitions: wave attack played at each frames > ramp up sound volume to be lower during the first frame.
+Boss1 still hittable when diyng
+Deactivate continue if level 1 has never been played
 
 **Design**
 Player
@@ -16,22 +14,19 @@ OK - Death animation by hit
 OK - Death animation by fall
 OK - Claw animation
 OK - Respawn invincibility FX
-- Add spawn animation to generator (flashing blue)
+OK - Add spawn animation to generator (flashing blue)
 
 Level
 OK - Doors
 OK - Floor switch
-ONGOING - 1st level intro cinematic (skippable)
+OK - 1st level intro cinematic (skippable)
 
 Ennemies
 OK - Hit sprites
 OK - Explosions
-- Animated bullets
-- Animated splitter blue arc (Cave)
-- Alteration sprites
-- 2-3 boss animations
-- 2-3 exit door opening (like boss 1)
-- hoovering FX for 2-3 boss and carrier
+OK - Animated bullets
+OK - Animated splitter blue arc (Cave)
+
 
 UI
 OK - Score panel
@@ -86,5 +81,5 @@ OK - Console
 OK - Title screen
 - Menus
 - leaderboards
-ONGOING - Intro sequence
+OK - Intro sequence
 - Ending sequence

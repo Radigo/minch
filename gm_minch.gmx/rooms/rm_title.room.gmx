@@ -54,9 +54,9 @@
     <instance objName="obj_title_bg" x="0" y="0" name="inst_6EFBE7FC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_title_towers" x="0" y="0" name="inst_02CBCFC2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_title_fg" x="0" y="0" name="inst_262A8EA7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_title_texts" x="0" y="0" name="inst_7EDD1A01" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_title" x="110" y="67" name="inst_72B3FD4C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_cursor" x="30" y="132" name="title_cursor" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_title_content" x="0" y="0" name="inst_7EDD1A01" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_title_logo" x="110" y="67" name="inst_72B3FD4C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_cursor" x="26" y="132" name="title_cursor" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

@@ -177,13 +177,9 @@
         <sprite>sprites\spr_deflector_left</sprite>
       </sprites>
       <sprites name="Generators">
-        <sprite>sprites\spr_generator_up_off</sprite>
         <sprite>sprites\spr_generator_up_on</sprite>
-        <sprite>sprites\spr_generator_down_off</sprite>
         <sprite>sprites\spr_generator_down_on</sprite>
-        <sprite>sprites\spr_generator_left_off</sprite>
         <sprite>sprites\spr_generator_left_on</sprite>
-        <sprite>sprites\spr_generator_right_off</sprite>
         <sprite>sprites\spr_generator_right_on</sprite>
       </sprites>
       <sprites name="FacilityMapObject">
@@ -338,12 +334,21 @@
       </sprites>
       <sprites name="beetle">
         <sprite>sprites\beetle_cy</sprite>
+        <sprite>sprites\spr_beetle_walk_cy</sprite>
         <sprite>sprites\beetle_ma</sprite>
+        <sprite>sprites\spr_beetle_walk_ma</sprite>
         <sprite>sprites\beetle_ye</sprite>
+        <sprite>sprites\spr_beetle_walk_ye</sprite>
         <sprite>sprites\beetle_pu</sprite>
+        <sprite>sprites\spr_beetle_walk_pu</sprite>
         <sprite>sprites\beetle_or</sprite>
+        <sprite>sprites\spr_beetle_walk_or</sprite>
         <sprite>sprites\beetle_gr</sprite>
+        <sprite>sprites\spr_beetle_walk_gr</sprite>
         <sprite>sprites\beetle_br</sprite>
+        <sprite>sprites\spr_beetle_walk_br</sprite>
+        <sprite>sprites\beetle_bk</sprite>
+        <sprite>sprites\spr_beetle_walk_bk</sprite>
       </sprites>
       <sprites name="mutant_bike_S">
         <sprite>sprites\spr_mutant_bike_S_cy</sprite>
@@ -473,6 +478,7 @@
         <sprite>sprites\spr_canondown_or</sprite>
         <sprite>sprites\spr_canondown_br</sprite>
         <sprite>sprites\spr_canondown_bk</sprite>
+        <sprite>sprites\spr_canondown_fx</sprite>
       </sprites>
       <sprites name="canon_left">
         <sprite>sprites\spr_canonleft_cy</sprite>
@@ -483,6 +489,7 @@
         <sprite>sprites\spr_canonleft_or</sprite>
         <sprite>sprites\spr_canonleft_br</sprite>
         <sprite>sprites\spr_canonleft_bk</sprite>
+        <sprite>sprites\spr_canonleft_fx</sprite>
       </sprites>
       <sprites name="canon_right">
         <sprite>sprites\spr_canonright_cy</sprite>
@@ -732,9 +739,14 @@
     <script>scripts\scr_get_room_id.gml</script>
     <script>scripts\scr_is_room_level.gml</script>
     <script>scripts\scr_rgb_color_from_index.gml</script>
-    <script>scripts\scr_is_room_ok_for_scoreattack.gml</script>
+    <scripts name="Controls">
+      <script>scripts\scr_controls_gamepad_check.gml</script>
+      <script>scripts\scr_controls_get_description.gml</script>
+      <script>scripts\scr_controls_configure_key.gml</script>
+      <script>scripts\scr_controls_to_key.gml</script>
+    </scripts>
     <scripts name="UI">
-      <script>scripts\scr_title_controls.gml</script>
+      <script>scripts\scr_title_step.gml</script>
       <script>scripts\scr_title_draw.gml</script>
       <script>scripts\scr_title_init.gml</script>
       <script>scripts\scr_console_controls.gml</script>
@@ -970,6 +982,9 @@
       <script>scripts\scr_add_door_anim_object.gml</script>
       <script>scripts\scr_change_door_triggered_instance.gml</script>
       <script>scripts\scr_door_instance_step.gml</script>
+      <script>scripts\scr_init_leaderboards.gml</script>
+      <script>scripts\scr_leaderboard_add_normalgame_score.gml</script>
+      <script>scripts\scr_leaderboard_add_scoreattack_score.gml</script>
     </scripts>
     <scripts name="Particles">
       <script>scripts\scr_particles_init.gml</script>
@@ -1026,8 +1041,8 @@
   </fonts>
   <objects name="objects">
     <objects name="UI">
-      <object>objects\obj_title</object>
-      <object>objects\obj_title_texts</object>
+      <object>objects\obj_title_logo</object>
+      <object>objects\obj_title_content</object>
       <object>objects\obj_cursor</object>
       <object>objects\obj_hud</object>
       <object>objects\obj_level_intro</object>
@@ -1098,6 +1113,7 @@
         <object>objects\obj_beetle_gr</object>
         <object>objects\obj_beetle_or</object>
         <object>objects\obj_beetle_br</object>
+        <object>objects\obj_beetle_bk</object>
         <object>objects\obj_beetle</object>
       </objects>
       <object>objects\obj_ennemy</object>
@@ -1240,6 +1256,8 @@
         <object>objects\obj_canonright_or</object>
         <object>objects\obj_canonright_br</object>
         <object>objects\obj_canonright_bk</object>
+        <object>objects\obj_canondown_fx</object>
+        <object>objects\obj_canonleft_fx</object>
       </objects>
       <objects name="obj_sentinel">
         <object>objects\obj_sentinel</object>
@@ -1345,6 +1363,7 @@
         <object>objects\obj_enemy_generator_up</object>
         <object>objects\obj_enemy_generator_left</object>
         <object>objects\obj_enemy_generator_right</object>
+        <object>objects\obj_enemy_generator_down</object>
         <object>objects\obj_generator</object>
         <object>objects\obj_spawner</object>
       </objects>
@@ -1532,12 +1551,6 @@
     <room>rooms\rm_lvl_43</room>
     <room>rooms\rm_lvl_51</room>
   </rooms>
-  <constants number="4">
-    <constant name="PAGE_SCOREATTACK">"page_scoreattack"</constant>
-    <constant name="PAGE_TITLE">"page_title"</constant>
-    <constant name="PAGE_OPTIONS">"page_options"</constant>
-    <constant name="PAGE_KEYCONFIG">"page_keyconfig"</constant>
-  </constants>
   <help>
     <rtf>help.rtf</rtf>
   </help>

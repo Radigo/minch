@@ -1,17 +1,12 @@
-var i, ds_map;
+global.allLevels = ds_map_create();
+global.orderedLevelNames = ds_list_create();
 
-ds_map = argument0;
-
-for (i = 0; i < global.NUM_LEVELS; i += 1)
-{
-    if (room_exists(i))
-    {
-        if (scr_is_room_level(room_get_name(i)))
-        {
-            show_debug_message("Adding room " + room_get_name(i) + " to map_list under key: " + room_get_name(i));
-            ds_map_add(ds_map, room_get_name(i), i);
-        }
+var roomIndex = 0;
+while (room_exists(roomIndex)) {
+    if (scr_is_room_level(room_get_name(roomIndex), false)) {
+        show_debug_message("Adding room " + room_get_name(roomIndex));
+        ds_map_add(global.allLevels, room_get_name(roomIndex), roomIndex);
+        ds_list_add(global.orderedLevelNames, room_get_name(roomIndex));
     }
+    roomIndex = room_next(roomIndex);
 }
-
-return ds_map;

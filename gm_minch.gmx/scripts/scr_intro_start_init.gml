@@ -9,10 +9,10 @@ self.ticker = 0;
 self.SEQUENCE_ZOOMCORE = "sequenceZoomcore";
 self.zoomDuration = 120;
 
-self.logoZoomScaleSource = obj_title.image_xscale;
+self.logoZoomScaleSource = obj_title_logo.image_xscale;
 self.logoZoomScaleTarget = 2.5;
-self.logoZoomXSource = obj_title.x;
-self.logoZoomYSource = obj_title.y;
+self.logoZoomXSource = obj_title_logo.x;
+self.logoZoomYSource = obj_title_logo.y;
 self.logoZoomXTarget = -260;
 self.logoZoomYTarget = 100;
 
@@ -80,6 +80,6 @@ self.textFadeDuration = 30;
 obj_title_bg.depth = 100;
 obj_title_towers.depth = 90;
 obj_title_fg.depth = 80;
-obj_title.depth = 0;
+obj_title_logo.depth = 0;
 
 self.depth = -10000;

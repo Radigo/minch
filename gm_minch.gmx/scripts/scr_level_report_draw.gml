@@ -32,7 +32,7 @@ if (self.reportTicker > self.scoreTime)
     draw_set_font(font_wide);
     draw_set_colour(c_ltgray);
     draw_set_halign(fa_center);
-    draw_text(view_xview[0] + 160, view_yview[0] + 140, string(global.levelScore));
+    draw_text(view_xview[0] + 160, view_yview[0] + 140, string(global.normalGameScore));
 }
 
 draw_set_alpha(1);

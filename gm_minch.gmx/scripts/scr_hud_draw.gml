@@ -34,7 +34,7 @@ if (global.comboValue > 1) {
 // SCORE
 draw_set_font(global.scoreFont);
 draw_set_halign(fa_left);
-draw_text((view_xview[0] + 4), (view_yview[0] + 4), string(global.levelScore));
+draw_text((view_xview[0] + 4), (view_yview[0] + 4), string(global.normalGameScore));
 
 // LIVES
 for (i = 0; i < global.extends; i++) {

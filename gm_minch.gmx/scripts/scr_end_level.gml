@@ -12,21 +12,23 @@ scr_particles_dispose();
 
 var nextRoom = room_next(room);
 
-switch (global.gameMode)
-{
+switch (global.gameMode) {
     case global.STORY_MODE:
-        if (has_won && (global.applicationMode != global.DEMO_MODE))
-        {
+        if (has_won && (global.applicationMode != global.DEMO_MODE)) {
             //TODO: check if next room is null (last level) to avoid crash
-            global.currentRoom = nextRoom;
-            scr_settings("saveProgress");
-        }
-        else
-        {
-           nextRoom = rm_title;
+            if (scr_is_room_level(nextRoom, false)) {
+                global.currentRoom = nextRoom;
+                scr_settings("saveProgress");
+            }
+        } else {
+            scr_leaderboard_add_normalgame_score(global.normalGameScore, true);
+            scr_settings("saveLeaderboards");
+            nextRoom = rm_title;
         }
         break;
     case global.SCOREATTACK_MODE:
+        scr_leaderboard_add_scoreattack_score(global.normalGameScore, room_get_name(global.currentRoom), true);
+        scr_settings("saveLeaderboards");
         nextRoom = rm_title;
         break;
 }

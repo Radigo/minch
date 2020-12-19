@@ -1,10 +1,35 @@
 /** Try to put here all config stuff */
 
-// SETTINGS
+// List all valid levels in the game
+scr_map_rooms();
+scr_init_leaderboards();
 
+// SETTINGS
 scr_settings("loadLang");
 scr_settings("loadKeys");
+scr_settings("loadGPad");
+scr_settings("loadControlType");
 scr_settings("loadProgress");
+scr_settings("loadLeaderboards");
+
+// CONTROLS
+global.UP = "ctrlUp";
+global.DOWN = "ctrlDown";
+global.LEFT = "ctrlLeft";
+global.RIGHT = "ctrlRight";
+global.A = "ctrlA";
+global.B = "ctrlB";
+global.START = "ctrlStart";
+
+global.CONTROLS = ds_list_create();
+ds_list_add(global.CONTROLS, global.UP, global.DOWN, global.LEFT, global.RIGHT,global.A, global.B, global.START);
+
+// UI
+global.PAGE_TITLE = "pageTitle";
+global.PAGE_SCOREATTACK = "pageScoreAttack";
+global.PAGE_LEADERBOARD = "pageLeaderboard";
+global.PAGE_OPTIONS = "pageOptions";
+global.PAGE_KEYCONFIG = "pageKeyconfig";
 
 //show_debug_message("language: " + global.language);
 global.wscale = 3;
@@ -33,6 +58,8 @@ ds_list_add(global.PRIMARY_COLORS, global.CY, global.MA, global.YE);
 global.SECONDARY_COLORS = ds_list_create();
 ds_list_add(global.SECONDARY_COLORS, global.PU, global.GR, global.RG);
 
+global.defaultLeaderboardName = "MNC";
+
 // Switches & events
 global.ENEMY_TRIGGER_ON = "enemyTriggerOn";// Switch turns enemy ON
 global.ENEMY_TRIGGER_OFF = "enemyTriggerOff";// Switch turns enemy OFF
@@ -52,9 +79,6 @@ global.STORY_MODE = "storyMode";// Continuous play through all levels
 global.SCOREATTACK_MODE = "scoreAttackMode";// Single level
 global.gameMode = global.STORY_MODE;
 
-global.NUM_LEVELS = 15;
-global.EXTENDED_NUM_LEVELS = 25;
-
 // Application release
 global.DEBUG_MODE = "debugMode";// Using during development
 global.DEMO_MODE = "demoMode";// Used for pre-release and demos
@@ -62,11 +86,8 @@ global.RELEASE_MODE = "releaseMode";// Used for real!
 
 global.applicationMode = global.DEBUG_MODE;
 
-switch (global.applicationMode)
-{
+switch (global.applicationMode) {
     case global.DEBUG_MODE:
-        global.map_list = ds_map_create();
-        scr_map_rooms(global.map_list);
         global.init_room = rm_lvl_11;
         global.allowConsole = true;
         global.initLives = 3;
@@ -77,8 +98,6 @@ switch (global.applicationMode)
         global.initLives = 3;
         break;
     case global.RELEASE_MODE:
-        global.map_list = ds_map_create();
-        scr_map_rooms(global.map_list);
         global.init_room = rm_lvl_11;
         global.allowConsole = false;
         global.initLives = 3;

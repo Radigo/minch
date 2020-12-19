@@ -8,10 +8,10 @@ if (self.currentSequence == self.SEQUENCE_ZOOMCORE) {
         var zoomProgress = self.ticker / self.zoomDuration;
         
         var logoScale = self.logoZoomScaleSource + ((self.logoZoomScaleTarget - self.logoZoomScaleSource) * zoomProgress);
-        obj_title.image_xscale = logoScale;
-        obj_title.image_yscale = logoScale;
-        obj_title.x = originX + self.logoZoomXSource + ((self.logoZoomXTarget - self.logoZoomXSource) * zoomProgress);
-        obj_title.y = originY + self.logoZoomYSource + ((self.logoZoomYTarget - self.logoZoomYSource) * zoomProgress);
+        obj_title_logo.image_xscale = logoScale;
+        obj_title_logo.image_yscale = logoScale;
+        obj_title_logo.x = originX + self.logoZoomXSource + ((self.logoZoomXTarget - self.logoZoomXSource) * zoomProgress);
+        obj_title_logo.y = originY + self.logoZoomYSource + ((self.logoZoomYTarget - self.logoZoomYSource) * zoomProgress);
         
         var fgScale = self.fgZoomScaleSource + ((self.fgZoomScaleTarget - self.fgZoomScaleSource) * zoomProgress);
         obj_title_fg.image_xscale = fgScale;

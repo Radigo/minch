@@ -10,10 +10,10 @@ switch (key)
         return "Continue";
     case "title_scoreattack":
         return "Score attack...";
+    case "title_leaderboards":
+        return "Leaderboards...";
     case "title_options":
         return "Options...";
-    case "title_joystick":
-        return "Jostick connected: " +  gamepad_get_description(0);
     case "title_quit":
         return "Press 'esc' to quit game";
     // Score attack
@@ -23,25 +23,36 @@ switch (key)
         return "< level";
     case "scoreattack_select_end":
         return ">";
+    // Leaderboard screen
+    case "leaderboard_title":
+        return "Hall of Fame";
+    case "leaderboard_normalgame":
+        return "< Normal Game >";
+    case "leaderboard_scoreattack":
+        return "< Score Attack >";
     // Options screen
+    case "keyboard":
+        return "Keyboard";
     case "options_keys":
         return "Configure keys";
+    case "options_gpad":
+        return "Configure controller";
     case "options_keyup":
-        return "Press UP key";
+        return "Press UP";
     case "options_keydown":
-        return "Press DOWN key";
+        return "Press DOWN";
     case "options_keyleft":
-        return "Press LEFT key";
+        return "Press LEFT";
     case "options_keyright":
-        return "Press RIGHT key";
+        return "Press RIGHT";
     case "options_keya":
-        return "Press A key";
+        return "Press A";
     case "options_keyb":
-        return "Press B key";
+        return "Press B";
     case "options_keystart":
-        return "Press Start key";
+        return "Press Start";
     case "options_keysdefault":
-        return "Reset key config";
+        return "Reset controls";
     case "options_clearsave":
         return "Clear progress";
     case "options_back":

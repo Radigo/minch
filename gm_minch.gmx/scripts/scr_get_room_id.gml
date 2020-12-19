@@ -2,7 +2,7 @@ var room_arg = argument0;
 
 var room_str = room_get_name(room_arg);
 
-if (!scr_is_room_level(room_str)) {
+if (!scr_is_room_level(room_str, false)) {
     return room_str;
 }
 

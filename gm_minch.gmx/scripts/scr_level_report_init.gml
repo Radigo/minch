@@ -20,3 +20,7 @@ global.minchControlIsActive = false;
 
 global.legsStatus = global.LEGS_IDLE;
 global.bodyStatus = global.BODY_IDLE;
+
+if (global.gameMode == global.SCOREATTACK_MODE) {
+    // flashy notification
+}

@@ -12,7 +12,7 @@ switch (argument0)
     case "map":
         if (argument1 != "")
         {
-            var map = ds_map_find_value(global.map_list, "rm_lvl_");
+            var map = ds_map_find_value(global.allLevels, "rm_lvl_" + argument1);
             
             if (room_exists(map))
             {
@@ -84,7 +84,16 @@ switch (argument0)
     case "idspispopd":
         global.clip = ! global.clip;
         break;
-        
+    case "hs":
+    case "highscore":
+        // set new high score in leaderboard
+        scr_leaderboard_add_normalgame_score(real(argument1), true);
+        break;
+    case "sa":
+    case "scoreattack":
+        // set new high score in scoreattack
+        scr_leaderboard_add_scoreattack_score(real(argument1), room_get_name(global.currentRoom), true);
+        break;        
         
         // DEBUG
     case "t":

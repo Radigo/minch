@@ -3,7 +3,6 @@
 // Values
 global.extends = global.initLives;
 
-global.levelScore = 0;
 global.levelTime = 0;
 global.comboColor = 0;
 global.comboValue = 1;
