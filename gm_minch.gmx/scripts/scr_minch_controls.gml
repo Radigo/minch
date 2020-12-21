@@ -95,28 +95,28 @@ if (global.controlStatus == global.SPAWN) {
         self.invincibilityTicker++;
     }
     
-    if (keyboard_check(global.key_right) &&  keyboard_check(global.key_up)) {
+    if (scr_controls_check_input(global.RIGHT) &&  scr_controls_check_input(global.UP)) {
         self.mainAngle = pi * 1.75;
         walk_speed = 2;
-    } else if (keyboard_check(global.key_left) &&  keyboard_check(global.key_up)) {
+    } else if (scr_controls_check_input(global.LEFT) &&  scr_controls_check_input(global.UP)) {
         self.mainAngle = pi * 1.25;
         walk_speed = 2;
-    } else if (keyboard_check(global.key_left) && keyboard_check(global.key_down)) {
+    } else if (scr_controls_check_input(global.LEFT) && scr_controls_check_input(global.DOWN)) {
         self.mainAngle = pi * 0.75;
         walk_speed = 2;
-    } else if (keyboard_check(global.key_down) && keyboard_check(global.key_right)) {
+    } else if (scr_controls_check_input(global.DOWN) && scr_controls_check_input(global.RIGHT)) {
         self.mainAngle = pi * 0.25;
         walk_speed = 2;
-    } else if (keyboard_check(global.key_up)) {
+    } else if (scr_controls_check_input(global.UP)) {
         self.mainAngle = pi * 1.5;
         walk_speed = 2;
-    } else if (keyboard_check(global.key_down)) {
+    } else if (scr_controls_check_input(global.DOWN)) {
         self.mainAngle = pi * 0.5;
         walk_speed = 2;
-    } else if (keyboard_check(global.key_left)) {
+    } else if (scr_controls_check_input(global.LEFT)) {
         self.mainAngle = pi * 1;
         walk_speed = 2;
-    } else if (keyboard_check(global.key_right)) {
+    } else if (scr_controls_check_input(global.RIGHT)) {
         self.mainAngle = 0;
         walk_speed = 2;
     }
@@ -129,7 +129,7 @@ if (global.controlStatus == global.SPAWN) {
         global.legsStatus = global.LEGS_IDLE;
     }
     
-    if (keyboard_check(global.key_a) && keyboard_check(global.key_b)) {
+    if (scr_controls_check_input(global.A) && scr_controls_check_input(global.B)) {
         //show_debug_message("press: AB");
         if (self.abReleased
             && (global.legsStatus != global.LEGS_JUMP)) {
@@ -148,7 +148,7 @@ if (global.controlStatus == global.SPAWN) {
         } else if (global.bodyStatus != global.BODY_CLAW) {
             global.bodyStatus = global.BODY_AIMEDSHOT;// << AIMED SHOT
         }
-    } else if (keyboard_check(global.key_a)) {
+    } else if (scr_controls_check_input(global.A)) {
         //show_debug_message("press: A");
         self.abReleased = false;
         
@@ -170,7 +170,7 @@ if (global.controlStatus == global.SPAWN) {
                 global.bodyStatus = global.BODY_FIXED;// << FIXED SHOT
             }
         }
-    } else if (keyboard_check(global.key_b)) {
+    } else if (scr_controls_check_input(global.B)) {
         //show_debug_message("press: B");
         self.abReleased = false;
         

@@ -1,43 +1,12 @@
-if (keyboard_lastkey = vk_escape) {
-    // TODO: change this for an exit invite popup (eventually pause game)
+if (keyboard_lastkey == vk_escape) {
     game_end();
 }
 
-
 var inputKey = -1;
-
-/*
-for (var i = 0; i < ds_list_size(global.CONTROLS); i++) {
-
-}
-
-if (gamepad_button_check_released(global.controlType, global.pad_up)) {
-    return global.UP;
-} else if (gamepad_button_check_released(global.controlType, global.pad_down)) {
-    return global.DOWN;
-} else if (gamepad_button_check_released(global.controlType, global.pad_left)) {
-    return global.LEFT;
-} else if (gamepad_button_check_released(global.controlType, global.pad_right)) {
-    return global.RIGHT;
-} else if (gamepad_button_check_released(global.controlType, global.pad_a)) {
-    return global.A;
-} else if (gamepad_button_check_released(global.controlType, global.pad_b)) {
-    return global.B;
-} else if (gamepad_button_check_released(global.controlType, global.pad_start)) {
-    return global.START;
-}
-*/
 
 if (self.rawInputMode) {
     // Raw input mode is to map controls, we can't mix gamepad and keyboard there
-    if (scr_controls_gamepad_check(global.control_type)) {
-        for (var inp = 0; inp < gamepad_button_count(global.control_type); inp++) {
-            if (gamepad_button_check_pressed(global.control_type, inp)) {
-                inputKey = inp;
-                break;
-            }
-        }
-    } else {
+    if (global.control_type < 0) {
         for (var key = 2; key < 200; key++) {
             if (keyboard_check_pressed(key)) {
                 inputKey = key;
@@ -45,6 +14,18 @@ if (self.rawInputMode) {
                 break;
             }
         }
+    } else if (scr_controls_gamepad_check(global.control_type)) {
+        for (var inp = 0; inp < gamepad_button_count(global.control_type); inp++) {
+            if (gamepad_button_check_pressed(global.control_type, inp)) {
+                inputKey = inp;
+                break;
+            }
+        }
+    } else {
+        // No valid input mode
+        global.titlepage = global.PAGE_OPTIONS;
+        self.rawInputMode = false;
+        v_cursor_index = 1;
     }
 } else {
     // Both input types work in menu
@@ -81,12 +62,16 @@ if (self.rawInputMode) {
     }
 }
 
-
 if (inputKey < 0) {
     return false;
 }
 
-show_debug_message("scr_title_step inputKey: " + string(inputKey));
+// Regular check of gamepad presence
+if (!scr_controls_gamepad_check(global.control_type)) {
+    global.control_type = -1;
+}
+
+//show_debug_message("scr_title_step inputKey: " + string(inputKey));
 
 // Applies to title screen cursor
 var cursor_x = 26;
@@ -100,6 +85,8 @@ var v_cursor_index_max = 0;
 var played_sound_id = noone;
 
 // Settings for each page
+var goBack = false;
+
 switch (global.titlepage) {
     case global.PAGE_TITLE:
         v_cursor_index = global.title_entry;
@@ -112,7 +99,7 @@ switch (global.titlepage) {
     case global.PAGE_LEADERBOARD:
         v_cursor_index = global.page_leaderboard_entry;
         v_cursor_index_max = 0;
-        global.leaderboardPageMax = 1
+        global.leaderboardPageMax = 1;
         break;
     case global.PAGE_OPTIONS:
         v_cursor_index = global.options_entry;
@@ -127,7 +114,7 @@ switch (global.titlepage) {
 var cursor_max_y = 132 + (v_cursor_index_max * 16);
 
 if (global.titlepage == global.PAGE_KEYCONFIG) {
-    show_debug_message("global.key_config_step: " + string(global.key_config_step));
+    //show_debug_message("global.key_config_step: " + string(global.key_config_step));
     switch (global.key_config_step) {
         case 0:
             scr_controls_configure_key(global.UP, inputKey);
@@ -220,9 +207,7 @@ if (global.titlepage == global.PAGE_KEYCONFIG) {
                         if (scr_controls_gamepad_check(global.control_type + 1)) {
                             played_sound_id = snd_ui_select;
                             global.control_type += 1;
-                            if (scr_controls_gamepad_check(global.control_type)) {
-                                scr_settings("saveControlType");
-                            }
+                            scr_settings("saveControlType");
                         }
                     }
                     break;
@@ -296,17 +281,12 @@ if (global.titlepage == global.PAGE_KEYCONFIG) {
                             room_goto(global.currentRoom);
                             break;
                         case 1:
-                            played_sound_id = snd_ui_cancel;
-                            global.titlepage = global.PAGE_TITLE;
-                            v_cursor_index = 2;// Score attack entry index
+                            goBack = true;
                             break;
                     }
                     break;
                 case global.PAGE_LEADERBOARD:
-                    played_sound_id = snd_ui_cancel;
-                    global.titlepage = global.PAGE_TITLE;
-                    v_cursor_index = 3;// Leaderboard entry index
-                    obj_title_logo.visible = true;
+                    goBack = true;
                     break;
                 case global.PAGE_OPTIONS:
                     global.options_entry = v_cursor_index;
@@ -328,15 +308,36 @@ if (global.titlepage == global.PAGE_KEYCONFIG) {
                             scr_settings("loadLeaderboards");
                             break;
                         case 4:
-                            played_sound_id = snd_ui_cancel;
-                            global.titlepage = global.PAGE_TITLE;
-                            v_cursor_index = 4;// Option entry index
+                            goBack = true;
                             break;
                     }
                     break;
             }
             break;
+        case global.B:
+            goBack = true;
+            break;
     }
+}
+
+if (goBack) {
+    // Back if in sub menu
+    switch (global.titlepage) {
+        case global.PAGE_SCOREATTACK:
+            played_sound_id = snd_ui_cancel;
+            v_cursor_index = 2;// Score attack entry index
+            break;
+        case global.PAGE_LEADERBOARD:
+            played_sound_id = snd_ui_cancel;
+            v_cursor_index = 3;// Leaderboard entry index
+            obj_title_logo.visible = true;
+            break;
+        case global.PAGE_OPTIONS:
+            played_sound_id = snd_ui_cancel;
+            v_cursor_index = 4;// Option entry index
+            break;
+    }
+    global.titlepage = global.PAGE_TITLE;
 }
 
 if (played_sound_id != noone) {

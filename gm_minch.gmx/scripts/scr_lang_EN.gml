@@ -15,7 +15,13 @@ switch (key)
     case "title_options":
         return "Options...";
     case "title_quit":
-        return "Press 'esc' to quit game";
+        return "ESC >> Quit game";
+    case "title_back":
+        return "ESC >> Back";
+    case "title_inputmodekeyboard":
+        return "Input mode: keyboard";
+    case "title_inputmodectrl":
+        return "Input mode: controller";
     // Score attack
     case "scoreattack_start":
         return "Start level";

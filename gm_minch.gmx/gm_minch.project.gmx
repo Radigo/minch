@@ -743,7 +743,7 @@
       <script>scripts\scr_controls_gamepad_check.gml</script>
       <script>scripts\scr_controls_get_description.gml</script>
       <script>scripts\scr_controls_configure_key.gml</script>
-      <script>scripts\scr_controls_to_key.gml</script>
+      <script>scripts\scr_controls_check_input.gml</script>
     </scripts>
     <scripts name="UI">
       <script>scripts\scr_title_step.gml</script>

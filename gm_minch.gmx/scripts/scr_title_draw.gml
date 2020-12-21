@@ -135,7 +135,6 @@ switch (global.titlepage)
                 draw_text(pos_x, pos_y, scr_text("options_keystart"));
                 break;
         }
-        
         break;
 }
 
@@ -143,6 +142,13 @@ draw_set_font(font_small);
 draw_set_color(c_dkgray);
 
 draw_text(8, 224, scr_text("title_quit"));
+
+if (global.control_type < 0) {
+    draw_text(96, 224, scr_text("title_inputmodekeyboard"));
+} else {
+    draw_text(96, 224, scr_text("title_inputmodectrl"));
+}
+
 draw_set_halign(fa_right);
 draw_text(312, 224, game_display_name);
 draw_set_halign(fa_left);
