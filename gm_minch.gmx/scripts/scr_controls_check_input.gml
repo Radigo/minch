@@ -5,17 +5,17 @@ if (global.control_type < 0) {
         case global.UP:
             return keyboard_check(global.key_up);
         case global.DOWN:
-            return keyboard_check( global.key_down);
+            return keyboard_check(global.key_down);
         case global.LEFT:
-            return keyboard_check( global.key_left);
+            return keyboard_check(global.key_left);
         case global.RIGHT:
-            return keyboard_check( global.key_right);
+            return keyboard_check(global.key_right);
         case global.A:
-            return keyboard_check( global.key_a);
+            return keyboard_check(global.key_a);
         case global.B:
-            return keyboard_check( global.key_b);
+            return keyboard_check(global.key_b);
         case global.START:
-            return keyboard_check( global.key_start);
+            return keyboard_check(global.key_start);
     }
 } else {
     switch (requiredControl) {

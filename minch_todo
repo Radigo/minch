@@ -1,8 +1,10 @@
 MinCH: todo
 
+**Retakes**
+Implement story mode with infinite lives and no score
+Give choice to continue or restart story mode (is reset progress what we want?)
+
 **Bugs**
-Boss1 still hittable when diyng
-Deactivate continue if level 1 has never been played
 
 **Design**
 Player
@@ -27,12 +29,11 @@ OK - Explosions
 OK - Animated bullets
 OK - Animated splitter blue arc (Cave)
 
-
 UI
 OK - Score panel
 OK - Life icon
 OK - Combo panel
-- Hi scores
+OK - Hi scores
 
 **Code**
 Player
@@ -46,13 +47,13 @@ OK - Combo system (color mix)
 OK - Combo system (special cases)
 OK - Block jump when not available
 OK - Checkpoints in case of death
-- Game Over (?)
+OK - Game Over
 OK - Free shot, check rotation speed. Consider firing at each frame when rotating.
 OK - Tuning on tap rate for free/focus shot (faster)
 OK - change focus marker design
 OK - implement tolerance timer to make jump timing easyier (scr_minch_init)
 OK - sliding collisions in corners
-- Joystick support
+OK - Joystick support
 
 Level design
 OK - Enemy follow path
@@ -79,7 +80,7 @@ OK - Console
 
 **Game elements**
 OK - Title screen
-- Menus
-- leaderboards
+OK - Menus
+OK - leaderboards
 OK - Intro sequence
 - Ending sequence

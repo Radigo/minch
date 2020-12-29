@@ -4,10 +4,10 @@ var key = argument0;
 switch (key)
 {
     // Title Screen
-    case "title_start":
-        return "Start";
-    case "title_continue":
-        return "Continue";
+    case "title_story":
+        return "Story...";
+    case "title_arcade":
+        return "Arcade";
     case "title_scoreattack":
         return "Score attack...";
     case "title_leaderboards":
@@ -22,6 +22,11 @@ switch (key)
         return "Input mode: keyboard";
     case "title_inputmodectrl":
         return "Input mode: controller";
+    // Story
+    case "story_start":
+        return "Start";
+    case "story_continue":
+        return "Continue";
     // Score attack
     case "scoreattack_start":
         return "Start level";
@@ -64,8 +69,22 @@ switch (key)
     case "options_back":
         return "back to title";
     // GUI
+    case global.ARCADE_MODE:
+        return "ARCADE";
+    case global.STORY_MODE:
+        return "STORY";
+    case global.SCOREATTACK_MODE:
+        return "SCORE ATTACK";
+    case "hud_hi":
+        return "HI ";
     case "level_complete":
         return "Level Complete";
+    case "game_over":
+        return "Game Over";
+    case "continue":
+        return "Continue";
+    case "retry":
+        return "Retry";
     case "skip_intro":
         return "Start >>";
     

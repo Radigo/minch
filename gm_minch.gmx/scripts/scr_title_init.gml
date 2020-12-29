@@ -2,20 +2,28 @@ self.flashTicker = 0;
 self.flashTickerLimit = 4;
 
 // Lock continue and score attack if no score have been done yet
-global.canContinue = (ds_list_size(global.normalGameScores) > 0) && (global.applicationMode != global.DEMO_MODE);
+global.canSelectStage = (global.lastMapName != "rm_lvl_11") && (global.applicationMode != global.DEMO_MODE);
 
 /** Title pages can be:
 "title"
+"score attack"
+"leaderboards"
 "options"
 "keyconfig" */
-global.titlepage = global.PAGE_TITLE;
 
 /** Index of chosen entry in title page, links to:
-start
-continue
+story
+arcade
 score attack
 options */
 global.title_entry = 0;
+
+/** Index of chosen entry in story page, links to:
+continue
+start 
+continue becomes default when we have a progress (canSelectStage)
+*/
+global.page_story_entry = 0;
 
 /** Index of chosen entry in score attack page, links to:
 level start
@@ -51,3 +59,24 @@ obj_title_fg.depth = 80;
 obj_title_logo.depth = 0;
 obj_title_content.depth = 10;
 obj_cursor.depth = 20;
+
+if (global.currentRoom == undefined) {
+    // First display of title
+    global.titlepage = global.PAGE_TITLE;
+} else if (global.gameMode == global.SCOREATTACK_MODE) {
+    // Coming after a score attack attempt
+    global.titlepage = global.PAGE_SCOREATTACK;
+} else if (global.gameMode == global.ARCADE_MODE) {
+    // Coming after a game with scoring, display leaderboard
+    // We have to fake page change because step script expects an input
+    global.leaderboardPage = 0;
+    global.titlepage = global.PAGE_LEADERBOARD;
+    obj_title_logo.visible = false;
+    
+    obj_cursor.x = 26;
+    obj_cursor.y = 204;
+} else if (global.gameMode == global.STORY_MODE) {
+    global.titlepage = global.PAGE_TITLE;
+}
+
+global.currentRoom = global.init_room;

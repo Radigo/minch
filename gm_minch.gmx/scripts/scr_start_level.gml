@@ -8,9 +8,6 @@ global.rules_map = ds_map_create();
 // init event map for all kind of trigger events
 global.events = ds_map_create();
 
-// Init checkpoints
-global.lastCheckpoint = 0;
-
 scr_scoring_init();
 
 // Prepare kill counter

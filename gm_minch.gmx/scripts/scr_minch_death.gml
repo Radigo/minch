@@ -60,11 +60,16 @@ if ((global.controlStatus == global.ALIVE)
     
     global.extends--;
     
-    // Restore focus
-    if (!obj_minch_camera.keepFocusAfterDeath) {
-        obj_minch_camera.transitionDuration = obj_minch_camera.transitionOutDuration;
-        obj_minch_camera.transitionStep = obj_minch_camera.transitionOutDuration;
-        obj_minch_camera.focus = obj_minch;
+    if (global.extends < 0) {
+        var report = instance_create(0, 0, obj_level_report);
+        report.isLevelComplete = false;
+    } else {
+        // Restore focus
+        if (!obj_minch_camera.keepFocusAfterDeath) {
+            obj_minch_camera.transitionDuration = obj_minch_camera.transitionOutDuration;
+            obj_minch_camera.transitionStep = obj_minch_camera.transitionOutDuration;
+            obj_minch_camera.focus = obj_minch;
+        }
     }
     
     if (destroy_instance) {

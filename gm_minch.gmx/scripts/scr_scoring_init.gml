@@ -1,8 +1,6 @@
 // Inits score vars
 
 // Values
-global.extends = global.initLives;
-
 global.levelTime = 0;
 global.comboColor = 0;
 global.comboValue = 1;

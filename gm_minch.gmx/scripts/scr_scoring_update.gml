@@ -28,6 +28,11 @@ if (global.comboColor > 0) {
     global.comboColorTimer = global.comboColorDuration;
 }
 
+// No score in story mode
+if (global.gameMode == global.STORY_MODE) {
+    return false;
+}
+
 // Save score
 global.normalGameScore += enemy_value * global.comboValue;
 

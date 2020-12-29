@@ -6,6 +6,7 @@ switch (roomStr) {
     case "rm_title":
     case "rm_title_start":
     case "rm_intro":
+    case "rm_ending":
         return false;
 }
 

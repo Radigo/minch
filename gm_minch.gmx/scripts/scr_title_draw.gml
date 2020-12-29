@@ -21,16 +21,27 @@ switch (global.titlepage)
 {
     case global.PAGE_TITLE:
         // Title texts
-        draw_text(pos_x, pos_y, scr_text("title_start"));
-        if (!global.canContinue) {
+        draw_text(pos_x, pos_y, scr_text("title_story"));
+        draw_text(pos_x, (pos_y + 16), scr_text("title_arcade"));
+        if (!global.canSelectStage) {
             draw_set_color(c_dkgray);
         }
-        draw_text(pos_x, (pos_y + 16), scr_text("title_continue"));
         draw_text(pos_x, (pos_y + 32), scr_text("title_scoreattack"));
         
         draw_set_color(c_gray);
         draw_text(pos_x, (pos_y + 48), scr_text("title_leaderboards"));
         draw_text(pos_x, (pos_y + 64), scr_text("title_options"));
+        break;
+    case global.PAGE_STORY:
+        // Choose to continue or start over
+        if (global.canSelectStage) {
+            draw_text(pos_x, pos_y, scr_text("story_continue"));
+            draw_text(pos_x, (pos_y + 16), scr_text("story_start"));
+            draw_text(pos_x, (pos_y + 32), scr_text("options_back"));
+        } else {
+            draw_text(pos_x, pos_y, scr_text("story_start"));
+            draw_text(pos_x, (pos_y + 16), scr_text("options_back"));
+        }
         break;
     case global.PAGE_SCOREATTACK:
         // Level Select

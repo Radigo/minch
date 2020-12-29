@@ -746,16 +746,18 @@
       <script>scripts\scr_controls_check_input.gml</script>
     </scripts>
     <scripts name="UI">
+      <script>scripts\scr_title_init.gml</script>
       <script>scripts\scr_title_step.gml</script>
       <script>scripts\scr_title_draw.gml</script>
-      <script>scripts\scr_title_init.gml</script>
       <script>scripts\scr_console_controls.gml</script>
       <script>scripts\scr_console.gml</script>
+      <script>scripts\scr_hud_init.gml</script>
       <script>scripts\scr_hud_draw.gml</script>
+      <script>scripts\scr_level_report_init.gml</script>
+      <script>scripts\scr_level_report_step.gml</script>
+      <script>scripts\scr_level_report_draw.gml</script>
       <script>scripts\scr_level_intro_init.gml</script>
       <script>scripts\scr_level_intro_draw.gml</script>
-      <script>scripts\scr_level_report_init.gml</script>
-      <script>scripts\scr_level_report_draw.gml</script>
       <script>scripts\scr_teleportfader_draw.gml</script>
       <script>scripts\scr_score_notif_init.gml</script>
       <script>scripts\scr_score_notif_step.gml</script>
@@ -1550,6 +1552,7 @@
     <room>rooms\rm_lvl_42</room>
     <room>rooms\rm_lvl_43</room>
     <room>rooms\rm_lvl_51</room>
+    <room>rooms\rm_ending</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

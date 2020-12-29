@@ -6,8 +6,7 @@ var is_piercing_shot = false;
 var is_mixing_object = false;
 var damage = 10;
 
-switch (string(object_get_name(other.object_index)))
-{
+switch (string(object_get_name(other.object_index))) {
     case "obj_minch_feets":
         if (global.controlStatus != global.ALIVE) {
             exit;
@@ -69,26 +68,20 @@ if ((x < (view_xview - self.safeZone))
 
 scr_shot_sparkles(self.shield, other, is_piercing_shot);
 
-if (!is_piercing_shot)
-{
-    with (other)
-    {
+if (!is_piercing_shot) {
+    with (other) {
         instance_destroy();
     }
 }
 
-if (!self.shield)
-{
+if (!self.shield) {
     self.hp -= damage;
     audio_play_sound(snd_shot_hit, 0, false);
     self.lastHitTicker = 0;
-}
-else
-{
+} else {
     audio_play_sound(snd_shot_shield, 0, false);
 }
 
-if (self.hp <= 0)
-{
+if (self.hp <= 0) {
     scr_enemy_death(true, is_mixing_object);
 }

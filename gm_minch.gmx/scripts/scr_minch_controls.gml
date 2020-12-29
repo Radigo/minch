@@ -12,13 +12,15 @@ var prev_y = y;
 
 self.isColliding = false;
 
-//show_debug_message("scr_minch_controls global.controlStatus: " + global.controlStatus + ", controlTime: " + string(self.controlTime));
+//show_debug_message("scr_minch_controls global.controlStatus: " + global.controlStatus + ", controlTime: " + string(self.controlTime) + ", global.minchControlIsActive: " + string(global.minchControlIsActive));
     
 // GET KEY PRESSED if we can move
 if (global.controlStatus == global.SPAWN) {
+    self.invincibilityTicker++;
+    
     if (global.extends < 0) {
         // Game over
-        scr_end_level(false);
+        return false;
     }
     
     if (self.controlTime == self.spawnDuration) {
@@ -45,7 +47,6 @@ if (global.controlStatus == global.SPAWN) {
     
     global.invincible = true;
     self.controlTime--;
-    self.invincibilityTicker++;
 } else if (global.controlStatus == global.TELEPORT) {
     // No possible move
     if (self.controlTime == 0) {
@@ -95,10 +96,10 @@ if (global.controlStatus == global.SPAWN) {
         self.invincibilityTicker++;
     }
     
-    if (scr_controls_check_input(global.RIGHT) &&  scr_controls_check_input(global.UP)) {
+    if (scr_controls_check_input(global.RIGHT) && scr_controls_check_input(global.UP)) {
         self.mainAngle = pi * 1.75;
         walk_speed = 2;
-    } else if (scr_controls_check_input(global.LEFT) &&  scr_controls_check_input(global.UP)) {
+    } else if (scr_controls_check_input(global.LEFT) && scr_controls_check_input(global.UP)) {
         self.mainAngle = pi * 1.25;
         walk_speed = 2;
     } else if (scr_controls_check_input(global.LEFT) && scr_controls_check_input(global.DOWN)) {

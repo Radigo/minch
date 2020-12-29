@@ -26,6 +26,7 @@ ds_list_add(global.CONTROLS, global.UP, global.DOWN, global.LEFT, global.RIGHT,g
 
 // UI
 global.PAGE_TITLE = "pageTitle";
+global.PAGE_STORY = "pageStory";
 global.PAGE_SCOREATTACK = "pageScoreAttack";
 global.PAGE_LEADERBOARD = "pageLeaderboard";
 global.PAGE_OPTIONS = "pageOptions";
@@ -75,9 +76,10 @@ global.CHANGE_STATUS_INACTIVE = "changeStatusInactive";// Changes status for ina
 global.TELEPORT_PLAYER_TO = "teleportPlayerTo";// Send MinCH to destination
 
 // Game engine
-global.STORY_MODE = "storyMode";// Continuous play through all levels
+global.ARCADE_MODE = "arcadeMode";// Continuous play through all levels
+global.STORY_MODE = "storyMode";// Continuous play through all levels with infinite lives and no score
 global.SCOREATTACK_MODE = "scoreAttackMode";// Single level
-global.gameMode = global.STORY_MODE;
+global.gameMode = global.ARCADE_MODE;
 
 // Application release
 global.DEBUG_MODE = "debugMode";// Using during development
@@ -90,21 +92,21 @@ switch (global.applicationMode) {
     case global.DEBUG_MODE:
         global.init_room = rm_lvl_11;
         global.allowConsole = true;
-        global.initLives = 3;
+        global.initLives = 2;
         break;
     case global.DEMO_MODE:
         global.init_room = rm_lvl_12;
         global.allowConsole = true;
-        global.initLives = 3;
+        global.initLives = 2;
         break;
     case global.RELEASE_MODE:
         global.init_room = rm_lvl_11;
         global.allowConsole = false;
-        global.initLives = 3;
+        global.initLives = 2;
         break;
 }
 
-global.currentRoom = global.init_room;
+global.currentRoom = undefined;
 
 // BGM
 global.bgmSequenceLoop = "bgmSequenceLoop";// Wait the end of bgm loop to change bgm

@@ -92,6 +92,14 @@ switch (global.titlepage) {
         v_cursor_index = global.title_entry;
         v_cursor_index_max = 4;
         break;
+    case global.PAGE_STORY:
+        v_cursor_index = global.page_story_entry;
+        if (global.canSelectStage) {
+            v_cursor_index_max = 2;
+        } else {
+            v_cursor_index_max = 1;
+        }
+        break;
     case global.PAGE_SCOREATTACK:
         v_cursor_index = global.page_scoreattack_entry;
         v_cursor_index_max = 1;
@@ -226,31 +234,23 @@ if (global.titlepage == global.PAGE_KEYCONFIG) {
                 case global.PAGE_TITLE:
                     global.title_entry = v_cursor_index;
                     switch(v_cursor_index) {
-                        case 0:// Start
+                        case 0:// Story mode
+                            played_sound_id = snd_ui_confirm;
+                            v_cursor_index = 0;
+                            global.titlepage = global.PAGE_STORY;
+                            break;
+                        case 1:// Arcade mode
                             // played_sound_id = snd_ui_start;// TODO: add start game sound FX
-                            global.gameMode = global.STORY_MODE;
+                            global.gameMode = global.ARCADE_MODE;
                             global.normalGameScore = 0;
+                            global.lastCheckpoint = 0;
+                            global.extends = global.initLives;
                             global.fromIntro = true;
-                            global.currentRoom = rm_lvl_11;
+                            global.currentRoom = global.init_room;
                             room_goto(rm_title_start);
                             break;
-                        case 1:// Continue
-                            if (global.canContinue) {
-                                // played_sound_id = snd_ui_start;// TODO: add start game sound FX
-                                global.gameMode = global.STORY_MODE;
-                                global.normalGameScore = 0;
-                                global.fromIntro = false;
-                                var level = ds_map_find_value(global.allLevels, global.lastMapName);
-                                
-                                if (room_exists(level)) {
-                                    global.currentRoom = level;
-                                    show_debug_message(global.currentRoom);
-                                    room_goto(global.currentRoom);
-                                }
-                            }
-                            break;
                         case 2:// Score Attack
-                            if (global.canContinue) {
+                            if (global.canSelectStage) {
                                 played_sound_id = snd_ui_confirm;
                                 v_cursor_index = 0;
                                 global.titlepage = global.PAGE_SCOREATTACK;
@@ -270,13 +270,62 @@ if (global.titlepage == global.PAGE_KEYCONFIG) {
                             break;
                     }
                     break;
+                case global.PAGE_STORY:
+                show_debug_message(global.canSelectStage);
+                show_debug_message(v_cursor_index);
+                    // played_sound_id = snd_ui_start;// TODO: add start game sound FX
+                    global.gameMode = global.STORY_MODE;
+                    global.normalGameScore = 0;
+                    
+                    if (global.canSelectStage) {
+                        switch(v_cursor_index) {
+                            case 0:// Continue
+                                var level = ds_map_find_value(global.allLevels, global.lastMapName);
+                                show_debug_message(level);
+                                if (room_exists(level)) {
+                                    global.fromIntro = false;
+                                    global.currentRoom = level;
+                                    global.lastCheckpoint = 0;
+                                    global.extends = global.initLives;
+                                    show_debug_message(global.currentRoom);
+                                    room_goto(global.currentRoom);
+                                }
+                                break;
+                            case 1:// Start Over
+                                global.fromIntro = true;
+                                global.currentRoom = global.init_room;
+                                global.lastCheckpoint = 0;
+                                global.extends = global.initLives;
+                                room_goto(rm_title_start);
+                                break;
+                            case 2:// Back
+                                goBack = true;
+                                break;
+                        }
+                    } else {
+                        switch(v_cursor_index) {
+                            case 0:// Start Over
+                                global.fromIntro = true;
+                                global.currentRoom = global.init_room;
+                                global.lastCheckpoint = 0;
+                                global.extends = global.initLives;
+                                room_goto(rm_title_start);
+                                break;
+                            case 1:// Back
+                                goBack = true;
+                                break;
+                        }
+                    }
+                    break;
                 case global.PAGE_SCOREATTACK:
                     global.page_scoreattack_entry = v_cursor_index;
                     switch(v_cursor_index) {
                         case 0:
                             // played_sound_id = snd_ui_start;// TODO: add start game sound FX
                             global.gameMode = global.SCOREATTACK_MODE;
+                            global.lastCheckpoint = 0;
                             global.normalGameScore = 0;
+                            global.extends = 0;
                             global.fromIntro = false;
                             room_goto(global.currentRoom);
                             break;
@@ -306,6 +355,7 @@ if (global.titlepage == global.PAGE_KEYCONFIG) {
                             // played_sound_id = snd_ui_delete;
                             scr_settings("clearSavedData");
                             scr_settings("loadLeaderboards");
+                            global.canSelectStage = false;
                             break;
                         case 4:
                             goBack = true;
@@ -323,6 +373,10 @@ if (global.titlepage == global.PAGE_KEYCONFIG) {
 if (goBack) {
     // Back if in sub menu
     switch (global.titlepage) {
+        case global.PAGE_STORY:
+            played_sound_id = snd_ui_cancel;
+            v_cursor_index = 0;// Story entry index
+            break;
         case global.PAGE_SCOREATTACK:
             played_sound_id = snd_ui_cancel;
             v_cursor_index = 2;// Score attack entry index
@@ -347,6 +401,9 @@ if (played_sound_id != noone) {
 switch (global.titlepage) {
     case global.PAGE_TITLE:
         global.title_entry = v_cursor_index;
+        break;
+    case global.PAGE_STORY:
+        global.page_story_entry = v_cursor_index;
         break;
     case global.PAGE_SCOREATTACK:
         global.page_scoreattack_entry = v_cursor_index;
