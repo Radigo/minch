@@ -60,6 +60,8 @@ switch (key)
         return "Press A";
     case "options_keyb":
         return "Press B";
+    case "options_keyc":
+        return "Press C";
     case "options_keystart":
         return "Press Start";
     case "options_keysdefault":

@@ -143,6 +143,9 @@ if (global.titlepage == global.PAGE_KEYCONFIG) {
             scr_controls_configure_key(global.B, inputKey);
             break;
         case 6:
+            scr_controls_configure_key(global.C, inputKey);
+            break;
+        case 7:
             scr_controls_configure_key(global.START, inputKey);
             if (scr_controls_gamepad_check(global.control_type)) {
                 scr_settings("saveGPad");

@@ -130,10 +130,25 @@ if (global.controlStatus == global.SPAWN) {
         global.legsStatus = global.LEGS_IDLE;
     }
     
-    if (scr_controls_check_input(global.A) && scr_controls_check_input(global.B)) {
+    if (scr_controls_check_input(global.C)) {
+        // Simple jump shortcut
+        if (self.abReleased && (global.legsStatus != global.LEGS_JUMP)) {
+            self.bodyAngle = self.mainAngle;
+            obj_marker.x = x + cos(self.bodyAngle) * self.markerDistance;
+            obj_marker.y = y + sin(self.bodyAngle) * self.markerDistance;
+            
+            if (scr_can_jump(x, y, self.bodyAngle)) {
+                // init start/target positions
+                self.jumpStartingPosX = x;
+                self.jumpStartingPosY = y;
+                self.legsAngle = self.bodyAngle;
+                global.legsStatus = global.LEGS_JUMP;// << JUMP!
+                self.abReleased = false;
+            }
+        }
+    } else if (scr_controls_check_input(global.A) && scr_controls_check_input(global.B)) {
         //show_debug_message("press: AB");
-        if (self.abReleased
-            && (global.legsStatus != global.LEGS_JUMP)) {
+        if (self.abReleased && (global.legsStatus != global.LEGS_JUMP)) {
             self.bodyAngle = self.mainAngle;
             obj_marker.x = x + cos(self.bodyAngle) * self.markerDistance;
             obj_marker.y = y + sin(self.bodyAngle) * self.markerDistance;

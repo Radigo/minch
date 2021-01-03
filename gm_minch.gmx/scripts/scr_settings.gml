@@ -11,6 +11,7 @@ switch (action) {
         global.key_right = ini_read_real("keys", "right", vk_right);
         global.key_a = ini_read_real("keys", "a", vk_control);
         global.key_b = ini_read_real("keys", "b", vk_alt);
+        global.key_c = ini_read_real("keys", "c", vk_space);
         global.key_start = ini_read_real("keys", "start", vk_enter);
         break;
     case "saveKeys":
@@ -20,6 +21,7 @@ switch (action) {
         ini_write_real("keys", "right", global.key_right);
         ini_write_real("keys", "a", global.key_a);
         ini_write_real("keys", "b", global.key_b);
+        ini_write_real("keys", "c", global.key_c);
         ini_write_real("keys", "start", global.key_start);
         break;
     case "loadGPad":
@@ -29,6 +31,7 @@ switch (action) {
         global.pad_right = ini_read_real("gpad", "right", gp_padr);
         global.pad_a = ini_read_real("gpad", "a", gp_face1);
         global.pad_b = ini_read_real("gpad", "b", gp_face2);
+        global.pad_c = ini_read_real("gpad", "c", gp_face3);
         global.pad_start = ini_read_real("gpad", "start", gp_start);
         break;
     case "saveGPad":
@@ -38,6 +41,7 @@ switch (action) {
         ini_write_real("gpad", "right", global.pad_right);
         ini_write_real("gpad", "a", global.pad_a);
         ini_write_real("gpad", "b", global.pad_b);
+        ini_write_real("gpad", "c", global.pad_c);
         ini_write_real("gpad", "start", global.pad_start);
         break;
     case "loadControlType":
@@ -53,6 +57,7 @@ switch (action) {
         global.key_right = vk_right;
         global.key_a = vk_control;
         global.key_b = vk_alt;
+        global.key_b = vk_space;
         global.key_start = vk_enter;
         scr_settings("saveKeys");
         
@@ -62,6 +67,7 @@ switch (action) {
         global.pad_right = gp_padr;
         global.pad_a = gp_face1;
         global.pad_b = gp_face2;
+        global.pad_c = gp_face3;
         global.pad_start = gp_start;
         scr_settings("saveGPad");
         

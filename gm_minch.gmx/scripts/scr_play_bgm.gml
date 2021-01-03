@@ -5,5 +5,6 @@
 
 if (global.currentBGM != noone)
 {
-    audio_play_sound(global.currentBGM, 0, false);
+show_debug_message("=== BGM have been deactivated ===");
+//    audio_play_sound(global.currentBGM, 0, false);
 }

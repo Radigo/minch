@@ -27,6 +27,10 @@ if (scr_controls_gamepad_check(global.control_type)) {
             show_debug_message("scr_controls_configure_key " + string(global.pad_b) + " = " + string(inputKey));
             global.pad_b = inputKey;
             break;
+        case global.C:
+            show_debug_message("scr_controls_configure_key " + string(global.pad_c) + " = " + string(inputKey));
+            global.pad_c = inputKey;
+            break;
         case global.START:
             show_debug_message("scr_controls_configure_key " + string(global.pad_start) + " = " + string(inputKey));
             global.pad_start = inputKey;
@@ -57,6 +61,10 @@ if (scr_controls_gamepad_check(global.control_type)) {
         case global.B:
             show_debug_message("scr_controls_configure_key " + string(global.key_b) + " = " + string(inputKey));
             global.key_b = inputKey;
+            break;
+        case global.C:
+            show_debug_message("scr_controls_configure_key " + string(global.key_c) + " = " + string(inputKey));
+            global.key_c = inputKey;
             break;
         case global.START:
             show_debug_message("scr_controls_configure_key " + string(global.key_start) + " = " + string(inputKey));

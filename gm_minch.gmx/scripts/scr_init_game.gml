@@ -19,10 +19,11 @@ global.LEFT = "ctrlLeft";
 global.RIGHT = "ctrlRight";
 global.A = "ctrlA";
 global.B = "ctrlB";
+global.C = "ctrlC";
 global.START = "ctrlStart";
 
 global.CONTROLS = ds_list_create();
-ds_list_add(global.CONTROLS, global.UP, global.DOWN, global.LEFT, global.RIGHT,global.A, global.B, global.START);
+ds_list_add(global.CONTROLS, global.UP, global.DOWN, global.LEFT, global.RIGHT,global.A, global.B, global.C, global.START);
 
 // UI
 global.PAGE_TITLE = "pageTitle";

@@ -637,6 +637,7 @@
         <sprite>sprites\spr_mutant_raid</sprite>
       </sprites>
     </sprites>
+    <sprite>sprites\spr_beta_ending</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_warehouse</background>
@@ -1024,6 +1025,10 @@
         <script>scripts\scr_intro_fake_conveyor_init.gml</script>
         <script>scripts\scr_intro_fake_conveyor_step.gml</script>
       </scripts>
+      <scripts name="Ending">
+        <script>scripts\scr_ending_init.gml</script>
+        <script>scripts\scr_ending_step.gml</script>
+      </scripts>
     </scripts>
   </scripts>
   <shaders name="shaders">
@@ -1057,6 +1062,9 @@
       <objects name="Intro">
         <object>objects\obj_controlroom</object>
         <object>objects\obj_intro</object>
+      </objects>
+      <objects name="Ending">
+        <object>objects\obj_beta_ending</object>
       </objects>
     </objects>
     <objects name="Minch">
@@ -1551,7 +1559,6 @@
     <room>rooms\rm_lvl_41</room>
     <room>rooms\rm_lvl_42</room>
     <room>rooms\rm_lvl_43</room>
-    <room>rooms\rm_lvl_51</room>
     <room>rooms\rm_ending</room>
   </rooms>
   <help>

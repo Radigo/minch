@@ -4,7 +4,11 @@ var roomCenterY = self.originY + (obj_trash_conductor.LAYOUT_TILE_SIZE * 5.5);
 
 var xDiff = (roomCenterX) - obj_trash_conductor.focus.x;
 if (abs(xDiff) > 1) {
-    obj_trash_conductor.focus.x += max(xDiff * 0.007, 1);
+    if (xDiff > 0) {
+        obj_trash_conductor.focus.x += max(xDiff * 0.007, 1);
+    } else {
+        obj_trash_conductor.focus.x += min(xDiff * 0.007, -1);
+    }
 } else {
     obj_trash_conductor.focus.x = roomCenterX;
 }

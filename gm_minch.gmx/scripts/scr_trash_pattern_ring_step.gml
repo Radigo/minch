@@ -93,8 +93,6 @@ if (instance_number(obj_trash_bigball) < self.numBalls) {
 for (var i = 0; i < ds_list_size(self.balls); i++) {
     var bigBall = ds_list_find_value(self.balls, i);
     
-    show_debug_message(string(bigBall.x) + ", " + string(bigBall.y) + ", " + string(bigBall.direction));
-    
     if ((bigBall.direction == 0) && (bigBall.x > (self.centerX + self.ballHRadius))) {
         bigBall.x = self.centerX + self.ballHRadius;
         if (bigBall.y > self.centerY) {

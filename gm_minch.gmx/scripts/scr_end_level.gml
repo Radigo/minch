@@ -18,7 +18,7 @@ switch (global.gameMode) {
     case global.ARCADE_MODE:
     case global.STORY_MODE:
         if (has_won && (global.applicationMode != global.DEMO_MODE)) {
-            if (scr_is_room_level(nextRoom, false)) {
+            if (scr_is_room_level(room_get_name(nextRoom), false)) {
                 global.currentRoom = nextRoom;
                 scr_settings("saveProgress");
             } else if (nextRoom == rm_ending) {

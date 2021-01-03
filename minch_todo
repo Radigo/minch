@@ -1,10 +1,9 @@
 MinCH: todo
 
 **Retakes**
-Implement story mode with infinite lives and no score
-Give choice to continue or restart story mode (is reset progress what we want?)
 
 **Bugs**
+Napalm regular death stuck
 
 **Design**
 Player

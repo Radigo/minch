@@ -143,6 +143,9 @@ switch (global.titlepage)
                 draw_text(pos_x, pos_y, scr_text("options_keyb"));
                 break;
             case 6:
+                draw_text(pos_x, pos_y, scr_text("options_keyc"));
+                break;
+            case 7:
                 draw_text(pos_x, pos_y, scr_text("options_keystart"));
                 break;
         }

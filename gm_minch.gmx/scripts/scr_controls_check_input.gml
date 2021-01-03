@@ -14,6 +14,8 @@ if (global.control_type < 0) {
             return keyboard_check(global.key_a);
         case global.B:
             return keyboard_check(global.key_b);
+        case global.C:
+            return keyboard_check(global.key_c);
         case global.START:
             return keyboard_check(global.key_start);
     }
@@ -31,6 +33,8 @@ if (global.control_type < 0) {
             return gamepad_button_check(global.control_type, global.pad_a);
         case global.B:
             return gamepad_button_check(global.control_type, global.pad_b);
+        case global.C:
+            return gamepad_button_check(global.control_type, global.pad_c);
         case global.START:
             return gamepad_button_check(global.control_type, global.pad_start);
     }
