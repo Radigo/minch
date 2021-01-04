@@ -141,7 +141,7 @@
           </argument>
           <argument>
             <kind>0</kind>
-            <string>300</string>
+            <string>1000</string>
           </argument>
         </arguments>
       </action>

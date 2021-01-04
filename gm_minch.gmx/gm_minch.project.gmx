@@ -829,8 +829,8 @@
           <script>scripts\scr_head_shot.gml</script>
         </scripts>
         <scripts name="BossNapalm">
-          <script>scripts\scr_boss_napalm_step.gml</script>
           <script>scripts\scr_napalm_init.gml</script>
+          <script>scripts\scr_boss_napalm_step.gml</script>
           <script>scripts\scr_fly_katana_shield_step.gml</script>
           <script>scripts\scr_katana_counter.gml</script>
           <script>scripts\scr_napalmdeath_init.gml</script>

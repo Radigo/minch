@@ -1,19 +1,16 @@
-scr_ai_step();
-
 if (self.isIntro) {
     // Wait for MinCH to shoot at us or if we move too close
-    if (collision_circle(self.x, self.y, 64, obj_shot, false, true)) {
+    if (collision_circle(self.x, self.y, 64, obj_shot, false, true) || collision_circle(self.x, self.y, 64, obj_minch_feets, false, true)) {
        instance_create(self.x, self.y, obj_katana_shield);
        self.isIntro = false;
        self.ticker = 0;
-    }
+    } 
     
     return false;
 }
 
-//show_debug_message("napalm step:");
+//show_debug_message("napalm step:" + string(self.currentPattern) + ", phase: " + string(self.currentPhase) + ", ticker: " + string(self.ticker));
 //show_debug_message(string(self.yList[| irandom(3)]));
-//show_debug_message(string(self.currentPattern));
 //show_debug_message(string(point_distance(self.x, self.y, self.targetCol, self.targetRow)));
 
 if ((self.currentPhase == self.ONE_KATANA) && (self.hp < self.phaseTwoHp)) {
@@ -42,6 +39,7 @@ if ((self.currentPhase == self.ONE_KATANA) && (self.hp < self.phaseTwoHp)) {
 if (self.currentPhase == self.DIYING) {
     return false;
 }
+
 // Moves (if not dying)
 if (self.currentPattern == self.REACH_SIDE) {
     if (self.targetX > self.x)
@@ -76,7 +74,7 @@ if (self.currentPattern == self.REACH_SIDE) {
     }
 } else if (self.currentPattern == self.RUSH_MINCH) {
     self.shield = true;
-    if (self.ticker < 60) {
+    if (self.ticker < 30) {
         // Getset
         self.targetX = obj_minch.x;
         // Prevent OOB of boss... send him on the other side of room in case of panic
@@ -115,11 +113,11 @@ if (self.currentPattern == self.REACH_SIDE) {
     // Slash n slowdown
     scr_fly_katana_shield_step(self.x, self.y, scr_aim_at_minch(self, 0, 0, 0), 24, 0.1);
     
-    if (self.ticker < 120) {
+    if (self.ticker < 60) {
         if ((self.currentPhase == self.TWO_KATANAS) || (self.currentPhase == self.FOUR_KATANAS)) {
             // Throw bullets in front
             var slash_ratio = (self.ticker / 50);
-            if ((slash_ratio <= 1) && ((self.ticker % 12) == 0)) {
+            if ((slash_ratio <= 1) && ((self.ticker % 6) == 0)) {
                 var spread_width = 48;
                 var spread_angle_width = 64;
                 
@@ -159,7 +157,7 @@ if (self.currentPattern == self.REACH_SIDE) {
         }
     }
 } else if (self.currentPattern == self.RUSH_SLASH_BIS) {
-    if (self.ticker < 120) {
+    if (self.ticker < 60) {
         var circle_ratio = (self.ticker / 50);
         if (circle_ratio < 1) {
             if (instance_number(obj_katana) == 0) instance_create(self.x, self.y, obj_katana);
@@ -173,7 +171,7 @@ if (self.currentPattern == self.REACH_SIDE) {
             instance_destroy(obj_katana);
         }
         
-        if ((self.currentPhase == self.FOUR_KATANAS) && (self.ticker == 30)) {
+        if ((self.currentPhase == self.FOUR_KATANAS) && (self.ticker == 16)) {
             for (var i = 0; i < 8; i++) {
                 var circle_angle = i * (360 / 8);
                 var source_x = self.x + dcos(circle_angle) * 12;
@@ -195,7 +193,7 @@ if (self.currentPattern == self.REACH_SIDE) {
     }
 } else if (self.currentPattern == self.TRANSITION) {
     // Stops for a moment if not diying
-    if ((self.currentPhase != self.DIYING) && (self.ticker > 60)) {
+    if ((self.currentPhase != self.DIYING) && (self.ticker > 16)) {
         self.shield = false;
         self.targetX = self.xList[| irandom(1)];
         self.targetY = self.yList[| 0];

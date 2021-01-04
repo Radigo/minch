@@ -2,7 +2,6 @@ scr_ai_init();
 
 // Regular vars
 self.hp = 800;
-self.value = 800;
 
 self.explosionSize = 48;
 self.explosionLevel = 3;

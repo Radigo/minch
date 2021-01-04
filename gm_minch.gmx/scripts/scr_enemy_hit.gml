@@ -34,6 +34,7 @@ switch (string(object_get_name(other.object_index))) {
         is_piercing_shot = true;
         is_mixing_object = false;
         damage = 10000;
+        self.shield = false;
         break;
     
     case "obj_sunray":

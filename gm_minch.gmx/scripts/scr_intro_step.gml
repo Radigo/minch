@@ -13,7 +13,7 @@ if (self.ticker > (self.skipStart + self.skipFadeDuration)) {
     self.skipMessageAlpha = 0;
 }
 
-if ((self.skipMessageAlpha > 0.5) && keyboard_check(global.key_start)) {
+if ((self.skipMessageAlpha > 0.5) && (keyboard_check(global.key_start) || gamepad_button_check_pressed(global.control_type, global.pad_start))) {
     // Skip !
     room_goto(rm_lvl_11);
 }

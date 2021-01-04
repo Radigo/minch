@@ -1,7 +1,5 @@
 scr_ai_init();
 
-
-
 // Room coordinates
 self.col0 = 176;
 self.col1 = 320;// Don't add in list

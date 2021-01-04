@@ -1,9 +1,9 @@
 MinCH: todo
 
 **Retakes**
+Enemy count doors update notification
 
 **Bugs**
-Napalm regular death stuck
 
 **Design**
 Player
@@ -56,7 +56,7 @@ OK - Joystick support
 
 Level design
 OK - Enemy follow path
-- Set all ennemies points value
+OK - Set all ennemies points value
 
 Engine
 OK - Contextual camera

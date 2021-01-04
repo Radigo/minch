@@ -53,8 +53,8 @@
   <instances>
     <instance objName="obj_start_point" x="1936" y="816" name="inst_F66BD7D8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_area_end_level" x="768" y="992" name="inst_1AB268EA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_door_h_2_cy" x="1248" y="896" name="inst_6543858E" locked="0" code="enemyCount = 10;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_door_h_2_cy" x="1248" y="1120" name="inst_FBA4AC2D" locked="0" code="enemyCount = 10;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_door_h_2_cy" x="1248" y="896" name="inst_6543858E" locked="0" code="self.enemyCount = 10;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_door_h_2_cy" x="1248" y="1120" name="inst_FBA4AC2D" locked="0" code="self.enemyCount = 10;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_door_v_1_ma" x="1440" y="1312" name="inst_7A26ACBA" locked="0" code="scr_register_dynamic_object(2, global.DOOR_OPEN);&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_door_v_1_ma" x="1088" y="1312" name="inst_0FED1317" locked="0" code="scr_register_dynamic_object(2, global.DOOR_OPEN);&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_fswitch_magenta" x="512" y="1312" name="inst_F8E0218C" locked="0" code="self.action_id = 2;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

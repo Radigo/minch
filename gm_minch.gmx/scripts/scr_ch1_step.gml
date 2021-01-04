@@ -244,7 +244,7 @@ if (self.pattern == self.PATTERN_RAGING) {
 }
 
 if (switchOffLasers) {
-    show_debug_message("switchOffLasers");
+    //show_debug_message("switchOffLasers");
 
     for (var i = 0; i < instance_number(obj_ch1_laser_h); i += 1){
         var laserInstance = instance_find(obj_ch1_laser_h, i);
