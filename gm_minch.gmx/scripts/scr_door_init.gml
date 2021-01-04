@@ -1,8 +1,6 @@
-name =  object_get_name(object_index);
-//parent = object_get_parent(object_index);
-//sprite = object_get_sprite(object_index);
+self.name =  object_get_name(object_index);
 
-var enemyColorStr = string_char_at(name, string_length(name) - 1) + string_char_at(name, string_length(name));
+var enemyColorStr = string_char_at(self.name, string_length(self.name) - 1) + string_char_at(self.name, string_length(self.name));
 self.color = scr_colors_str_to_int(enemyColorStr);
 
 self.remainingEnemies = -1;

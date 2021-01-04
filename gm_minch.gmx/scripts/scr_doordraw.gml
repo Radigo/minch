@@ -11,7 +11,6 @@ var flashOpacity = 0;
 if (self.flashTicker > 0) {
     // Flash during self.flashDuration
     flashOpacity = self.flashTicker / self.flashDuration;
-    show_debug_message("flashOpacity: " + string(flashOpacity) + ", self.flashTicker: " + string(self.flashTicker) + ", self.flashDuration: " + string(self.flashDuration));
     self.flashTicker--;
 }
 
@@ -24,7 +23,7 @@ draw_set_colour(c_yellow);
 draw_rectangle(x, y, x+32, y+32, true);
 */
 
-if (string_pos("_v_", name) > 0)
+if (string_pos("_v_", self.name) > 0)
 {
     // Vertical door
     if (flashOpacity > 0) {
@@ -35,7 +34,7 @@ if (string_pos("_v_", name) > 0)
     draw_set_alpha(1);
     draw_text(x+22, y-13, string_format(self.remainingEnemies, 2, 0));
 }
-else if (string_pos("_h_", name) > 0)
+else if (string_pos("_h_", self.name) > 0)
 {
     // Horizontal door
     if (flashOpacity > 0) {
