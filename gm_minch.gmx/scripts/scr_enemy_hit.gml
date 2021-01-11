@@ -62,7 +62,7 @@ if ((x < (view_xview - self.safeZone))
     || (y < (view_yview - self.safeZone))
     || (y > (view_yview + view_hview + self.safeZone)))
 {
-    damage = 0;
+    return false;
 }
 
 //show_debug_message(string(object_get_name(self.object_index)) + " > hit by: " + string(object_get_name(other.object_index)) + ", dmg: " + string(damage) + " > hp: " + string(self.hp) + " (safe zone: " + string(self.safeZone) + ")");

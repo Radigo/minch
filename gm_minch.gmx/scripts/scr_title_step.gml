@@ -1,8 +1,5 @@
-if (keyboard_lastkey == vk_escape) {
-    game_end();
-}
-
 var inputKey = -1;
+var escPressed = keyboard_check_pressed(vk_escape);
 
 if (self.rawInputMode) {
     // Raw input mode is to map controls, we can't mix gamepad and keyboard there
@@ -42,6 +39,8 @@ if (self.rawInputMode) {
         inputKey = global.A;
     } else if (keyboard_check_pressed(global.key_b)) {
         inputKey = global.B;
+    } else if (keyboard_check_pressed(vk_escape)) {
+        inputKey = global.B;
     } else if (keyboard_check_pressed(global.key_start)) {
         inputKey = global.START;
     // Gamepad
@@ -64,16 +63,14 @@ if (self.rawInputMode) {
 
 if (inputKey < 0) {
     return false;
-}
-
-// Regular check of gamepad presence
-if (!scr_controls_gamepad_check(global.control_type)) {
-    global.control_type = -1;
+    
 }
 
 //show_debug_message("scr_title_step inputKey: " + string(inputKey));
+//show_debug_message("global.control_type: " + string(global.control_type));
 
 // Applies to title screen cursor
+
 var cursor_x = 26;
 var cursor_min_y = 132;
 
@@ -123,42 +120,50 @@ var cursor_max_y = 132 + (v_cursor_index_max * 16);
 
 if (global.titlepage == global.PAGE_KEYCONFIG) {
     //show_debug_message("global.key_config_step: " + string(global.key_config_step));
-    switch (global.key_config_step) {
-        case 0:
-            scr_controls_configure_key(global.UP, inputKey);
-            break;
-        case 1:
-            scr_controls_configure_key(global.DOWN, inputKey);
-            break;
-        case 2:
-            scr_controls_configure_key(global.LEFT, inputKey);
-            break;
-        case 3:
-            scr_controls_configure_key(global.RIGHT, inputKey);
-            break;
-        case 4:
-            scr_controls_configure_key(global.A, inputKey);
-            break;
-        case 5:
-            scr_controls_configure_key(global.B, inputKey);
-            break;
-        case 6:
-            scr_controls_configure_key(global.C, inputKey);
-            break;
-        case 7:
-            scr_controls_configure_key(global.START, inputKey);
-            if (scr_controls_gamepad_check(global.control_type)) {
-                scr_settings("saveGPad");
-            } else {
-                scr_settings("saveKeys");
-            }
-            global.titlepage = global.PAGE_OPTIONS;
-            self.rawInputMode = false;
-            v_cursor_index = 1;
-            break;
+    if (escPressed) {
+        // Abort remapping
+        global.titlepage = global.PAGE_OPTIONS;
+        self.rawInputMode = false;
+        v_cursor_index = 1;
+        scr_settings("loadKeys");
+    } else {
+        switch (global.key_config_step) {
+            case 0:
+                scr_controls_configure_key(global.UP, inputKey);
+                break;
+            case 1:
+                scr_controls_configure_key(global.DOWN, inputKey);
+                break;
+            case 2:
+                scr_controls_configure_key(global.LEFT, inputKey);
+                break;
+            case 3:
+                scr_controls_configure_key(global.RIGHT, inputKey);
+                break;
+            case 4:
+                scr_controls_configure_key(global.A, inputKey);
+                break;
+            case 5:
+                scr_controls_configure_key(global.B, inputKey);
+                break;
+            case 6:
+                scr_controls_configure_key(global.C, inputKey);
+                break;
+            case 7:
+                scr_controls_configure_key(global.START, inputKey);
+                if (scr_controls_gamepad_check(global.control_type)) {
+                    scr_settings("saveGPad");
+                } else {
+                    scr_settings("saveKeys");
+                }
+                global.titlepage = global.PAGE_OPTIONS;
+                self.rawInputMode = false;
+                v_cursor_index = 1;
+                break;
+        }
+        global.key_config_step += 1;
+        return false;
     }
-    global.key_config_step += 1;
-    return false;
 } else {
     switch (inputKey) {
         case global.UP:
@@ -186,9 +191,21 @@ if (global.titlepage == global.PAGE_KEYCONFIG) {
                 case global.PAGE_OPTIONS:
                     // switch control type
                     if (v_cursor_index == 0) {
-                        if (global.control_type > -1) {
+                        var controlType = global.control_type;
+                        while (controlType > -1) {
+                            // decrement until finding a valid controller
+                            controlType--;
+                            if (scr_controls_gamepad_check(controlType)) {
+                                played_sound_id = snd_ui_select;
+                                global.control_type = controlType;
+                                scr_settings("saveControlType");
+                                break;
+                            }
+                        }
+                        
+                        if (controlType < 0) {
                             played_sound_id = snd_ui_select;
-                            global.control_type -= 1;
+                            global.control_type = controlType;
                             scr_settings("saveControlType");
                         }
                     }
@@ -215,10 +232,16 @@ if (global.titlepage == global.PAGE_KEYCONFIG) {
                 case global.PAGE_OPTIONS:
                     // switch control type
                     if (v_cursor_index == 0) {
-                        if (scr_controls_gamepad_check(global.control_type + 1)) {
-                            played_sound_id = snd_ui_select;
-                            global.control_type += 1;
-                            scr_settings("saveControlType");
+                        var controlType = global.control_type;
+                        while (controlType < 12) {
+                            // increment until finding a valid controller
+                            controlType++;
+                            if (scr_controls_gamepad_check(controlType)) {
+                                played_sound_id = snd_ui_select;
+                                global.control_type = controlType;
+                                scr_settings("saveControlType");
+                                break;
+                            }
                         }
                     }
                     break;
@@ -274,8 +297,6 @@ if (global.titlepage == global.PAGE_KEYCONFIG) {
                     }
                     break;
                 case global.PAGE_STORY:
-                show_debug_message(global.canSelectStage);
-                show_debug_message(v_cursor_index);
                     // played_sound_id = snd_ui_start;// TODO: add start game sound FX
                     global.gameMode = global.STORY_MODE;
                     global.normalGameScore = 0;
@@ -284,13 +305,11 @@ if (global.titlepage == global.PAGE_KEYCONFIG) {
                         switch(v_cursor_index) {
                             case 0:// Continue
                                 var level = ds_map_find_value(global.allLevels, global.lastMapName);
-                                show_debug_message(level);
                                 if (room_exists(level)) {
                                     global.fromIntro = false;
                                     global.currentRoom = level;
                                     global.lastCheckpoint = 0;
                                     global.extends = global.initLives;
-                                    show_debug_message(global.currentRoom);
                                     room_goto(global.currentRoom);
                                 }
                                 break;
@@ -376,6 +395,11 @@ if (global.titlepage == global.PAGE_KEYCONFIG) {
 if (goBack) {
     // Back if in sub menu
     switch (global.titlepage) {
+        case global.PAGE_TITLE:
+            if (escPressed) {
+                game_end();
+            }
+            break;
         case global.PAGE_STORY:
             played_sound_id = snd_ui_cancel;
             v_cursor_index = 0;// Story entry index

@@ -22,6 +22,8 @@ global.B = "ctrlB";
 global.C = "ctrlC";
 global.START = "ctrlStart";
 
+global.axisThreshold = 0.5;
+
 global.CONTROLS = ds_list_create();
 ds_list_add(global.CONTROLS, global.UP, global.DOWN, global.LEFT, global.RIGHT,global.A, global.B, global.C, global.START);
 

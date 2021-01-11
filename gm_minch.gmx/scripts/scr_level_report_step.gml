@@ -81,6 +81,7 @@ if (self.playerInvite && (self.reportTicker > self.inviteTime)) {
                     } else {
                         global.extends = global.initLives;
                     }
+                    global.lastCheckpoint = 0;
                     room_goto(global.currentRoom);
                     break;
                 case 2:

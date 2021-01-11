@@ -15,17 +15,37 @@ scr_particles_dispose();
 var nextRoom = room_next(room);
 
 switch (global.gameMode) {
-    case global.ARCADE_MODE:
     case global.STORY_MODE:
+        // Save progress
+        // Don't save score
         if (has_won && (global.applicationMode != global.DEMO_MODE)) {
             if (scr_is_room_level(room_get_name(nextRoom), false)) {
                 global.currentRoom = nextRoom;
-                scr_settings("saveProgress");
+                var currentRoomName = room_get_name(global.currentRoom);
+                var currentMapIndex = ds_list_find_index(global.orderedLevelNames, currentRoomName);
+                var lastMapIndex = ds_list_find_index(global.orderedLevelNames, global.lastMapName);
+                if (currentMapIndex > lastMapIndex) {
+                    global.lastMapName = currentRoomName;
+                    scr_settings("saveProgress");
+                }
+            } else if (nextRoom == rm_ending) {
+                // We finished the game!
+                // Nothing special
+            }
+        } else {
+            nextRoom = rm_title;
+        }
+        break;
+    case global.ARCADE_MODE:
+        // Don't save progress
+        // Save score
+        if (has_won && (global.applicationMode != global.DEMO_MODE)) {
+            if (scr_is_room_level(room_get_name(nextRoom), false)) {
+                global.currentRoom = nextRoom;
             } else if (nextRoom == rm_ending) {
                 // We finished the game!
                 scr_leaderboard_add_normalgame_score(global.normalGameScore, true);
                 scr_settings("saveLeaderboards");
-                scr_settings("saveProgress");
             }
         } else {
             scr_leaderboard_add_normalgame_score(global.normalGameScore, true);

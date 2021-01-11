@@ -7,7 +7,7 @@ var locationInstance = argument2;// Reference to sprite for notif location
 var isMixing = argument3;
 var comboIncrement = argument4;
 
-//show_debug_message("Enemy value: " + string(enemy_value) + ", Enemy color: " + string(enemy_color));
+//show_debug_message("scr_scoring_update enemy value: " + string(enemy_value) + ", Enemy color: " + string(enemy_color));
 if (enemy_color >= global.BK) {
     // Combo breaker
     global.comboValue = 1;

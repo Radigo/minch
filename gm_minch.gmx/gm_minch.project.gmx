@@ -197,6 +197,7 @@
         <sprite>sprites\spr_fswitch_black</sprite>
       </sprites>
       <sprites name="Doors">
+        <sprite>sprites\spr_door_counter_fx</sprite>
         <sprite>sprites\spr_door_h_1_open</sprite>
         <sprite>sprites\spr_door_h_1_cy</sprite>
         <sprite>sprites\spr_door_h_1_ma</sprite>
@@ -712,10 +713,6 @@
     <path>paths\path_rm31_2</path>
     <path>paths\path_rm31_3</path>
     <path>paths\path_rm31_4</path>
-    <path>paths\path_rm31_5</path>
-    <path>paths\path_rm31_6</path>
-    <path>paths\path_rm31_7</path>
-    <path>paths\path_rm31_8</path>
     <path>paths\path_rm41_1</path>
     <path>paths\path_rm41_2</path>
     <path>paths\path_rm41_3</path>
@@ -1400,6 +1397,7 @@
         <object>objects\obj_fswitch_black</object>
       </objects>
       <objects name="Doors">
+        <object>objects\obj_door_counter_fx</object>
         <object>objects\obj_door</object>
         <object>objects\obj_door_h_1_cy</object>
         <object>objects\obj_door_h_1_ma</object>

@@ -1,5 +1,7 @@
 // Calculates the final color mix & values and send them to the scoring manager
 
+//show_debug_message("scr_mixer_flush================================");
+
 var total_value = 0;
 var mixed_color = 0;
 var isMixSuccess = false;// If we mixed different colors successfully
@@ -21,8 +23,7 @@ if (number_of_enemies > 0)
         var entry_value = ds_list_find_value(entry, 0);
         var entry_color = ds_list_find_value(entry, 1);
         
-        //show_debug_message("entry value = " + string(entry_value));
-        //show_debug_message("entry color = " + string(entry_color));
+        //show_debug_message("entry value = " + string(entry_value) + ", color = " + string(entry_color));
         
         total_value += entry_value;
         
@@ -41,8 +42,7 @@ if (number_of_enemies > 0)
         }
     }
     
-    show_debug_message("=>> mixed color = " + string(mixed_color));
-    show_debug_message("=>> total value = " + string(total_value));
+    //show_debug_message("=>> mixed color = " + string(mixed_color) + ", value = " + string(total_value));
     
     /* Mixing rules:
     1 - We cannot mix over brown
@@ -61,7 +61,7 @@ if (number_of_enemies > 0)
             }
         } else if (mixed_color < global.BK) {// rule 1
             isMixSuccess = true;
-        }
+        }  
     }
     
     if (isMixSuccess) {
@@ -69,7 +69,11 @@ if (number_of_enemies > 0)
         total_value = total_value * number_of_enemies;
         // Increment enemy kill counter with mixed color
         ds_map_replace(global.ennemyKilled, mixed_color, ds_map_find_value(global.ennemyKilled, mixed_color) + 1);
-        show_debug_message("scr_mixer_flush color: " + string(ds_map_find_value(global.ennemyKilled, mixed_color)));
+        // Call event linked to enemy count mechanic
+        with (obj_door) {
+            event_user(0);
+        }
+        //show_debug_message("isMixSuccess color: " + string(ds_map_find_value(global.ennemyKilled, mixed_color)));
     }
     
     // Combo increment is the total number of enemies in the mix.

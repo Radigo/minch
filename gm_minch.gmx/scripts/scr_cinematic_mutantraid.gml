@@ -1,6 +1,3 @@
-show_debug_message("spawn_mutant");
-
-
 if (instance_number(obj_mutant_raid) > 40)
 {
     instance_destroy(instance_furthest(obj_mutantaid_spawner.x, obj_mutantaid_spawner.y, obj_mutant_raid));

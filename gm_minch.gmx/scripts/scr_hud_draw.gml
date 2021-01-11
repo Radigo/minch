@@ -13,7 +13,7 @@ if (global.comboColorTimer > 0) {
         (view_yview[0] + 15),
         (35 * (global.comboColorTimer / global.comboColorDuration)),
         6);
-} else if ((global.comboColor > 0) && (global.comboColor < global.BK)) {
+} else if (self.hasScore && (global.comboColor > 0) && (global.comboColor < global.BK)) {
     draw_sprite(spr_combobar_current, global.comboColor, (view_xview[0] + 6), (view_yview[0] + 15));
     
     // Frame

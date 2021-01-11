@@ -57,13 +57,13 @@ switch (key)
     case "options_keyright":
         return "Press RIGHT";
     case "options_keya":
-        return "Press A";
+        return "Press SHOT";
     case "options_keyb":
-        return "Press B";
+        return "Press CLAW";
     case "options_keyc":
-        return "Press C";
+        return "Press JUMP";
     case "options_keystart":
-        return "Press Start";
+        return "Press START";
     case "options_keysdefault":
         return "Reset controls";
     case "options_clearsave":

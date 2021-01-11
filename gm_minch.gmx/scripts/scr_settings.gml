@@ -89,7 +89,6 @@ switch (action) {
         show_debug_message("Loading last map " + global.lastMapName);
         break;
     case "saveProgress":
-        global.lastMapName = room_get_name(global.currentRoom);
         ini_write_string("progress", "map", global.lastMapName);
         show_debug_message("Saving last map " + global.lastMapName);
         break;

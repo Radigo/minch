@@ -25,11 +25,15 @@ if (instance_exists(obj_level_intro)
     return false;
 }
 
-// If emitter is off screen, don't shoot
 if ((x < (view_xview - safe_zone))
     || (x > (view_xview + view_wview + safe_zone))
     || (y < (view_yview - safe_zone))
     || (y > (view_yview + view_hview + safe_zone))) {
+    // If emitter is off screen, don't shoot
+    return false;
+//} else if (point_distance(x, y, obj_minch_feets.x, obj_minch_feets.y) < 16) {
+} else if ((abs(x - obj_minch_feets.x) < 20) && (abs(y - obj_minch_feets.y) < 20)) {
+    // If emitter is too close to MinCH, don't shoot
     return false;
 }
 // default speed

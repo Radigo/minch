@@ -3,8 +3,8 @@
   <caption></caption>
   <width>2176</width>
   <height>2048</height>
-  <vsnap>16</vsnap>
-  <hsnap>16</hsnap>
+  <vsnap>32</vsnap>
+  <hsnap>32</hsnap>
   <isometric>0</isometric>
   <speed>60</speed>
   <persistent>0</persistent>
@@ -1224,6 +1224,7 @@
     <tile bgName="bg_warehouse_overlay" x="672" y="1376" w="32" h="32" xo="160" yo="64" id="10073928" name="inst_8BD04918" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bg_warehouse_overlay" x="704" y="1376" w="32" h="32" xo="192" yo="64" id="10073929" name="inst_90D2B673" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bg_warehouse_overlay" x="736" y="1376" w="32" h="32" xo="224" yo="64" id="10073930" name="inst_2B1B35FE" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bg_warehouse_overlay" x="1600" y="1312" w="64" h="32" xo="96" yo="64" id="10074039" name="inst_28EEDC9D" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bg_fences" x="2016" y="800" w="32" h="32" xo="128" yo="0" id="10071952" name="inst_38F87780" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bg_fences" x="1952" y="896" w="32" h="32" xo="128" yo="0" id="10071953" name="inst_3DB1A988" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bg_fences" x="1440" y="1248" w="32" h="32" xo="128" yo="0" id="10072898" name="inst_7B7C213E" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

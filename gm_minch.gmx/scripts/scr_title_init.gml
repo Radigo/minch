@@ -51,6 +51,7 @@ a
 b */
 global.key_config_step = 0;
 self.rawInputMode = false;
+self.prevAxisPressed = false;// Used to enable single axis "press"
 
 // Reorder depths (objects depths seems automatically managed depending on their Y)
 obj_title_bg.depth = 100;
