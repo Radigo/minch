@@ -111,7 +111,18 @@ switch (global.applicationMode) {
 
 global.currentRoom = undefined;
 
-// BGM
+// Sound
+global.SFX_LOW_PRIORITY = 1;// shots, bullet shots
+global.SFX_ENVIRONMENT = 2;// hits on walls, enemies, shields
+global.SFX_MINCH_CONTROLS = 3;// claw, jump, wave, lock
+global.SFX_BOOMS = 4;
+global.SFX_LEVEL_DESIGN = 5;// switch, doors
+global.SFX_SCORING = 6;// combo
+global.SFX_UI = 7;
+global.SFX_BGM = 8;
+
+audio_channel_num(8);// num priorities
+
 global.bgmSequenceLoop = "bgmSequenceLoop";// Wait the end of bgm loop to change bgm
 global.bgmSequenceMeasure = "bgmSequenceMeasure";// Change bgm at current bgm measure end
 global.bgmSequenceInstant = "bgmSequenceInstant";// Instantly change bgm

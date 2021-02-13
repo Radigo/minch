@@ -5,9 +5,11 @@ var triggered_door_istance = argument1;
 
 var door_object_name, door_object_animation_name, door_object_animation, door_animation_instance;
 
-if (argument0 == global.DOOR_CLOSE)
-{
+if (argument0 == global.DOOR_CLOSE) {
     animation_speed_multiplier = -1;
+    audio_play_sound(snd_door_close, global.SFX_LEVEL_DESIGN, false);
+} else {
+    audio_play_sound(snd_door_open, global.SFX_LEVEL_DESIGN, false);
 }
 
 door_object_name = object_get_name(triggered_door_istance.object_index);

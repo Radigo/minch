@@ -5,23 +5,13 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound">
-    <sound>sound\snd_fall</sound>
-    <sound>sound\snd_shot_1</sound>
-    <sound>sound\snd_shot_2</sound>
-    <sound>sound\snd_jump</sound>
-    <sound>sound\snd_lock</sound>
-    <sound>sound\snd_land</sound>
-    <sound>sound\snd_wave</sound>
-    <sound>sound\snd_claw</sound>
-    <sound>sound\snd_bullet_shot</sound>
-    <sound>sound\snd_switch</sound>
-    <sound>sound\snd_shot_hit</sound>
-    <sound>sound\snd_shot_shield</sound>
     <sounds name="UI">
       <sound>sound\snd_ui_select</sound>
       <sound>sound\snd_ui_confirm</sound>
       <sound>sound\snd_ui_cancel</sound>
       <sound>sound\snd_ui_tick</sound>
+      <sound>sound\snd_ui_start</sound>
+      <sound>sound\snd_ui_delete</sound>
     </sounds>
     <sounds name="booms">
       <sound>sound\snd_boom_light</sound>
@@ -39,6 +29,26 @@
       <sound>sound\bgm_boss_1</sound>
       <sound>sound\bgm_next</sound>
       <sound>sound\bgm_stop</sound>
+      <sound>sound\bgm_11_mp3</sound>
+    </sounds>
+    <sounds name="minch">
+      <sound>sound\snd_fall</sound>
+      <sound>sound\snd_lock</sound>
+      <sound>sound\snd_land</sound>
+      <sound>sound\snd_jump</sound>
+      <sound>sound\snd_shot_1</sound>
+      <sound>sound\snd_wave</sound>
+      <sound>sound\snd_claw</sound>
+    </sounds>
+    <sounds name="ld">
+      <sound>sound\snd_switch</sound>
+      <sound>sound\snd_door_open</sound>
+      <sound>sound\snd_door_close</sound>
+    </sounds>
+    <sounds name="baddies">
+      <sound>sound\snd_bullet_shot</sound>
+      <sound>sound\snd_shot_hit</sound>
+      <sound>sound\snd_shot_shield</sound>
     </sounds>
   </sounds>
   <sprites name="sprites">
@@ -969,6 +979,9 @@
       <script>scripts\scr_doordraw.gml</script>
       <script>scripts\scr_door_enemy_update.gml</script>
       <script>scripts\scr_blend_add_draw.gml</script>
+      <script>scripts\scr_add_door_anim_object.gml</script>
+      <script>scripts\scr_change_door_triggered_instance.gml</script>
+      <script>scripts\scr_door_instance_step.gml</script>
     </scripts>
     <scripts name="Mechanics">
       <script>scripts\scr_scoring_init.gml</script>
@@ -979,9 +992,6 @@
       <script>scripts\scr_mixer_init.gml</script>
       <script>scripts\scr_mixer_update.gml</script>
       <script>scripts\scr_mixer_flush.gml</script>
-      <script>scripts\scr_add_door_anim_object.gml</script>
-      <script>scripts\scr_change_door_triggered_instance.gml</script>
-      <script>scripts\scr_door_instance_step.gml</script>
       <script>scripts\scr_init_leaderboards.gml</script>
       <script>scripts\scr_leaderboard_add_normalgame_score.gml</script>
       <script>scripts\scr_leaderboard_add_scoreattack_score.gml</script>

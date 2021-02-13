@@ -34,6 +34,6 @@ for (i = 0; i < num_shots; i++)
     scr_bullet_shot(ball_origin_x_left, ball_origin_y_down, shot_angle, scr_get_moreorless(shot_speed, 0.4), 3);
     if (scr_bullet_shot(ball_origin_x_right, ball_origin_y_down, shot_angle, scr_get_moreorless(shot_speed, 0.4), 3))
     {
-        audio_play_sound(snd_bullet_shot, 0, false);
+        audio_play_sound(snd_bullet_shot, global.SFX_LOW_PRIORITY, false);
     }
 }

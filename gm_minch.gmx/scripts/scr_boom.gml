@@ -12,8 +12,7 @@ var em_rays = part_emitter_create(global.ps_light);
 part_emitter_region(global.ps_air, em_shrapnels, (source_x - (size / 2)), (source_x + (size / 2)), (source_y - (size / 2)), (source_y + (size / 2)), ps_shape_ellipse, ps_distr_invgaussian);
 part_emitter_region(global.ps_light, em_rays, (source_x - (size / 2)), (source_x + (size / 2)), (source_y - (size / 2)), (source_y + (size / 2)), ps_shape_ellipse, ps_distr_invgaussian);
 
-switch (level)
-{
+switch (level){
     case 4:
         part_emitter_burst(global.ps_light, em_rays, global.pt_light_ray, 12);
         part_emitter_burst(global.ps_air, em_shrapnels, global.pt_shrapnels_big, 12);
@@ -21,7 +20,7 @@ switch (level)
         part_emitter_burst(global.ps_air, em_shrapnels, global.pt_shrapnels_small, 12);
         var boom_fx = instance_create(source_x, source_y, obj_fx_boom_big);
         boom_fx.image_speed = 0.33;
-        audio_play_sound(snd_boom_heavy, 0, false);
+        audio_play_sound(snd_boom_heavyier, global.SFX_BOOMS, false);
         break;
     case 3:
         part_emitter_burst(global.ps_light, em_rays, global.pt_light_ray, 10);
@@ -29,20 +28,20 @@ switch (level)
         part_emitter_burst(global.ps_air, em_shrapnels, global.pt_shrapnels_small, 12);
         var boom_fx = instance_create(source_x, source_y, obj_fx_boom_small);
         boom_fx.image_speed = 0.33;
-        audio_play_sound(snd_boom_medium, 0, false);
+        audio_play_sound(snd_boom_heavy, global.SFX_BOOMS, false);
         break;
     case 2:
         part_emitter_burst(global.ps_light, em_rays, global.pt_light_ray, 8);
         part_emitter_burst(global.ps_air, em_shrapnels, global.pt_shrapnels_small, 18);
         var boom_fx = instance_create(source_x, source_y, obj_fx_boom_tiny);
         boom_fx.image_speed = 0.33;
-        audio_play_sound(snd_boom_medium, 0, false);
+        audio_play_sound(snd_boom_medium, global.SFX_BOOMS, false);
         break;
     case 1:
         part_emitter_burst(global.ps_light, em_rays, global.pt_light_ray, 12);
         var boom_fx = instance_create(source_x, source_y, obj_fx_boom_tiny);
         boom_fx.image_speed = 0.33;
-        audio_play_sound(snd_boom_light, 0, false);
+        audio_play_sound(snd_boom_light, global.SFX_BOOMS, false);
         break;
 }
 

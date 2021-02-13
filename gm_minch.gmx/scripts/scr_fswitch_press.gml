@@ -33,7 +33,7 @@ if (isPressed)
         
         if (play_sound)
         {
-            audio_play_sound(snd_switch, 0, false);
+            audio_play_sound(snd_switch, global.SFX_LEVEL_DESIGN, false);
         }
     }
 }

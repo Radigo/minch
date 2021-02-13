@@ -196,7 +196,7 @@ if (global.titlepage == global.PAGE_KEYCONFIG) {
                             // decrement until finding a valid controller
                             controlType--;
                             if (scr_controls_gamepad_check(controlType)) {
-                                played_sound_id = snd_ui_select;
+                                played_sound_id = snd_ui_tick;
                                 global.control_type = controlType;
                                 scr_settings("saveControlType");
                                 break;
@@ -204,7 +204,7 @@ if (global.titlepage == global.PAGE_KEYCONFIG) {
                         }
                         
                         if (controlType < 0) {
-                            played_sound_id = snd_ui_select;
+                            played_sound_id = snd_ui_tick;
                             global.control_type = controlType;
                             scr_settings("saveControlType");
                         }
@@ -213,7 +213,7 @@ if (global.titlepage == global.PAGE_KEYCONFIG) {
                 case global.PAGE_LEADERBOARD:
                     // switch page
                     if (global.leaderboardPage > 0) {
-                        played_sound_id = snd_ui_select;
+                        played_sound_id = snd_ui_tick;
                         global.leaderboardPage -= 1;
                     }
                     break;
@@ -237,7 +237,7 @@ if (global.titlepage == global.PAGE_KEYCONFIG) {
                             // increment until finding a valid controller
                             controlType++;
                             if (scr_controls_gamepad_check(controlType)) {
-                                played_sound_id = snd_ui_select;
+                                played_sound_id = snd_ui_tick;
                                 global.control_type = controlType;
                                 scr_settings("saveControlType");
                                 break;
@@ -248,7 +248,7 @@ if (global.titlepage == global.PAGE_KEYCONFIG) {
                 case global.PAGE_LEADERBOARD:
                     // switch page
                     if (global.leaderboardPage < global.leaderboardPageMax) {
-                        played_sound_id = snd_ui_select;
+                        played_sound_id = snd_ui_tick;
                         global.leaderboardPage += 1;
                     }
                     break;
@@ -266,7 +266,7 @@ if (global.titlepage == global.PAGE_KEYCONFIG) {
                             global.titlepage = global.PAGE_STORY;
                             break;
                         case 1:// Arcade mode
-                            // played_sound_id = snd_ui_start;// TODO: add start game sound FX
+                            played_sound_id = snd_ui_start;
                             global.gameMode = global.ARCADE_MODE;
                             global.normalGameScore = 0;
                             global.lastCheckpoint = 0;
@@ -297,7 +297,7 @@ if (global.titlepage == global.PAGE_KEYCONFIG) {
                     }
                     break;
                 case global.PAGE_STORY:
-                    // played_sound_id = snd_ui_start;// TODO: add start game sound FX
+                    played_sound_id = snd_ui_start;
                     global.gameMode = global.STORY_MODE;
                     global.normalGameScore = 0;
                     
@@ -343,7 +343,7 @@ if (global.titlepage == global.PAGE_KEYCONFIG) {
                     global.page_scoreattack_entry = v_cursor_index;
                     switch(v_cursor_index) {
                         case 0:
-                            // played_sound_id = snd_ui_start;// TODO: add start game sound FX
+                            played_sound_id = snd_ui_start;
                             global.gameMode = global.SCOREATTACK_MODE;
                             global.lastCheckpoint = 0;
                             global.normalGameScore = 0;
@@ -370,11 +370,11 @@ if (global.titlepage == global.PAGE_KEYCONFIG) {
                             v_cursor_index = 0;
                             break;
                         case 2:
-                            // played_sound_id = snd_ui_delete;
+                            played_sound_id = snd_ui_delete;
                             scr_settings("resetControls");
                             break;
                         case 3:
-                            // played_sound_id = snd_ui_delete;
+                            played_sound_id = snd_ui_delete;
                             scr_settings("clearSavedData");
                             scr_settings("loadLeaderboards");
                             global.canSelectStage = false;
@@ -422,7 +422,7 @@ if (goBack) {
 }
 
 if (played_sound_id != noone) {
-    audio_play_sound(played_sound_id, 0, false);
+    audio_play_sound(played_sound_id, global.SFX_UI, false);
 }
 
 switch (global.titlepage) {

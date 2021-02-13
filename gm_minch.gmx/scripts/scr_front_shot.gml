@@ -28,7 +28,7 @@ switch (attack_level)
         scr_pattern_spread(origin_x, origin_y, shot_angle, 0.8, 2, 7, 8);
         if (scr_pattern_spread(origin_x, origin_y, (shot_angle + 180), 0.8, 2, 7, 8))
     {
-        audio_play_sound(snd_bullet_shot, 0, false);
+        audio_play_sound(snd_bullet_shot, global.SFX_LOW_PRIORITY, false);
     }
         break;
     case 3:
@@ -37,7 +37,7 @@ switch (attack_level)
         scr_pattern_spread(origin_x, origin_y, ((shot_angle * 10) + 180), 1.2, 2, 3, 6);
         if (scr_pattern_spread(origin_x, origin_y, ((shot_angle * 10) + 270), 1.2, 2, 3, 6))
         {
-            audio_play_sound(snd_bullet_shot, 0, false);
+            audio_play_sound(snd_bullet_shot, global.SFX_LOW_PRIORITY, false);
         }
         break;
 }

@@ -161,8 +161,9 @@ if (global.controlStatus == global.SPAWN) {
                 global.legsStatus = global.LEGS_JUMP;// << JUMP!
                 self.abReleased = false;
             }
-        } else if (global.bodyStatus != global.BODY_CLAW) {
+        } else if ((global.bodyStatus != global.BODY_CLAW) && (global.bodyStatus != global.BODY_AIMEDSHOT)) {
             global.bodyStatus = global.BODY_AIMEDSHOT;// << AIMED SHOT
+            audio_play_sound(snd_lock, global.SFX_MINCH_CONTROLS, false);
         }
     } else if (scr_controls_check_input(global.A)) {
         //show_debug_message("press: A");
@@ -274,7 +275,7 @@ switch (global.bodyStatus) {
             self.numShots++;
             self.shotTime = self.shotDelay;
             
-            audio_play_sound(snd_shot_1, 0, false);
+            audio_play_sound(snd_shot_1, global.SFX_LOW_PRIORITY, false);
         } else {
             self.shotTime--;
         }
@@ -287,7 +288,7 @@ switch (global.bodyStatus) {
             self.numShots++;
             self.shotTime = self.fixedDelay;
             
-            audio_play_sound(snd_shot_1, 0, false);
+            audio_play_sound(snd_shot_1, global.SFX_LOW_PRIORITY, false);
             
         } else {
             self.shotTime--;
@@ -314,7 +315,7 @@ switch (global.bodyStatus) {
             self.numShots++;
             self.shotTime = self.fixedDelay;
             
-            audio_play_sound(snd_shot_1, 0, false);
+            audio_play_sound(snd_shot_1, global.SFX_LOW_PRIORITY, false);
         } else {
             self.shotTime--;
         }
@@ -329,7 +330,7 @@ switch (global.bodyStatus) {
             scr_clawhitbox_position(self);
             scr_claw_fx_position(self);
             
-            audio_play_sound(snd_claw, 0, false);
+            audio_play_sound(snd_claw, global.SFX_MINCH_CONTROLS, false);
         } else if (self.clawTime > 0) {
             self.clawTime--;
             scr_clawhitbox_position(self);
@@ -367,7 +368,7 @@ if (global.legsStatus == global.LEGS_JUMP) {
             var jump_boost_fx = instance_create(self.x, self.y, obj_jump_boost);
             jump_boost_fx.image_angle = direction - 90;
             
-            audio_play_sound(snd_jump, 0, false);
+            audio_play_sound(snd_jump, global.SFX_MINCH_CONTROLS, false);
         }
         
         self.jumpTicker++;
@@ -377,7 +378,7 @@ if (global.legsStatus == global.LEGS_JUMP) {
         self.legsAngle = self.mainAngle;
         global.legsStatus = global.BODY_IDLE;
         
-        audio_play_sound(snd_land, 0, false);
+        audio_play_sound(snd_land, global.SFX_LOW_PRIORITY, false);
     }
 } else if (global.controlStatus == global.CRATE) {
     // We can still move the target
@@ -504,6 +505,8 @@ if (global.controlStatus == global.CRATE) {
         global.controlStatus = global.ALIVE;
         
         instance_destroy(self.crateTop);
+        
+        scr_play_bgm(bgm_11_mp3);
     } else {
         // Display crate alterations
         self.image_index = floor((1 - (self.crateHP / self.crateMaxHP)) * self.image_number);

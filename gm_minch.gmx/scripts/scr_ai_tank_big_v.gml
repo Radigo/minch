@@ -113,7 +113,7 @@ if (self.isActive)
         scr_pattern_spread(spread_source_x, (self.y - 48), spread_direction, 2, 3, 3, 5);
         if (scr_pattern_spread(spread_source_x, (self.y + 48), -spread_direction, 2, 3, 3, 5))
         {
-            audio_play_sound(snd_bullet_shot, 0, false);
+            audio_play_sound(snd_bullet_shot, global.SFX_LOW_PRIORITY, false);
         }
     }
     

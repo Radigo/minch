@@ -105,7 +105,7 @@ if (self.playerInvite && (self.reportTicker > self.inviteTime)) {
 }
 
 if (played_sound_id != noone) {
-    audio_play_sound(played_sound_id, 0, false);
+    audio_play_sound(played_sound_id, global.SFX_UI, false);
 }
 
 self.reportTicker++;

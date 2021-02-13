@@ -4,81 +4,39 @@ MinCH: todo
 
 **Bugs**
 
-**Design**
-Player
-OK - Shot sprites
-OK - Shot animation
-OK - Jump animation
-OK - Wave attack animation
-OK - Death animation by hit
-OK - Death animation by fall
-OK - Claw animation
-OK - Respawn invincibility FX
-OK - Add spawn animation to generator (flashing blue)
-
-Level
-OK - Doors
-OK - Floor switch
-OK - 1st level intro cinematic (skippable)
-
-Ennemies
-OK - Hit sprites
-OK - Explosions
-OK - Animated bullets
-OK - Animated splitter blue arc (Cave)
-
-UI
-OK - Score panel
-OK - Life icon
-OK - Combo panel
-OK - Hi scores
-
-**Code**
-Player
-OK - Wave attack
-OK - Clean free shot directions (cf. Outzone)
-OK - Kill player in holes
-OK - Kill player in traps
-OK - Combo system (basis)
-OK - Combo system (advanced)
-OK - Combo system (color mix)
-OK - Combo system (special cases)
-OK - Block jump when not available
-OK - Checkpoints in case of death
-OK - Game Over
-OK - Free shot, check rotation speed. Consider firing at each frame when rotating.
-OK - Tuning on tap rate for free/focus shot (faster)
-OK - change focus marker design
-OK - implement tolerance timer to make jump timing easyier (scr_minch_init)
-OK - sliding collisions in corners
-OK - Joystick support
-
-Level design
-OK - Enemy follow path
-OK - Set all ennemies points value
-
-Engine
-OK - Contextual camera
-OK - Level intro & end report
-OK - Ennemy shot only when next to viewport
-OK - Ennemy sleep/wake up
-OK - Events
-OK - Switch doors
-OK - Ennemy count doors > combo count bug
-OK - LD elements with combo colors
-OK - rolling floor areas
-OK - Ennemy generators
-OK - Cinematics
-OK - BGM play
-OK - BGM sequencing
-
-Tools
-OK - Demo mode for pre releases and tests
-OK - Console
-
 **Game elements**
-OK - Title screen
-OK - Menus
-OK - leaderboards
-OK - Intro sequence
 - Ending sequence
+
+** SFX **
+- check door click sound timing (consider separate sound?)
+__________
+> existing
+- new
+__________
+
+Gameplay
+- dour counter change
+- color combo (secondary)
+- legendary color combo (brown)
+- bad color combo
+- extend
+- enemy generator
+- stairs
+- Neant gate close
+
+Enemies
+> bullet shot (variants from light to heavy)
+- beetle walk
+- bikes engine
+- tank missile
+- Napalm swords
+- CH1 scream
+- CH1 charge + laser
+- Trash charge (big bullets)
+- Trash punch / land
+- Trash jump
+
+**Others**
+- In-game clues on how to mix colors (ex: spilling barrels of liquids)
+- More cinematics in levels to give life
+- Aimed shot & wave attack illustrations
