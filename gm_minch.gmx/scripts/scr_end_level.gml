@@ -63,7 +63,7 @@ switch (global.gameMode) {
 }
 
 
-// Stop BGM
+// Reset all audio
 global.currentBGM = noone;
 global.nextBGM = noone;
 audio_stop_all();

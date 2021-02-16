@@ -32,6 +32,8 @@ if (self.ticker == self.tickerLimit) {
     
     self.enemyNumIndex++;
     self.image_speed = 0.3;
+    
+    scr_play_sound(snd_generator, global.SFX_ENVIRONMENT, false);
 }
 
 if (self.enemyNumIndex >= self.numEnemies) {

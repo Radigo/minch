@@ -31,6 +31,8 @@ if (newRemainingEnemies <= 0) {
     flashFx.image_xscale = fxScaleX;
     flashFx.image_speed = 0.5;
     flashFx.depth = self.depth - 1;
+    
+    scr_play_sound(snd_door_counter_update, global.SFX_LEVEL_DESIGN, false);
 }
 
 self.remainingEnemies = newRemainingEnemies;

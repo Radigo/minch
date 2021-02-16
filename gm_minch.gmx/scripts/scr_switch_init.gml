@@ -13,3 +13,5 @@ self.multipleUses = false;
 self.active = false;
 image_index = 2;
 image_speed = 0;
+
+self.sfx = argument0;

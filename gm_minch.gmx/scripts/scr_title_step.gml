@@ -422,7 +422,7 @@ if (goBack) {
 }
 
 if (played_sound_id != noone) {
-    audio_play_sound(played_sound_id, global.SFX_UI, false);
+    scr_play_sound(played_sound_id, global.SFX_UI, false);
 }
 
 switch (global.titlepage) {

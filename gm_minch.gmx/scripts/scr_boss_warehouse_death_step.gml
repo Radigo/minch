@@ -34,7 +34,7 @@ if ((self.ticker < first_booms_limit) && ((self.ticker % 5) == 0)) {
     for (i = 0; i < 8; i++) {
         boom_x = (random(96) - 48) + self.explodingFrame.x;
         boom_y = (random(96) - 48) + self.explodingFrame.y;
-        scr_boom(boom_x, boom_y, 3, 24);
+        scr_boom(boom_x, boom_y, 3, 24, (i < 7));
     }
 } else if (self.ticker == self.tickerLimit) {
     global.nextBGM = bgm_stop;

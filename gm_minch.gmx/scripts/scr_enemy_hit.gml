@@ -77,10 +77,10 @@ if (!is_piercing_shot) {
 
 if (!self.shield) {
     self.hp -= damage;
-    audio_play_sound(snd_shot_hit, global.SFX_ENVIRONMENT, false);
+    scr_play_sound(snd_shot_hit, global.SFX_ENVIRONMENT, false);
     self.lastHitTicker = 0;
 } else {
-    audio_play_sound(snd_shot_shield, global.SFX_ENVIRONMENT, false);
+    scr_play_sound(snd_shot_shield, global.SFX_ENVIRONMENT, false);
 }
 
 if (self.hp <= 0) {

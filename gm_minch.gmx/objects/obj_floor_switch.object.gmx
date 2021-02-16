@@ -29,7 +29,7 @@
           </argument>
           <argument>
             <kind>0</kind>
-            <string></string>
+            <string>snd_switch</string>
           </argument>
           <argument>
             <kind>0</kind>
@@ -111,7 +111,7 @@
           </argument>
           <argument>
             <kind>0</kind>
-            <string>true</string>
+            <string></string>
           </argument>
           <argument>
             <kind>0</kind>

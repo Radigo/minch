@@ -3,7 +3,7 @@ var safe_zone = 64;// Outbounds distance until shots can live
 if (collision_point(x, y, obj_wall, false, false))
 {
     scr_shot_sparkles(true, self, false);
-    audio_play_sound(snd_shot_shield, global.SFX_ENVIRONMENT, false);
+    scr_play_sound(snd_shot_shield, global.SFX_ENVIRONMENT, false);
     instance_destroy();
 }
 

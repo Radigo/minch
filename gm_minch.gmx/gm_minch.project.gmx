@@ -39,16 +39,29 @@
       <sound>sound\snd_shot_1</sound>
       <sound>sound\snd_wave</sound>
       <sound>sound\snd_claw</sound>
+      <sound>sound\snd_death</sound>
+      <sound>sound\snd_extend</sound>
     </sounds>
     <sounds name="ld">
       <sound>sound\snd_switch</sound>
       <sound>sound\snd_door_open</sound>
       <sound>sound\snd_door_close</sound>
+      <sound>sound\snd_door_counter_update</sound>
+      <sound>sound\snd_stairs_up</sound>
+      <sound>sound\snd_stairs_down</sound>
     </sounds>
     <sounds name="baddies">
       <sound>sound\snd_bullet_shot</sound>
       <sound>sound\snd_shot_hit</sound>
       <sound>sound\snd_shot_shield</sound>
+      <sound>sound\snd_generator</sound>
+    </sounds>
+    <sounds name="mechanics">
+      <sound>sound\snd_combo_first</sound>
+      <sound>sound\snd_combo_second</sound>
+      <sound>sound\snd_combo_third</sound>
+      <sound>sound\snd_combo_error</sound>
+      <sound>sound\snd_combo_lost</sound>
     </sounds>
   </sounds>
   <sprites name="sprites">
@@ -1008,6 +1021,7 @@
       <script>scripts\scr_bullet_cancel.gml</script>
       <script>scripts\scr_boom.gml</script>
       <script>scripts\scr_bigbullet_kill.gml</script>
+      <script>scripts\scr_play_sound.gml</script>
     </scripts>
     <scripts name="BGM">
       <script>scripts\scr_play_bgm.gml</script>

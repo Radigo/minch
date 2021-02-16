@@ -3,7 +3,6 @@
  * Warning: calling this script starts a loop!
 */
 
-if (global.currentBGM != noone)
-{
-    audio_play_sound(global.currentBGM, global.SFX_BGM, false);
+if (global.currentBGM != noone) {
+    scr_play_sound(global.currentBGM, global.SFX_BGM, false);
 }

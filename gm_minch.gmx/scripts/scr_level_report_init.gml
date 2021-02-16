@@ -29,6 +29,9 @@ self.selectIndexMax = 2;
 // Gameplay
 scr_all_bullet_cancel();
 
+// Audio
+audio_sound_gain(global.currentBGM, 0, 2000);
+
 // MinCH
 global.minchControlIsActive = false;
 

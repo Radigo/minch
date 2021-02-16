@@ -16,10 +16,27 @@ if (enemy_color >= global.BK) {
 
 if (enemy_color == global.comboColor) {
     global.comboValue += comboIncrement;
+    
+    switch (global.comboColor) {
+        case global.CY:
+        case global.MA:
+        case global.YE:
+            scr_play_sound(snd_combo_first, global.SFX_SCORING, false);
+            break;
+        case global.PU:
+        case global.GR:
+        case global.RG:
+            scr_play_sound(snd_combo_second, global.SFX_SCORING, false);
+            break;
+        case global.BR:
+            scr_play_sound(snd_combo_third, global.SFX_SCORING, false);
+            break;
+    }
 } else {
     if (global.comboColorTimer == 0) {
         global.comboValue = 1;
     }
+    scr_play_sound(snd_combo_error, global.SFX_SCORING, false);
 }
 
 global.comboColor = enemy_color;

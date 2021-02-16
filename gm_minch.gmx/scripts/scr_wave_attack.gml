@@ -26,4 +26,4 @@ part_type_direction(global.pt_light_ray, 0, 360, 0, 0);
 part_emitter_burst(global.ps_ground, em_wave_smoke, global.pt_light_ray, 64);
 
 // Sound
-audio_play_sound(snd_wave, global.SFX_MINCH_CONTROLS, false);
+scr_play_sound(snd_wave, global.SFX_MINCH_CONTROLS, false);

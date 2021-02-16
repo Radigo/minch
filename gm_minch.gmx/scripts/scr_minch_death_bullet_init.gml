@@ -19,3 +19,5 @@ ds_list_add(self.partsDuration, irandom_range(durationMin, durationMax), irandom
 
 // Display
 self.image_speed = 0.25;
+
+scr_play_sound(snd_death, global.SFX_MINCH_CONTROLS, false);

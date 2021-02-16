@@ -4,21 +4,17 @@ var action_id = argument0;
 show_debug_message("Activated switch id:" + string(action_id));
 
 // Following woks with only 1 object
-if (ds_map_exists(global.actions_map, action_id))
-{
+if (ds_map_exists(global.actions_map, action_id)) {
     var dynamic_objects_list = ds_map_find_value(global.actions_map, action_id);
     var action_rule = ds_map_find_value(global.rules_map, action_id);
     
-    for (var i = 0; i < ds_list_size(dynamic_objects_list); i++)
-    {
+    for (var i = 0; i < ds_list_size(dynamic_objects_list); i++) {
         var dynamic_object = ds_list_find_value(dynamic_objects_list, i);
         
-        with (dynamic_object)
-        {
+        with (dynamic_object) {
             //show_debug_message("scr_switch_machine > action_id:" + string(action_id) + ", rule: " + action_rule);
             
-            switch (action_rule)
-            {
+            switch (action_rule) {
                 case global.ENEMY_TRIGGER_ON:
                     dynamic_object.switchTriggered = true;
                     break;
@@ -35,8 +31,7 @@ if (ds_map_exists(global.actions_map, action_id))
                     // Only if focus object is MinCH (no focus) OR focus changed
                     
                     if (obj_minch_camera.focus == obj_minch
-                        || (object_get_name(obj_minch_camera.focus) != object_get_name(dynamic_object)))
-                    {
+                        || (object_get_name(obj_minch_camera.focus) != object_get_name(dynamic_object))) {
                         obj_minch_camera.transitionDuration = obj_minch_camera.transitionInDuration;
                         obj_minch_camera.transitionStep = obj_minch_camera.transitionInDuration;
                         obj_minch_camera.focus = dynamic_object;
@@ -48,8 +43,7 @@ if (ds_map_exists(global.actions_map, action_id))
                     // Only if focus object is MinCH (no focus) OR focus changed
                     
                     if (obj_minch_camera.focus == obj_minch
-                        || (object_get_name(obj_minch_camera.focus) != object_get_name(dynamic_object)))
-                    {
+                        || (object_get_name(obj_minch_camera.focus) != object_get_name(dynamic_object))) {
                         obj_minch_camera.transitionDuration = obj_minch_camera.transitionInDuration;
                         obj_minch_camera.transitionStep = obj_minch_camera.transitionInDuration;
                         obj_minch_camera.focus = dynamic_object;
