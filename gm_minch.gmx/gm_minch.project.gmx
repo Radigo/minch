@@ -30,6 +30,7 @@
       <sound>sound\bgm_next</sound>
       <sound>sound\bgm_stop</sound>
       <sound>sound\bgm_11_mp3</sound>
+      <sound>sound\bgm_12_mp3</sound>
     </sounds>
     <sounds name="minch">
       <sound>sound\snd_fall</sound>

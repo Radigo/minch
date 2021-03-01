@@ -225,7 +225,7 @@
     <instance objName="obj_ara_single_fixed_cy" x="1008" y="1648" name="inst_F1DB033E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ara_single_fixed_cy" x="1008" y="1424" name="inst_F81C6AB2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ara_single_fixed_cy" x="1040" y="1424" name="inst_69242CB3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_area_checkpoint" x="1760" y="800" name="inst_D5818B88" locked="0" code="self.checkpointId = 1;&#xA;self.bgmId = bgm_11_mp3;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_area_checkpoint" x="1760" y="800" name="inst_D5818B88" locked="0" code="self.checkpointId = 1;&#xA;self.bgmId = bgm_11_mp3;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_area_checkpoint" x="1152" y="992" name="inst_30B2FFCF" locked="0" code="self.checkpointId = 2;&#xA;" scaleX="1" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="obj_checkpoint_1" x="1728" y="816" name="inst_CC975E76" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_checkpoint_2" x="1280" y="1024" name="inst_1E0EEA31" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
