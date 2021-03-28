@@ -35,7 +35,7 @@ if (!self.hasFocus)
     scr_switch_machine(2);
     self.hasFocus = true;
     
-    global.nextBGM = bgm_boss_1;
+    global.nextBGM = bgm_boss;
     global.bgmSequencing = global.bgmSequenceInstant;
     audio_stop_sound(global.currentBGM);
     scr_play_bgm();
