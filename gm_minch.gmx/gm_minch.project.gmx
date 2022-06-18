@@ -23,15 +23,15 @@
       <sound>sound\bgm_rooftops_intro</sound>
       <sound>sound\bgm_rooftops_buldings</sound>
       <sound>sound\bgm_rooftops_bank</sound>
-      <sound>sound\bgm_generator_1</sound>
-      <sound>sound\bgm_generator_2</sound>
-      <sound>sound\bgm_generator_3</sound>
       <sound>sound\bgm_next</sound>
       <sound>sound\bgm_stop</sound>
       <sound>sound\bgm_11_mp3</sound>
       <sound>sound\bgm_12_mp3</sound>
       <sound>sound\bgm_21_mp3</sound>
       <sound>sound\bgm_22_mp3</sound>
+      <sound>sound\bgm_23_low_mp3</sound>
+      <sound>sound\bgm_23_mid_mp3</sound>
+      <sound>sound\bgm_23_high_mp3</sound>
       <sound>sound\bgm_22_intro_mp3</sound>
       <sound>sound\bgm_22_triumph_wav</sound>
       <sound>sound\bgm_boss</sound>

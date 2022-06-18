@@ -123,11 +123,11 @@ global.SFX_BGM = 8;
 
 audio_channel_num(8);// num priorities
 
-global.bgmSequenceLoop = "bgmSequenceLoop";// Wait the end of bgm loop to change bgm
-global.bgmSequenceMeasure = "bgmSequenceMeasure";// Change bgm at current bgm measure end
-global.bgmSequenceInstant = "bgmSequenceInstant";// Instantly change bgm
+global.BGM_SEQUENCE_LOOP = "bgmSequenceLoop";// Wait the end of bgm loop to change bgm
+global.BGM_SEQUENCE_INSTANT = "bgmSequenceInstant";// Instantly change bgm
+global.BGM_SEQUENCE_SYNC = "bgmSequenceSync";// Multiple bgms are played in sync and muted/unmuted for transitions
 
-global.bgmSequencing = global.bgmSequenceMeasure;
+global.bgmSequencing = global.BGM_SEQUENCE_INSTANT;
 global.currentBGM = noone;
 global.nextBGM = noone;
 

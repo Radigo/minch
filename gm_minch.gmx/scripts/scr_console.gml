@@ -24,7 +24,7 @@ switch (argument0)
         break;
     case "checkpoint":
     case "cp":
-        scr_pass_checkpoint(real(argument1), global.currentBGM, global.bgmSequenceInstant);
+        scr_pass_checkpoint(real(argument1), global.currentBGM, global.BGM_SEQUENCE_INSTANT, false);
         break;
     case "kill":
     case "k":

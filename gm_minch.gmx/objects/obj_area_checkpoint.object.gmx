@@ -83,7 +83,7 @@
           </argument>
           <argument>
             <kind>0</kind>
-            <string></string>
+            <string>self.singleUse</string>
           </argument>
           <argument>
             <kind>0</kind>

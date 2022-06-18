@@ -36,7 +36,7 @@ if (!self.hasFocus)
     self.hasFocus = true;
     
     global.nextBGM = bgm_boss;
-    global.bgmSequencing = global.bgmSequenceInstant;
+    global.bgmSequencing = global.BGM_SEQUENCE_INSTANT;
     audio_stop_sound(global.currentBGM);
     scr_play_bgm();
 }

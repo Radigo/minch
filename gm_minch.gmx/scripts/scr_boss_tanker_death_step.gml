@@ -47,7 +47,7 @@ else if (self.ticker == second_booms_limit)
 else if (self.ticker == self.tickerLimit)
 {
     global.nextBGM = bgm_stop;
-    global.bgmSequencing = global.bgmSequenceInstant;
+    global.bgmSequencing = global.BGM_SEQUENCE_INSTANT;
     audio_stop_sound(global.currentBGM);
     scr_play_bgm();
         

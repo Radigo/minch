@@ -269,7 +269,7 @@
     <instance objName="obj_checkpoint_3" x="1568" y="1824" name="inst_9764B24F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_checkpoint_4" x="1952" y="2224" name="inst_C0E48239" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_checkpoint_5" x="1664" y="2464" name="inst_0D184953" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_area_checkpoint" x="1536" y="1536" name="inst_FFBBD294" locked="0" code="self.checkpointId = 1;&#xA;self.bgmId = bgm_rooftops_buldings;&#xA;self.bgmSequencing = global.bgmSequenceLoop;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_area_checkpoint" x="1536" y="1536" name="inst_FFBBD294" locked="0" code="self.checkpointId = 1;&#xA;self.bgmId = bgm_rooftops_buldings;&#xA;self.bgmSequencing = global.BGM_SEQUENCE_LOOP;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_copter_drone_cy" x="1712" y="1968" name="inst_FBF7EF0B" locked="0" code="path_start(path_rm32_1, 1, 1, true);&#xA;path_position = 0;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_copter_drone_cy" x="1648" y="1968" name="inst_C39F3372" locked="0" code="path_start(path_rm32_1, 1, 1, true);&#xA;path_position = 2 / 16;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_copter_drone_cy" x="1584" y="1968" name="inst_D1586543" locked="0" code="path_start(path_rm32_1, 1, 1, true);&#xA;path_position = 4 / 16;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
