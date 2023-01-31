@@ -25,15 +25,16 @@
       <sound>sound\bgm_rooftops_bank</sound>
       <sound>sound\bgm_next</sound>
       <sound>sound\bgm_stop</sound>
-      <sound>sound\bgm_11_mp3</sound>
-      <sound>sound\bgm_12_mp3</sound>
-      <sound>sound\bgm_21_mp3</sound>
-      <sound>sound\bgm_22_mp3</sound>
-      <sound>sound\bgm_23_low_mp3</sound>
-      <sound>sound\bgm_23_mid_mp3</sound>
-      <sound>sound\bgm_23_high_mp3</sound>
-      <sound>sound\bgm_22_intro_mp3</sound>
-      <sound>sound\bgm_22_triumph_wav</sound>
+      <sound>sound\bgm_11</sound>
+      <sound>sound\bgm_12</sound>
+      <sound>sound\bgm_21</sound>
+      <sound>sound\bgm_22_triumph</sound>
+      <sound>sound\bgm_22_intro</sound>
+      <sound>sound\bgm_22</sound>
+      <sound>sound\bgm_23_low</sound>
+      <sound>sound\bgm_23_mid</sound>
+      <sound>sound\bgm_23_high</sound>
+      <sound>sound\bgm_31</sound>
       <sound>sound\bgm_boss</sound>
     </sounds>
     <sounds name="minch">

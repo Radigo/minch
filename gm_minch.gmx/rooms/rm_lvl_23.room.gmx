@@ -11,17 +11,17 @@
   <colour>0</colour>
   <showcolour>-1</showcolour>
   <code>// Normal BGM start
-global.nextBGM = bgm_23_low_mp3;
+global.nextBGM = bgm_23_low;
 global.bgmSequencing = global.BGM_SEQUENCE_INSTANT;
 audio_stop_sound(global.currentBGM);
 scr_play_bgm();
 
 // Prepare synced BGMs
-audio_sound_gain(bgm_23_mid_mp3, 0, 0);
-audio_play_sound(bgm_23_mid_mp3, global.SFX_BGM + 1, true);
+audio_sound_gain(bgm_23_mid, 0, 0);
+audio_play_sound(bgm_23_mid, global.SFX_BGM + 1, true);
 
-audio_sound_gain(bgm_23_high_mp3, 0, 0);
-audio_play_sound(bgm_23_high_mp3, global.SFX_BGM + 2, true);</code>
+audio_sound_gain(bgm_23_high, 0, 0);
+audio_play_sound(bgm_23_high, global.SFX_BGM + 2, true);</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>0</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>

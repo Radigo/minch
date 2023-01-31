@@ -506,7 +506,7 @@ if (global.controlStatus == global.CRATE) {
         
         instance_destroy(self.crateTop);
         
-        scr_play_bgm(bgm_11_mp3);
+        scr_play_bgm(bgm_11);
     } else {
         // Display crate alterations
         self.image_index = floor((1 - (self.crateHP / self.crateMaxHP)) * self.image_number);

@@ -12,7 +12,7 @@ scr_reveal_neighbor();
 scr_play_sound(bgm_22_triumph_wav, global.SFX_BGM, false);
 
 // Start level BGM
-global.nextBGM = bgm_22_mp3;
+global.nextBGM = bgm_22;
 global.bgmSequencing = global.BGM_SEQUENCE_INSTANT;
 audio_stop_sound(global.currentBGM);
 scr_play_bgm();
