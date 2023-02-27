@@ -1,5 +1,9 @@
 // Reach for midpoint between self and minch
 
+if (!instance_exists(obj_katana_shield)) {
+    return false;
+}
+
 var napalmX = argument0;
 var napalmY = argument1;
 var shieldAngle = argument2;

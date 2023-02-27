@@ -4,6 +4,6 @@
 */
 
 if (global.currentBGM != noone) {
-    audio_sound_gain(global.currentBGM, 1, 0);
+    audio_sound_gain(global.currentBGM, global.BGM_GAIN, 0);
     scr_play_sound(global.currentBGM, global.SFX_BGM, false);
 }

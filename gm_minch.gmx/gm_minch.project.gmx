@@ -20,9 +20,6 @@
       <sound>sound\snd_boom_heavyier</sound>
     </sounds>
     <sounds name="BGM">
-      <sound>sound\bgm_rooftops_intro</sound>
-      <sound>sound\bgm_rooftops_buldings</sound>
-      <sound>sound\bgm_rooftops_bank</sound>
       <sound>sound\bgm_next</sound>
       <sound>sound\bgm_stop</sound>
       <sound>sound\bgm_11</sound>
@@ -35,6 +32,10 @@
       <sound>sound\bgm_23_mid</sound>
       <sound>sound\bgm_23_high</sound>
       <sound>sound\bgm_31</sound>
+      <sound>sound\bgm_32_intro</sound>
+      <sound>sound\bgm_32</sound>
+      <sound>sound\bgm_33_ch1intro</sound>
+      <sound>sound\bgm_33_ch1</sound>
       <sound>sound\bgm_boss</sound>
     </sounds>
     <sounds name="minch">
@@ -61,6 +62,9 @@
       <sound>sound\snd_shot_hit</sound>
       <sound>sound\snd_shot_shield</sound>
       <sound>sound\snd_generator</sound>
+      <sound>sound\snd_ch1_scream</sound>
+      <sound>sound\snd_ch1_search</sound>
+      <sound>sound\snd_ch1_laser</sound>
     </sounds>
     <sounds name="mechanics">
       <sound>sound\snd_combo_first</sound>

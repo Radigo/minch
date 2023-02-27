@@ -6,7 +6,7 @@ if (global.currentBGM == noone) {
 }
 
 if  (global.nextBGM == global.currentBGM) {
-    // Next BGM is the same as current, wait for loop
+    // Next BGM is the same as current, wait for loop 
     global.bgmSequencing = global.BGM_SEQUENCE_LOOP;
 }
 
@@ -24,7 +24,7 @@ switch (global.bgmSequencing) {
     case global.BGM_SEQUENCE_SYNC:
          // Mute current, unmute next
         audio_sound_gain(global.currentBGM, 0, 100);
-        audio_sound_gain(global.nextBGM, 1, 100);
+        audio_sound_gain(global.nextBGM, global.BGM_GAIN, 100);
         global.currentBGM = global.nextBGM;
         global.nextBGM = noone;
         global.bgmSequencing = global.BGM_SEQUENCE_LOOP;
@@ -44,7 +44,7 @@ audio_stop_sound(global.currentBGM);
 global.currentBGM = global.nextBGM;
 global.nextBGM = noone;
 
-self.bgmFrame = 0;
+self.bgmStep = 0;
 
 if (global.currentBGM != bgm_stop) {
     scr_play_bgm();

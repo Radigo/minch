@@ -1,8 +1,12 @@
 //show_debug_message("ticker: " + string(self.ticker) + " > " + string(self.tickerLimit) + ", self.isIntro: " + string(self.isIntro) + ", move: " + self.move + " / patternTicker: " + string(self.patternTicker) + " > " + string(self.patternTickerLimit) + ", pattern: " + self.pattern);
 
-if (!self.switchTriggered)
-{
+if (!self.switchTriggered) {
     return false;
+}
+
+// Dirty failsafe trick
+if (self.hp < self.killSequenceHp) {
+    self.hp = self.killSequenceHp - 1;
 }
 
 // Calm before the storm
@@ -13,6 +17,15 @@ if (self.isIntro) {
         self.ticker = 0;
         self.patternTicker = 0;
         self.isIntro = false;
+        
+        scr_play_sound(snd_ch1_scream, global.SFX_BOOMS, false);
+       
+        global.bgmSequencing = global.BGM_SEQUENCE_INSTANT;
+        global.nextBGM = bgm_33_ch1intro;
+        audio_stop_sound(global.currentBGM);
+        scr_play_bgm();
+        global.bgmSequencing = global.BGM_SEQUENCE_LOOP;
+        global.nextBGM = bgm_33_ch1;
     }
     
     return false;
@@ -119,11 +132,14 @@ if (self.pattern == self.PATTERN_RAGING) {
         self.patternTickerLimit = 60;
         var charge = instance_create(self.x + self.ARM_X, self.y + self.LEFT_ARM_Y, obj_ch1_laser_h_charge);
         charge.image_speed = 0.5;
+        scr_play_sound(snd_ch1_search, global.SFX_BOOMS, false);
     } else if ((self.patternTicker > self.SINGLE_LASER_WARMUP_TIME - 6)
               && (instance_number(obj_ch1_laser_h) == 0)) {
         instance_destroy(obj_ch1_laser_h_charge);
         var laser = instance_create(self.x + self.ARM_X, self.y + self.LEFT_ARM_Y, obj_ch1_laser_h);
         laser.image_speed = 0.5;
+        audio_stop_sound(snd_ch1_search);
+        scr_play_sound(snd_ch1_laser, global.SFX_BOOMS, false);
     } else if ((self.patternTicker > self.SINGLE_LASER_WARMUP_TIME)
               && (collision_rectangle(self.x + self.ARM_X, self.y + self.LEFT_ARM_Y - self.LASER_HALF_WIDTH,
                                       self.x + self.ARM_X + self.LASER_LENGTH, self.y + self.LEFT_ARM_Y + self.LASER_HALF_WIDTH,
@@ -134,16 +150,18 @@ if (self.pattern == self.PATTERN_RAGING) {
     // Fire laser with right arm, warmup time, then short blast
     if (self.patternTicker == 1) {
         switchOffLasers = true;
-        
         self.sprite_index = spr_ch1_body_laserdown;
         self.patternTickerLimit = 60;
         var charge = instance_create(self.x + self.ARM_X, self.y + self.RIGHT_ARM_Y, obj_ch1_laser_h_charge);
         charge.image_speed = 0.5;
+        scr_play_sound(snd_ch1_search, global.SFX_BOOMS, false);
     } else if ((self.patternTicker > self.SINGLE_LASER_WARMUP_TIME - 6)
               && (instance_number(obj_ch1_laser_h) == 0)) {
         instance_destroy(obj_ch1_laser_h_charge);
         var laser = instance_create(self.x + self.ARM_X, self.y + self.RIGHT_ARM_Y, obj_ch1_laser_h);
         laser.image_speed = 0.5;
+        audio_stop_sound(snd_ch1_search);
+        scr_play_sound(snd_ch1_laser, global.SFX_BOOMS, false);
     } else if ((self.patternTicker > self.SINGLE_LASER_WARMUP_TIME)
               && (collision_rectangle(self.x + self.ARM_X, self.y + self.RIGHT_ARM_Y - self.LASER_HALF_WIDTH,
                                       self.x + self.ARM_X + self.LASER_LENGTH, self.y + self.RIGHT_ARM_Y + self.LASER_HALF_WIDTH,
@@ -154,13 +172,13 @@ if (self.pattern == self.PATTERN_RAGING) {
     // Fire lasers with both arms, warmup time (shorter), then medium long blast
     if (self.patternTicker == 1) {
         switchOffLasers = true;
-        
         self.sprite_index = spr_ch1_body_lasertwin;
         self.patternTickerLimit = 90;
         var chargeL = instance_create(self.x + self.ARM_X, self.y + self.LEFT_ARM_Y, obj_ch1_laser_h_charge);
         chargeL.image_speed = 0.5;
         var chargeR = instance_create(self.x + self.ARM_X, self.y + self.RIGHT_ARM_Y, obj_ch1_laser_h_charge);
         chargeR.image_speed = 0.5;
+        scr_play_sound(snd_ch1_search, global.SFX_BOOMS, false);
     } else if ((self.patternTicker > self.TWIN_LASER_WARMUP_TIME - 6)
               && (instance_number(obj_ch1_laser_h) == 0)) {
         instance_destroy(obj_ch1_laser_h_charge);
@@ -168,6 +186,8 @@ if (self.pattern == self.PATTERN_RAGING) {
         laserL.image_speed = 0.5;
         var laserR = instance_create(self.x + self.ARM_X, self.y + self.RIGHT_ARM_Y, obj_ch1_laser_h);
         laserR.image_speed = 0.5;
+        audio_stop_sound(snd_ch1_search);
+        scr_play_sound(snd_ch1_laser, global.SFX_BOOMS, false);
     } else if (self.patternTicker > self.TWIN_LASER_WARMUP_TIME) {
         if (collision_rectangle(
                 self.x + self.ARM_X, self.y + self.LEFT_ARM_Y - self.LASER_HALF_WIDTH,

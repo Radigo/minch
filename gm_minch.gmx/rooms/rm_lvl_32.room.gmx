@@ -10,7 +10,10 @@
   <persistent>0</persistent>
   <colour>12632256</colour>
   <showcolour>-1</showcolour>
-  <code></code>
+  <code>global.nextBGM = bgm_32_intro;
+audio_stop_sound(global.currentBGM);
+global.bgmSequencing = global.BGM_SEQUENCE_INSTANT;
+scr_play_bgm();</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>0</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
@@ -269,7 +272,7 @@
     <instance objName="obj_checkpoint_3" x="1568" y="1824" name="inst_9764B24F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_checkpoint_4" x="1952" y="2224" name="inst_C0E48239" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_checkpoint_5" x="1664" y="2464" name="inst_0D184953" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_area_checkpoint" x="1536" y="1536" name="inst_FFBBD294" locked="0" code="self.checkpointId = 1;&#xA;self.bgmId = bgm_rooftops_buldings;&#xA;self.bgmSequencing = global.BGM_SEQUENCE_LOOP;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_area_checkpoint" x="1536" y="1536" name="inst_FFBBD294" locked="0" code="self.checkpointId = 1;&#xA;self.bgmId = bgm_32;&#xA;global.bgmSequencing = global.BGM_SEQUENCE_LOOP;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_copter_drone_cy" x="1712" y="1968" name="inst_FBF7EF0B" locked="0" code="path_start(path_rm32_1, 1, 1, true);&#xA;path_position = 0;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_copter_drone_cy" x="1648" y="1968" name="inst_C39F3372" locked="0" code="path_start(path_rm32_1, 1, 1, true);&#xA;path_position = 2 / 16;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_copter_drone_cy" x="1584" y="1968" name="inst_D1586543" locked="0" code="path_start(path_rm32_1, 1, 1, true);&#xA;path_position = 4 / 16;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -354,8 +357,8 @@
     <instance objName="obj_area_checkpoint" x="1632" y="2400" name="inst_5FDEE44E" locked="0" code="self.checkpointId = 5;&#xA;" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="1216" y="2336" name="inst_FEA9C6D4" locked="0" code="" scaleX="1" scaleY="3" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="1088" y="2336" name="inst_3E3FC84E" locked="0" code="" scaleX="1" scaleY="3" colour="4294967295" rotation="0"/>
-    <instance objName="obj_area_checkpoint" x="1856" y="1440" name="inst_E0D9944D" locked="0" code="self.bgmId = bgm_rooftops_intro;" scaleX="3" scaleY="3" colour="4294967295" rotation="0"/>
-    <instance objName="obj_area_checkpoint" x="224" y="1600" name="inst_90D8F764" locked="0" code="self.bgmId = bgm_rooftops_bank;&#xA;" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_area_checkpoint" x="1856" y="1440" name="inst_E0D9944D" locked="0" code="" scaleX="3" scaleY="3" colour="4294967295" rotation="0"/>
+    <instance objName="obj_area_checkpoint" x="224" y="1600" name="inst_90D8F764" locked="0" code="" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_event_area_multiuse" x="928" y="2432" name="inst_BB89D331" locked="0" code="// Focus OFF&#xA;self.action_id = 4;&#xA;" scaleX="2" scaleY="5" colour="4294967295" rotation="0"/>
     <instance objName="obj_event_area_multiuse" x="512" y="1664" name="inst_783C6AD2" locked="0" code="// Focus OFF&#xA;self.action_id = 4;&#xA;" scaleX="2" scaleY="5" colour="4294967295" rotation="0"/>
     <instance objName="obj_event_area" x="576" y="2336" name="inst_DD6E5937" locked="0" code="// Enemy ON&#xA;self.action_id = 1;&#xA;" scaleX="11" scaleY="1" colour="4294967295" rotation="0"/>

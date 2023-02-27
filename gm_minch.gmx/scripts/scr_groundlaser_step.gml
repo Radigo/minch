@@ -10,11 +10,13 @@ if (self.status == self.STATUS_SEARCH) {
         self.targetY = obj_napalm.y;
         self.status = self.STATUS_FIRE;
         self.ticker = 0;
+        scr_play_sound(snd_ch1_search, global.SFX_BOOMS, false);
     } else if (global.legsStatus == global.LEGS_JUMP) {
         self.targetX = obj_marker.x;
         self.targetY = obj_marker.y;
         self.status = self.STATUS_FIRE;
         self.ticker = 0;
+        scr_play_sound(snd_ch1_search, global.SFX_BOOMS, false);
     }
 } else if (self.status == self.STATUS_FIRE) {
     if (self.ticker == 60) {
@@ -22,6 +24,8 @@ if (self.status == self.STATUS_SEARCH) {
         laser.image_speed = 0.5;
         var rocks = instance_create(self.targetX, self.targetY, obj_fx_boom_big);
         rocks.image_speed = 0.2;
+        audio_stop_sound(snd_ch1_search);
+        scr_play_sound(snd_ch1_laser, global.SFX_BOOMS, false);
     } else if (self.ticker == 61) {
         if (instance_exists(obj_napalmdeath)) {
             // Create hole in the ground

@@ -4,6 +4,11 @@ if (self.isIntro) {
        instance_create(self.x, self.y, obj_katana_shield);
        self.isIntro = false;
        self.ticker = 0;
+       
+       global.nextBGM = bgm_boss;
+       global.bgmSequencing = global.BGM_SEQUENCE_INSTANT;
+       audio_stop_sound(global.currentBGM);
+       scr_play_bgm();
     } 
     
     return false;

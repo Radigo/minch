@@ -9,7 +9,7 @@ instance_destroy();
 scr_reveal_neighbor();
 
 // Play special BGM
-scr_play_sound(bgm_22_triumph_wav, global.SFX_BGM, false);
+scr_play_sound(bgm_22_triumph, global.SFX_BGM, false);
 
 // Start level BGM
 global.nextBGM = bgm_22;
