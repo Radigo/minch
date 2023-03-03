@@ -5,6 +5,10 @@ MinCH: todo
 **Bugs**
 - BGM doesn't restart when 'continue' in score attack
 - remaining black door in 4-2
+- intro bgm remains after 1-1 crate escape
+
+**Potential issues**
+- self.singleUse = false; in scr_init_checkpoint, should be 'true'?
 
 **Game elements**
 - Ending sequence
@@ -14,7 +18,7 @@ MinCH: todo
 - 4-2 second phase (wild)
 - 4-3 boss
 - ending (main theme variation)
-- game intro (medley)
+- game intro (medley or long 3-2 intro)
 
 ** SFX **
 - check door click sound timing (consider separate sound? )

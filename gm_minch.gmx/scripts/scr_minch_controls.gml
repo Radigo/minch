@@ -506,7 +506,11 @@ if (global.controlStatus == global.CRATE) {
         
         instance_destroy(self.crateTop);
         
-        scr_play_bgm(bgm_11);
+        // Normal BGM start
+        global.nextBGM = bgm_11;
+        global.bgmSequencing = global.BGM_SEQUENCE_INSTANT;
+        audio_stop_sound(global.currentBGM);
+        scr_play_bgm();
     } else {
         // Display crate alterations
         self.image_index = floor((1 - (self.crateHP / self.crateMaxHP)) * self.image_number);
