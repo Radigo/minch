@@ -271,9 +271,13 @@ if (global.titlepage == global.PAGE_KEYCONFIG) {
                             global.normalGameScore = 0;
                             global.lastCheckpoint = 0;
                             global.extends = global.initLives;
-                            global.fromIntro = true;
-                            global.currentRoom = global.init_room;
-                            room_goto(rm_title_start);
+                            if (global.applicationMode == global.DEMO_MODE) {
+                                global.currentRoom = global.init_room;
+                            } else {
+                                global.fromIntro = true;
+                                global.currentRoom = rm_title_start;
+                            }
+                            room_goto(global.currentRoom);
                             break;
                         case 2:// Score Attack
                             if (global.canSelectStage) {
@@ -314,11 +318,15 @@ if (global.titlepage == global.PAGE_KEYCONFIG) {
                                 }
                                 break;
                             case 1:// Start Over
-                                global.fromIntro = true;
-                                global.currentRoom = global.init_room;
                                 global.lastCheckpoint = 0;
                                 global.extends = global.initLives;
-                                room_goto(rm_title_start);
+                                if (global.applicationMode == global.DEMO_MODE) {
+                                    global.currentRoom = global.init_room;
+                                } else {
+                                    global.fromIntro = true;
+                                    global.currentRoom = rm_title_start;
+                                }
+                                room_goto(global.currentRoom);
                                 break;
                             case 2:// Back
                                 goBack = true;
@@ -327,11 +335,15 @@ if (global.titlepage == global.PAGE_KEYCONFIG) {
                     } else {
                         switch(v_cursor_index) {
                             case 0:// Start Over
-                                global.fromIntro = true;
-                                global.currentRoom = global.init_room;
                                 global.lastCheckpoint = 0;
                                 global.extends = global.initLives;
-                                room_goto(rm_title_start);
+                                if (global.applicationMode == global.DEMO_MODE) {
+                                    global.currentRoom = global.init_room;
+                                } else {
+                                    global.fromIntro = true;
+                                    global.currentRoom = rm_title_start;
+                                }
+                                room_goto(global.currentRoom);
                                 break;
                             case 1:// Back
                                 goBack = true;

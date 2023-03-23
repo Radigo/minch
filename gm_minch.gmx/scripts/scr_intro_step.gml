@@ -15,5 +15,6 @@ if (self.ticker > (self.skipStart + self.skipFadeDuration)) {
 
 if ((self.skipMessageAlpha > 0.5) && (keyboard_check(global.key_start) || gamepad_button_check_pressed(global.control_type, global.pad_start))) {
     // Skip !
+    audio_sound_gain(bgm_intro, 0, 1000);
     room_goto(rm_lvl_11);
 }

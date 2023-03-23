@@ -6,6 +6,8 @@ MinCH: todo
 - BGM doesn't restart when 'continue' in score attack
 - remaining black door in 4-2
 - intro bgm remains after 1-1 crate escape
+- 3-3 ch1 too loud
+- 3-1 3rd floor top right void looks unfinished
 
 **Potential issues**
 - self.singleUse = false; in scr_init_checkpoint, should be 'true'?

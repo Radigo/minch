@@ -10,11 +10,13 @@
   <persistent>0</persistent>
   <colour>0</colour>
   <showcolour>-1</showcolour>
-  <code>// Very custom BGM start (Jukebox is not present in intro)
+  <code>// Very custom BGM start (Jukebox is not present in intro but starts in level 1-1)
 audio_stop_sound(global.currentBGM);
-global.currentBGM = bgm_32_intro;
-global.bgmSequencing = global.BGM_SEQUENCE_INSTANT;
-scr_play_bgm();</code>
+global.currentBGM = bgm_stop;
+
+scr_play_sound(bgm_intro, global.SFX_UI, false);
+
+show_debug_message("rm_title_start");</code>
   <enableViews>0</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>

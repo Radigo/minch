@@ -1,6 +1,9 @@
 self.flashTicker = 0;
 self.flashTickerLimit = 4;
 
+// Init intro flag
+global.fromIntro = false;
+
 // Lock continue and score attack if no score have been done yet
 global.canSelectStage = (global.lastMapName != "rm_lvl_11") && (global.applicationMode != global.DEMO_MODE);
 

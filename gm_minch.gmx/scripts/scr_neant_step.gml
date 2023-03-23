@@ -23,6 +23,14 @@ if (self.currentPhase == self.PHASE_THRONE_INTRO) {
     self.tickerLimit = self.THRONE_INTRO_TICKER_LIMIT;
     self.patternTickerLimit = floor(self.THRONE_INTRO_TICKER_LIMIT / self.NUM_THRONE_ROCKS);
     
+    if (self.ticker == 1) {
+        // Start music
+        global.nextBGM = bgm_boss;
+        global.bgmSequencing = global.BGM_SEQUENCE_INSTANT;
+        audio_stop_sound(global.currentBGM);
+        scr_play_bgm();
+    }
+    
     if (self.patternTicker == 1) {
         // Spawn rock at orbit position right
         var rock = instance_create((self.x + self.ORBIT_X), (self.y + self.THRONE_ORBIT_CENTER_Y_OFFSET), obj_neant_rock);
@@ -34,17 +42,18 @@ if (self.currentPhase == self.PHASE_THRONE_INTRO) {
         self.ticker = 0;
         self.currentPhase = self.PHASE_THRONE;
         self.sprite_index = spr_neant_sitting_idle;
+        self.shield = false;
     }
     
 } else if (self.currentPhase == self.PHASE_THRONE) {
     // Sitting on throne, rocks turning around
-    self.shield = false;
     if (self.hp < (self.PHASE_ROOM_HP + self.PHASE_SUN_HP)) {
         self.ticker = 0;
         self.tickerLimit = 120;
         self.currentPhase = self.PHASE_THRONE_STANDING;
         self.sprite_index = spr_neant_standing;
         self.image_speed = 0;
+        self.shield = true;
         
         // Roof explodes
         instance_destroy(self.roof);
@@ -91,6 +100,7 @@ if (self.currentPhase == self.PHASE_THRONE_INTRO) {
         scr_neant_change_room_pattern();
         part_emitter_stream(global.ps_ground, self.em_fx, self.pt_fx, 1);
         self.depth = 0;
+        self.shield = false;
     }
 } else if (self.currentPhase == self.PHASE_ROCKS_EXPLODING) {
     // Flying in room, sending rocks in straight lines aiming for MinCH
@@ -162,6 +172,10 @@ if (self.currentPhase == self.PHASE_THRONE_INTRO) {
     } else if ((self.hp < self.PHASE_SUN_HP) || (self.ticker == self.tickerLimit)) {
         // Change pattern
         scr_neant_change_room_pattern();
+        
+        // Audio
+        audio_sound_gain(global.currentBGM, 0, 1000);
+        self.shield = true;
     }
     
 } else if (self.currentPhase == self.PHASE_ROCKS_SUN) {
@@ -181,7 +195,17 @@ if (self.currentPhase == self.PHASE_THRONE_INTRO) {
         self.speed = self.speed * 0.9;
         self.ticker = 0;
     } else {
-        // Sun pattern
+        // Sun pattern (only 1 ticker loop before self-destruct)
+        show_debug_message(self.ticker);
+        if (self.ticker == 300) {
+            // Start very angry music
+            global.nextBGM = bgm_42;
+            global.bgmSequencing = global.BGM_SEQUENCE_INSTANT;
+            audio_stop_sound(global.currentBGM);
+            scr_play_bgm();
+            self.shield = false;
+        }
+        
         self.speed = 0;
         self.sprite_index = spr_neant_flying_sun;
         

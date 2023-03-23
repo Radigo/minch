@@ -506,6 +506,8 @@ if (global.controlStatus == global.CRATE) {
         
         instance_destroy(self.crateTop);
         
+        audio_stop_sound(bgm_intro);
+        scr_play_sound(bgm_11_intro, global.SFX_BGM, false);
         // Normal BGM start
         global.nextBGM = bgm_11;
         global.bgmSequencing = global.BGM_SEQUENCE_INSTANT;

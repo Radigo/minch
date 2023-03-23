@@ -23,7 +23,9 @@
       <sound>sound\bgm_next</sound>
       <sound>sound\bgm_stop</sound>
       <sound>sound\bgm_11</sound>
+      <sound>sound\bgm_11_intro</sound>
       <sound>sound\bgm_12</sound>
+      <sound>sound\bgm_13_intro</sound>
       <sound>sound\bgm_21</sound>
       <sound>sound\bgm_22_triumph</sound>
       <sound>sound\bgm_22_intro</sound>
@@ -35,9 +37,13 @@
       <sound>sound\bgm_32_intro</sound>
       <sound>sound\bgm_32_rampup</sound>
       <sound>sound\bgm_32</sound>
+      <sound>sound\bgm_33_intro</sound>
       <sound>sound\bgm_33_ch1intro</sound>
       <sound>sound\bgm_33_ch1</sound>
+      <sound>sound\bgm_41</sound>
       <sound>sound\bgm_boss</sound>
+      <sound>sound\bgm_42</sound>
+      <sound>sound\bgm_intro</sound>
     </sounds>
     <sounds name="minch">
       <sound>sound\snd_fall</sound>
@@ -57,6 +63,8 @@
       <sound>sound\snd_door_counter_update</sound>
       <sound>sound\snd_stairs_up</sound>
       <sound>sound\snd_stairs_down</sound>
+      <sound>sound\snd_gate_closing</sound>
+      <sound>sound\snd_gate_closed</sound>
     </sounds>
     <sounds name="baddies">
       <sound>sound\snd_bullet_shot</sound>
