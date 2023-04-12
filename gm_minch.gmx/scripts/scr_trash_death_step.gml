@@ -95,6 +95,8 @@ if (self.currentPhase == self.PHASE_STUN) {
         }
         
         self.speed = abs(escapeX - self.x) / self.escapeDuration;
+        
+        scr_play_sound(snd_trash_jump, global.SFX_ENVIRONMENT, false);
     }
 
 } else if (self.currentPhase == self.PHASE_JUMP) {
@@ -139,6 +141,8 @@ if (self.currentPhase == self.PHASE_STUN) {
         
         self.speed = point_distance(self.x, self.y, obj_trash_conductor.patternX, obj_trash_conductor.patternY) / self.escapeDuration;
         self.direction = point_direction(self.x, self.y, obj_trash_conductor.patternX, obj_trash_conductor.patternY);
+        
+        scr_play_sound(snd_trash_jump, global.SFX_ENVIRONMENT, false);
     }
 } else if (self.currentPhase == self.PHASE_ESCAPE) {
     if (self.ticker > self.tickerLimit) {

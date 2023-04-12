@@ -77,6 +77,12 @@ if (self.ticker == 5) {
     
     // spawn Nuke
     instance_create(centerTileX, bottomTileY, obj_nuke);
+    
+    // Stop BGM
+    global.nextBGM = bgm_stop;
+    global.bgmSequencing = global.BGM_SEQUENCE_INSTANT;
+    audio_stop_sound(global.currentBGM);
+    scr_play_bgm();
 } else if (self.ticker == self.tickerLimit) {
     // stop everything to avoid looping
     with (self)

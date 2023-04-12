@@ -169,15 +169,16 @@ if (self.currentPhase == self.PHASE_THRONE_INTRO) {
             rock.direction = rockAngle;
             rock.speed = 1.5;
         }
-    } else if ((self.hp < self.PHASE_SUN_HP) || (self.ticker == self.tickerLimit)) {
-        // Change pattern
+    } else if (self.ticker == self.tickerLimit) {
+        // Change pattern w/o transition
         scr_neant_change_room_pattern();
-        
+    } else if (self.hp < self.PHASE_SUN_HP) {
+        // Change pattern with a transition
+        scr_neant_change_room_pattern();
         // Audio
         audio_sound_gain(global.currentBGM, 0, 1000);
         self.shield = true;
     }
-    
 } else if (self.currentPhase == self.PHASE_ROCKS_SUN) {
     // FLying in room center, rocks turning around and throwing lasers
     self.tickerLimit = 10000;
@@ -196,7 +197,6 @@ if (self.currentPhase == self.PHASE_THRONE_INTRO) {
         self.ticker = 0;
     } else {
         // Sun pattern (only 1 ticker loop before self-destruct)
-        show_debug_message(self.ticker);
         if (self.ticker == 300) {
             // Start very angry music
             global.nextBGM = bgm_42;

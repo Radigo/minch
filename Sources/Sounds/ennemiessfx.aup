@@ -1,0 +1,185 @@
+<?xml version="1.0" standalone="no" ?>
+<!DOCTYPE project PUBLIC "-//audacityproject-1.3.0//DTD//EN" "http://audacity.sourceforge.net/xml/audacityproject-1.3.0.dtd" >
+<project xmlns="http://audacity.sourceforge.net/xml/" projname="ennemiessfx_data" version="1.3.0" audacityversion="2.3.3" sel0="0.0000000000" sel1="0.0000000000" vpos="256" h="0.0000000000" zoom="259.2592592593" rate="44100.0" snapto="off" selectionformat="hh:mm:ss + milliseconds" frequencyformat="Hz" bandwidthformat="octaves">
+	<tags/>
+	<wavetrack name="ennemiessfx" isSelected="0" height="52" minimized="0" channel="0" linked="1" mute="1" solo="0" rate="44100" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="0.00000000" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="88739">
+				<waveblock start="0">
+					<simpleblockfile filename="e0808852.au" len="88739" min="-0.223395" max="0.111043" rms="0.02457"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="ennemiessfx" isSelected="0" height="52" minimized="0" channel="1" linked="0" mute="1" solo="0" rate="44100" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="0.00000000" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="88739">
+				<waveblock start="0">
+					<simpleblockfile filename="e08086e1.au" len="88739" min="-0.223395" max="0.111043" rms="0.02457"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="ennemiessfx" isSelected="0" height="55" minimized="0" channel="0" linked="1" mute="1" solo="0" rate="44100" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="0.00000000" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="134549">
+				<waveblock start="0">
+					<simpleblockfile filename="e0808b14.au" len="134549" min="-0.488306" max="0.510171" rms="0.064996"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="ennemiessfx" isSelected="0" height="55" minimized="0" channel="1" linked="0" mute="1" solo="0" rate="44100" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="0.00000000" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="134549">
+				<waveblock start="0">
+					<simpleblockfile filename="e0808c2a.au" len="134549" min="-0.488306" max="0.510171" rms="0.064996"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="ennemiessfx" isSelected="0" height="60" minimized="0" channel="0" linked="1" mute="1" solo="0" rate="44100" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="0.00000000" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="165135">
+				<waveblock start="0">
+					<simpleblockfile filename="e08085df.au" len="165135" min="-0.507887" max="0.549751" rms="0.071165"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="ennemiessfx" isSelected="0" height="60" minimized="0" channel="1" linked="0" mute="1" solo="0" rate="44100" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="0.00000000" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="165135">
+				<waveblock start="0">
+					<simpleblockfile filename="e080877c.au" len="165135" min="-0.507887" max="0.549751" rms="0.071165"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="ennemiessfx" isSelected="0" height="75" minimized="0" channel="0" linked="1" mute="1" solo="0" rate="44100" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="0.00000000" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="49690">
+				<waveblock start="0">
+					<simpleblockfile filename="e08086d3.au" len="49690" min="-0.77246" max="1.201419" rms="0.099042"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="ennemiessfx" isSelected="0" height="75" minimized="0" channel="1" linked="0" mute="1" solo="0" rate="44100" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="0.00000000" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="49690">
+				<waveblock start="0">
+					<simpleblockfile filename="e080810c.au" len="49690" min="-0.77246" max="1.201419" rms="0.099042"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="ennemiessfx" isSelected="0" height="56" minimized="0" channel="0" linked="1" mute="1" solo="0" rate="44100" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="0.00000000" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="77109">
+				<waveblock start="0">
+					<simpleblockfile filename="e08082e4.au" len="77109" min="-0.589589" max="0.565745" rms="0.090686"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="ennemiessfx" isSelected="0" height="56" minimized="0" channel="1" linked="0" mute="1" solo="0" rate="44100" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="0.00000000" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="77109">
+				<waveblock start="0">
+					<simpleblockfile filename="e0808c68.au" len="77109" min="-0.589589" max="0.565745" rms="0.090686"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="ennemiessfx" isSelected="0" height="75" minimized="0" channel="0" linked="1" mute="1" solo="0" rate="44100" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="0.00000000" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="88229">
+				<waveblock start="0">
+					<simpleblockfile filename="e0808be8.au" len="88229" min="-0.252612" max="0.237823" rms="0.071936"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="ennemiessfx" isSelected="0" height="75" minimized="0" channel="1" linked="0" mute="1" solo="0" rate="44100" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="0.00000000" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="88229">
+				<waveblock start="0">
+					<simpleblockfile filename="e08084e1.au" len="88229" min="-0.252612" max="0.237823" rms="0.071936"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="ennemiessfx" isSelected="0" height="46" minimized="0" channel="0" linked="1" mute="1" solo="0" rate="44100" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="0.00000000" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="69337">
+				<waveblock start="0">
+					<simpleblockfile filename="e0808eac.au" len="69337" min="-0.424282" max="0.482376" rms="0.093131"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="ennemiessfx" isSelected="0" height="46" minimized="0" channel="1" linked="0" mute="1" solo="0" rate="44100" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="0.00000000" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="69337">
+				<waveblock start="0">
+					<simpleblockfile filename="e0808083.au" len="69337" min="-0.424282" max="0.482376" rms="0.093131"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="ennemiessfx" isSelected="0" height="35" minimized="0" channel="0" linked="1" mute="1" solo="0" rate="44100" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="0.00000000" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="59075">
+				<waveblock start="0">
+					<simpleblockfile filename="e080878d.au" len="59075" min="-0.701156" max="0.802145" rms="0.121951"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="ennemiessfx" isSelected="0" height="35" minimized="0" channel="1" linked="0" mute="1" solo="0" rate="44100" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="0.00000000" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="59075">
+				<waveblock start="0">
+					<simpleblockfile filename="e08088d6.au" len="59075" min="-0.701156" max="0.802145" rms="0.121951"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="ennemiessfx" isSelected="1" height="51" minimized="0" channel="0" linked="1" mute="0" solo="1" rate="44100" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="0.00000000" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="49723">
+				<waveblock start="0">
+					<simpleblockfile filename="e0808fb1.au" len="49723" min="-0.407654" max="0.352381" rms="0.067581"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="ennemiessfx" isSelected="1" height="51" minimized="0" channel="1" linked="0" mute="0" solo="1" rate="44100" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="0.00000000" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="49723">
+				<waveblock start="0">
+					<simpleblockfile filename="e080858c.au" len="49723" min="-0.407654" max="0.352381" rms="0.067581"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+</project>

@@ -66,7 +66,7 @@ if (self.speed > 0.2) {
             self.sprite_index = spr_beetle_walk_bk;
             break;
     }
-    self.image_speed = 0.5 * (1 / maxSpeed);// Fanvy formula in case max speed is not 1
+    self.image_speed = 0.5 * (1 / maxSpeed);// Fancy formula in case max speed is not 1
 } else {
     switch (self.color) {
         case global.CY:

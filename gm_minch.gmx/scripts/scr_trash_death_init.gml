@@ -35,6 +35,12 @@ ds_list_delete(obj_trash_conductor.directionSequence, 0);
 
 // Last pattern
 if (ds_list_empty(obj_trash_conductor.patternsSequence)) {
+    // Stop BGM
+    global.nextBGM = bgm_stop;
+    global.bgmSequencing = global.BGM_SEQUENCE_INSTANT;
+    audio_stop_sound(global.currentBGM);
+    scr_play_bgm();
+
     // Longer stun
     self.tickerLimit = 90;
     return false;

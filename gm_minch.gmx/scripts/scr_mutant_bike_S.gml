@@ -23,8 +23,10 @@ if (self.startDelay > 0)
         self.speed = random(3) + 3;
         
         self.visible = true;
-        self.y = self.initY;
+        self.y = obj_minch_feets.y - 200;
         self.isActive = true;
+        
+        scr_play_sound(snd_bike, global.SFX_ENVIRONMENT, false);
     }
 }
 
@@ -39,11 +41,12 @@ if (self.isActive)
         scr_bullet_shot(self.x, (self.y - 16), (random(30) + 180), (random(1) + 1), 2);
     }
     
-    if (self.y > room_height)
+    if (self.y > obj_minch_feets.y + 200)
     {
         self.isActive = false;
         self.visible = false;
-        self.startDelay = 0;
+        self.ticker = 0;
+        self.startDelay = random(100);
         self.speed = 0;
     }
 }

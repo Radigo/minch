@@ -43,6 +43,7 @@
       <sound>sound\bgm_41</sound>
       <sound>sound\bgm_boss</sound>
       <sound>sound\bgm_42</sound>
+      <sound>sound\bgm_43</sound>
       <sound>sound\bgm_intro</sound>
     </sounds>
     <sounds name="minch">
@@ -74,6 +75,14 @@
       <sound>sound\snd_ch1_scream</sound>
       <sound>sound\snd_ch1_search</sound>
       <sound>sound\snd_ch1_laser</sound>
+      <sound>sound\snd_bike</sound>
+      <sound>sound\snd_missile</sound>
+      <sound>sound\snd_sword</sound>
+      <sound>sound\snd_sword_round</sound>
+      <sound>sound\snd_trash_charge</sound>
+      <sound>sound\snd_trash_bgibullet</sound>
+      <sound>sound\snd_trash_impact</sound>
+      <sound>sound\snd_trash_jump</sound>
     </sounds>
     <sounds name="mechanics">
       <sound>sound\snd_combo_first</sound>

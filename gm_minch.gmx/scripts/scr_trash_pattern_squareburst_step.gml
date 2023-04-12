@@ -46,6 +46,8 @@ if (self.currentMove == self.MOVE_JUMP) {
         self.shield = true;
         
         self.sprite_index = spr_trash_jump_down;
+        
+        scr_play_sound(snd_trash_jump, global.SFX_ENVIRONMENT, false);
     }
 }
 

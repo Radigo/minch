@@ -1,12 +1,6 @@
 MinCH: todo
 
-**Retakes**
-
 **Bugs**
-- BGM doesn't restart when 'continue' in score attack
-- remaining black door in 4-2
-- intro bgm remains after 1-1 crate escape
-- 3-3 ch1 too loud
 - 3-1 3rd floor top right void looks unfinished
 
 **Potential issues**
@@ -16,27 +10,22 @@ MinCH: todo
 - Ending sequence
 
 ** BGM **
-- 4.1 (oppressing)
-- 4-2 second phase (wild)
 - 4-3 boss
 - ending (main theme variation)
-- game intro (medley or long 3-2 intro)
 
 ** SFX **
 - check door click sound timing (consider separate sound? )
+- last gate opening sound
 __________
 > existing
 - new
 __________
 
 Enemies
-> bullet shot (variants from light to heavy)
 - beetle walk
 - bikes engine
 - tank missile
 - Napalm swords
-- CH1 scream
-- CH1 charge + laser
 - Trash charge (big bullets)
 - Trash punch / land
 - Trash jump

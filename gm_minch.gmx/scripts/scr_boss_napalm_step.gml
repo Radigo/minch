@@ -112,6 +112,8 @@ if (self.currentPattern == self.REACH_SIDE) {
             image_speed = 0.25;
             sprite_index = spr_napalm_slash_a;
             self.currentPattern = self.RUSH_SLASH;
+            
+            scr_play_sound(snd_sword, global.SFX_ENVIRONMENT, false);
         }
     }
 } else if (self.currentPattern == self.RUSH_SLASH) {
@@ -159,6 +161,8 @@ if (self.currentPattern == self.REACH_SIDE) {
             image_speed = 0.25;
             sprite_index = spr_napalm_slash_b;
             self.currentPattern = self.RUSH_SLASH_BIS;
+            
+            scr_play_sound(snd_sword_round, global.SFX_ENVIRONMENT, false);
         }
     }
 } else if (self.currentPattern == self.RUSH_SLASH_BIS) {

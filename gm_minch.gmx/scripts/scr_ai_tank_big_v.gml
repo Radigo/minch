@@ -98,6 +98,8 @@ if (self.isActive) {
         } else if ((self.turretFacing == "right") && (obj_minch_feets.x > self.x)) {
             scr_bullet_shot((self.x + 24), (self.y + self.turretY), 0, 2.3, 0, obj_missile_darkred_E);
         }
+        
+        scr_play_sound(snd_missile, global.SFX_LOW_PRIORITY, false);
     }
 } else {
     self.patternTicker = 0;

@@ -15,8 +15,7 @@ audio_stop_sound(global.currentBGM);
 global.currentBGM = bgm_stop;
 
 scr_play_sound(bgm_intro, global.SFX_UI, false);
-
-show_debug_message("rm_title_start");</code>
+audio_sound_gain(bgm_intro, 1, 0);</code>
   <enableViews>0</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>

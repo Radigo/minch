@@ -10,7 +10,11 @@
   <persistent>0</persistent>
   <colour>527885</colour>
   <showcolour>-1</showcolour>
-  <code></code>
+  <code>// Normal BGM start
+global.nextBGM = bgm_43;
+global.bgmSequencing = global.BGM_SEQUENCE_INSTANT;
+audio_stop_sound(global.currentBGM);
+scr_play_bgm();</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>0</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>

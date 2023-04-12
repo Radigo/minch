@@ -25,7 +25,7 @@
     <option_android_build_version>0</option_android_build_version>
     <option_android_color_depth>0</option_android_color_depth>
     <option_android_compile_sdk_version>23</option_android_compile_sdk_version>
-    <option_android_display_name>gm_minch</option_android_display_name>
+    <option_android_display_name>minch</option_android_display_name>
     <option_android_facebook_app_display_name></option_android_facebook_app_display_name>
     <option_android_facebook_appid></option_android_facebook_appid>
     <option_android_facebook_enable>0</option_android_facebook_enable>
@@ -80,7 +80,7 @@
     <option_android_ouya_icon>Configs\Default\android\icons\ouyaIcon.png</option_android_ouya_icon>
     <option_android_package_company>companyname</option_android_package_company>
     <option_android_package_domain>com</option_android_package_domain>
-    <option_android_package_product>gm_minch</option_android_package_product>
+    <option_android_package_product>minch</option_android_package_product>
     <option_android_permission_flags>8</option_android_permission_flags>
     <option_android_pocketchange_enable>0</option_android_pocketchange_enable>
     <option_android_pocketchange_id></option_android_pocketchange_id>
@@ -120,7 +120,7 @@
     <option_androidfire_build_version>0</option_androidfire_build_version>
     <option_androidfire_color_depth>0</option_androidfire_color_depth>
     <option_androidfire_compile_sdk_version>23</option_androidfire_compile_sdk_version>
-    <option_androidfire_display_name>gm_minch</option_androidfire_display_name>
+    <option_androidfire_display_name>minch</option_androidfire_display_name>
     <option_androidfire_facebook_app_display_name></option_androidfire_facebook_app_display_name>
     <option_androidfire_facebook_appid></option_androidfire_facebook_appid>
     <option_androidfire_facebook_enable>false</option_androidfire_facebook_enable>
@@ -152,7 +152,7 @@
     <option_androidfire_orient_portrait_flipped>True</option_androidfire_orient_portrait_flipped>
     <option_androidfire_package_company>companyname</option_androidfire_package_company>
     <option_androidfire_package_domain>com</option_androidfire_package_domain>
-    <option_androidfire_package_product>gm_minch</option_androidfire_package_product>
+    <option_androidfire_package_product>minch</option_androidfire_package_product>
     <option_androidfire_permission_flags>8</option_androidfire_permission_flags>
     <option_androidfire_portrait_splash_png>Configs\Default\amazonfire\portrait_splash.png</option_androidfire_portrait_splash_png>
     <option_androidfire_push_enable>0</option_androidfire_push_enable>
@@ -189,7 +189,7 @@
     <option_androidtv_build_version>0</option_androidtv_build_version>
     <option_androidtv_color_depth>0</option_androidtv_color_depth>
     <option_androidtv_compile_sdk_version>23</option_androidtv_compile_sdk_version>
-    <option_androidtv_display_name>gm_minch</option_androidtv_display_name>
+    <option_androidtv_display_name>minch</option_androidtv_display_name>
     <option_androidtv_facebook_app_display_name></option_androidtv_facebook_app_display_name>
     <option_androidtv_facebook_appid></option_androidtv_facebook_appid>
     <option_androidtv_facebook_enable>0</option_androidtv_facebook_enable>
@@ -216,7 +216,7 @@
     <option_androidtv_moga>0</option_androidtv_moga>
     <option_androidtv_package_company>companyname</option_androidtv_package_company>
     <option_androidtv_package_domain>com</option_androidtv_package_domain>
-    <option_androidtv_package_product>gm_minch</option_androidtv_package_product>
+    <option_androidtv_package_product>minch</option_androidtv_package_product>
     <option_androidtv_permission_flags>8</option_androidtv_permission_flags>
     <option_androidtv_push_enable>0</option_androidtv_push_enable>
     <option_androidtv_push_id></option_androidtv_push_id>
@@ -301,7 +301,7 @@ Shoot enemies in the rotten suburbs of Luxuria city. Make your way through the a
     <option_ios_build_version>0</option_ios_build_version>
     <option_ios_certificate>&lt; Press refresh to fetch certificate list from Mac&gt;</option_ios_certificate>
     <option_ios_device_type>3</option_ios_device_type>
-    <option_ios_display_name>gm_minch</option_ios_display_name>
+    <option_ios_display_name>minch</option_ios_display_name>
     <option_ios_facebook_app_display_name></option_ios_facebook_app_display_name>
     <option_ios_facebook_appid></option_ios_facebook_appid>
     <option_ios_facebook_enable>0</option_ios_facebook_enable>
@@ -353,17 +353,17 @@ Shoot enemies in the rotten suburbs of Luxuria city. Make your way through the a
     <option_ios_texture_page>1024</option_ios_texture_page>
     <option_ios_use_test_ads>0</option_ios_use_test_ads>
     <option_lastchanged></option_lastchanged>
-    <option_linux_display_name>gm_minch</option_linux_display_name>
+    <option_linux_display_name>minch</option_linux_display_name>
     <option_linux_enable_steam>0</option_linux_enable_steam>
     <option_linux_fullscreen>0</option_linux_fullscreen>
-    <option_linux_homepage>http://www.gm_minch.com</option_linux_homepage>
+    <option_linux_homepage>http://www.minch.com</option_linux_homepage>
     <option_linux_icon>Configs\Default\linux\icon64.png</option_linux_icon>
     <option_linux_interpolate>-1</option_linux_interpolate>
-    <option_linux_long_desc>gm_minch</option_linux_long_desc>
+    <option_linux_long_desc>minch</option_linux_long_desc>
     <option_linux_maintainer_email></option_linux_maintainer_email>
     <option_linux_scale>-1</option_linux_scale>
     <option_linux_screenkey>-1</option_linux_screenkey>
-    <option_linux_short_desc>gm_minch</option_linux_short_desc>
+    <option_linux_short_desc>minch</option_linux_short_desc>
     <option_linux_sizeable>0</option_linux_sizeable>
     <option_linux_splash_png>Configs\Default\linux\splash.png</option_linux_splash_png>
     <option_linux_steam_app_id>0</option_linux_steam_app_id>
@@ -382,7 +382,7 @@ Shoot enemies in the rotten suburbs of Luxuria city. Make your way through the a
     <option_mac_build_version>0</option_mac_build_version>
     <option_mac_copyright_info>(c)2012 CompanyName Ltd...</option_mac_copyright_info>
     <option_mac_create_app_store>-1</option_mac_create_app_store>
-    <option_mac_display_name>gm_minch</option_mac_display_name>
+    <option_mac_display_name>minch</option_mac_display_name>
     <option_mac_enable_retina>0</option_mac_enable_retina>
     <option_mac_enable_steam>0</option_mac_enable_steam>
     <option_mac_fullscreen>0</option_mac_fullscreen>
@@ -391,7 +391,7 @@ Shoot enemies in the rotten suburbs of Luxuria city. Make your way through the a
     <option_mac_major_version>1</option_mac_major_version>
     <option_mac_menu_dock>0</option_mac_menu_dock>
     <option_mac_minor_version>0</option_mac_minor_version>
-    <option_mac_output_dir>~/GameMaker-Studio/gm_minch</option_mac_output_dir>
+    <option_mac_output_dir>~/GameMaker-Studio/minch</option_mac_output_dir>
     <option_mac_scale>-1</option_mac_scale>
     <option_mac_screenkey>-1</option_mac_screenkey>
     <option_mac_showcursor>-1</option_mac_showcursor>
@@ -469,9 +469,9 @@ Shoot enemies in the rotten suburbs of Luxuria city. Make your way through the a
     <option_textureGroup0_targets>9223372036854775807</option_textureGroup0_targets>
     <option_textureGroup_count>1</option_textureGroup_count>
     <option_textureGroups0>Default</option_textureGroups0>
-    <option_tizen_app_id>http://yourdomain/gm_minch</option_tizen_app_id>
+    <option_tizen_app_id>http://yourdomain/minch</option_tizen_app_id>
     <option_tizen_build_version>0</option_tizen_build_version>
-    <option_tizen_display_name>gm_minch</option_tizen_display_name>
+    <option_tizen_display_name>minch</option_tizen_display_name>
     <option_tizen_flurry_enable>0</option_tizen_flurry_enable>
     <option_tizen_flurry_id></option_tizen_flurry_id>
     <option_tizen_google_analytics_enable>0</option_tizen_google_analytics_enable>
@@ -491,7 +491,7 @@ Shoot enemies in the rotten suburbs of Luxuria city. Make your way through the a
     <option_tvos_app_id></option_tvos_app_id>
     <option_tvos_build_version>0</option_tvos_build_version>
     <option_tvos_certificate>&lt; Press refresh to fetch certificate list from Mac&gt;</option_tvos_certificate>
-    <option_tvos_display_name>gm_minch</option_tvos_display_name>
+    <option_tvos_display_name>minch</option_tvos_display_name>
     <option_tvos_icon_1280>Configs\Default\tvos\icons\icon1280.png</option_tvos_icon_1280>
     <option_tvos_icon_400>Configs\Default\tvos\icons\icon400.png</option_tvos_icon_400>
     <option_tvos_interpolate>-1</option_tvos_interpolate>
@@ -522,7 +522,7 @@ Shoot enemies in the rotten suburbs of Luxuria city. Make your way through the a
     <option_win8_analytics_id></option_win8_analytics_id>
     <option_win8_build_version>0</option_win8_build_version>
     <option_win8_certificate_location>Windows8_TemporaryKey.pfx</option_win8_certificate_location>
-    <option_win8_display_name>gm_minch</option_win8_display_name>
+    <option_win8_display_name>minch</option_win8_display_name>
     <option_win8_internet_capable>0</option_win8_internet_capable>
     <option_win8_interpolate>-1</option_win8_interpolate>
     <option_win8_landscape_allowed>-1</option_win8_landscape_allowed>
@@ -553,7 +553,7 @@ Shoot enemies in the rotten suburbs of Luxuria city. Make your way through the a
     <option_winUAP_allowfullscreen>0</option_winUAP_allowfullscreen>
     <option_winUAP_build_version>0</option_winUAP_build_version>
     <option_winUAP_certificate_location>WinUWPRunner_TemporaryKey.pfx</option_winUAP_certificate_location>
-    <option_winUAP_display_name>gm_minch</option_winUAP_display_name>
+    <option_winUAP_display_name>minch</option_winUAP_display_name>
     <option_winUAP_fullscreen>0</option_winUAP_fullscreen>
     <option_winUAP_internet_capable>0</option_winUAP_internet_capable>
     <option_winUAP_interpolate>-1</option_winUAP_interpolate>
@@ -629,7 +629,7 @@ Shoot enemies in the rotten suburbs of Luxuria city. Make your way through the a
     <option_winphone_cycle_wide_image_8>Configs\Default\WinPhone\CycleWide8.png</option_winphone_cycle_wide_image_8>
     <option_winphone_cycle_wide_image_9>Configs\Default\WinPhone\CycleWide9.png</option_winphone_cycle_wide_image_9>
     <option_winphone_description>YourDescription</option_winphone_description>
-    <option_winphone_display_name>gm_minch</option_winphone_display_name>
+    <option_winphone_display_name>minch</option_winphone_display_name>
     <option_winphone_flip_content_back></option_winphone_flip_content_back>
     <option_winphone_flip_content_front></option_winphone_flip_content_front>
     <option_winphone_flip_medium_back_image>Configs\Default\WinPhone\FlipMedBack.png</option_winphone_flip_medium_back_image>

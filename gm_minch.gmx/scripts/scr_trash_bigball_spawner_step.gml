@@ -18,4 +18,8 @@ if (self.ticker < self.growthDuration) {
 } else if (self.ticker == self.growthDuration) {
     self.speed = self.travelSpeed;
     self.image_speed = 0.5;
+    
+    // Only one at a time to avoid overlaps
+    audio_stop_sound(snd_trash_bgibullet);
+    scr_play_sound(snd_trash_bgibullet, global.SFX_ENVIRONMENT, false);
 }
