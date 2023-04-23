@@ -1,6 +1,7 @@
 MinCH: todo
 
 **Bugs**
+- boss value isn't credited (boss 1 values 900 instead of 10000)
 - 3-1 3rd floor top right void looks unfinished
 
 **Potential issues**
@@ -10,12 +11,10 @@ MinCH: todo
 - Ending sequence
 
 ** BGM **
-- 4-3 boss
 - ending (main theme variation)
 
 ** SFX **
-- check door click sound timing (consider separate sound? )
-- last gate opening sound
+- check door click sound timing (consider separate sound?)
 __________
 > existing
 - new

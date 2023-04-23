@@ -31,7 +31,7 @@ if (self.overlay != noone) {
         self.overlay = noone;
         scr_boom(self.x, self.y, 3, 32);
     }
-} else if (instance_number(obj_cannon_b_overlay) > 0) {
+} else if (instance_number(obj_cannon_b_overlay_bk) > 0) {
     // Overlay on other
     aimTime = 160;
     lockOnTime = aimTime + 30;
@@ -42,7 +42,7 @@ if (self.overlay != noone) {
 
 if (self.ticker < aimTime) {
     // Aim if one overlay exists
-    if (instance_number(obj_cannon_b_overlay) > 0) {
+    if (instance_number(obj_cannon_b_overlay_bk) > 0) {
         targetAngle = scr_aim_at_minch(self, 0, 0, 0);
         var angleDiff = targetAngle - image_angle;
         if (angleDiff > 180) {

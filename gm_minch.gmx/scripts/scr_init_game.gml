@@ -62,6 +62,7 @@ ds_list_add(global.PRIMARY_COLORS, global.CY, global.MA, global.YE);
 global.SECONDARY_COLORS = ds_list_create();
 ds_list_add(global.SECONDARY_COLORS, global.PU, global.GR, global.RG);
 
+global.extendEvery = 200000;
 global.defaultLeaderboardName = "MNC";
 
 // Switches & events

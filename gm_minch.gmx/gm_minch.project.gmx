@@ -66,6 +66,8 @@
       <sound>sound\snd_stairs_down</sound>
       <sound>sound\snd_gate_closing</sound>
       <sound>sound\snd_gate_closed</sound>
+      <sound>sound\snd_end_gate_opening</sound>
+      <sound>sound\snd_end_gate_opened</sound>
     </sounds>
     <sounds name="baddies">
       <sound>sound\snd_bullet_shot</sound>
@@ -1238,13 +1240,13 @@
           <object>objects\obj_grenwave</object>
         </objects>
         <objects name="neant">
-          <object>objects\obj_neant</object>
+          <object>objects\obj_neant_bk</object>
           <object>objects\obj_neant_death</object>
           <object>objects\obj_neant_cape</object>
-          <object>objects\obj_cannon_a</object>
-          <object>objects\obj_cannon_b</object>
-          <object>objects\obj_cannon_b_overlay</object>
-          <object>objects\obj_cannon_c</object>
+          <object>objects\obj_cannon_a_bk</object>
+          <object>objects\obj_cannon_b_bk</object>
+          <object>objects\obj_cannon_b_overlay_bk</object>
+          <object>objects\obj_cannon_c_bk</object>
           <object>objects\obj_roof_center</object>
           <object>objects\obj_roof_front_left</object>
           <object>objects\obj_roof_front_right</object>

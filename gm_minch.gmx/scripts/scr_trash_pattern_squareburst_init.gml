@@ -82,4 +82,4 @@ for (var i = 0; i < numStreamsPerSpawner; i++) {
 }
 
 // Pusher
-self.pusher = instance_create(self.x, self.y, obj_trash_pusher);
+//self.pusher = instance_create(self.x, self.y, obj_trash_pusher);

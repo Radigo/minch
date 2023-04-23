@@ -7,7 +7,7 @@ var locationInstance = argument2;// Reference to sprite for notif location
 var isMixing = argument3;
 var comboIncrement = argument4;
 
-//show_debug_message("scr_scoring_update enemy value: " + string(enemy_value) + ", Enemy color: " + string(enemy_color));
+show_debug_message("scr_scoring_update enemy value: " + string(enemy_value) + ", Enemy color: " + string(enemy_color));
 if (enemy_color >= global.BK) {
     // Combo breaker
     global.comboValue = 1;
@@ -50,8 +50,20 @@ if (global.gameMode == global.STORY_MODE) {
     return false;
 }
 
+// Manage extends
+var prevScore = global.normalGameScore;
+var nextExtendScore = global.extendEvery * ceil(prevScore / global.extendEvery);
+
+show_debug_message("prevScore: " + string(prevScore) + ", next extand ay: " + string(nextExtendScore) + " (every " + string(global.extendEvery) + ")");
+
 // Save score
 global.normalGameScore += enemy_value * global.comboValue;
+
+if ((prevScore < nextExtendScore) && (global.normalGameScore >= nextExtendScore)) {
+    show_debug_message(">>EXTEND!<<");
+    scr_play_sound(snd_extend, global.SFX_MINCH_CONTROLS, false);
+    global.extends++;
+}
 
 // Display score notification over destroyed ennemies
 var notif = instance_create(locationInstance.x, locationInstance.y, obj_score_notif);

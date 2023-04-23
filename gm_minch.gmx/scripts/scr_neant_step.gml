@@ -60,14 +60,14 @@ if (self.currentPhase == self.PHASE_THRONE_INTRO) {
         scr_boom(self.x, self.y, 4, 64);
         
         // All cannons explode
-        while (instance_number(obj_cannon_a) > 0) {
-            instance_destroy(instance_find(obj_cannon_a, 0));
+        while (instance_number(obj_cannon_a_bk) > 0) {
+            instance_destroy(instance_find(obj_cannon_a_bk, 0));
         }
-        while (instance_number(obj_cannon_b) > 0) {
-            instance_destroy(instance_find(obj_cannon_b, 0));
+        while (instance_number(obj_cannon_b_bk) > 0) {
+            instance_destroy(instance_find(obj_cannon_b_bk, 0));
         }
-        while (instance_number(obj_cannon_c) > 0) {
-            instance_destroy(instance_find(obj_cannon_c, 0));
+        while (instance_number(obj_cannon_c_bk) > 0) {
+            instance_destroy(instance_find(obj_cannon_c_bk, 0));
         }
         
         scr_all_bullet_cancel();

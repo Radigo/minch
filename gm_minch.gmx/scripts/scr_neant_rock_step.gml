@@ -5,7 +5,7 @@ if (self.behavior == self.BEHAVE_THRONE) {
     // Rotates around sitting Neant, can pass behind church roof
     self.patternTickerLimit = 10 + ceil((self.hp / self.MAX_HP) * 60);
     
-    var neant = instance_find(obj_neant, 0);
+    var neant = instance_find(obj_neant_bk, 0);
     
     if (neant == noone) {
         // Change beahavior? destroy?

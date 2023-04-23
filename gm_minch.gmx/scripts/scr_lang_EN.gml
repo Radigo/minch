@@ -22,6 +22,8 @@ switch (key)
         return "Input mode: keyboard";
     case "title_inputmodectrl":
         return "Input mode: controller";
+    case "title_extendevery":
+        return "Extend every " + string(global.extendEvery) + " pts";
     // Story
     case "story_start":
         return "Start";

@@ -20,6 +20,7 @@ if (self.currentPhase == self.PHASE_STUN) {
             if (self.x < obj_trash_conductor.patternX) {
                 self.image_xscale = -1;
             }
+            scr_play_sound(snd_end_gate_opening, global.SFX_ENVIRONMENT, true);
         } else {
             self.currentPhase = self.PHASE_JUMP;
             self.tickerLimit = self.jumpDuration;
@@ -65,6 +66,9 @@ if (self.currentPhase == self.PHASE_STUN) {
     var tileSize = 32;
     if (obj_trash_conductor.leftFence.x > obj_trash_conductor.patternX - (tileSize * 3)) {
         obj_trash_conductor.leftFence.x -= 0.2;
+    } else if (audio_is_playing(snd_end_gate_opening)) {
+        audio_stop_sound(snd_end_gate_opening);
+        scr_play_sound(snd_end_gate_opened, global.SFX_ENVIRONMENT, false);
     }
     
     if (obj_trash_conductor.rightFence.x < obj_trash_conductor.patternX + (tileSize * 3)) {

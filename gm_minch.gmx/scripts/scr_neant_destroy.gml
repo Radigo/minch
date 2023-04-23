@@ -3,14 +3,14 @@ instance_create(self.x, self.y, obj_neant_death);
 
 //just in case, kill everybody and cancel all bullets
 // All cannons explode
-while (instance_number(obj_cannon_a) > 0) {
-    instance_destroy(instance_find(obj_cannon_a, 0));
+while (instance_number(obj_cannon_a_bk) > 0) {
+    instance_destroy(instance_find(obj_cannon_a_bk, 0));
 }
-while (instance_number(obj_cannon_b) > 0) {
-    instance_destroy(instance_find(obj_cannon_b, 0));
+while (instance_number(obj_cannon_b_bk) > 0) {
+    instance_destroy(instance_find(obj_cannon_b_bk, 0));
 }
-while (instance_number(obj_cannon_c) > 0) {
-    instance_destroy(instance_find(obj_cannon_c, 0));
+while (instance_number(obj_cannon_c_bk) > 0) {
+    instance_destroy(instance_find(obj_cannon_c_bk, 0));
 }
 // All rocks explode
 while (instance_number(obj_neant_rock) > 0) {

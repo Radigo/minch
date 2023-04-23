@@ -5,7 +5,7 @@ if (!self.switchTriggered) {
 self.shield = false;
 
 // Settings
-var numCannons = instance_number(obj_cannon_a) + instance_number(obj_cannon_b);
+var numCannons = instance_number(obj_cannon_a_bk) + instance_number(obj_cannon_b_bk);
 
 var rotationSpeed = 0.1;
 var aimTime = 200 + (numCannons * 20);

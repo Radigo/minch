@@ -157,10 +157,12 @@ draw_set_color(c_dkgray);
 
 draw_text(8, 224, scr_text("title_quit"));
 
+draw_text(92, 214, scr_text("title_extendevery"));
+        
 if (global.control_type < 0) {
-    draw_text(96, 224, scr_text("title_inputmodekeyboard"));
+    draw_text(92, 224, scr_text("title_inputmodekeyboard"));
 } else {
-    draw_text(96, 224, scr_text("title_inputmodectrl"));
+    draw_text(92, 224, scr_text("title_inputmodectrl"));
 }
 
 draw_set_halign(fa_right);
