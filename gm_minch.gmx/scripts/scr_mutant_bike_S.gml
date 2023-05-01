@@ -4,7 +4,7 @@ if (self.startDelay == 0)
 {
     if (self.switchTriggered)
     {
-        //show_debug_message("triggered bike id: " + string(self.action_id));
+        show_debug_message("triggered bike id: " + string(self.action_id));
         
         self.startDelay = random(1000);
     }
@@ -19,11 +19,16 @@ if (self.startDelay > 0)
     if (!self.isActive
         && (self.ticker > self.startDelay))
     {
+        if (global.lastCheckpoint >= 7)
+        {
+            with (self) instance_destroy();
+        }
+        
         self.direction = -90;
         self.speed = random(3) + 3;
         
         self.visible = true;
-        self.y = obj_minch_feets.y - 200;
+        self.y = max(self.initY, obj_minch_feets.y - 200);
         self.isActive = true;
         
         scr_play_sound(snd_bike, global.SFX_ENVIRONMENT, false);

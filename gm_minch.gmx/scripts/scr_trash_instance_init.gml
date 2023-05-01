@@ -173,22 +173,22 @@ switch (object_get_name(object_index)) {
 }
 
 if (hasTopDoor) {
-    var topDummyDoor = instance_create(originX + (obj_trash_conductor.LAYOUT_TILE_SIZE * 5), originY + (obj_trash_conductor.LAYOUT_TILE_SIZE * 1), obj_door_h_1_open);
+    var topDummyDoor = instance_create(originX + (obj_trash_conductor.LAYOUT_TILE_SIZE * 5), originY + (obj_trash_conductor.LAYOUT_TILE_SIZE * 1), obj_door_h_1_open_bk);
     topDummyDoor.depth = 9000;
 }
 
 if (hasBottomDoor) {
-    var bottomDummyDoor = instance_create(originX + (obj_trash_conductor.LAYOUT_TILE_SIZE * 5), originY + (obj_trash_conductor.LAYOUT_TILE_SIZE * 9), obj_door_h_1_open);
+    var bottomDummyDoor = instance_create(originX + (obj_trash_conductor.LAYOUT_TILE_SIZE * 5), originY + (obj_trash_conductor.LAYOUT_TILE_SIZE * 9), obj_door_h_1_open_bk);
     bottomDummyDoor.depth = 9000;
 }
 
 if (hasLeftDoor) {
-    var leftDummyDoor = instance_create(originX, originY + (obj_trash_conductor.LAYOUT_TILE_SIZE * 5), obj_door_v_1_open);
+    var leftDummyDoor = instance_create(originX, originY + (obj_trash_conductor.LAYOUT_TILE_SIZE * 5), obj_door_v_1_open_bk);
     leftDummyDoor.depth = 9000;
 }
 
 if (hasRightDoor) {
-    var rightDummyDoor = instance_create(originX + (obj_trash_conductor.LAYOUT_TILE_SIZE * 10), originY + (obj_trash_conductor.LAYOUT_TILE_SIZE * 5), obj_door_v_1_open);
+    var rightDummyDoor = instance_create(originX + (obj_trash_conductor.LAYOUT_TILE_SIZE * 10), originY + (obj_trash_conductor.LAYOUT_TILE_SIZE * 5), obj_door_v_1_open_bk);
     rightDummyDoor.depth = 9000;
 }
 

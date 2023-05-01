@@ -251,7 +251,14 @@
       </sprites>
       <sprites name="Doors">
         <sprite>sprites\spr_door_counter_fx</sprite>
-        <sprite>sprites\spr_door_h_1_open</sprite>
+        <sprite>sprites\spr_door_h_1_open_cy</sprite>
+        <sprite>sprites\spr_door_h_1_open_ma</sprite>
+        <sprite>sprites\spr_door_h_1_open_ye</sprite>
+        <sprite>sprites\spr_door_h_1_open_pu</sprite>
+        <sprite>sprites\spr_door_h_1_open_gr</sprite>
+        <sprite>sprites\spr_door_h_1_open_or</sprite>
+        <sprite>sprites\spr_door_h_1_open_br</sprite>
+        <sprite>sprites\spr_door_h_1_open_bk</sprite>
         <sprite>sprites\spr_door_h_1_cy</sprite>
         <sprite>sprites\spr_door_h_1_ma</sprite>
         <sprite>sprites\spr_door_h_1_ye</sprite>
@@ -261,7 +268,14 @@
         <sprite>sprites\spr_door_h_1_br</sprite>
         <sprite>sprites\spr_door_h_1_bk</sprite>
         <sprite>sprites\spr_door_h_1_anim</sprite>
-        <sprite>sprites\spr_door_h_2_open</sprite>
+        <sprite>sprites\spr_door_h_2_open_cy</sprite>
+        <sprite>sprites\spr_door_h_2_open_ma</sprite>
+        <sprite>sprites\spr_door_h_2_open_ye</sprite>
+        <sprite>sprites\spr_door_h_2_open_pu</sprite>
+        <sprite>sprites\spr_door_h_2_open_gr</sprite>
+        <sprite>sprites\spr_door_h_2_open_or</sprite>
+        <sprite>sprites\spr_door_h_2_open_br</sprite>
+        <sprite>sprites\spr_door_h_2_open_bk</sprite>
         <sprite>sprites\spr_door_h_2_cy</sprite>
         <sprite>sprites\spr_door_h_2_ma</sprite>
         <sprite>sprites\spr_door_h_2_ye</sprite>
@@ -271,7 +285,14 @@
         <sprite>sprites\spr_door_h_2_br</sprite>
         <sprite>sprites\spr_door_h_2_bk</sprite>
         <sprite>sprites\spr_door_h_2_anim</sprite>
-        <sprite>sprites\spr_door_v_1_open</sprite>
+        <sprite>sprites\spr_door_v_1_open_cy</sprite>
+        <sprite>sprites\spr_door_v_1_open_ma</sprite>
+        <sprite>sprites\spr_door_v_1_open_ye</sprite>
+        <sprite>sprites\spr_door_v_1_open_pu</sprite>
+        <sprite>sprites\spr_door_v_1_open_gr</sprite>
+        <sprite>sprites\spr_door_v_1_open_or</sprite>
+        <sprite>sprites\spr_door_v_1_open_br</sprite>
+        <sprite>sprites\spr_door_v_1_open_bk</sprite>
         <sprite>sprites\spr_door_v_1_cy</sprite>
         <sprite>sprites\spr_door_v_1_ma</sprite>
         <sprite>sprites\spr_door_v_1_ye</sprite>
@@ -281,7 +302,14 @@
         <sprite>sprites\spr_door_v_1_br</sprite>
         <sprite>sprites\spr_door_v_1_bk</sprite>
         <sprite>sprites\spr_door_v_1_anim</sprite>
-        <sprite>sprites\spr_door_v_2_open</sprite>
+        <sprite>sprites\spr_door_v_2_open_cy</sprite>
+        <sprite>sprites\spr_door_v_2_open_ma</sprite>
+        <sprite>sprites\spr_door_v_2_open_ye</sprite>
+        <sprite>sprites\spr_door_v_2_open_pu</sprite>
+        <sprite>sprites\spr_door_v_2_open_gr</sprite>
+        <sprite>sprites\spr_door_v_2_open_or</sprite>
+        <sprite>sprites\spr_door_v_2_open_br</sprite>
+        <sprite>sprites\spr_door_v_2_open_bk</sprite>
         <sprite>sprites\spr_door_v_2_cy</sprite>
         <sprite>sprites\spr_door_v_2_ma</sprite>
         <sprite>sprites\spr_door_v_2_ye</sprite>
@@ -291,7 +319,14 @@
         <sprite>sprites\spr_door_v_2_br</sprite>
         <sprite>sprites\spr_door_v_2_bk</sprite>
         <sprite>sprites\spr_door_v_2_anim</sprite>
-        <sprite>sprites\spr_door_v_3_open</sprite>
+        <sprite>sprites\spr_door_v_3_open_cy</sprite>
+        <sprite>sprites\spr_door_v_3_open_ma</sprite>
+        <sprite>sprites\spr_door_v_3_open_ye</sprite>
+        <sprite>sprites\spr_door_v_3_open_pu</sprite>
+        <sprite>sprites\spr_door_v_3_open_gr</sprite>
+        <sprite>sprites\spr_door_v_3_open_or</sprite>
+        <sprite>sprites\spr_door_v_3_open_br</sprite>
+        <sprite>sprites\spr_door_v_3_open_bk</sprite>
         <sprite>sprites\spr_door_v_3_cy</sprite>
         <sprite>sprites\spr_door_v_3_ma</sprite>
         <sprite>sprites\spr_door_v_3_ye</sprite>
@@ -302,7 +337,16 @@
         <sprite>sprites\spr_door_v_3_bk</sprite>
         <sprite>sprites\spr_door_v_3_anim</sprite>
       </sprites>
-      <sprite>sprites\spr_platform</sprite>
+      <sprites name="Platform">
+        <sprite>sprites\spr_platform</sprite>
+        <sprite>sprites\spr_platform_cy</sprite>
+        <sprite>sprites\spr_platform_ma</sprite>
+        <sprite>sprites\spr_platform_ye</sprite>
+        <sprite>sprites\spr_platform_pu</sprite>
+        <sprite>sprites\spr_platform_gr</sprite>
+        <sprite>sprites\spr_platform_or</sprite>
+        <sprite>sprites\spr_platform_br</sprite>
+      </sprites>
       <sprites name="ConveyorBelts">
         <sprite>sprites\spr_belt_up</sprite>
         <sprite>sprites\spr_belt_down</sprite>
@@ -1461,7 +1505,14 @@
         <object>objects\obj_door_h_1_or</object>
         <object>objects\obj_door_h_1_br</object>
         <object>objects\obj_door_h_1_bk</object>
-        <object>objects\obj_door_h_1_open</object>
+        <object>objects\obj_door_h_1_open_cy</object>
+        <object>objects\obj_door_h_1_open_ma</object>
+        <object>objects\obj_door_h_1_open_ye</object>
+        <object>objects\obj_door_h_1_open_pu</object>
+        <object>objects\obj_door_h_1_open_gr</object>
+        <object>objects\obj_door_h_1_open_or</object>
+        <object>objects\obj_door_h_1_open_br</object>
+        <object>objects\obj_door_h_1_open_bk</object>
         <object>objects\obj_door_h_1_anim</object>
         <object>objects\obj_door_h_2_cy</object>
         <object>objects\obj_door_h_2_ma</object>
@@ -1471,7 +1522,14 @@
         <object>objects\obj_door_h_2_or</object>
         <object>objects\obj_door_h_2_br</object>
         <object>objects\obj_door_h_2_bk</object>
-        <object>objects\obj_door_h_2_open</object>
+        <object>objects\obj_door_h_2_open_cy</object>
+        <object>objects\obj_door_h_2_open_ma</object>
+        <object>objects\obj_door_h_2_open_ye</object>
+        <object>objects\obj_door_h_2_open_pu</object>
+        <object>objects\obj_door_h_2_open_gr</object>
+        <object>objects\obj_door_h_2_open_or</object>
+        <object>objects\obj_door_h_2_open_br</object>
+        <object>objects\obj_door_h_2_open_bk</object>
         <object>objects\obj_door_h_2_anim</object>
         <object>objects\obj_door_v_1_cy</object>
         <object>objects\obj_door_v_1_ma</object>
@@ -1481,7 +1539,14 @@
         <object>objects\obj_door_v_1_or</object>
         <object>objects\obj_door_v_1_br</object>
         <object>objects\obj_door_v_1_bk</object>
-        <object>objects\obj_door_v_1_open</object>
+        <object>objects\obj_door_v_1_open_cy</object>
+        <object>objects\obj_door_v_1_open_ma</object>
+        <object>objects\obj_door_v_1_open_ye</object>
+        <object>objects\obj_door_v_1_open_pu</object>
+        <object>objects\obj_door_v_1_open_gr</object>
+        <object>objects\obj_door_v_1_open_or</object>
+        <object>objects\obj_door_v_1_open_br</object>
+        <object>objects\obj_door_v_1_open_bk</object>
         <object>objects\obj_door_v_1_anim</object>
         <object>objects\obj_door_v_2_cy</object>
         <object>objects\obj_door_v_2_ma</object>
@@ -1491,7 +1556,14 @@
         <object>objects\obj_door_v_2_or</object>
         <object>objects\obj_door_v_2_br</object>
         <object>objects\obj_door_v_2_bk</object>
-        <object>objects\obj_door_v_2_open</object>
+        <object>objects\obj_door_v_2_open_cy</object>
+        <object>objects\obj_door_v_2_open_ma</object>
+        <object>objects\obj_door_v_2_open_ye</object>
+        <object>objects\obj_door_v_2_open_pu</object>
+        <object>objects\obj_door_v_2_open_gr</object>
+        <object>objects\obj_door_v_2_open_or</object>
+        <object>objects\obj_door_v_2_open_br</object>
+        <object>objects\obj_door_v_2_open_bk</object>
         <object>objects\obj_door_v_2_anim</object>
         <object>objects\obj_door_v_3_cy</object>
         <object>objects\obj_door_v_3_ma</object>
@@ -1501,7 +1573,14 @@
         <object>objects\obj_door_v_3_or</object>
         <object>objects\obj_door_v_3_br</object>
         <object>objects\obj_door_v_3_bk</object>
-        <object>objects\obj_door_v_3_open</object>
+        <object>objects\obj_door_v_3_open_cy</object>
+        <object>objects\obj_door_v_3_open_ma</object>
+        <object>objects\obj_door_v_3_open_ye</object>
+        <object>objects\obj_door_v_3_open_pu</object>
+        <object>objects\obj_door_v_3_open_gr</object>
+        <object>objects\obj_door_v_3_open_or</object>
+        <object>objects\obj_door_v_3_open_br</object>
+        <object>objects\obj_door_v_3_open_bk</object>
         <object>objects\obj_door_v_3_anim</object>
         <object>objects\obj_sewermaindoor_l</object>
         <object>objects\obj_sewermaindoor_r</object>

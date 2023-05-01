@@ -1,6 +1,11 @@
 // Change score depending on current combo, multipliers and stuffs...
 // Called by defeated ennemy
 
+// No score in story mode
+if (global.gameMode == global.STORY_MODE) {
+    return false;
+}
+
 var enemy_value = argument0;
 var enemy_color = argument1;
 var locationInstance = argument2;// Reference to sprite for notif location
@@ -45,16 +50,11 @@ if (global.comboColor > 0) {
     global.comboColorTimer = global.comboColorDuration;
 }
 
-// No score in story mode
-if (global.gameMode == global.STORY_MODE) {
-    return false;
-}
-
 // Manage extends
 var prevScore = global.normalGameScore;
 var nextExtendScore = global.extendEvery * ceil(prevScore / global.extendEvery);
 
-show_debug_message("prevScore: " + string(prevScore) + ", next extand ay: " + string(nextExtendScore) + " (every " + string(global.extendEvery) + ")");
+//show_debug_message("prevScore: " + string(prevScore) + ", next extand ay: " + string(nextExtendScore) + " (every " + string(global.extendEvery) + ")");
 
 // Save score
 global.normalGameScore += enemy_value * global.comboValue;

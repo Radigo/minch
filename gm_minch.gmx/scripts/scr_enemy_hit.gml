@@ -15,7 +15,7 @@ switch (string(object_get_name(other.object_index))) {
             exit;
         }
         is_piercing_shot = true;
-        damage = 20;
+        damage = 100;
         break;
         
     case "obj_claw_hitbox":

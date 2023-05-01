@@ -2,28 +2,28 @@ scr_scoring_step();
 
 draw_set_color(c_ltgray);
 
-// COMBO
-// Bar
-draw_sprite(spr_combobar_bg, global.comboColor, (view_xview[0] + 6), (view_yview[0] + 15));
-
-if (global.comboColorTimer > 0) {
-    draw_sprite_stretched(
-        spr_combobar,
-        (global.comboColorTimer % 6), (view_xview[0] + 6),
-        (view_yview[0] + 15),
-        (35 * (global.comboColorTimer / global.comboColorDuration)),
-        6);
-} else if (self.hasScore && (global.comboColor > 0) && (global.comboColor < global.BK)) {
-    draw_sprite(spr_combobar_current, global.comboColor, (view_xview[0] + 6), (view_yview[0] + 15));
-    
-    // Frame
-    draw_sprite(spr_comboframe, global.comboColor, (view_xview[0]), (view_yview[0]));
-    draw_sprite(spr_combohalo, global.comboColor, (view_xview[0]), (view_yview[0]));
-}
-
-draw_sprite(spr_combobar_frame, 0, (view_xview[0] + 4), (view_yview[0] + 13));
-
 if (self.hasScore) {
+    // COMBO
+    // Bar
+    draw_sprite(spr_combobar_bg, global.comboColor, (view_xview[0] + 6), (view_yview[0] + 15));
+    
+    if (global.comboColorTimer > 0) {
+        draw_sprite_stretched(
+            spr_combobar,
+            (global.comboColorTimer % 6), (view_xview[0] + 6),
+            (view_yview[0] + 15),
+            (35 * (global.comboColorTimer / global.comboColorDuration)),
+            6);
+    } else if (self.hasScore && (global.comboColor > 0) && (global.comboColor < global.BK)) {
+        draw_sprite(spr_combobar_current, global.comboColor, (view_xview[0] + 6), (view_yview[0] + 15));
+        
+        // Frame
+        draw_sprite(spr_comboframe, global.comboColor, (view_xview[0]), (view_yview[0]));
+        draw_sprite(spr_combohalo, global.comboColor, (view_xview[0]), (view_yview[0]));
+    }
+    
+    draw_sprite(spr_combobar_frame, 0, (view_xview[0] + 4), (view_yview[0] + 13));
+    
     // Combo counter
     if (global.comboValue > 1) {
         //var combo_pos_x = view_xview[0] + 320 - 4 - (string_length(string(global.comboValue)) * 17);

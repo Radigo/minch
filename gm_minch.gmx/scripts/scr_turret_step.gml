@@ -12,6 +12,8 @@ if (!self.isActive)
 
 self.prevAimAngle = self.aimAngle;
 
+//show_debug_message("scr_turret_step " + string(self) + " patternmode: " + string(self.patternMode));
+
 switch (self.patternMode)
 {
     case self.PATTERN_MODE_FREE:

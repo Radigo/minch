@@ -94,7 +94,7 @@ if (self.playerInvite && (self.reportTicker > self.inviteTime)) {
                     break;
             }
             
-            audio_sound_gain(global.currentBGM, 1, 0);
+            audio_sound_gain(global.currentBGM, global.BGM_GAIN, 0);
             break;
     }
 } else if (self.reportTicker > (self.fadeTime + self.faderDuration)) {

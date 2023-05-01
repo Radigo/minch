@@ -29,8 +29,35 @@ switch (self.action_rule)
 {
     case global.CREATE_PLATFORM:
         // Create platform always change a hole for the same sprite, we need to change empty hole by the platform sprite
-        self.sprite_index = spr_platform;
-        self.image_speed = 0;
-        self.visible = true;
-        break;
+        switch (self.color) {
+            case global.CY:
+                self.sprite_index = spr_platform_cy;
+                self.visible = true;
+                break;
+            case global.MA:
+                self.sprite_index = spr_platform_ma;
+                self.visible = true;
+                break;
+            case global.YE:
+                self.sprite_index = spr_platform_ye;
+                self.visible = true;
+                break;
+            case global.PU:
+                self.sprite_index = spr_platform_pu;
+                self.visible = true;
+                break;
+            case global.RG:
+                self.sprite_index = spr_platform_or;
+                self.visible = true;
+                break;
+            case global.GR:
+                self.sprite_index = spr_platform_gr;
+                self.visible = true;
+                break;
+            default:
+                self.sprite_index = spr_platform;
+                self.image_speed = 0;
+                self.visible = true;
+                break;
+        }
 }

@@ -1,7 +1,21 @@
 MinCH: todo
 
 **Bugs**
-- boss value isn't credited (boss 1 values 900 instead of 10000)
+############################################################################################
+FATAL ERROR in
+action number 1
+of Create Event
+for object obj_trash_pattern_squareburst_instance:
+
+Variable obj_trash_pattern_squareburst_instance.obj_door_h_1_open(100490, -2147483648) not set before reading it.
+at gml_Script_scr_trash_instance_init
+############################################################################################
+--------------------------------------------------------------------------------------------
+stack frame is
+gml_Script_scr_trash_instance_init (line 0)
+gml_Script_scr_trash_pattern_squareburst_init
+gml_Object_obj_trash_pattern_squareburst_instance_Create_0
+
 - 3-1 3rd floor top right void looks unfinished
 
 **Potential issues**
@@ -15,21 +29,12 @@ MinCH: todo
 
 ** SFX **
 - check door click sound timing (consider separate sound?)
-__________
-> existing
-- new
-__________
-
-Enemies
-- beetle walk
-- bikes engine
-- tank missile
-- Napalm swords
-- Trash charge (big bullets)
-- Trash punch / land
-- Trash jump
 
 **Others**
 - In-game clues on how to mix colors (ex: spilling barrels of liquids)
 - More cinematics in levels to give life
 - Aimed shot & wave attack illustrations
+
+**Credits**
+A game made by Radigo with Game Maker 1.4.
+Thanks to Moony, Ben Shinobi, MKnight, Lake Ishikawa, Artung, Sailor Cheetara and Guts.
